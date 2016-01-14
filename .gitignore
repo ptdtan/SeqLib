@@ -1,4 +1,3 @@
-SVSim*
 [#]*[#]
 .\#*
 *~
@@ -14,7 +13,6 @@ autom4te.cache
 .Rhistory
 .in
 .deps*
-html
 latex
 config.log
 tmp*
@@ -22,15 +20,12 @@ libhts.*
 libsnowtools.a
 libaho*
 libbwa.a
-example*
 tabix
 htsfile
 bgzip
 back*
 *.m4
 *.bam
-variant
 stamp-h1
 config.status
-Makefile
 *.pico
