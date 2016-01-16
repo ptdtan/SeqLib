@@ -47,18 +47,18 @@
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028   <span class="keyword">friend</span> <a class="code" href="classAlignedContig.html">AlignedContig</a>;
 <a name="l00029"></a>00029 
-<a name="l00034"></a>00034   <a class="code" href="structAlignmentFragment.html#ae19ddb9258ac4e86782d2d2a57663530">AlignmentFragment</a>(<span class="keyword">const</span> BamTools::BamAlignment &amp;talign, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> &amp;window, <span class="keyword">const</span> CigarMap &amp;nmap, <span class="keyword">const</span> CigarMap &amp;tmap);
+<a name="l00034"></a>00034   <a class="code" href="structAlignmentFragment.html#a6bdb524441c20c0000d1b68033f919d6">AlignmentFragment</a>(<span class="keyword">const</span> BamTools::BamAlignment &amp;talign, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> &amp;window, <span class="keyword">const</span> CigarMap &amp;nmap, <span class="keyword">const</span> CigarMap &amp;tmap);
 <a name="l00035"></a>00035   
-<a name="l00037"></a><a class="code" href="structAlignmentFragment.html#a85ad0bd45b4ef3715b8fc9b0c3c64080">00037</a>   <span class="keywordtype">bool</span> <a class="code" href="structAlignmentFragment.html#a85ad0bd45b4ef3715b8fc9b0c3c64080" title="sort AlignmentFragment objects by start position">operator &lt; </a>(<span class="keyword">const</span> <a class="code" href="structAlignmentFragment.html">AlignmentFragment</a>&amp; str)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (start &lt; str.start); }
+<a name="l00037"></a><a class="code" href="structAlignmentFragment.html#acdbbd6bbdaa3fe6f69c337a4c576ca69">00037</a>   <span class="keywordtype">bool</span> <a class="code" href="structAlignmentFragment.html#acdbbd6bbdaa3fe6f69c337a4c576ca69" title="sort AlignmentFragment objects by start position">operator &lt; </a>(<span class="keyword">const</span> <a class="code" href="structAlignmentFragment.html">AlignmentFragment</a>&amp; str)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (start &lt; str.start); }
 <a name="l00038"></a>00038 
 <a name="l00040"></a>00040   <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="structAlignmentFragment.html#aa7c93c0627c4a1a27dc322d8b93ea976" title="print the AlignmentFragment">operator&lt;&lt;</a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="structAlignmentFragment.html">AlignmentFragment</a>&amp; c); 
 <a name="l00041"></a>00041 
-<a name="l00047"></a>00047   <span class="keywordtype">bool</span> <a class="code" href="structAlignmentFragment.html#a1fa6be6e16facea60f420b9ef544ddfe">parseIndelBreak</a>(BreakPoint &amp;bp);
+<a name="l00047"></a>00047   <span class="keywordtype">bool</span> <a class="code" href="structAlignmentFragment.html#a0cffa1372a533c683ef494656de6aad6">parseIndelBreak</a>(BreakPoint &amp;bp);
 <a name="l00048"></a>00048 
-<a name="l00056"></a>00056   <span class="keywordtype">void</span> <a class="code" href="structAlignmentFragment.html#ad91f27dde9df7af710d181234994bb13">indelCigarMatches</a>(<span class="keyword">const</span> CigarMap &amp;nmap, <span class="keyword">const</span> CigarMap &amp;tmap);  
+<a name="l00056"></a>00056   <span class="keywordtype">void</span> <a class="code" href="structAlignmentFragment.html#a0bd33acc5cb1fbef316661024a86e4d9">indelCigarMatches</a>(<span class="keyword">const</span> CigarMap &amp;nmap, <span class="keyword">const</span> CigarMap &amp;tmap);  
 <a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="structAlignmentFragment.html#afcadd19d30935adcbb4b28281d0358ec">00058</a>   BPVec <a class="code" href="structAlignmentFragment.html#afcadd19d30935adcbb4b28281d0358ec">indel_breaks</a>; 
-<a name="l00060"></a><a class="code" href="structAlignmentFragment.html#a108082351fe1da8062c460a82c6db12f">00060</a>   CigarOpVec <a class="code" href="structAlignmentFragment.html#a108082351fe1da8062c460a82c6db12f">cigar</a>; 
+<a name="l00058"></a><a class="code" href="structAlignmentFragment.html#aafc491a3b04d12dd48971f2ed082c0ec">00058</a>   BPVec <a class="code" href="structAlignmentFragment.html#aafc491a3b04d12dd48971f2ed082c0ec">indel_breaks</a>; 
+<a name="l00060"></a><a class="code" href="structAlignmentFragment.html#a5a9ec2a5f12a966d27c39369c3142fff">00060</a>   CigarOpVec <a class="code" href="structAlignmentFragment.html#a5a9ec2a5f12a966d27c39369c3142fff">cigar</a>; 
 <a name="l00062"></a>00062   <span class="keyword">private</span>:
 <a name="l00063"></a>00063 
 <a name="l00064"></a>00064   BamTools::BamAlignment align; 
@@ -91,23 +91,23 @@
 <a name="l00100"></a>00100 
 <a name="l00101"></a>00101  <span class="keyword">public</span>:  
 <a name="l00102"></a>00102 
-<a name="l00108"></a>00108   <a class="code" href="classAlignedContig.html#a921b6638f641afe9b4437e2698db4b55">AlignedContig</a>(<span class="keyword">const</span> std::string &amp;sam, <span class="keyword">const</span> BamTools::BamReader * reader, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> &amp;twindow, 
+<a name="l00108"></a>00108   <a class="code" href="classAlignedContig.html#a85c6e91bc99bd217c99ddef52c9f4ff3">AlignedContig</a>(<span class="keyword">const</span> std::string &amp;sam, <span class="keyword">const</span> BamTools::BamReader * reader, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> &amp;twindow, 
 <a name="l00109"></a>00109                 <span class="keyword">const</span> CigarMap &amp;nmap, <span class="keyword">const</span> CigarMap &amp;tmap);
 <a name="l00110"></a>00110 
-<a name="l00111"></a><a class="code" href="classAlignedContig.html#a8000303191fe7c6080627f17d3c15519">00111</a>   std::string <a class="code" href="classAlignedContig.html#a8000303191fe7c6080627f17d3c15519">samrecord</a>; 
-<a name="l00113"></a><a class="code" href="classAlignedContig.html#aeb794f0e5d9cad9fa0cb6db1aa9a081a">00113</a>   <a class="code" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> <a class="code" href="classAlignedContig.html#aeb794f0e5d9cad9fa0cb6db1aa9a081a">window</a>; 
-<a name="l00118"></a>00118   <span class="keywordtype">bool</span> <a class="code" href="classAlignedContig.html#a619a8d02062f8b153092138ddb698e45">isWorse</a>(<span class="keyword">const</span> <a class="code" href="classAlignedContig.html">AlignedContig</a> &amp;ac) <span class="keyword">const</span>;
+<a name="l00111"></a><a class="code" href="classAlignedContig.html#a0b76fb5ff3dd0df0ce2c9aaf9bfdb511">00111</a>   std::string <a class="code" href="classAlignedContig.html#a0b76fb5ff3dd0df0ce2c9aaf9bfdb511">samrecord</a>; 
+<a name="l00113"></a><a class="code" href="classAlignedContig.html#a96ae247e44210e29ab6e56f51906559e">00113</a>   <a class="code" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> <a class="code" href="classAlignedContig.html#a96ae247e44210e29ab6e56f51906559e">window</a>; 
+<a name="l00118"></a>00118   <span class="keywordtype">bool</span> <a class="code" href="classAlignedContig.html#a2b7040114eb9889e69e0db5e30aff60c">isWorse</a>(<span class="keyword">const</span> <a class="code" href="classAlignedContig.html">AlignedContig</a> &amp;ac) <span class="keyword">const</span>;
 <a name="l00119"></a>00119   
-<a name="l00125"></a>00125   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#acdcb29869bc7d1f7a6c643d0f66e00a8">addAlignment</a>(<span class="keyword">const</span> BamTools::BamAlignment &amp;align, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> &amp;<a class="code" href="classAlignedContig.html#aeb794f0e5d9cad9fa0cb6db1aa9a081a">window</a>, 
+<a name="l00125"></a>00125   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#ae88a6860c1a372a28d182c1124650eb0">addAlignment</a>(<span class="keyword">const</span> BamTools::BamAlignment &amp;align, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> &amp;<a class="code" href="classAlignedContig.html#a96ae247e44210e29ab6e56f51906559e">window</a>, 
 <a name="l00126"></a>00126                     <span class="keyword">const</span> CigarMap &amp;nmap, <span class="keyword">const</span> CigarMap &amp;tmap);
 <a name="l00127"></a>00127 
-<a name="l00129"></a><a class="code" href="classAlignedContig.html#ad41983eb6cb0e66acc282e4c1ee35639">00129</a>   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#ad41983eb6cb0e66acc282e4c1ee35639" title="add a discordant cluster that maps to same regions as this contig">addDiscordantCluster</a>(DiscordantCluster dc) { m_dc.push_back(dc); } 
+<a name="l00129"></a><a class="code" href="classAlignedContig.html#ae7fe34822532bb212974d56c12fcb3d0">00129</a>   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#ae7fe34822532bb212974d56c12fcb3d0" title="add a discordant cluster that maps to same regions as this contig">addDiscordantCluster</a>(DiscordantCluster dc) { m_dc.push_back(dc); } 
 <a name="l00130"></a>00130 
-<a name="l00134"></a>00134   std::string <a class="code" href="classAlignedContig.html#a92e192900154cacb0a582011b19bf2a1">printDiscordantClusters</a>() <span class="keyword">const</span>;
+<a name="l00134"></a>00134   std::string <a class="code" href="classAlignedContig.html#a92b6bb864c5e14f938d7bb50b640ee88">printDiscordantClusters</a>() <span class="keyword">const</span>;
 <a name="l00135"></a>00135 
-<a name="l00137"></a><a class="code" href="classAlignedContig.html#ac206f1f1e111f6911f7837cf73393c47">00137</a>   std::string <a class="code" href="classAlignedContig.html#ac206f1f1e111f6911f7837cf73393c47" title="return the name of the contig">getContigName</a>()<span class="keyword"> const </span>{ assert(m_align.size()); <span class="keywordflow">return</span> m_align[0].align.Name; }
+<a name="l00137"></a><a class="code" href="classAlignedContig.html#af8f8abd3b8c21e13f801aa718b60c180">00137</a>   std::string <a class="code" href="classAlignedContig.html#af8f8abd3b8c21e13f801aa718b60c180" title="return the name of the contig">getContigName</a>()<span class="keyword"> const </span>{ assert(m_align.size()); <span class="keywordflow">return</span> m_align[0].align.Name; }
 <a name="l00138"></a>00138 
-<a name="l00142"></a><a class="code" href="classAlignedContig.html#ac403e77676523d55fc1bffc44d9e81b5">00142</a>   <span class="keywordtype">int</span> <a class="code" href="classAlignedContig.html#ac403e77676523d55fc1bffc44d9e81b5">getMaxMapq</a>()<span class="keyword"> const </span>{ 
+<a name="l00142"></a><a class="code" href="classAlignedContig.html#a2d2738e52c13ffbb61844e3445973616">00142</a>   <span class="keywordtype">int</span> <a class="code" href="classAlignedContig.html#a2d2738e52c13ffbb61844e3445973616">getMaxMapq</a>()<span class="keyword"> const </span>{ 
 <a name="l00143"></a>00143     <span class="keywordtype">int</span> m = -1;
 <a name="l00144"></a>00144     <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : m_align)
 <a name="l00145"></a>00145       <span class="keywordflow">if</span> (i.align.MapQuality &gt; m)
@@ -115,7 +115,7 @@
 <a name="l00147"></a>00147     <span class="keywordflow">return</span> m;
 <a name="l00148"></a>00148   }
 <a name="l00149"></a>00149 
-<a name="l00153"></a><a class="code" href="classAlignedContig.html#a324519c970600189dfabb07f3a4bdd74">00153</a>   <span class="keywordtype">int</span> <a class="code" href="classAlignedContig.html#a324519c970600189dfabb07f3a4bdd74">getMinMapq</a>()<span class="keyword"> const </span>{ 
+<a name="l00153"></a><a class="code" href="classAlignedContig.html#a797cd0aba22812838288dfc9c94ccb32">00153</a>   <span class="keywordtype">int</span> <a class="code" href="classAlignedContig.html#a797cd0aba22812838288dfc9c94ccb32">getMinMapq</a>()<span class="keyword"> const </span>{ 
 <a name="l00154"></a>00154     <span class="keywordtype">int</span> m = 1000;
 <a name="l00155"></a>00155     <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : m_align)
 <a name="l00156"></a>00156       <span class="keywordflow">if</span> (i.align.MapQuality &lt; m)
@@ -123,29 +123,29 @@
 <a name="l00158"></a>00158     <span class="keywordflow">return</span> m;
 <a name="l00159"></a>00159   }
 <a name="l00160"></a>00160 
-<a name="l00165"></a>00165   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#a8688abaf882eb60cd882c24b874a2c8e">splitCoverage</a>();
+<a name="l00165"></a>00165   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#aa1b329ef5e5341d6121cdc17a7f23b55">splitCoverage</a>();
 <a name="l00166"></a>00166   
-<a name="l00171"></a>00171   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#a7b3e98b00f73cbd5983f5d118481418e">blacklist</a>(GRC&amp; grv);
+<a name="l00171"></a>00171   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#a92fb97b363fcfd1d17d01d257163fc45">blacklist</a>(GRC&amp; grv);
 <a name="l00172"></a>00172 
-<a name="l00179"></a>00179   <span class="keywordtype">bool</span> <a class="code" href="classAlignedContig.html#a678d57a5a8ef132402ad2d0ee64b8d8b">parseDiscovarName</a>(<span class="keywordtype">size_t</span> &amp;tumor, <span class="keywordtype">size_t</span> &amp;normal);
+<a name="l00179"></a>00179   <span class="keywordtype">bool</span> <a class="code" href="classAlignedContig.html#a5c1207495753f99856c23f7c99a1cab4">parseDiscovarName</a>(<span class="keywordtype">size_t</span> &amp;tumor, <span class="keywordtype">size_t</span> &amp;normal);
 <a name="l00180"></a>00180 
-<a name="l00184"></a>00184   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#a1f8ccd375653650c5fafefd3cec6c4a2">printContigFasta</a>(std::ofstream &amp;os) <span class="keyword">const</span>;
+<a name="l00184"></a>00184   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#ac89822495a2125a71f0bedffd7ab7af7">printContigFasta</a>(std::ofstream &amp;os) <span class="keyword">const</span>;
 <a name="l00185"></a>00185 
-<a name="l00188"></a>00188   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#a90b91a7a41a7b866221ed634360eed09">setMultiMapBreakPairs</a>();
+<a name="l00188"></a>00188   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#a736ed9c8b8e104084f95cf406cf36970">setMultiMapBreakPairs</a>();
 <a name="l00189"></a>00189 
-<a name="l00195"></a>00195   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#ac2c9612755aea0cc4710e32934c63660">alignReadsToContigs</a>(ReadVec &amp;bav);
+<a name="l00195"></a>00195   <span class="keywordtype">void</span> <a class="code" href="classAlignedContig.html#a919635f815f7d61b725db7a679a95db2">alignReadsToContigs</a>(ReadVec &amp;bav);
 <a name="l00196"></a>00196 
-<a name="l00198"></a><a class="code" href="classAlignedContig.html#a1c1f3d53751f6f97826848c63d2c0233">00198</a>   std::string <a class="code" href="classAlignedContig.html#a1c1f3d53751f6f97826848c63d2c0233" title="return the contig sequence as it came off the assembler">getSequence</a>()<span class="keyword"> const </span>{ assert(m_seq.length()); <span class="keywordflow">return</span> m_seq; }
+<a name="l00198"></a><a class="code" href="classAlignedContig.html#a0df5fdde212845a3d05e87b3e7429040">00198</a>   std::string <a class="code" href="classAlignedContig.html#a0df5fdde212845a3d05e87b3e7429040" title="return the contig sequence as it came off the assembler">getSequence</a>()<span class="keyword"> const </span>{ assert(m_seq.length()); <span class="keywordflow">return</span> m_seq; }
 <a name="l00199"></a>00199 
-<a name="l00201"></a><a class="code" href="classAlignedContig.html#a4c3278de431021a2a0fc99863354207f">00201</a>   <span class="keywordtype">bool</span> <a class="code" href="classAlignedContig.html#a4c3278de431021a2a0fc99863354207f" title="detemine if the contig contains a subsequence">hasSubSequence</a>(<span class="keyword">const</span> std::string&amp; subseq)<span class="keyword"> const </span>{ 
+<a name="l00201"></a><a class="code" href="classAlignedContig.html#a22af6490cd18083779f0136b0016a33f">00201</a>   <span class="keywordtype">bool</span> <a class="code" href="classAlignedContig.html#a22af6490cd18083779f0136b0016a33f" title="detemine if the contig contains a subsequence">hasSubSequence</a>(<span class="keyword">const</span> std::string&amp; subseq)<span class="keyword"> const </span>{ 
 <a name="l00202"></a>00202     <span class="keywordflow">return</span> (m_seq.find(subseq) != std::string::npos);
 <a name="l00203"></a>00203   }
 <a name="l00204"></a>00204   
 <a name="l00206"></a>00206   <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classAlignedContig.html#a09494def1b2874e3ac7b71e26c7fff3a" title="print this contig">operator&lt;&lt;</a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="classAlignedContig.html">AlignedContig</a> &amp;ac);
 <a name="l00207"></a>00207 
-<a name="l00211"></a>00211   <span class="keywordtype">bool</span> <a class="code" href="classAlignedContig.html#aca38ca2e5b218a4f6c2b81abe3c03314">hasVariant</a>() <span class="keyword">const</span>;
+<a name="l00211"></a>00211   <span class="keywordtype">bool</span> <a class="code" href="classAlignedContig.html#a6a3e4a2fa54ef05064f0db4d3ee742fb">hasVariant</a>() <span class="keyword">const</span>;
 <a name="l00212"></a>00212 
-<a name="l00216"></a>00216   std::vector&lt;BreakPoint&gt; <a class="code" href="classAlignedContig.html#ad9931290f3e05bd8e79af8096102413e">getAllBreakPoints</a>() <span class="keyword">const</span>;
+<a name="l00216"></a>00216   std::vector&lt;BreakPoint&gt; <a class="code" href="classAlignedContig.html#adad16defbff78f4cce1c305fdcb46a83">getAllBreakPoints</a>() <span class="keyword">const</span>;
 <a name="l00217"></a>00217   std::vector&lt;const BreakPoint*&gt; getAllBreakPointPointers() <span class="keyword">const</span> ;
 <a name="l00218"></a>00218 
 <a name="l00219"></a>00219   std::vector&lt;BreakPoint&gt; m_local_breaks; <span class="comment">// store all of the multi-map BreakPoints for this contigs </span>

@@ -68,13 +68,13 @@
 <a name="l00048"></a>00048 
 <a name="l00049"></a>00049  <span class="keyword">public</span>:
 <a name="l00050"></a>00050 
-<a name="l00058"></a>00058   <a class="code" href="classSnowTools_1_1BamWalker.html#adf32eb48959cc9354fc2fc7b5c93e5ad">BamWalker</a>(<span class="keyword">const</span> std::string&amp; in, <span class="keyword">const</span> std::string&amp; out);
+<a name="l00058"></a>00058   <a class="code" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">BamWalker</a>(<span class="keyword">const</span> std::string&amp; in, <span class="keyword">const</span> std::string&amp; out);
 <a name="l00059"></a>00059 
-<a name="l00062"></a>00062   <a class="code" href="classSnowTools_1_1BamWalker.html#adf32eb48959cc9354fc2fc7b5c93e5ad">BamWalker</a>(<span class="keyword">const</span> std::string&amp; in);
+<a name="l00062"></a>00062   <a class="code" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">BamWalker</a>(<span class="keyword">const</span> std::string&amp; in);
 <a name="l00063"></a>00063 
-<a name="l00065"></a><a class="code" href="classSnowTools_1_1BamWalker.html#adf32eb48959cc9354fc2fc7b5c93e5ad">00065</a>   <a class="code" href="classSnowTools_1_1BamWalker.html#adf32eb48959cc9354fc2fc7b5c93e5ad">BamWalker</a>() {}
+<a name="l00065"></a><a class="code" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">00065</a>   <a class="code" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">BamWalker</a>() {}
 <a name="l00066"></a>00066 
-<a name="l00072"></a><a class="code" href="classSnowTools_1_1BamWalker.html#a2254a8e0bc475305d4017e72d67e43c8">00072</a>   <a class="code" href="classSnowTools_1_1BamWalker.html#a2254a8e0bc475305d4017e72d67e43c8">~BamWalker</a>() {
+<a name="l00072"></a><a class="code" href="classSnowTools_1_1BamWalker.html#a2962c1139d95364142dad9ffdfdd29e7">00072</a>   <a class="code" href="classSnowTools_1_1BamWalker.html#a2962c1139d95364142dad9ffdfdd29e7">~BamWalker</a>() {
 <a name="l00073"></a>00073 
 <a name="l00074"></a>00074     <span class="keywordflow">if</span> (fp)
 <a name="l00075"></a>00075       bgzf_close(fp);
@@ -93,30 +93,30 @@
 <a name="l00088"></a>00088 
 <a name="l00089"></a>00089   <span class="keywordtype">void</span> printRuleCounts(unordered_map&lt;string, size_t&gt; &amp;rm) <span class="keyword">const</span>;
 <a name="l00090"></a>00090   
-<a name="l00096"></a>00096   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#adf06a1e7152bf59ca19b43d37448139d">setBamWalkerRegion</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&amp; gp);
+<a name="l00096"></a>00096   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a3e9ba6850e320e8de87450bf8dffed95">setBamWalkerRegion</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&amp; gp);
 <a name="l00097"></a>00097 
-<a name="l00104"></a>00104   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a1d5ebf84cf66c41aad6e5e33368b0bfa">setBamWalkerRegions</a>(<span class="keyword">const</span> GenomicRegionVector&amp; grv);
+<a name="l00104"></a>00104   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#aab850a3b1ee77dda5d6e2923353f0eb5">setBamWalkerRegions</a>(<span class="keyword">const</span> GenomicRegionVector&amp; grv);
 <a name="l00105"></a>00105 
 <a name="l00106"></a>00106   <span class="comment">// create the index file for the output bam</span>
 <a name="l00107"></a>00107   <span class="comment">//void MakeIndex();</span>
 <a name="l00108"></a>00108 
-<a name="l00114"></a>00114   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a4efb6d5a2305dc5c47991f0e27ce4f80">printRuntimeMessage</a>(<span class="keyword">const</span> <a class="code" href="structSnowTools_1_1ReadCount.html">ReadCount</a> &amp;rc_main, <span class="keyword">const</span> Read &amp;r) <span class="keyword">const</span>;
+<a name="l00114"></a>00114   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a53a4e735af9c44e32916015904568cd5">printRuntimeMessage</a>(<span class="keyword">const</span> <a class="code" href="structSnowTools_1_1ReadCount.html">ReadCount</a> &amp;rc_main, <span class="keyword">const</span> Read &amp;r) <span class="keyword">const</span>;
 <a name="l00115"></a>00115 
 <a name="l00119"></a>00119   <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSnowTools_1_1BamWalker.html#a0b5aa762d12f803aed463b7ae109f8fc">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1BamWalker.html">BamWalker</a>&amp; b);
 <a name="l00120"></a>00120 
-<a name="l00123"></a>00123   <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a83352fc8cf00047492fcbaaa72da787d">OpenReadBam</a>(<span class="keyword">const</span> std::string&amp; bam);
+<a name="l00123"></a>00123   <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a31f579f732e93b3d273ef0442fd67f04">OpenReadBam</a>(<span class="keyword">const</span> std::string&amp; bam);
 <a name="l00124"></a>00124 
-<a name="l00127"></a>00127   <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BamWalker.html#ac7cf1f46868965ceeb03ff7b87d9d94b">OpenWriteBam</a>(<span class="keyword">const</span> std::string&amp; bam);
+<a name="l00127"></a>00127   <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a94c2e25a4592cc6e57caf7bbb9777fa4">OpenWriteBam</a>(<span class="keyword">const</span> std::string&amp; bam);
 <a name="l00128"></a>00128 
-<a name="l00135"></a>00135   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#ad145cceb9fcfba476fa01bcecec21708">SetMiniRulesCollection</a>(<span class="keyword">const</span> std::string&amp; rules);
+<a name="l00135"></a>00135   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#abd8b034e1f271558a4cfe318483bf224">SetMiniRulesCollection</a>(<span class="keyword">const</span> std::string&amp; rules);
 <a name="l00136"></a>00136   
-<a name="l00139"></a><a class="code" href="classSnowTools_1_1BamWalker.html#ac447f2d89ec41b55d3618914dbd1555f">00139</a>   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#ac447f2d89ec41b55d3618914dbd1555f">SetMiniRulesCollection</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a>&amp; mr) { m_mr = mr; }
+<a name="l00139"></a><a class="code" href="classSnowTools_1_1BamWalker.html#a9e10991e5bc7ab4637688c933fcda1d9">00139</a>   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a9e10991e5bc7ab4637688c933fcda1d9">SetMiniRulesCollection</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a>&amp; mr) { m_mr = mr; }
 <a name="l00140"></a>00140 
-<a name="l00149"></a>00149   <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BamWalker.html#aafce1eb1df65702a6c80b0ee1c2dbf73">GetNextRead</a>(Read &amp;r, std::string&amp; ref);
+<a name="l00149"></a>00149   <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BamWalker.html#ab3ae3db1012fa712c6516e499487a574">GetNextRead</a>(Read &amp;r, std::string&amp; ref);
 <a name="l00150"></a>00150 
-<a name="l00154"></a>00154   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#ae332bf285d91984368cdb20a4244e91d">WriteAlignment</a>(Read &amp;r);
+<a name="l00154"></a>00154   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a5f8402e26f7c7cfe3e35d7ffa51018e8">WriteAlignment</a>(Read &amp;r);
 <a name="l00155"></a>00155 
-<a name="l00158"></a><a class="code" href="classSnowTools_1_1BamWalker.html#ae82c5723ee038a3003e8d165c4dafb8d">00158</a>   <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a>&amp; <a class="code" href="classSnowTools_1_1BamWalker.html#ae82c5723ee038a3003e8d165c4dafb8d">GetMiniRulesCollection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_mr; }
+<a name="l00158"></a><a class="code" href="classSnowTools_1_1BamWalker.html#a569496895a479f9eabe7e91af6bfde89">00158</a>   <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a>&amp; <a class="code" href="classSnowTools_1_1BamWalker.html#a569496895a479f9eabe7e91af6bfde89">GetMiniRulesCollection</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_mr; }
 <a name="l00159"></a>00159 
 <a name="l00160"></a>00160   std::string m_in;
 <a name="l00161"></a>00161   std::string m_out;
