@@ -29,41 +29,90 @@
 </div>
 <div class="contents">
 <h1>BamWalker Class Reference</h1><!-- doxytag: class="SnowTools::BamWalker" -->
+<p>Walk along a BAM or along BAM regions and stream in/out reads.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="BamWalker_8h_source.html">BamWalker.h</a>&gt;</code></p>
 
 <p><a href="classSnowTools_1_1BamWalker-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aaff1e5ceff9b784bc7d203384d49d0ed">BamWalker</a> (const std::string &amp;in)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">BamWalker</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a new <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a> for streaming data in and streaming out to a new BAM file.  <a href="#aaff1e5ceff9b784bc7d203384d49d0ed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d76fbd34bd87b39c9da9d420a0e72c2"></a><!-- doxytag: member="SnowTools::BamWalker::BamWalker" ref="a3d76fbd34bd87b39c9da9d420a0e72c2" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">BamWalker</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct an empty <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a>. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a2962c1139d95364142dad9ffdfdd29e7">~BamWalker</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destroy a <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a> and close all connections to the BAM.  <a href="#a2962c1139d95364142dad9ffdfdd29e7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a0c0730cffc706b670786b830423ccfc0">setBamWalkerRegion</a> (const <a class="el" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a> &amp;gp, std::shared_ptr&lt; hts_idx_t &gt; passed_idx=std::shared_ptr&lt; hts_idx_t &gt;(nullptr))</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a part of the BAM to walk.  <a href="#a0c0730cffc706b670786b830423ccfc0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#ac520c63498ec94087c3a3388b1c18f68">setBamWalkerRegions</a> (const GenomicRegionVector &amp;grv, std::shared_ptr&lt; hts_idx_t &gt; passed_idx=std::shared_ptr&lt; hts_idx_t &gt;(nullptr))</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set up multiple regions.  <a href="#ac520c63498ec94087c3a3388b1c18f68"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a849ff48a8a85042f690cdce75a1169da">makeIndex</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create the index file for the output bam in BAI format.  <a href="#a849ff48a8a85042f690cdce75a1169da"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a575a991ac506a335984434372bfc5ea0">printRuntimeMessage</a> (const <a class="el" href="structSnowTools_1_1ReadCount.html">ReadCount</a> &amp;rc_main, const <a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a31f579f732e93b3d273ef0442fd67f04">OpenReadBam</a> (const std::string &amp;bam)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print a run-time message to stdout.  <a href="#a575a991ac506a335984434372bfc5ea0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31f579f732e93b3d273ef0442fd67f04"></a><!-- doxytag: member="SnowTools::BamWalker::OpenReadBam" ref="a31f579f732e93b3d273ef0442fd67f04" args="(const std::string &amp;bam)" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a31f579f732e93b3d273ef0442fd67f04">OpenReadBam</a> (const std::string &amp;bam)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Open a BAM file for streaming in. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a94c2e25a4592cc6e57caf7bbb9777fa4">OpenWriteBam</a> (const std::string &amp;bam)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Open an NGS file direct from stdin.  <a href="#a94c2e25a4592cc6e57caf7bbb9777fa4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#abd8b034e1f271558a4cfe318483bf224">SetMiniRulesCollection</a> (const std::string &amp;rules)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a9e10991e5bc7ab4637688c933fcda1d9">SetMiniRulesCollection</a> (const <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> &amp;mr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pass a <a class="el" href="classSnowTools_1_1MiniRules.html" title="Define a set of rules for creating a variant bam.">MiniRules</a> script to the BAM.  <a href="#abd8b034e1f271558a4cfe318483bf224"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e10991e5bc7ab4637688c933fcda1d9"></a><!-- doxytag: member="SnowTools::BamWalker::SetMiniRulesCollection" ref="a9e10991e5bc7ab4637688c933fcda1d9" args="(const MiniRulesCollection &amp;mr)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a9e10991e5bc7ab4637688c933fcda1d9">SetMiniRulesCollection</a> (const <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> &amp;mr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Explicitly provide a <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> to this <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a>. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a3ad955b17c2276ea256c778f7c148f2f">GetNextRead</a> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r, bool &amp;rule)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aab1e0522710eb9b34d6ca9dc9272f85b">addBlacklist</a> (<a class="el" href="classSnowTools_1_1GenomicRegionCollection.html">GRC</a> &amp;bl)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retrieve the next read from the BAM.  <a href="#a3ad955b17c2276ea256c778f7c148f2f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aab1e0522710eb9b34d6ca9dc9272f85b"></a><!-- doxytag: member="SnowTools::BamWalker::addBlacklist" ref="aab1e0522710eb9b34d6ca9dc9272f85b" args="(GRC &amp;bl)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aab1e0522710eb9b34d6ca9dc9272f85b">addBlacklist</a> (<a class="el" href="classSnowTools_1_1GenomicRegionCollection.html">GRC</a> &amp;bl)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set regions to not be read from. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a1318dd069374f158cd0a27e474e0db0b">writeAlignment</a> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a569496895a479f9eabe7e91af6bfde89">GetMiniRulesCollection</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a4b9b8ccda58f886b7a456c5a3a537886">MiniRulesToFile</a> (const std::string &amp;file) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a157fdc90043e79241bb6ad6a50d3b0c0">setCountAllRules</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aa69d3e7dc8c03cd121f0251b7c0dcf7f">setStdout</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#abbaf98275cf279ef3dd97549530e3a31">setCram</a> (const std::string &amp;out, const std::string &amp;ref)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write an alignment to the output BAM file.  <a href="#a1318dd069374f158cd0a27e474e0db0b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a569496895a479f9eabe7e91af6bfde89"></a><!-- doxytag: member="SnowTools::BamWalker::GetMiniRulesCollection" ref="a569496895a479f9eabe7e91af6bfde89" args="() const " -->
+const <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a569496895a479f9eabe7e91af6bfde89">GetMiniRulesCollection</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> object used by this <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a>. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b9b8ccda58f886b7a456c5a3a537886"></a><!-- doxytag: member="SnowTools::BamWalker::MiniRulesToFile" ref="a4b9b8ccda58f886b7a456c5a3a537886" args="(const std::string &amp;file) const " -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a4b9b8ccda58f886b7a456c5a3a537886">MiniRulesToFile</a> (const std::string &amp;file) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Send the counts for passed rules to a file. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a157fdc90043e79241bb6ad6a50d3b0c0"></a><!-- doxytag: member="SnowTools::BamWalker::setCountAllRules" ref="a157fdc90043e79241bb6ad6a50d3b0c0" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a157fdc90043e79241bb6ad6a50d3b0c0">setCountAllRules</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a> to count reads for all rules. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa69d3e7dc8c03cd121f0251b7c0dcf7f"></a><!-- doxytag: member="SnowTools::BamWalker::setStdout" ref="aa69d3e7dc8c03cd121f0251b7c0dcf7f" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aa69d3e7dc8c03cd121f0251b7c0dcf7f">setStdout</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a flag to say if we should print reads to stdout. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbaf98275cf279ef3dd97549530e3a31"></a><!-- doxytag: member="SnowTools::BamWalker::setCram" ref="abbaf98275cf279ef3dd97549530e3a31" args="(const std::string &amp;out, const std::string &amp;ref)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#abbaf98275cf279ef3dd97549530e3a31">setCram</a> (const std::string &amp;out, const std::string &amp;ref)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a flag to say if we should print reads to CRAM format. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44d06abeaf6bb6529f927d8339a0816c"></a><!-- doxytag: member="SnowTools::BamWalker::setPrintHeader" ref="a44d06abeaf6bb6529f927d8339a0816c" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>setPrintHeader</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a2f8b481a12b9b3d555e7ef5d72a7504d">setStripAllTags</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a9a4b8aa57ecc58dad95a3399aa4f8a74">setStripTags</a> (const std::string &amp;list)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aa27b8bf65198e09866edbaff08d1fdd6">setVerbose</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a1e6b8f701b791d3d500a1cfdb094d42a">displayMiniRulesCollection</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bam_hdr_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a28de93624ea4a7c46d914eebe5b8e2db">header</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a6b394d470631995333bd5aba90eb3acf">SetWriteHeader</a> (bam_hdr_t *hdr)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#af230f50845671d7e9da189b1fe70f0fa">setReadLimit</a> (int lim)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aece1b2bfe33bf63a07845abdd909d7f3">setReadKeepLimit</a> (int lim)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#ac6cb48261b2055e553b6efbafed4197b">resetAll</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f8b481a12b9b3d555e7ef5d72a7504d"></a><!-- doxytag: member="SnowTools::BamWalker::setStripAllTags" ref="a2f8b481a12b9b3d555e7ef5d72a7504d" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a2f8b481a12b9b3d555e7ef5d72a7504d">setStripAllTags</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the output bam to remove all alignment tags. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a4b8aa57ecc58dad95a3399aa4f8a74"></a><!-- doxytag: member="SnowTools::BamWalker::setStripTags" ref="a9a4b8aa57ecc58dad95a3399aa4f8a74" args="(const std::string &amp;list)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a9a4b8aa57ecc58dad95a3399aa4f8a74">setStripTags</a> (const std::string &amp;list)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a list of tags to strip. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa27b8bf65198e09866edbaff08d1fdd6"></a><!-- doxytag: member="SnowTools::BamWalker::setVerbose" ref="aa27b8bf65198e09866edbaff08d1fdd6" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aa27b8bf65198e09866edbaff08d1fdd6">setVerbose</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set to have verbose actions. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e6b8f701b791d3d500a1cfdb094d42a"></a><!-- doxytag: member="SnowTools::BamWalker::displayMiniRulesCollection" ref="a1e6b8f701b791d3d500a1cfdb094d42a" args="() const " -->
+std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a1e6b8f701b791d3d500a1cfdb094d42a">displayMiniRulesCollection</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> as a string. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28de93624ea4a7c46d914eebe5b8e2db"></a><!-- doxytag: member="SnowTools::BamWalker::header" ref="a28de93624ea4a7c46d914eebe5b8e2db" args="() const " -->
+bam_hdr_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a28de93624ea4a7c46d914eebe5b8e2db">header</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return a pointer to the BAM header. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b394d470631995333bd5aba90eb3acf"></a><!-- doxytag: member="SnowTools::BamWalker::SetWriteHeader" ref="a6b394d470631995333bd5aba90eb3acf" args="(bam_hdr_t *hdr)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a6b394d470631995333bd5aba90eb3acf">SetWriteHeader</a> (bam_hdr_t *hdr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Explicitly provide the output BAM a header. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af230f50845671d7e9da189b1fe70f0fa"></a><!-- doxytag: member="SnowTools::BamWalker::setReadLimit" ref="af230f50845671d7e9da189b1fe70f0fa" args="(int lim)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#af230f50845671d7e9da189b1fe70f0fa">setReadLimit</a> (int lim)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the limit for total number of reads seen. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aece1b2bfe33bf63a07845abdd909d7f3"></a><!-- doxytag: member="SnowTools::BamWalker::setReadKeepLimit" ref="aece1b2bfe33bf63a07845abdd909d7f3" args="(int lim)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#aece1b2bfe33bf63a07845abdd909d7f3">setReadKeepLimit</a> (int lim)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the limit for total number of reads kept. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6cb48261b2055e553b6efbafed4197b"></a><!-- doxytag: member="SnowTools::BamWalker::resetAll" ref="ac6cb48261b2055e553b6efbafed4197b" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#ac6cb48261b2055e553b6efbafed4197b">resetAll</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reset all the counters and regions, but keep the loaded index. <br/></td></tr>
 <tr><td colspan="2"><h2>Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b472c034acab7bbe12df7426cd85ce"></a><!-- doxytag: member="SnowTools::BamWalker::m_in" ref="a60b472c034acab7bbe12df7426cd85ce" args="" -->
 std::string&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_in</b></td></tr>
@@ -122,10 +171,12 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_seen</b> =
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad46b0bd263055dcaac420ef5d4e341c7"></a><!-- doxytag: member="SnowTools::BamWalker::m_num_reads_kept" ref="ad46b0bd263055dcaac420ef5d4e341c7" args="" -->
 int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> = 0</td></tr>
 <tr><td colspan="2"><h2>Friends</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a0b5aa762d12f803aed463b7ae109f8fc">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> &amp;b)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b5aa762d12f803aed463b7ae109f8fc"></a><!-- doxytag: member="SnowTools::BamWalker::operator&lt;&lt;" ref="a0b5aa762d12f803aed463b7ae109f8fc" args="(std::ostream &amp;out, const BamWalker &amp;b)" -->
+std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWalker.html#a0b5aa762d12f803aed463b7ae109f8fc">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> &amp;b)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print out some basic info about this walker, including Minz0iRules. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Walk along a BAM or along BAM regions and stream in/out reads </p>
+<p>Walk along a BAM or along BAM regions and stream in/out reads. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aaff1e5ceff9b784bc7d203384d49d0ed"></a><!-- doxytag: member="SnowTools::BamWalker::BamWalker" ref="aaff1e5ceff9b784bc7d203384d49d0ed" args="(const std::string &amp;in)" -->
 <div class="memitem">
@@ -142,26 +193,9 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Construct a new <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> for streaming data in and streaming out to a new BAM file.</p>
-<p>This constructor will open the BAM file and read the header. It will also open the out BAM file. Construct a new <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> for reading a BAM </p>
 
-</div>
-</div>
-<a class="anchor" id="a3d76fbd34bd87b39c9da9d420a0e72c2"></a><!-- doxytag: member="SnowTools::BamWalker::BamWalker" ref="a3d76fbd34bd87b39c9da9d420a0e72c2" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Construct an empty <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> </p>
+<p>Construct a new <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a> for streaming data in and streaming out to a new BAM file. </p>
+<p>This constructor will open the BAM file and read the header. It will also open the out BAM file. Construct a new <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a> for reading a BAM </p>
 
 </div>
 </div>
@@ -179,67 +213,13 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Destroy a <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> and close all connections to the BAM</p>
+
+<p>Destroy a <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a> and close all connections to the BAM. </p>
 <p>Calling the destructor will take care of all of the C-style dealloc calls required within HTSlib to close a BAM or SAM file. </p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aab1e0522710eb9b34d6ca9dc9272f85b"></a><!-- doxytag: member="SnowTools::BamWalker::addBlacklist" ref="aab1e0522710eb9b34d6ca9dc9272f85b" args="(GRC &amp;bl)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void addBlacklist </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classSnowTools_1_1GenomicRegionCollection.html">GRC</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>bl</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set regions to not be read from </p>
-
-</div>
-</div>
-<a class="anchor" id="a1e6b8f701b791d3d500a1cfdb094d42a"></a><!-- doxytag: member="SnowTools::BamWalker::displayMiniRulesCollection" ref="a1e6b8f701b791d3d500a1cfdb094d42a" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string displayMiniRulesCollection </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Return the <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> as a string </p>
-
-</div>
-</div>
-<a class="anchor" id="a569496895a479f9eabe7e91af6bfde89"></a><!-- doxytag: member="SnowTools::BamWalker::GetMiniRulesCollection" ref="a569496895a479f9eabe7e91af6bfde89" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a>&amp; GetMiniRulesCollection </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Return the <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> object used by this <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> </p>
-
-</div>
-</div>
 <a class="anchor" id="a3ad955b17c2276ea256c778f7c148f2f"></a><!-- doxytag: member="SnowTools::BamWalker::GetNextRead" ref="a3ad955b17c2276ea256c778f7c148f2f" args="(BamRead &amp;r, bool &amp;rule)" -->
 <div class="memitem">
 <div class="memproto">
@@ -264,27 +244,10 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Retrieve the next read from the BAM.</p>
+
+<p>Retrieve the next read from the BAM. </p>
 <p>If a <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> is defined for this BAM will grab the next valid read. r Read to fill with data rule bool identifying if this read passed the rules </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if the next read is available </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a28de93624ea4a7c46d914eebe5b8e2db"></a><!-- doxytag: member="SnowTools::BamWalker::header" ref="a28de93624ea4a7c46d914eebe5b8e2db" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bam_hdr_t* header </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Return a pointer to the BAM header </p>
 
 </div>
 </div>
@@ -302,46 +265,9 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Create the index file for the output bam in BAI format.</p>
+
+<p>Create the index file for the output bam in BAI format. </p>
 <p>This will make a call to HTSlib bam_index_build for the output file. </p>
-
-</div>
-</div>
-<a class="anchor" id="a4b9b8ccda58f886b7a456c5a3a537886"></a><!-- doxytag: member="SnowTools::BamWalker::MiniRulesToFile" ref="a4b9b8ccda58f886b7a456c5a3a537886" args="(const std::string &amp;file) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MiniRulesToFile </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>file</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Send the counts for passed rules to a file </p>
-
-</div>
-</div>
-<a class="anchor" id="a31f579f732e93b3d273ef0442fd67f04"></a><!-- doxytag: member="SnowTools::BamWalker::OpenReadBam" ref="a31f579f732e93b3d273ef0442fd67f04" args="(const std::string &amp;bam)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool OpenReadBam </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>bam</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Open a BAM file for streaming in </p>
 
 </div>
 </div>
@@ -360,7 +286,9 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Open an NGS file direct from stdin Open a BAM file for streaming out </p>
+
+<p>Open an NGS file direct from stdin. </p>
+<p>Open a BAM file for streaming out </p>
 
 </div>
 </div>
@@ -388,26 +316,9 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Print a run-time message to stdout.</p>
-<p>Prints a message about all of the reads that have been visited, and informaiton about the current read </p>
 
-</div>
-</div>
-<a class="anchor" id="ac6cb48261b2055e553b6efbafed4197b"></a><!-- doxytag: member="SnowTools::BamWalker::resetAll" ref="ac6cb48261b2055e553b6efbafed4197b" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void resetAll </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Reset all the counters and regions, but keep the loaded index </p>
+<p>Print a run-time message to stdout. </p>
+<p>Prints a message about all of the reads that have been visited, and informaiton about the current read </p>
 
 </div>
 </div>
@@ -435,7 +346,8 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Set a part of the BAM to walk.</p>
+
+<p>Set a part of the BAM to walk. </p>
 <p>This will set the BAM pointer to the given region. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
@@ -470,7 +382,9 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Set up multiple regions. Overwrites current regions.</p>
+
+<p>Set up multiple regions. </p>
+<p>Overwrites current regions.</p>
 <p>This will set the BAM pointer to the first element of the input list. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
@@ -478,71 +392,6 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a157fdc90043e79241bb6ad6a50d3b0c0"></a><!-- doxytag: member="SnowTools::BamWalker::setCountAllRules" ref="a157fdc90043e79241bb6ad6a50d3b0c0" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setCountAllRules </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set the <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> to count reads for all rules </p>
-
-</div>
-</div>
-<a class="anchor" id="abbaf98275cf279ef3dd97549530e3a31"></a><!-- doxytag: member="SnowTools::BamWalker::setCram" ref="abbaf98275cf279ef3dd97549530e3a31" args="(const std::string &amp;out, const std::string &amp;ref)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setCram </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>ref</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set a flag to say if we should print reads to CRAM format </p>
-
-</div>
-</div>
-<a class="anchor" id="a9e10991e5bc7ab4637688c933fcda1d9"></a><!-- doxytag: member="SnowTools::BamWalker::SetMiniRulesCollection" ref="a9e10991e5bc7ab4637688c933fcda1d9" args="(const MiniRulesCollection &amp;mr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetMiniRulesCollection </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>mr</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Explicitly provide a <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a> to this <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> </p>
 
 </div>
 </div>
@@ -561,144 +410,15 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Pass a <a class="el" href="classSnowTools_1_1MiniRules.html">MiniRules</a> script to the BAM.</p>
-<p>This will call the constructor of <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a>, and parse the provides rules and add it as a rule set to this <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a>. </p>
+
+<p>Pass a <a class="el" href="classSnowTools_1_1MiniRules.html" title="Define a set of rules for creating a variant bam.">MiniRules</a> script to the BAM. </p>
+<p>This will call the constructor of <a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a>, and parse the provides rules and add it as a rule set to this <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads.">BamWalker</a>. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>rules</em>&nbsp;</td><td>A string of rules, or a file pointing to a rules script </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="aece1b2bfe33bf63a07845abdd909d7f3"></a><!-- doxytag: member="SnowTools::BamWalker::setReadKeepLimit" ref="aece1b2bfe33bf63a07845abdd909d7f3" args="(int lim)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setReadKeepLimit </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>lim</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set the limit for total number of reads kept </p>
-
-</div>
-</div>
-<a class="anchor" id="af230f50845671d7e9da189b1fe70f0fa"></a><!-- doxytag: member="SnowTools::BamWalker::setReadLimit" ref="af230f50845671d7e9da189b1fe70f0fa" args="(int lim)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setReadLimit </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>lim</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set the limit for total number of reads seen </p>
-
-</div>
-</div>
-<a class="anchor" id="aa69d3e7dc8c03cd121f0251b7c0dcf7f"></a><!-- doxytag: member="SnowTools::BamWalker::setStdout" ref="aa69d3e7dc8c03cd121f0251b7c0dcf7f" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setStdout </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set a flag to say if we should print reads to stdout </p>
-
-</div>
-</div>
-<a class="anchor" id="a2f8b481a12b9b3d555e7ef5d72a7504d"></a><!-- doxytag: member="SnowTools::BamWalker::setStripAllTags" ref="a2f8b481a12b9b3d555e7ef5d72a7504d" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setStripAllTags </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set the output bam to remove all alignment tags </p>
-
-</div>
-</div>
-<a class="anchor" id="a9a4b8aa57ecc58dad95a3399aa4f8a74"></a><!-- doxytag: member="SnowTools::BamWalker::setStripTags" ref="a9a4b8aa57ecc58dad95a3399aa4f8a74" args="(const std::string &amp;list)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setStripTags </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>list</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set a list of tags to strip </p>
-
-</div>
-</div>
-<a class="anchor" id="aa27b8bf65198e09866edbaff08d1fdd6"></a><!-- doxytag: member="SnowTools::BamWalker::setVerbose" ref="aa27b8bf65198e09866edbaff08d1fdd6" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void setVerbose </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Set to have verbose actions </p>
-
-</div>
-</div>
-<a class="anchor" id="a6b394d470631995333bd5aba90eb3acf"></a><!-- doxytag: member="SnowTools::BamWalker::SetWriteHeader" ref="a6b394d470631995333bd5aba90eb3acf" args="(bam_hdr_t *hdr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SetWriteHeader </td>
-          <td>(</td>
-          <td class="paramtype">bam_hdr_t *&nbsp;</td>
-          <td class="paramname"> <em>hdr</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Explicitly provide the output BAM a header </p>
 
 </div>
 </div>
@@ -717,42 +437,14 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> =
       </table>
 </div>
 <div class="memdoc">
-<p>Write an alignment to the output BAM file </p>
+
+<p>Write an alignment to the output BAM file. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>r</em>&nbsp;</td><td>The <a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> to save </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>r</em>&nbsp;</td><td>The <a class="el" href="classSnowTools_1_1BamRead.html" title="Class to store and interact with an HTSLib bam1_t read.">BamRead</a> to save </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<hr/><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" id="a0b5aa762d12f803aed463b7ae109f8fc"></a><!-- doxytag: member="SnowTools::BamWalker::operator&lt;&lt;" ref="a0b5aa762d12f803aed463b7ae109f8fc" args="(std::ostream &amp;out, const BamWalker &amp;b)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>b</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [friend]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Print out some basic info about this walker, including Minz0iRules </p>
 
 </div>
 </div>

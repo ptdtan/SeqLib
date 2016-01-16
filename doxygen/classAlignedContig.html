@@ -61,8 +61,12 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f60313d574c54ef458116b80b51ca57"></a><!-- doxytag: member="AlignedContig::getAllBreakPointPointers" ref="a9f60313d574c54ef458116b80b51ca57" args="() const " -->
 std::vector&lt; const BreakPoint * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><b>getAllBreakPointPointers</b> () const </td></tr>
 <tr><td colspan="2"><h2>Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignedContig.html#a0b76fb5ff3dd0df0ce2c9aaf9bfdb511">samrecord</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignedContig.html#a96ae247e44210e29ab6e56f51906559e">window</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b76fb5ff3dd0df0ce2c9aaf9bfdb511"></a><!-- doxytag: member="AlignedContig::samrecord" ref="a0b76fb5ff3dd0df0ce2c9aaf9bfdb511" args="" -->
+std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignedContig.html#a0b76fb5ff3dd0df0ce2c9aaf9bfdb511">samrecord</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">the original SAM record <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96ae247e44210e29ab6e56f51906559e"></a><!-- doxytag: member="AlignedContig::window" ref="a96ae247e44210e29ab6e56f51906559e" args="" -->
+<a class="el" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignedContig.html#a96ae247e44210e29ab6e56f51906559e">window</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">reference window from where this contig was assembled <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bac94d4a9e7d98d5c8b50f20f800661"></a><!-- doxytag: member="AlignedContig::m_local_breaks" ref="a2bac94d4a9e7d98d5c8b50f20f800661" args="" -->
 std::vector&lt; BreakPoint &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><b>m_local_breaks</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5058ce0c76e26db0f15031695dca9967"></a><!-- doxytag: member="AlignedContig::m_global_bp" ref="a5058ce0c76e26db0f15031695dca9967" args="" -->
@@ -447,35 +451,6 @@ std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="
 </div>
 <div class="memdoc">
 <p>loop through all of the breakpoints and calculate the split read support for each. Requires alignedReads to have been run first (will error if not run). </p>
-
-</div>
-</div>
-<hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="a0b76fb5ff3dd0df0ce2c9aaf9bfdb511"></a><!-- doxytag: member="AlignedContig::samrecord" ref="a0b76fb5ff3dd0df0ce2c9aaf9bfdb511" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string <a class="el" href="classAlignedContig.html#a0b76fb5ff3dd0df0ce2c9aaf9bfdb511">samrecord</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>the original SAM record </p>
-
-</div>
-</div>
-<a class="anchor" id="a96ae247e44210e29ab6e56f51906559e"></a><!-- doxytag: member="AlignedContig::window" ref="a96ae247e44210e29ab6e56f51906559e" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a> <a class="el" href="classAlignedContig.html#a96ae247e44210e29ab6e56f51906559e">window</a></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>reference window from where this contig was assembled </p>
 
 </div>
 </div>

@@ -29,46 +29,55 @@
 </div>
 <div class="contents">
 <h1>BWAWrapper Class Reference</h1><!-- doxytag: class="SnowTools::BWAWrapper" -->
+<p>Calls BWA-MEM on sequence queries and returns aligned reads, all in memory.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="BWAWrapper_8h_source.html">BWAWrapper.h</a>&gt;</code></p>
 
 <p><a href="classSnowTools_1_1BWAWrapper-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">BWAWrapper</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d9790b13b354f5f661522156f4fc55d"></a><!-- doxytag: member="SnowTools::BWAWrapper::BWAWrapper" ref="a8d9790b13b354f5f661522156f4fc55d" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">BWAWrapper</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a new <a class="el" href="classSnowTools_1_1BWAWrapper.html" title="Calls BWA-MEM on sequence queries and returns aligned reads, all in memory.">BWAWrapper</a>. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">~BWAWrapper</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#aed657fe3d8a2f726a262bb8e7795d06a">ChrIDToName</a> (int id) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bam_hdr_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a340f07bbd60a0e15dbce4c9f8fe15f42">HeaderFromIndex</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bam_hdr_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a37716a4f8f8f94ba53a03b61f99f5c6a">sam_hdr_read2</a> (const std::string &amp;hdr) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destroy the <a class="el" href="classSnowTools_1_1BWAWrapper.html" title="Calls BWA-MEM on sequence queries and returns aligned reads, all in memory.">BWAWrapper</a>.  <a href="#a5205d95c7b8d0db7818032c4c0baee93"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed657fe3d8a2f726a262bb8e7795d06a"></a><!-- doxytag: member="SnowTools::BWAWrapper::ChrIDToName" ref="aed657fe3d8a2f726a262bb8e7795d06a" args="(int id) const " -->
+std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#aed657fe3d8a2f726a262bb8e7795d06a">ChrIDToName</a> (int id) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retrieve the sequence name from its ID </p>
+<dl><dt><b>Exceptions:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>throws</em>&nbsp;</td><td>an out_of_bounds if id not found. </td></tr>
+  </table>
+  </dd>
+</dl>
+<br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a340f07bbd60a0e15dbce4c9f8fe15f42"></a><!-- doxytag: member="SnowTools::BWAWrapper::HeaderFromIndex" ref="a340f07bbd60a0e15dbce4c9f8fe15f42" args="() const " -->
+bam_hdr_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a340f07bbd60a0e15dbce4c9f8fe15f42">HeaderFromIndex</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a bam_hdr_t from the loaded index files. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37716a4f8f8f94ba53a03b61f99f5c6a"></a><!-- doxytag: member="SnowTools::BWAWrapper::sam_hdr_read2" ref="a37716a4f8f8f94ba53a03b61f99f5c6a" args="(const std::string &amp;hdr) const " -->
+bam_hdr_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a37716a4f8f8f94ba53a03b61f99f5c6a">sam_hdr_read2</a> (const std::string &amp;hdr) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a bam_hdr_t from a header string. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac76bbbe015fe16c1cb7e96220be73a2d"></a><!-- doxytag: member="SnowTools::BWAWrapper::alignSingleSequence" ref="ac76bbbe015fe16c1cb7e96220be73a2d" args="(const std::string &amp;seq, const std::string &amp;name, BamReadVector &amp;vec, double keep_sec_with_frac_of_primary_score, int max_secondary)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>alignSingleSequence</b> (const std::string &amp;seq, const std::string &amp;name, BamReadVector &amp;vec, double keep_sec_with_frac_of_primary_score, int max_secondary)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a5835f1754c0042ef1dd2af3372cef5fa">constructIndex</a> (const USeqVector &amp;v)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a new bwa index for this object.  <a href="#a5835f1754c0042ef1dd2af3372cef5fa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#af5c4342479461e5319eebf9e792ef1b4">retrieveIndex</a> (const std::string &amp;file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Retrieve a bwa index object from disk.  <a href="#af5c4342479461e5319eebf9e792ef1b4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#ab5462eed3b898007c3dd471506f97414">writeIndex</a> (const std::string &amp;index_name)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bwaidx_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">getIndex</a> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a3cb8d82ae69775d7d5870dce3bf1edfd">refCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dump the stored index to files Note that this does not write the fasta itself.  <a href="#ab5462eed3b898007c3dd471506f97414"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb73aa5fc750eff0735bfcb90b9abd10"></a><!-- doxytag: member="SnowTools::BWAWrapper::getIndex" ref="acb73aa5fc750eff0735bfcb90b9abd10" args="() const " -->
+bwaidx_t *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">getIndex</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the index. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3cb8d82ae69775d7d5870dce3bf1edfd"></a><!-- doxytag: member="SnowTools::BWAWrapper::refCount" ref="a3cb8d82ae69775d7d5870dce3bf1edfd" args="() const " -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a3cb8d82ae69775d7d5870dce3bf1edfd">refCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of reference contigs in current index. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#ae4bf94f490a3cbbfb50e0ed109224ee5">getInfo</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get information about the index.  <a href="#ae4bf94f490a3cbbfb50e0ed109224ee5"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Calls BWA-MEM on sequence queries and returns aligned reads, all in memory </p>
+<p>Calls BWA-MEM on sequence queries and returns aligned reads, all in memory. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8d9790b13b354f5f661522156f4fc55d"></a><!-- doxytag: member="SnowTools::BWAWrapper::BWAWrapper" ref="a8d9790b13b354f5f661522156f4fc55d" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSnowTools_1_1BWAWrapper.html">BWAWrapper</a> </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Create a new <a class="el" href="classSnowTools_1_1BWAWrapper.html">BWAWrapper</a> </p>
-
-</div>
-</div>
 <a class="anchor" id="a5205d95c7b8d0db7818032c4c0baee93"></a><!-- doxytag: member="SnowTools::BWAWrapper::~BWAWrapper" ref="a5205d95c7b8d0db7818032c4c0baee93" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -83,37 +92,13 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>alignSingleSequence</
       </table>
 </div>
 <div class="memdoc">
-<p>Destroy the <a class="el" href="classSnowTools_1_1BWAWrapper.html">BWAWrapper</a></p>
+
+<p>Destroy the <a class="el" href="classSnowTools_1_1BWAWrapper.html" title="Calls BWA-MEM on sequence queries and returns aligned reads, all in memory.">BWAWrapper</a>. </p>
 <p>This will call the destructor on the index and options stucture </p>
 
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aed657fe3d8a2f726a262bb8e7795d06a"></a><!-- doxytag: member="SnowTools::BWAWrapper::ChrIDToName" ref="aed657fe3d8a2f726a262bb8e7795d06a" args="(int id) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string ChrIDToName </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>id</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Retrieve the sequence name from its ID </p>
-<dl><dt><b>Exceptions:</b></dt><dd>
-  <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>throws</em>&nbsp;</td><td>an out_of_bounds if id not found </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a5835f1754c0042ef1dd2af3372cef5fa"></a><!-- doxytag: member="SnowTools::BWAWrapper::constructIndex" ref="a5835f1754c0042ef1dd2af3372cef5fa" args="(const USeqVector &amp;v)" -->
 <div class="memitem">
 <div class="memproto">
@@ -129,6 +114,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>alignSingleSequence</
       </table>
 </div>
 <div class="memdoc">
+
 <p>Construct a new bwa index for this object. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
@@ -136,24 +122,6 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>alignSingleSequence</
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="acb73aa5fc750eff0735bfcb90b9abd10"></a><!-- doxytag: member="SnowTools::BWAWrapper::getIndex" ref="acb73aa5fc750eff0735bfcb90b9abd10" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bwaidx_t* getIndex </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Return the index </p>
 
 </div>
 </div>
@@ -171,44 +139,9 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>alignSingleSequence</
       </table>
 </div>
 <div class="memdoc">
-<p>Get information about the index </p>
+
+<p>Get information about the index. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>string containing summary of index </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a340f07bbd60a0e15dbce4c9f8fe15f42"></a><!-- doxytag: member="SnowTools::BWAWrapper::HeaderFromIndex" ref="a340f07bbd60a0e15dbce4c9f8fe15f42" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bam_hdr_t* HeaderFromIndex </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Create a bam_hdr_t from the loaded index files </p>
-
-</div>
-</div>
-<a class="anchor" id="a3cb8d82ae69775d7d5870dce3bf1edfd"></a><!-- doxytag: member="SnowTools::BWAWrapper::refCount" ref="a3cb8d82ae69775d7d5870dce3bf1edfd" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int refCount </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Get the number of reference contigs in current index </p>
 
 </div>
 </div>
@@ -227,32 +160,14 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>alignSingleSequence</
       </table>
 </div>
 <div class="memdoc">
-<p>Retrieve a bwa index object from disk </p>
+
+<p>Retrieve a bwa index object from disk. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>path a to an index fasta (index with bwa index) </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a37716a4f8f8f94ba53a03b61f99f5c6a"></a><!-- doxytag: member="SnowTools::BWAWrapper::sam_hdr_read2" ref="a37716a4f8f8f94ba53a03b61f99f5c6a" args="(const std::string &amp;hdr) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bam_hdr_t* sam_hdr_read2 </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>hdr</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Construct a bam_hdr_t from a header string </p>
 
 </div>
 </div>
@@ -271,7 +186,8 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><b>alignSingleSequence</
       </table>
 </div>
 <div class="memdoc">
-<p>Dump the stored index to files Note that this does not write the fasta itself </p>
+
+<p>Dump the stored index to files Note that this does not write the fasta itself. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>index_name</em>&nbsp;</td><td>write index files (*.sai, *.pac, *.ann, *.bwt, *.amb) </td></tr>

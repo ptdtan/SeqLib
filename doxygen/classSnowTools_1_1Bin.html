@@ -29,43 +29,38 @@
 </div>
 <div class="contents">
 <h1>Bin Class Reference</h1><!-- doxytag: class="SnowTools::Bin" -->
+<p>Stores one bin in a <a class="el" href="classSnowTools_1_1Histogram.html" title="Class to store histogram of numeric values.">Histogram</a>.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Histogram_8h_source.html">Histogram.h</a>&gt;</code></p>
 
 <p><a href="classSnowTools_1_1Bin-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#af40e27e5f302b776897021bb651ea107">Bin</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#a5ccd556b543fb53df0ba87f54d8082e4">getCount</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af40e27e5f302b776897021bb651ea107"></a><!-- doxytag: member="SnowTools::Bin::Bin" ref="af40e27e5f302b776897021bb651ea107" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#af40e27e5f302b776897021bb651ea107">Bin</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a new object with 0 count and range [0,1]. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ccd556b543fb53df0ba87f54d8082e4"></a><!-- doxytag: member="SnowTools::Bin::getCount" ref="a5ccd556b543fb53df0ba87f54d8082e4" args="() const " -->
+int32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#a5ccd556b543fb53df0ba87f54d8082e4">getCount</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the number of counts in this histogram bin. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#a96e4833db94cac76d18baaeca72fac02">contains</a> (const int32_t &amp;elem) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#a4848183e1dc5af23c419da91893012ef">operator&lt;</a> (const <a class="el" href="classSnowTools_1_1Bin.html">Bin</a> &amp;b) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if a value fits within the range of this bin.  <a href="#a96e4833db94cac76d18baaeca72fac02"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4848183e1dc5af23c419da91893012ef"></a><!-- doxytag: member="SnowTools::Bin::operator&lt;" ref="a4848183e1dc5af23c419da91893012ef" args="(const Bin &amp;b) const " -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#a4848183e1dc5af23c419da91893012ef">operator&lt;</a> (const <a class="el" href="classSnowTools_1_1Bin.html">Bin</a> &amp;b) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Define bin comparison operator by location of left bound, then right. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSnowTools_1_1Bin.html">Bin</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#abce38631cdb2c7ebcfb742ce5b381a1a">operator--</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Decrement the histogram bin by one.  <a href="#abce38631cdb2c7ebcfb742ce5b381a1a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSnowTools_1_1Bin.html">Bin</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#abe1b735a3bece3458758d298f51a89eb">operator++</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Increment the histogram bin by one.  <a href="#abe1b735a3bece3458758d298f51a89eb"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Friends</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9527905d6ce1859de64c20b8caa2ba1"></a><!-- doxytag: member="SnowTools::Bin::Histogram" ref="ad9527905d6ce1859de64c20b8caa2ba1" args="" -->
 class&nbsp;</td><td class="memItemRight" valign="bottom"><b>Histogram</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#ade162cc7977d54a853bf53ca12a44aab">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1Bin.html">Bin</a> &amp;b)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ade162cc7977d54a853bf53ca12a44aab"></a><!-- doxytag: member="SnowTools::Bin::operator&lt;&lt;" ref="ade162cc7977d54a853bf53ca12a44aab" args="(std::ostream &amp;out, const Bin &amp;b)" -->
+std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Bin.html#ade162cc7977d54a853bf53ca12a44aab">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1Bin.html">Bin</a> &amp;b)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Output the bin in format "start range, end range, count". <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Stores one bin in a <a class="el" href="classSnowTools_1_1Histogram.html">Histogram</a> </p>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="af40e27e5f302b776897021bb651ea107"></a><!-- doxytag: member="SnowTools::Bin::Bin" ref="af40e27e5f302b776897021bb651ea107" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSnowTools_1_1Bin.html">Bin</a> </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Construct a new object with 0 count and range [0,1] </p>
-
-</div>
-</div>
+<p>Stores one bin in a <a class="el" href="classSnowTools_1_1Histogram.html" title="Class to store histogram of numeric values.">Histogram</a>. </p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a96e4833db94cac76d18baaeca72fac02"></a><!-- doxytag: member="SnowTools::Bin::contains" ref="a96e4833db94cac76d18baaeca72fac02" args="(const int32_t &amp;elem) const " -->
 <div class="memitem">
@@ -82,7 +77,8 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>Histogram</b></td></
       </table>
 </div>
 <div class="memdoc">
-<p>Check if a value fits within the range of this bin </p>
+
+<p>Check if a value fits within the range of this bin. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>dist</em>&nbsp;</td><td>Distance value to check if its in this range </td></tr>
@@ -100,24 +96,6 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>Histogram</b></td></
 
 </div>
 </div>
-<a class="anchor" id="a5ccd556b543fb53df0ba87f54d8082e4"></a><!-- doxytag: member="SnowTools::Bin::getCount" ref="a5ccd556b543fb53df0ba87f54d8082e4" args="() const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int32_t getCount </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const<code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Return the number of counts in this histogram bin </p>
-
-</div>
-</div>
 <a class="anchor" id="abe1b735a3bece3458758d298f51a89eb"></a><!-- doxytag: member="SnowTools::Bin::operator++" ref="abe1b735a3bece3458758d298f51a89eb" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -132,7 +110,9 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>Histogram</b></td></
       </table>
 </div>
 <div class="memdoc">
-<p>Increment the histogram bin by one. Note that this is the prefix version only </p>
+
+<p>Increment the histogram bin by one. </p>
+<p>Note that this is the prefix version only </p>
 
 </div>
 </div>
@@ -150,55 +130,9 @@ class&nbsp;</td><td class="memItemRight" valign="bottom"><b>Histogram</b></td></
       </table>
 </div>
 <div class="memdoc">
-<p>Decrement the histogram bin by one. Note that this is the prefix version only </p>
 
-</div>
-</div>
-<a class="anchor" id="a4848183e1dc5af23c419da91893012ef"></a><!-- doxytag: member="SnowTools::Bin::operator&lt;" ref="a4848183e1dc5af23c419da91893012ef" args="(const Bin &amp;b) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSnowTools_1_1Bin.html">Bin</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>b</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Define bin comparison operator by location of left bound, then right </p>
-
-</div>
-</div>
-<hr/><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" id="ade162cc7977d54a853bf53ca12a44aab"></a><!-- doxytag: member="SnowTools::Bin::operator&lt;&lt;" ref="ade162cc7977d54a853bf53ca12a44aab" args="(std::ostream &amp;out, const Bin &amp;b)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSnowTools_1_1Bin.html">Bin</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>b</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [friend]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Output the bin in format "start range, end range, count" </p>
+<p>Decrement the histogram bin by one. </p>
+<p>Note that this is the prefix version only </p>
 
 </div>
 </div>

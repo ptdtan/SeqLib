@@ -34,58 +34,33 @@
 <p><a href="classSnowTools_1_1STCoverage-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#ab9bf3fbe7292f8c21d572881f2f71aa3">settleCoverage</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8bb3912a3ce86b15842e79d0b421204"></a><!-- doxytag: member="SnowTools::STCoverage::clear" ref="ac8bb3912a3ce86b15842e79d0b421204" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clear the coverage map. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9bf3fbe7292f8c21d572881f2f71aa3"></a><!-- doxytag: member="SnowTools::STCoverage::settleCoverage" ref="ab9bf3fbe7292f8c21d572881f2f71aa3" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>settleCoverage</b> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#afd1d3b9a795993c0fa72406fea0d3764">addRead</a> (const <a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r, bool full_length=false)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#a79b6a7f16ffa91fd3e478f4ed3643f58">STCoverage</a> (const <a class="el" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a> &amp;gr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add a read to this coverage track.  <a href="#afd1d3b9a795993c0fa72406fea0d3764"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a79b6a7f16ffa91fd3e478f4ed3643f58"></a><!-- doxytag: member="SnowTools::STCoverage::STCoverage" ref="a79b6a7f16ffa91fd3e478f4ed3643f58" args="(const GenomicRegion &amp;gr)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#a79b6a7f16ffa91fd3e478f4ed3643f58">STCoverage</a> (const <a class="el" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a> &amp;gr)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Make a new coverage object at interval gr. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f63aca58dc3da133c176674df29b3dc"></a><!-- doxytag: member="SnowTools::STCoverage::maxCov" ref="a1f63aca58dc3da133c176674df29b3dc" args="() const " -->
 uint16_t&nbsp;</td><td class="memItemRight" valign="bottom"><b>maxCov</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">STCoverage</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fa980c62dd117ba8d55c64cedc3b302"></a><!-- doxytag: member="SnowTools::STCoverage::STCoverage" ref="a5fa980c62dd117ba8d55c64cedc3b302" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">STCoverage</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Make an empty coverage. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#a70b606eb3ed43bc1cc965c0366784d62">ToBedgraph</a> (<a class="el" href="classogzstream.html">ogzstream</a> *o, const bam_hdr_t *h) const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#aa5ce17682a93dad940fc3b667782bdee">getCoverageAtPosition</a> (int chr, int pos) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return a short summary string of this coverage object.  <a href="#a70b606eb3ed43bc1cc965c0366784d62"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5ce17682a93dad940fc3b667782bdee"></a><!-- doxytag: member="SnowTools::STCoverage::getCoverageAtPosition" ref="aa5ce17682a93dad940fc3b667782bdee" args="(int chr, int pos) const " -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#aa5ce17682a93dad940fc3b667782bdee">getCoverageAtPosition</a> (int chr, int pos) const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return the coverage count at a position. <br/></td></tr>
 <tr><td colspan="2"><h2>Friends</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#a4208f6828c2b8846469864c98d4e9cd1">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1STCoverage.html">STCoverage</a> &amp;c)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4208f6828c2b8846469864c98d4e9cd1"></a><!-- doxytag: member="SnowTools::STCoverage::operator&lt;&lt;" ref="a4208f6828c2b8846469864c98d4e9cd1" args="(std::ostream &amp;out, const STCoverage &amp;c)" -->
+std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html#a4208f6828c2b8846469864c98d4e9cd1">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1STCoverage.html">STCoverage</a> &amp;c)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print the entire data. <br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Class to hold base-pair or binned coverage across the genome </p>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a79b6a7f16ffa91fd3e478f4ed3643f58"></a><!-- doxytag: member="SnowTools::STCoverage::STCoverage" ref="a79b6a7f16ffa91fd3e478f4ed3643f58" args="(const GenomicRegion &amp;gr)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSnowTools_1_1STCoverage.html">STCoverage</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>gr</em></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Make a new coverage object at interval gr </p>
-
-</div>
-</div>
-<a class="anchor" id="a5fa980c62dd117ba8d55c64cedc3b302"></a><!-- doxytag: member="SnowTools::STCoverage::STCoverage" ref="a5fa980c62dd117ba8d55c64cedc3b302" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSnowTools_1_1STCoverage.html">STCoverage</a> </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Make an empty coverage </p>
-
-</div>
-</div>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="afd1d3b9a795993c0fa72406fea0d3764"></a><!-- doxytag: member="SnowTools::STCoverage::addRead" ref="afd1d3b9a795993c0fa72406fea0d3764" args="(const BamRead &amp;r, bool full_length=false)" -->
 <div class="memitem">
@@ -111,76 +86,14 @@ uint16_t&nbsp;</td><td class="memItemRight" valign="bottom"><b>maxCov</b> () con
       </table>
 </div>
 <div class="memdoc">
-<p>Add a read to this coverage track </p>
+
+<p>Add a read to this coverage track. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>reserve_size</em>&nbsp;</td><td>Upper bound estimate for size of map. Not a hard cutoff but improves performance if total number of positions is less than this, as it will not rehash. </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="ac8bb3912a3ce86b15842e79d0b421204"></a><!-- doxytag: member="SnowTools::STCoverage::clear" ref="ac8bb3912a3ce86b15842e79d0b421204" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void clear </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Clear the coverage map </p>
-
-</div>
-</div>
-<a class="anchor" id="aa5ce17682a93dad940fc3b667782bdee"></a><!-- doxytag: member="SnowTools::STCoverage::getCoverageAtPosition" ref="aa5ce17682a93dad940fc3b667782bdee" args="(int chr, int pos) const " -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int getCoverageAtPosition </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>chr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>pos</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td> const</td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Return the coverage count at a position </p>
-
-</div>
-</div>
-<a class="anchor" id="ab9bf3fbe7292f8c21d572881f2f71aa3"></a><!-- doxytag: member="SnowTools::STCoverage::settleCoverage" ref="ab9bf3fbe7292f8c21d572881f2f71aa3" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void settleCoverage </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
 
 </div>
 </div>
@@ -208,42 +121,15 @@ uint16_t&nbsp;</td><td class="memItemRight" valign="bottom"><b>maxCov</b> () con
       </table>
 </div>
 <div class="memdoc">
+
+<p>Return a short summary string of this coverage object. </p>
 <p>Add to coverage objects together to get total coverge</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>cov</em>&nbsp;</td><td>Coverage object to add to current object Return a short summary string of this coverage object </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>cov</em>&nbsp;</td><td>Coverage object to add to current object </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<hr/><h2>Friends And Related Function Documentation</h2>
-<a class="anchor" id="a4208f6828c2b8846469864c98d4e9cd1"></a><!-- doxytag: member="SnowTools::STCoverage::operator&lt;&lt;" ref="a4208f6828c2b8846469864c98d4e9cd1" args="(std::ostream &amp;out, const STCoverage &amp;c)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&nbsp;</td>
-          <td class="paramname"> <em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSnowTools_1_1STCoverage.html">STCoverage</a> &amp;&nbsp;</td>
-          <td class="paramname"> <em>c</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [friend]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Print the entire data </p>
 
 </div>
 </div>

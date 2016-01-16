@@ -29,13 +29,20 @@
 </div>
 <div class="contents">
 <h1>Range Struct Reference</h1><!-- doxytag: class="SnowTools::Range" -->
+<p>Hold a range of valid numeric values (e.g.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a>&gt;</code></p>
 
 <p><a href="structSnowTools_1_1Range-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#afa61e339c5d7dd76c25663fc2718da8a">Range</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#a37e70320de2bd5842a17d379a82b8cd2">Range</a> (int mn, int mx, int in, std::string p)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa61e339c5d7dd76c25663fc2718da8a"></a><!-- doxytag: member="SnowTools::Range::Range" ref="afa61e339c5d7dd76c25663fc2718da8a" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#afa61e339c5d7dd76c25663fc2718da8a">Range</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g.">Range</a> from 0 to 0, non-inverted. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37e70320de2bd5842a17d379a82b8cd2"></a><!-- doxytag: member="SnowTools::Range::Range" ref="a37e70320de2bd5842a17d379a82b8cd2" args="(int mn, int mx, int in, std::string p)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#a37e70320de2bd5842a17d379a82b8cd2">Range</a> (int mn, int mx, int in, std::string p)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Construct a <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g.">Range</a> from mn to mx, inclusive. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff5557f62ee377f7fe52d648c04dd5a5"></a><!-- doxytag: member="SnowTools::Range::isValid" ref="aff5557f62ee377f7fe52d648c04dd5a5" args="(int val)" -->
 bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>isValid</b> (int val)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08377f95ed495426c61911507e285aa6"></a><!-- doxytag: member="SnowTools::Range::parseRuleLine" ref="a08377f95ed495426c61911507e285aa6" args="(std::string line)" -->
@@ -66,67 +73,9 @@ bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>none</b> = false</td>
 std::ostream &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="structSnowTools_1_1Range.html">Range</a> &amp;r)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Hold a range of valid numeric values (e.g. isize).</p>
+<p>Hold a range of valid numeric values (e.g. </p>
+<p>isize).</p>
 <p>Can optionally invert the range to make rule the complement of the range (eg isize NOT in [300,600] </p>
-<hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="afa61e339c5d7dd76c25663fc2718da8a"></a><!-- doxytag: member="SnowTools::Range::Range" ref="afa61e339c5d7dd76c25663fc2718da8a" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structSnowTools_1_1Range.html">Range</a> </td>
-          <td>(</td>
-          <td class="paramname"></td>
-          <td>&nbsp;)&nbsp;</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Construct a <a class="el" href="structSnowTools_1_1Range.html">Range</a> from 0 to 0, non-inverted </p>
-
-</div>
-</div>
-<a class="anchor" id="a37e70320de2bd5842a17d379a82b8cd2"></a><!-- doxytag: member="SnowTools::Range::Range" ref="a37e70320de2bd5842a17d379a82b8cd2" args="(int mn, int mx, int in, std::string p)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structSnowTools_1_1Range.html">Range</a> </td>
-          <td>(</td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>mn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>mx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&nbsp;</td>
-          <td class="paramname"> <em>in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string&nbsp;</td>
-          <td class="paramname"> <em>p</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-<p>Construct a <a class="el" href="structSnowTools_1_1Range.html">Range</a> from mn to mx, inclusive </p>
-
-</div>
-</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/SnowTools/<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a></li>
 </ul>

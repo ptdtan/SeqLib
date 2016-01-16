@@ -39,14 +39,14 @@
 <a name="l00015"></a>00015 
 <a name="l00016"></a>00016 <span class="keyword">namespace </span>SnowTools {
 <a name="l00017"></a>00017 
-<a name="l00019"></a>00019   std::string <a class="code" href="namespaceSnowTools.html#aac9accfd1a1196afb484e3f8a2cada7a">getFileName</a>(<span class="keyword">const</span> std::string&amp; s);
+<a name="l00019"></a>00019   std::string <a class="code" href="namespaceSnowTools.html#aac9accfd1a1196afb484e3f8a2cada7a" title="Get a filename from a file path.">getFileName</a>(<span class="keyword">const</span> std::string&amp; s);
 <a name="l00020"></a>00020   
-<a name="l00025"></a><a class="code" href="namespaceSnowTools.html#ad7d0163db65feb21145482c7add27015">00025</a>   <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceSnowTools.html#ad7d0163db65feb21145482c7add27015">read_access_test</a> (<span class="keyword">const</span> std::string&amp; name) {
+<a name="l00025"></a><a class="code" href="namespaceSnowTools.html#ad7d0163db65feb21145482c7add27015">00025</a>   <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespaceSnowTools.html#ad7d0163db65feb21145482c7add27015" title="Check if a file is readable and exists.">read_access_test</a> (<span class="keyword">const</span> std::string&amp; name) {
 <a name="l00026"></a>00026     <span class="keywordflow">return</span> (access (name.c_str(), R_OK) == 0); 
 <a name="l00027"></a>00027   }
 <a name="l00028"></a>00028 
 <a name="l00033"></a>00033   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; 
-<a name="l00034"></a><a class="code" href="namespaceSnowTools.html#a2c0a27e9afd3ede60b7c374bbfea8dfd">00034</a>     std::string <a class="code" href="namespaceSnowTools.html#a2c0a27e9afd3ede60b7c374bbfea8dfd">AddCommas</a>(T data) { 
+<a name="l00034"></a><a class="code" href="namespaceSnowTools.html#a2c0a27e9afd3ede60b7c374bbfea8dfd">00034</a>     std::string <a class="code" href="namespaceSnowTools.html#a2c0a27e9afd3ede60b7c374bbfea8dfd" title="Format a number to include commas.">AddCommas</a>(T data) { 
 <a name="l00035"></a>00035     std::stringstream ss; 
 <a name="l00036"></a>00036     ss &lt;&lt; data; 
 <a name="l00037"></a>00037     std::string s = ss.str();
@@ -75,7 +75,7 @@
 <a name="l00060"></a>00060 <span class="preprocessor">#endif</span>
 <a name="l00061"></a>00061 <span class="preprocessor"></span>  }
 <a name="l00062"></a>00062 
-<a name="l00065"></a><a class="code" href="namespaceSnowTools.html#adc134ade28625d21ad03c87b4f1b0519">00065</a>   <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespaceSnowTools.html#adc134ade28625d21ad03c87b4f1b0519">rcomplement</a>(std::string &amp;a) {
+<a name="l00065"></a><a class="code" href="namespaceSnowTools.html#adc134ade28625d21ad03c87b4f1b0519">00065</a>   <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="namespaceSnowTools.html#adc134ade28625d21ad03c87b4f1b0519" title="Deprecated.">rcomplement</a>(std::string &amp;a) {
 <a name="l00066"></a>00066     
 <a name="l00067"></a>00067     std::reverse(&amp;a[0], &amp;a[a.size()]);
 <a name="l00068"></a>00068     std::string::iterator it = a.begin();
@@ -129,7 +129,7 @@
 <a name="l00116"></a>00116    <span class="keywordflow">return</span> ts;
 <a name="l00117"></a>00117  }
 <a name="l00118"></a>00118 
-<a name="l00120"></a>00120  <span class="keywordtype">int</span> <a class="code" href="namespaceSnowTools.html#a16a0b8059870e214c1724efe190b8d87">weightedRandom</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; cs);
+<a name="l00120"></a>00120  <span class="keywordtype">int</span> <a class="code" href="namespaceSnowTools.html#a16a0b8059870e214c1724efe190b8d87" title="Generate a weighed random value.">weightedRandom</a>(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; cs);
 <a name="l00121"></a>00121 
 <a name="l00122"></a>00122  std::vector&lt;double&gt; getWeightedSum(<span class="keyword">const</span> std::vector&lt;double&gt;&amp; c);
 <a name="l00123"></a>00123 

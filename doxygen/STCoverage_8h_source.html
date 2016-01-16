@@ -66,26 +66,26 @@
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045  <span class="keyword">public</span>:
 <a name="l00046"></a>00046 
-<a name="l00048"></a>00048   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();
+<a name="l00048"></a>00048   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#ac8bb3912a3ce86b15842e79d0b421204" title="Clear the coverage map.">clear</a>();
 <a name="l00049"></a>00049 
 <a name="l00050"></a>00050 
-<a name="l00052"></a>00052   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#ab9bf3fbe7292f8c21d572881f2f71aa3">settleCoverage</a>();
+<a name="l00052"></a>00052   <span class="keywordtype">void</span> settleCoverage();
 <a name="l00053"></a>00053       
-<a name="l00058"></a>00058   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#afd1d3b9a795993c0fa72406fea0d3764">addRead</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r, <span class="keywordtype">bool</span> full_length = <span class="keyword">false</span>);
+<a name="l00058"></a>00058   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#afd1d3b9a795993c0fa72406fea0d3764" title="Add a read to this coverage track.">addRead</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1BamRead.html" title="Class to store and interact with an HTSLib bam1_t read.">BamRead</a> &amp;r, <span class="keywordtype">bool</span> full_length = <span class="keyword">false</span>);
 <a name="l00059"></a>00059 
-<a name="l00061"></a>00061   <a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">STCoverage</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&amp; gr);
+<a name="l00061"></a>00061   <a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302" title="Make an empty coverage.">STCoverage</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&amp; gr);
 <a name="l00062"></a>00062 
 <a name="l00063"></a>00063   uint16_t maxCov() <span class="keyword">const</span>;
 <a name="l00064"></a>00064 
-<a name="l00066"></a><a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">00066</a>   <a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">STCoverage</a>() {}
+<a name="l00066"></a><a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">00066</a>   <a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302" title="Make an empty coverage.">STCoverage</a>() {}
 <a name="l00067"></a>00067 
 <a name="l00072"></a>00072   <span class="comment">//void combineCoverage(Coverage &amp;cov);</span>
 <a name="l00073"></a>00073 
-<a name="l00075"></a>00075   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#a70b606eb3ed43bc1cc965c0366784d62">ToBedgraph</a>(<a class="code" href="classogzstream.html">ogzstream</a> * o, <span class="keyword">const</span> bam_hdr_t * h) <span class="keyword">const</span>;
+<a name="l00075"></a>00075   <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#a70b606eb3ed43bc1cc965c0366784d62" title="Return a short summary string of this coverage object.">ToBedgraph</a>(<a class="code" href="classogzstream.html">ogzstream</a> * o, <span class="keyword">const</span> bam_hdr_t * h) <span class="keyword">const</span>;
 <a name="l00076"></a>00076   
-<a name="l00078"></a>00078   <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSnowTools_1_1STCoverage.html#a4208f6828c2b8846469864c98d4e9cd1">operator&lt;&lt;</a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1STCoverage.html">STCoverage</a> &amp;c);
+<a name="l00078"></a>00078   <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSnowTools_1_1STCoverage.html#a4208f6828c2b8846469864c98d4e9cd1" title="Print the entire data.">operator&lt;&lt;</a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1STCoverage.html">STCoverage</a> &amp;c);
 <a name="l00079"></a>00079 
-<a name="l00081"></a>00081   <span class="keywordtype">int</span> <a class="code" href="classSnowTools_1_1STCoverage.html#aa5ce17682a93dad940fc3b667782bdee">getCoverageAtPosition</a>(<span class="keywordtype">int</span> chr, <span class="keywordtype">int</span> pos) <span class="keyword">const</span>;
+<a name="l00081"></a>00081   <span class="keywordtype">int</span> <a class="code" href="classSnowTools_1_1STCoverage.html#aa5ce17682a93dad940fc3b667782bdee" title="Return the coverage count at a position.">getCoverageAtPosition</a>(<span class="keywordtype">int</span> chr, <span class="keywordtype">int</span> pos) <span class="keyword">const</span>;
 <a name="l00082"></a>00082   
 <a name="l00083"></a>00083 };
 <a name="l00084"></a>00084 
