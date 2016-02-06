@@ -175,9 +175,6 @@ typedef std::vector&lt; <a class="el" href="structSnowTools_1_1USeq.html">USeq</
 typedef std::vector<br class="typebreak" />
 &lt; <a class="el" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GenomicRegionVector</b></td></tr>
 <tr class="separator:a5d1b754407a7c1e6214095851d4920d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adda28d6b9260cec80e8b2a7a2c3697f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adda28d6b9260cec80e8b2a7a2c3697f8"></a>
-typedef <a class="el" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GR</b></td></tr>
-<tr class="separator:adda28d6b9260cec80e8b2a7a2c3697f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d7f9a42c460dbbb2015ae3decb9f734"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d7f9a42c460dbbb2015ae3decb9f734"></a>
 typedef <a class="el" href="classTInterval.html">TInterval</a>&lt; int32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GenomicInterval</b></td></tr>
 <tr class="separator:a5d7f9a42c460dbbb2015ae3decb9f734"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,44 +215,29 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aac9accfd1a1196afb484e3f8a2cada7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac9accfd1a1196afb484e3f8a2cada7a"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#aac9accfd1a1196afb484e3f8a2cada7a">getFileName</a> (const std::string &amp;s)</td></tr>
-<tr class="memdesc:aac9accfd1a1196afb484e3f8a2cada7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a filename from a file path. <br /></td></tr>
-<tr class="separator:aac9accfd1a1196afb484e3f8a2cada7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7d0163db65feb21145482c7add27015"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#ad7d0163db65feb21145482c7add27015">read_access_test</a> (const std::string &amp;name)</td></tr>
 <tr class="memdesc:ad7d0163db65feb21145482c7add27015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a file is readable and exists.  <a href="#ad7d0163db65feb21145482c7add27015">More...</a><br /></td></tr>
 <tr class="separator:ad7d0163db65feb21145482c7add27015"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc8425947cc0711523e77e97c42d483f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:abc8425947cc0711523e77e97c42d483f"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#abc8425947cc0711523e77e97c42d483f">AddCommas</a> (T data)</td></tr>
-<tr class="memdesc:abc8425947cc0711523e77e97c42d483f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format a number to include commas.  <a href="#abc8425947cc0711523e77e97c42d483f">More...</a><br /></td></tr>
+<tr class="memdesc:abc8425947cc0711523e77e97c42d483f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format an integer to include commas.  <a href="#abc8425947cc0711523e77e97c42d483f">More...</a><br /></td></tr>
 <tr class="separator:abc8425947cc0711523e77e97c42d483f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ddf883e5f55ed193349a8a74fc9d07f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ddf883e5f55ed193349a8a74fc9d07f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>displayRuntime</b> (const timespec start)</td></tr>
+<tr class="memitem:a3ddf883e5f55ed193349a8a74fc9d07f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#a3ddf883e5f55ed193349a8a74fc9d07f">displayRuntime</a> (const timespec start)</td></tr>
+<tr class="memdesc:a3ddf883e5f55ed193349a8a74fc9d07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the runtime (CPU and Wall)  <a href="#a3ddf883e5f55ed193349a8a74fc9d07f">More...</a><br /></td></tr>
 <tr class="separator:a3ddf883e5f55ed193349a8a74fc9d07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc134ade28625d21ad03c87b4f1b0519"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc134ade28625d21ad03c87b4f1b0519"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#adc134ade28625d21ad03c87b4f1b0519">rcomplement</a> (std::string &amp;a)</td></tr>
-<tr class="memdesc:adc134ade28625d21ad03c87b4f1b0519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated. <br /></td></tr>
+<tr class="memitem:adc134ade28625d21ad03c87b4f1b0519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#adc134ade28625d21ad03c87b4f1b0519">rcomplement</a> (std::string &amp;a)</td></tr>
+<tr class="memdesc:adc134ade28625d21ad03c87b4f1b0519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reverse complement in-place sequence containg upper/lower case ACTGN.  <a href="#adc134ade28625d21ad03c87b4f1b0519">More...</a><br /></td></tr>
 <tr class="separator:adc134ade28625d21ad03c87b4f1b0519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5db963da52f61ef53e04a64653c4464"><td class="memTemplParams" colspan="2"><a class="anchor" id="ad5db963da52f61ef53e04a64653c4464"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ad5db963da52f61ef53e04a64653c4464"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>percentCalc</b> (T numer, T denom)</td></tr>
+<tr class="memitem:ad5db963da52f61ef53e04a64653c4464"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ad5db963da52f61ef53e04a64653c4464"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#ad5db963da52f61ef53e04a64653c4464">percentCalc</a> (T numer, T denom)</td></tr>
+<tr class="memdesc:ad5db963da52f61ef53e04a64653c4464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the percentage and return as integer.  <a href="#ad5db963da52f61ef53e04a64653c4464">More...</a><br /></td></tr>
 <tr class="separator:ad5db963da52f61ef53e04a64653c4464"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab54c87369ec85befaec8fd710d7a54"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afab54c87369ec85befaec8fd710d7a54"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>cutLastChar</b> (const std::string &amp;in)</td></tr>
-<tr class="separator:afab54c87369ec85befaec8fd710d7a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a5768ba562e3b091d87662a36b96248"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a5768ba562e3b091d87662a36b96248"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>scrubString</b> (const std::string &amp;toscrub, const std::string &amp;toremove)</td></tr>
+<tr class="memitem:a6a5768ba562e3b091d87662a36b96248"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#a6a5768ba562e3b091d87662a36b96248">scrubString</a> (const std::string &amp;toscrub, const std::string &amp;toremove)</td></tr>
+<tr class="memdesc:a6a5768ba562e3b091d87662a36b96248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove substrings from a string.  <a href="#a6a5768ba562e3b091d87662a36b96248">More...</a><br /></td></tr>
 <tr class="separator:a6a5768ba562e3b091d87662a36b96248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16a0b8059870e214c1724efe190b8d87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16a0b8059870e214c1724efe190b8d87"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#a16a0b8059870e214c1724efe190b8d87">weightedRandom</a> (const std::vector&lt; double &gt; &amp;cs)</td></tr>
-<tr class="memdesc:a16a0b8059870e214c1724efe190b8d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a weighed random value. <br /></td></tr>
+<tr class="memitem:a16a0b8059870e214c1724efe190b8d87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#a16a0b8059870e214c1724efe190b8d87">weightedRandom</a> (const std::vector&lt; double &gt; &amp;cs)</td></tr>
+<tr class="memdesc:a16a0b8059870e214c1724efe190b8d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a weighed random integer.  <a href="#a16a0b8059870e214c1724efe190b8d87">More...</a><br /></td></tr>
 <tr class="separator:a16a0b8059870e214c1724efe190b8d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fd2d6f0c80a45fb4520b2ccad7e3388"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fd2d6f0c80a45fb4520b2ccad7e3388"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>genRandomVals</b> (uint32_t &amp;i1, uint32_t &amp;i2, const uint32_t &amp;max, uint32_t seed=0)</td></tr>
-<tr class="separator:a3fd2d6f0c80a45fb4520b2ccad7e3388"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af244647865dbca7dc9e18715f81c9a5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af244647865dbca7dc9e18715f81c9a5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>genRandomValue</b> (uint32_t &amp;i, const uint32_t &amp;max, uint32_t seed=0)</td></tr>
-<tr class="separator:af244647865dbca7dc9e18715f81c9a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to store vector of intervals on the genome. </p>
@@ -274,11 +256,121 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>genRandomValue</b> (u
       </table>
 </div><div class="memdoc">
 
-<p>Format a number to include commas. </p>
+<p>Format an integer to include commas. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Number to format </td></tr>
-    <tr><td class="paramname">Formatted</td><td>number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>String with formatted number containing commas </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3ddf883e5f55ed193349a8a74fc9d07f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SnowTools::displayRuntime </td>
+          <td>(</td>
+          <td class="paramtype">const timespec&#160;</td>
+          <td class="paramname"><em>start</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Display the runtime (CPU and Wall) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start</td><td>Running timer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Time formatted as "CPU: XmYs Wall: XmYs" </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Does not work on OSX or Windows (returns "not configured") </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5db963da52f61ef53e04a64653c4464"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SnowTools::percentCalc </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>numer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>denom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the percentage and return as integer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numer</td><td>Numerator </td></tr>
+    <tr><td class="paramname">denom</td><td>Denominator </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Integer with the percentage floored </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adc134ade28625d21ad03c87b4f1b0519"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SnowTools::rcomplement </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reverse complement in-place sequence containg upper/lower case ACTGN. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Sequence to be reverse complmented </td></tr>
   </table>
   </dd>
 </dl>
@@ -318,10 +410,71 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>genRandomValue</b> (u
 
 </div>
 </div>
+<a class="anchor" id="a6a5768ba562e3b091d87662a36b96248"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SnowTools::scrubString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>toscrub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>toremove</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove substrings from a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">toscrub</td><td>Input string to clean </td></tr>
+    <tr><td class="paramname">toremove</td><td>Substring to remove from input </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Scrubbed string </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a16a0b8059870e214c1724efe190b8d87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SnowTools::weightedRandom </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a weighed random integer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cs</td><td>Weighting for each integer (values must sum to one) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Random integer bounded on [0,cs.size()) </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 6 2016 15:08:28 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 6 2016 16:40:09 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
