@@ -71,7 +71,7 @@
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// custom deleter for aho-corasick</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structatm__free__delete.html">   21</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structatm__free__delete.html">atm_free_delete</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">struct </span>atm_free_delete {</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">void</span> operator()(<span class="keywordtype">void</span>* x) { free((AC_AUTOMATA_t*)x); }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typedef</span> std::unique_ptr&lt;AC_AUTOMATA_t&gt; atm_ptr;</div>
@@ -476,7 +476,6 @@
 <div class="ttc" id="classSnowTools_1_1Flag_html_a4a08bd62f6d96a28aefa66c60cd095e8"><div class="ttname"><a href="classSnowTools_1_1Flag.html#a4a08bd62f6d96a28aefa66c60cd095e8">SnowTools::Flag::setOn</a></div><div class="ttdeci">void setOn()</div><div class="ttdoc">Set the flag to ON. </div><div class="ttdef"><b>Definition:</b> MiniRules.h:50</div></div>
 <div class="ttc" id="structSnowTools_1_1FlagRule_html"><div class="ttname"><a href="structSnowTools_1_1FlagRule.html">SnowTools::FlagRule</a></div><div class="ttdef"><b>Definition:</b> MiniRules.h:144</div></div>
 <div class="ttc" id="classSnowTools_1_1Flag_html_ad087dfc3726786e34d6ee1a745482c4a"><div class="ttname"><a href="classSnowTools_1_1Flag.html#ad087dfc3726786e34d6ee1a745482c4a">SnowTools::Flag::isOff</a></div><div class="ttdeci">bool isOff() const </div><div class="ttdoc">Query if the flag is OFF. </div><div class="ttdef"><b>Definition:</b> MiniRules.h:66</div></div>
-<div class="ttc" id="structatm__free__delete_html"><div class="ttname"><a href="structatm__free__delete.html">atm_free_delete</a></div><div class="ttdef"><b>Definition:</b> MiniRules.h:21</div></div>
 <div class="ttc" id="classSnowTools_1_1BamRead_html"><div class="ttname"><a href="classSnowTools_1_1BamRead.html">SnowTools::BamRead</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRead.h:109</div></div>
 <div class="ttc" id="classSnowTools_1_1MiniRulesCollection_html"><div class="ttname"><a href="classSnowTools_1_1MiniRulesCollection.html">SnowTools::MiniRulesCollection</a></div><div class="ttdef"><b>Definition:</b> MiniRules.h:414</div></div>
 <div class="ttc" id="classSnowTools_1_1MiniRulesCollection_html_a10fbc0a737af72194b246ffb99f36640"><div class="ttname"><a href="classSnowTools_1_1MiniRulesCollection.html#a10fbc0a737af72194b246ffb99f36640">SnowTools::MiniRulesCollection::MiniRulesCollection</a></div><div class="ttdeci">MiniRulesCollection()</div><div class="ttdoc">Construct an empty MiniRulesCollection that will pass all reads. </div><div class="ttdef"><b>Definition:</b> MiniRules.h:421</div></div>
@@ -485,7 +484,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 6 2016 20:45:20 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 6 2016 21:09:42 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

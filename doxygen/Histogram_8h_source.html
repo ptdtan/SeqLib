@@ -65,8 +65,8 @@
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span>Bin;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classTInterval.html">TInterval&lt;Bin&gt;</a> <a class="code" href="classTInterval.html">BinInterval</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> <a class="code" href="classIntervalTree.html">IntervalTree&lt;Bin&gt;</a> <a class="code" href="classIntervalTree.html">BinIntervalTree</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">typedef</span> TInterval&lt;Bin&gt; BinInterval;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> IntervalTree&lt;Bin&gt; BinIntervalTree;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">typedef</span> std::vector&lt;BinInterval&gt; BinIntervalVector;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">typedef</span> uint32_t S;</div>
@@ -167,14 +167,12 @@
 <div class="ttc" id="classSnowTools_1_1Histogram_html_a2955f83d1c1e4d8a56c735ac53f75b6e"><div class="ttname"><a href="classSnowTools_1_1Histogram.html#a2955f83d1c1e4d8a56c735ac53f75b6e">SnowTools::Histogram::toCSV</a></div><div class="ttdeci">void toCSV(std::ofstream &amp;fs)</div><div class="ttdoc">Output to CSV file like: bin_start,bin_end,count. </div></div>
 <div class="ttc" id="classSnowTools_1_1Histogram_html"><div class="ttname"><a href="classSnowTools_1_1Histogram.html">SnowTools::Histogram</a></div><div class="ttdoc">Class to store histogram of numeric values. </div><div class="ttdef"><b>Definition:</b> Histogram.h:89</div></div>
 <div class="ttc" id="classSnowTools_1_1Bin_html_ade162cc7977d54a853bf53ca12a44aab"><div class="ttname"><a href="classSnowTools_1_1Bin.html#ade162cc7977d54a853bf53ca12a44aab">SnowTools::Bin::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const Bin &amp;b)</div><div class="ttdoc">Output the bin in format "start range, end range, count". </div><div class="ttdef"><b>Definition:</b> Histogram.h:44</div></div>
-<div class="ttc" id="classTInterval_html"><div class="ttname"><a href="classTInterval.html">TInterval</a></div><div class="ttdef"><b>Definition:</b> IntervalTree.h:9</div></div>
 <div class="ttc" id="classSnowTools_1_1Histogram_html_af51c4df08524a7d196bd62f31e4bc50f"><div class="ttname"><a href="classSnowTools_1_1Histogram.html#af51c4df08524a7d196bd62f31e4bc50f">SnowTools::Histogram::Histogram</a></div><div class="ttdeci">Histogram()</div><div class="ttdoc">Construct an empty histogram. </div><div class="ttdef"><b>Definition:</b> Histogram.h:100</div></div>
 <div class="ttc" id="classSnowTools_1_1Histogram_html_a94e8ada5dd397e7a481f3ed7e41dfbcc"><div class="ttname"><a href="classSnowTools_1_1Histogram.html#a94e8ada5dd397e7a481f3ed7e41dfbcc">SnowTools::Histogram::numBins</a></div><div class="ttdeci">size_t numBins()</div><div class="ttdoc">Get number of bins in histogram. </div><div class="ttdef"><b>Definition:</b> Histogram.h:158</div></div>
 <div class="ttc" id="classSnowTools_1_1Histogram_html_a852f9884db004166d2e2820a66a6a65f"><div class="ttname"><a href="classSnowTools_1_1Histogram.html#a852f9884db004166d2e2820a66a6a65f">SnowTools::Histogram::begin</a></div><div class="ttdeci">std::vector&lt; int32_t &gt;::iterator begin()</div><div class="ttdoc">Return iterator to the fist bin. </div><div class="ttdef"><b>Definition:</b> Histogram.h:116</div></div>
 <div class="ttc" id="classSnowTools_1_1Histogram_html_aed80158ab05d45f9cca656725dcd38ea"><div class="ttname"><a href="classSnowTools_1_1Histogram.html#aed80158ab05d45f9cca656725dcd38ea">SnowTools::Histogram::retrieveBinID</a></div><div class="ttdeci">size_t retrieveBinID(const int32_t &amp;elem) const </div><div class="ttdoc">Find bin corresponding to a span. </div></div>
 <div class="ttc" id="classSnowTools_1_1Bin_html_a96e4833db94cac76d18baaeca72fac02"><div class="ttname"><a href="classSnowTools_1_1Bin.html#a96e4833db94cac76d18baaeca72fac02">SnowTools::Bin::contains</a></div><div class="ttdeci">bool contains(const int32_t &amp;elem) const </div><div class="ttdoc">Check if a value fits within the range of this bin. </div></div>
 <div class="ttc" id="classSnowTools_1_1Histogram_html_a7b718a6912517bdc603f29ad3a231104"><div class="ttname"><a href="classSnowTools_1_1Histogram.html#a7b718a6912517bdc603f29ad3a231104">SnowTools::Histogram::addElem</a></div><div class="ttdeci">void addElem(const int32_t &amp;elem)</div><div class="ttdoc">Add an element to the histogram. </div></div>
-<div class="ttc" id="classIntervalTree_html"><div class="ttname"><a href="classIntervalTree.html">IntervalTree</a></div><div class="ttdef"><b>Definition:</b> IntervalTree.h:46</div></div>
 <div class="ttc" id="classSnowTools_1_1Histogram_html_ae1ce8365dd916ca490a583e0d01f2615"><div class="ttname"><a href="classSnowTools_1_1Histogram.html#ae1ce8365dd916ca490a583e0d01f2615">SnowTools::Histogram::end</a></div><div class="ttdeci">std::vector&lt; int32_t &gt;::iterator end()</div><div class="ttdoc">Return iterator to the last bin. </div><div class="ttdef"><b>Definition:</b> Histogram.h:120</div></div>
 <div class="ttc" id="classSnowTools_1_1Histogram_html_a111bc7cfb9998a225c4338e207fe25de"><div class="ttname"><a href="classSnowTools_1_1Histogram.html#a111bc7cfb9998a225c4338e207fe25de">SnowTools::Histogram::totalCount</a></div><div class="ttdeci">int totalCount() const </div><div class="ttdoc">Return the total number of elements in the Histogram. </div><div class="ttdef"><b>Definition:</b> Histogram.h:142</div></div>
 <div class="ttc" id="classSnowTools_1_1Bin_html"><div class="ttname"><a href="classSnowTools_1_1Bin.html">SnowTools::Bin</a></div><div class="ttdoc">Stores one bin in a Histogram. </div><div class="ttdef"><b>Definition:</b> Histogram.h:29</div></div>
@@ -184,7 +182,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 6 2016 20:45:20 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 6 2016 21:09:42 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
