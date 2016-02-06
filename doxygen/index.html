@@ -59,7 +59,7 @@ SnowTools/BamTools similarity</h2>
 SnowTools/BamTools differences</h2>
 <ul>
 <li>Sort/index functionality is independently implemented in BamTools. In <a class="el" href="namespaceSnowTools.html" title="Class to store vector of intervals on the genome. ">SnowTools</a>, the Samtools sort and index functions are called directly.</li>
-<li>BamTools stores quality scores and sequences as strings. In <a class="el" href="namespaceSnowTools.html" title="Class to store vector of intervals on the genome. ">SnowTools</a>, the HTSlib native <a class="el" href="structbam1__t.html">bam1_t</a> format is used instead. This format has a lower memory footprint by using only 4 bits per base, rather than 8. Conversion to C++ style std::string is provided as a function and can be done on the fly.</li>
+<li>BamTools stores quality scores and sequences as strings. In <a class="el" href="namespaceSnowTools.html" title="Class to store vector of intervals on the genome. ">SnowTools</a>, the HTSlib native bam1_t format is used instead. This format has a lower memory footprint by using only 4 bits per base, rather than 8. Conversion to C++ style std::string is provided as a function and can be done on the fly.</li>
 <li>BamTools provides the BamMultiReader class for reading multiple BAM files at once, while <a class="el" href="namespaceSnowTools.html" title="Class to store vector of intervals on the genome. ">SnowTools</a> does not currently support this functionality.</li>
 <li>BamTools provides the following CLI tools that are not supported in <a class="el" href="namespaceSnowTools.html" title="Class to store vector of intervals on the genome. ">SnowTools</a><ul>
 <li>convert - Convert between BAM and other formats</li>
@@ -96,7 +96,7 @@ Attributions</h1>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 6 2016 20:24:36 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 6 2016 20:45:20 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -160,7 +160,7 @@
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  </div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamRead.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a>();</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamRead.html#af1d3aa3591fce81d05b5515154181c70">assign</a>(<a class="code" href="structbam1__t.html">bam1_t</a>* a);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamRead.html#af1d3aa3591fce81d05b5515154181c70">assign</a>(bam1_t* a);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamRead.html#a9c52958d3fa4c3fdf59ebfb63e5f1dc1">  132</a></span>&#160;  <a class="code" href="classSnowTools_1_1BamRead.html#a9c52958d3fa4c3fdf59ebfb63e5f1dc1">BamRead</a>() : m_hdr(nullptr) {}</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
@@ -444,7 +444,7 @@
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;    b-&gt;m_data = b-&gt;l_data;</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;  }</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;</div>
-<div class="line"><a name="l00512"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamRead.html#ac8a8e932ebee9ad1abe2f4deafc23b31">  512</a></span>&#160;  <span class="keyword">inline</span> <a class="code" href="structbam1__t.html">bam1_t</a>* <a class="code" href="classSnowTools_1_1BamRead.html#ac8a8e932ebee9ad1abe2f4deafc23b31">raw</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> b.get(); }</div>
+<div class="line"><a name="l00512"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamRead.html#ac8a8e932ebee9ad1abe2f4deafc23b31">  512</a></span>&#160;  <span class="keyword">inline</span> bam1_t* <a class="code" href="classSnowTools_1_1BamRead.html#ac8a8e932ebee9ad1abe2f4deafc23b31">raw</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> b.get(); }</div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;  </div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;  <span class="comment">//std::string toSam(bam_hdr_t* h) const;</span></div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
@@ -514,7 +514,6 @@
 <div class="ttc" id="classSnowTools_1_1CigarField_html"><div class="ttname"><a href="classSnowTools_1_1CigarField.html">SnowTools::CigarField</a></div><div class="ttdef"><b>Definition:</b> BamRead.h:43</div></div>
 <div class="ttc" id="classSnowTools_1_1BamRead_html_a9600062f79fb330c7ee41ec7bfad3d8c"><div class="ttname"><a href="classSnowTools_1_1BamRead.html#a9600062f79fb330c7ee41ec7bfad3d8c">SnowTools::BamRead::SetMapQuality</a></div><div class="ttdeci">void SetMapQuality(int32_t m)</div><div class="ttdoc">Set the mapping quality. </div><div class="ttdef"><b>Definition:</b> BamRead.h:216</div></div>
 <div class="ttc" id="classSnowTools_1_1BamRead_html_abc98a9ed00137658f5a6029627d2c691"><div class="ttname"><a href="classSnowTools_1_1BamRead.html#abc98a9ed00137658f5a6029627d2c691">SnowTools::BamRead::AlignmentEndPosition</a></div><div class="ttdeci">int32_t AlignmentEndPosition() const </div><div class="ttdoc">Get the end of the alignment on the read, by removing soft-clips. </div><div class="ttdef"><b>Definition:</b> BamRead.h:346</div></div>
-<div class="ttc" id="structbam1__t_html"><div class="ttname"><a href="structbam1__t.html">bam1_t</a></div><div class="ttdef"><b>Definition:</b> bamFile.h:19</div></div>
 <div class="ttc" id="classSnowTools_1_1BamRead_html_aca7f1f1a9f775d2a51daf9004fc48d29"><div class="ttname"><a href="classSnowTools_1_1BamRead.html#aca7f1f1a9f775d2a51daf9004fc48d29">SnowTools::BamRead::SetSequence</a></div><div class="ttdeci">void SetSequence(const std::string &amp;seq)</div><div class="ttdoc">Set the sequence name. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamRead_html_a20e39d0a44668c55b436cd7fd7d534d5"><div class="ttname"><a href="classSnowTools_1_1BamRead.html#a20e39d0a44668c55b436cd7fd7d534d5">SnowTools::BamRead::ReverseFlag</a></div><div class="ttdeci">bool ReverseFlag() const </div><div class="ttdoc">BamRead is aligned on reverse strand. </div><div class="ttdef"><b>Definition:</b> BamRead.h:135</div></div>
 <div class="ttc" id="classSnowTools_1_1BamRead_html_a964f96c94ac8cdab7a74178cd6366dad"><div class="ttname"><a href="classSnowTools_1_1BamRead.html#a964f96c94ac8cdab7a74178cd6366dad">SnowTools::BamRead::AlignmentPosition</a></div><div class="ttdeci">int32_t AlignmentPosition() const </div><div class="ttdoc">Get the start of the alignment on the read, by removing soft-clips. </div><div class="ttdef"><b>Definition:</b> BamRead.h:332</div></div>
@@ -559,7 +558,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 6 2016 20:24:35 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Feb 6 2016 20:45:20 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
