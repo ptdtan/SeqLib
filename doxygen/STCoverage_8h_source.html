@@ -80,61 +80,61 @@
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classSnowTools_1_1STCoverage.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSnowTools_1_1STCoverage.html">STCoverage</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classSnowTools_1_1GenomicRegionCollection.html">GRC</a> m_grc;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a> m_gr;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//CovMapMap m_map;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  std::vector&lt;CovMap&gt; m_map;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  uint16_sp v;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classSnowTools_1_1STCoverage.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSnowTools_1_1STCoverage.html">STCoverage</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classSnowTools_1_1GenomicRegionCollection.html">GRC</a> m_grc;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a> m_gr;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">//CovMapMap m_map;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  std::vector&lt;CovMap&gt; m_map;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  uint16_sp v;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordtype">void</span> settleCoverage();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#afd1d3b9a795993c0fa72406fea0d3764">addRead</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r, <span class="keywordtype">bool</span> full_length = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">STCoverage</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&amp; gr);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  uint16_t maxCov() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#ac8bb3912a3ce86b15842e79d0b421204">clear</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> settleCoverage();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#afd1d3b9a795993c0fa72406fea0d3764">addRead</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r, <span class="keywordtype">bool</span> full_length = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">STCoverage</a>(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&amp; gr);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">   66</a></span>&#160;  <a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">STCoverage</a>() {}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="comment">//void combineCoverage(Coverage &amp;cov);</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#a70b606eb3ed43bc1cc965c0366784d62">ToBedgraph</a>(ogzstream * o, <span class="keyword">const</span> bam_hdr_t * h) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSnowTools_1_1STCoverage.html#a4208f6828c2b8846469864c98d4e9cd1">operator&lt;&lt;</a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1STCoverage.html">STCoverage</a> &amp;c);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classSnowTools_1_1STCoverage.html#aa5ce17682a93dad940fc3b667782bdee">getCoverageAtPosition</a>(<span class="keywordtype">int</span> chr, <span class="keywordtype">int</span> pos) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  uint16_t maxCov() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">   68</a></span>&#160;  <a class="code" href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">STCoverage</a>() {}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="comment">//void combineCoverage(Coverage &amp;cov);</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1STCoverage.html#a70b606eb3ed43bc1cc965c0366784d62">ToBedgraph</a>(ogzstream * o, <span class="keyword">const</span> bam_hdr_t * h) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSnowTools_1_1STCoverage.html#a4208f6828c2b8846469864c98d4e9cd1">operator&lt;&lt;</a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="classSnowTools_1_1STCoverage.html">STCoverage</a> &amp;c);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classSnowTools_1_1STCoverage.html#aa5ce17682a93dad940fc3b667782bdee">getCoverageAtPosition</a>(<span class="keywordtype">int</span> chr, <span class="keywordtype">int</span> pos) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> AlignedContig.h:10</div></div>
 <div class="ttc" id="classSnowTools_1_1GenomicRegionCollection_html"><div class="ttname"><a href="classSnowTools_1_1GenomicRegionCollection.html">SnowTools::GenomicRegionCollection&lt; GenomicRegion &gt;</a></div></div>
 <div class="ttc" id="classSnowTools_1_1STCoverage_html_a70b606eb3ed43bc1cc965c0366784d62"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html#a70b606eb3ed43bc1cc965c0366784d62">SnowTools::STCoverage::ToBedgraph</a></div><div class="ttdeci">void ToBedgraph(ogzstream *o, const bam_hdr_t *h) const </div><div class="ttdoc">Return a short summary string of this coverage object. </div></div>
 <div class="ttc" id="classSnowTools_1_1STCoverage_html_ac8bb3912a3ce86b15842e79d0b421204"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html#ac8bb3912a3ce86b15842e79d0b421204">SnowTools::STCoverage::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Clear the coverage map. </div></div>
-<div class="ttc" id="classSnowTools_1_1BamRead_html"><div class="ttname"><a href="classSnowTools_1_1BamRead.html">SnowTools::BamRead</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRead.h:109</div></div>
+<div class="ttc" id="classSnowTools_1_1BamRead_html"><div class="ttname"><a href="classSnowTools_1_1BamRead.html">SnowTools::BamRead</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRead.h:111</div></div>
 <div class="ttc" id="classSnowTools_1_1STCoverage_html_a4208f6828c2b8846469864c98d4e9cd1"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html#a4208f6828c2b8846469864c98d4e9cd1">SnowTools::STCoverage::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const STCoverage &amp;c)</div><div class="ttdoc">Print the entire data. </div></div>
 <div class="ttc" id="classSnowTools_1_1GenomicRegion_html"><div class="ttname"><a href="classSnowTools_1_1GenomicRegion.html">SnowTools::GenomicRegion</a></div><div class="ttdef"><b>Definition:</b> GenomicRegion.h:21</div></div>
-<div class="ttc" id="classSnowTools_1_1STCoverage_html"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html">SnowTools::STCoverage</a></div><div class="ttdef"><b>Definition:</b> STCoverage.h:32</div></div>
-<div class="ttc" id="classSnowTools_1_1STCoverage_html_a5fa980c62dd117ba8d55c64cedc3b302"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">SnowTools::STCoverage::STCoverage</a></div><div class="ttdeci">STCoverage()</div><div class="ttdoc">Make an empty coverage. </div><div class="ttdef"><b>Definition:</b> STCoverage.h:66</div></div>
+<div class="ttc" id="classSnowTools_1_1STCoverage_html"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html">SnowTools::STCoverage</a></div><div class="ttdoc">Hold base-pair or binned coverage across an interval or genome. </div><div class="ttdef"><b>Definition:</b> STCoverage.h:34</div></div>
+<div class="ttc" id="classSnowTools_1_1STCoverage_html_a5fa980c62dd117ba8d55c64cedc3b302"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html#a5fa980c62dd117ba8d55c64cedc3b302">SnowTools::STCoverage::STCoverage</a></div><div class="ttdeci">STCoverage()</div><div class="ttdoc">Make an empty coverage. </div><div class="ttdef"><b>Definition:</b> STCoverage.h:68</div></div>
 <div class="ttc" id="classSnowTools_1_1STCoverage_html_afd1d3b9a795993c0fa72406fea0d3764"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html#afd1d3b9a795993c0fa72406fea0d3764">SnowTools::STCoverage::addRead</a></div><div class="ttdeci">void addRead(const BamRead &amp;r, bool full_length=false)</div><div class="ttdoc">Add a read to this coverage track. </div></div>
 <div class="ttc" id="classSnowTools_1_1STCoverage_html_aa5ce17682a93dad940fc3b667782bdee"><div class="ttname"><a href="classSnowTools_1_1STCoverage.html#aa5ce17682a93dad940fc3b667782bdee">SnowTools::STCoverage::getCoverageAtPosition</a></div><div class="ttdeci">int getCoverageAtPosition(int chr, int pos) const </div><div class="ttdoc">Return the coverage count at a position. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 6 2016 21:09:42 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 7 2016 18:22:02 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -45,6 +45,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
@@ -57,13 +58,22 @@
 <p>Class to store vector of intervals on the genome.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceSnowTools_1_1BamReadSort"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools_1_1BamReadSort.html">BamReadSort</a></td></tr>
+<tr class="memdesc:namespaceSnowTools_1_1BamReadSort"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort methods for reads. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html">AbstractRule</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a full rule (<a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> + <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> + motif etc)  <a href="classSnowTools_1_1AbstractRule.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AlignedContig.html">AlignedContig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A contig with 1 or more mappings to the genome.  <a href="classSnowTools_1_1AlignedContig.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1AlignmentFragment.html">AlignmentFragment</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single alignment of a contig to the reference.  <a href="structSnowTools_1_1AlignmentFragment.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to store and interact with an HTSLib bam1_t read.  <a href="classSnowTools_1_1BamRead.html#details">More...</a><br /></td></tr>
@@ -81,20 +91,25 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores one bin in a <a class="el" href="classSnowTools_1_1Histogram.html" title="Class to store histogram of numeric values. ">Histogram</a>.  <a href="classSnowTools_1_1Bin.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BLATWrapper.html">BLATWrapper</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call BLAT on a single sequence.  <a href="classSnowTools_1_1BLATWrapper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1BreakEnd.html">BreakEnd</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a single break-end of a structural variant.  <a href="structSnowTools_1_1BreakEnd.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1BreakPoint.html">BreakPoint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structural variation (connnecting A-&gt;B) on the genome.  <a href="structSnowTools_1_1BreakPoint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html">BWAWrapper</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls BWA-MEM on sequence queries and returns aligned reads, all in memory.  <a href="classSnowTools_1_1BWAWrapper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html">CigarField</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic container for cigar data.  <a href="classSnowTools_1_1CigarField.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Flag.html">Flag</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a rule for a single alignment flag.  <a href="classSnowTools_1_1Flag.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1FlagRule.html">FlagRule</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a set of <a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> objects for filtering alignment flags.  <a href="structSnowTools_1_1FlagRule.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1FracRegion.html">FracRegion</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,28 +125,37 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to store histogram of numeric values.  <a href="classSnowTools_1_1Histogram.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1MiniRules.html">MiniRules</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a set of rules for creating a variant bam.  <a href="classSnowTools_1_1MiniRules.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A set of AbstractRules on a region united by logi rules.  <a href="classSnowTools_1_1MiniRules.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1MiniRulesCollection.html">MiniRulesCollection</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A full set of rules across any number of regions.  <a href="classSnowTools_1_1MiniRulesCollection.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1PlottedRead.html">PlottedRead</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small container for a read and its position in an ASCII read plot.  <a href="structSnowTools_1_1PlottedRead.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1PlottedReadLine.html">PlottedReadLine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A single line of an ASCII read plot.  <a href="structSnowTools_1_1PlottedReadLine.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html">Range</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold a range of valid numeric values (e.g.  <a href="structSnowTools_1_1Range.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1ReadCount.html">ReadCount</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small class to store a counter to measure <a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWalker</a> progress.  <a href="structSnowTools_1_1ReadCount.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1ReducedBreakEnd.html">ReducedBreakEnd</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimalist <a class="el" href="structSnowTools_1_1BreakEnd.html" title="Represents a single break-end of a structural variant. ">BreakEnd</a> used to reduce memory.  <a href="structSnowTools_1_1ReducedBreakEnd.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1ReducedBreakPoint.html">ReducedBreakPoint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimalist <a class="el" href="structSnowTools_1_1BreakPoint.html" title="A structural variation (connnecting A->B) on the genome. ">BreakPoint</a> used for reading large breakpoint files.  <a href="structSnowTools_1_1ReducedBreakPoint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html">RefGenome</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores an indexed reference genome.  <a href="classSnowTools_1_1RefGenome.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1STCoverage.html">STCoverage</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold base-pair or binned coverage across an interval or genome.  <a href="classSnowTools_1_1STCoverage.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1SVVCF.html">SVVCF</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represent a VCF containing structural variants.  <a href="classSnowTools_1_1SVVCF.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1USeq.html">USeq</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold unaligned sequence (name and bases)  <a href="structSnowTools_1_1USeq.html#details">More...</a><br /></td></tr>
@@ -142,7 +166,7 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ab72534f74775ca7e6249537398c5f038"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab72534f74775ca7e6249537398c5f038"></a>
 typedef std::vector<br class="typebreak" />
 &lt; <a class="el" href="structSnowTools_1_1AlignmentFragment.html">AlignmentFragment</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#ab72534f74775ca7e6249537398c5f038">AlignmentFragmentVector</a></td></tr>
-<tr class="memdesc:ab72534f74775ca7e6249537398c5f038"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of <a class="el" href="structSnowTools_1_1AlignmentFragment.html">AlignmentFragment</a> objects <br /></td></tr>
+<tr class="memdesc:ab72534f74775ca7e6249537398c5f038"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of <a class="el" href="structSnowTools_1_1AlignmentFragment.html" title="A single alignment of a contig to the reference. ">AlignmentFragment</a> objects <br /></td></tr>
 <tr class="separator:ab72534f74775ca7e6249537398c5f038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03b1b306463d36da3dbc280b576d347b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03b1b306463d36da3dbc280b576d347b"></a>
 typedef std::vector&lt; <a class="el" href="structSnowTools_1_1PlottedRead.html">PlottedRead</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PlottedReadVector</b></td></tr>
@@ -474,7 +498,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 6 2016 21:09:42 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 7 2016 18:22:02 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

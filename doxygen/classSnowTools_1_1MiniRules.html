@@ -59,7 +59,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Define a set of rules for creating a variant bam.  
+<p>A set of AbstractRules on a region united by logi rules.  
  <a href="classSnowTools_1_1MiniRules.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a>&gt;</code></p>
@@ -131,17 +131,15 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <tr class="separator:ad34d8d999fceeabe71255a4e526b8bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Define a set of rules for creating a variant bam. </p>
-<p>The syntax is: all@!isize:[0,800],mapq:[0,60] region rule1:[0,800],mapq:[0,60] rule2@!isize[0,800]:mapq[0,60],:ardclip:supplementary:duplicate:qcfail rule3@</p>
-<p>A file of NA indicates that the rule should be applied genome-wide. The ordering of the lines sets the hierarchical rule. For instance, a rule on line 2 will be applied before a rule on line 3 for all regions that are the union of regions in level 3 and below.</p>
-<p>e.g. Level 3 region file has region chr1 100 1000 Level 2 region file has region chr1 150 1200 The union of these will produce a new region chr1 100 1200, with level 2 </p>
+<div class="textblock"><p>A set of AbstractRules on a region united by logi rules. </p>
+<p><a class="el" href="classSnowTools_1_1MiniRules.html" title="A set of AbstractRules on a region united by logi rules. ">MiniRules</a> stores an arbitrarily complex collection of AbstractRules (e.g. (Mapped &amp;&amp; Clipped) || (Unmapped)). </p>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/SnowTools/<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 6 2016 21:09:42 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 7 2016 18:22:02 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
