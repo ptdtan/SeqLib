@@ -107,7 +107,7 @@
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    std::reverse(&amp;a[0], &amp;a[a.size()]);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    std::string::iterator it = a.begin();</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">for</span> (; it != a.end(); it++)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      *it = RCOMPLEMENT_TABLE[*it];</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      *it = RCOMPLEMENT_TABLE[(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)*it];</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  </div>
 <div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="namespaceSnowTools.html#ad5db963da52f61ef53e04a64653c4464">   82</a></span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespaceSnowTools.html#ad5db963da52f61ef53e04a64653c4464">percentCalc</a>(T numer, T denom) {</div>
@@ -135,7 +135,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 7 2016 20:01:30 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 9 2016 19:44:37 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
