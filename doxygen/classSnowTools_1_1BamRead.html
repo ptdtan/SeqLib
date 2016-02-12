@@ -318,10 +318,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bam1_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#ac8a8e932ebee9ad1abe2f4deafc23b31">raw</a> () const </td></tr>
 <tr class="memdesc:ac8a8e932ebee9ad1abe2f4deafc23b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw pointer. <br /></td></tr>
 <tr class="separator:ac8a8e932ebee9ad1abe2f4deafc23b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a161698735a1b5e3842001160621edca7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a161698735a1b5e3842001160621edca7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#a161698735a1b5e3842001160621edca7">coveredBase</a> (int pos) const </td></tr>
-<tr class="memdesc:a161698735a1b5e3842001160621edca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if bases is covered by match (not clip) at loc N on read. <br /></td></tr>
+<tr class="memitem:a161698735a1b5e3842001160621edca7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#a161698735a1b5e3842001160621edca7">coveredBase</a> (int pos) const </td></tr>
+<tr class="memdesc:a161698735a1b5e3842001160621edca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if base at position on read is covered by alignment M or I (not clip)  <a href="#a161698735a1b5e3842001160621edca7">More...</a><br /></td></tr>
 <tr class="separator:a161698735a1b5e3842001160621edca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab21596f19cd4e682049f039b31bc299"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#aab21596f19cd4e682049f039b31bc299">coveredMatchBase</a> (int pos) const </td></tr>
+<tr class="memdesc:aab21596f19cd4e682049f039b31bc299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if base at position on read is covered by match only (M)  <a href="#aab21596f19cd4e682049f039b31bc299">More...</a><br /></td></tr>
+<tr class="separator:aab21596f19cd4e682049f039b31bc299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -470,6 +472,56 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 
 <p>Retrieve the human readable chromosome name. </p>
 <p>Note that this requires that the header not be empty. If it is empty, assumes this ia chr1 based reference </p>
+
+</div>
+</div>
+<a class="anchor" id="a161698735a1b5e3842001160621edca7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool coveredBase </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if base at position on read is covered by alignment M or I (not clip) </p>
+<p>Example: Alignment with 50M10I10M20S &ndash; 0-79: true, 80+ false </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Position on base (0 is start) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if that base is aligned (I or M) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aab21596f19cd4e682049f039b31bc299"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool coveredMatchBase </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if base at position on read is covered by match only (M) </p>
+<p>Example: Alignment with 10S50M20S &ndash; 0-9: false, 10-59: true, 60+: false </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Position on base (0 is start) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if that base is aligned (M) </dd></dl>
 
 </div>
 </div>
@@ -701,7 +753,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 9 2016 19:44:37 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 12 2016 03:55:27 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

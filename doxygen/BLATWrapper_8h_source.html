@@ -200,19 +200,30 @@
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">void</span> __extendHitRight(<span class="keywordtype">int</span> qMax, <span class="keywordtype">int</span> tMax,</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                        <span class="keywordtype">char</span> **pEndQ, <span class="keywordtype">char</span> **pEndT, <span class="keywordtype">int</span> (*scoreMatch)(<span class="keywordtype">char</span> a, <span class="keywordtype">char</span> b), </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                        <span class="keywordtype">int</span> maxDown);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;};</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keyword">struct </span>gfHit* __gfFindHitsWithQmask(<span class="keyword">struct</span> genoFind *gf, bioSeq *seq,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                      Bits *qMaskBits, <span class="keywordtype">int</span> qMaskOffset, <span class="keyword">struct</span> lm *lm, <span class="keywordtype">int</span> *retHitCount, </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                      <span class="keyword">struct</span> gfSeqSource *target, <span class="keywordtype">int</span> tMin, <span class="keywordtype">int</span> tMax);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  </div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keyword">struct </span>gfHit* __gfFastFindDnaHits(<span class="keyword">struct</span> genoFind *gf, <span class="keyword">struct</span> dnaSeq *seq, </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                    Bits *qMaskBits,  <span class="keywordtype">int</span> qMaskOffset, <span class="keyword">struct</span> lm *lm, <span class="keywordtype">int</span> *retHitCount,</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                                    <span class="keyword">struct</span> gfSeqSource *target, <span class="keywordtype">int</span> tMin, <span class="keywordtype">int</span> tMax);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keyword">struct </span>gfSeqSource* __findSource(<span class="keyword">struct</span> genoFind *gf, bits32 targetPos);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;};</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> AlignedContig.h:10</div></div>
 <div class="ttc" id="classSnowTools_1_1BLATWrapper_html"><div class="ttname"><a href="classSnowTools_1_1BLATWrapper.html">SnowTools::BLATWrapper</a></div><div class="ttdoc">Call BLAT on a single sequence. </div><div class="ttdef"><b>Definition:</b> BLATWrapper.h:48</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 9 2016 19:44:37 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 12 2016 03:55:26 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
