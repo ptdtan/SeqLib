@@ -115,6 +115,21 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a25897fa121ae9461a961dc8680be53c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a25897fa121ae9461a961dc8680be53c4">setGapOpen</a> (int gap_open)</td></tr>
 <tr class="memdesc:a25897fa121ae9461a961dc8680be53c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the gap open penalty.  <a href="#a25897fa121ae9461a961dc8680be53c4">More...</a><br /></td></tr>
 <tr class="separator:a25897fa121ae9461a961dc8680be53c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee617c11497566693513072ec127390a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#aee617c11497566693513072ec127390a">setGapExtension</a> (int gap_ext)</td></tr>
+<tr class="memdesc:aee617c11497566693513072ec127390a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the gap open penalty.  <a href="#aee617c11497566693513072ec127390a">More...</a><br /></td></tr>
+<tr class="separator:aee617c11497566693513072ec127390a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddfdaf5c4533e9b73917ceabc2c4c75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a4ddfdaf5c4533e9b73917ceabc2c4c75">setMismatchPenalty</a> (int m)</td></tr>
+<tr class="memdesc:a4ddfdaf5c4533e9b73917ceabc2c4c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the mismatch penalty.  <a href="#a4ddfdaf5c4533e9b73917ceabc2c4c75">More...</a><br /></td></tr>
+<tr class="separator:a4ddfdaf5c4533e9b73917ceabc2c4c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0610f7e9089124d6e0d31200d3e0380"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#af0610f7e9089124d6e0d31200d3e0380">setReseedTrigger</a> (float r)</td></tr>
+<tr class="memdesc:af0610f7e9089124d6e0d31200d3e0380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the reseed trigger.  <a href="#af0610f7e9089124d6e0d31200d3e0380">More...</a><br /></td></tr>
+<tr class="separator:af0610f7e9089124d6e0d31200d3e0380"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfad906b698d914ccf0bad498d37cdbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#adfad906b698d914ccf0bad498d37cdbd">setBandwidth</a> (int w)</td></tr>
+<tr class="memdesc:adfad906b698d914ccf0bad498d37cdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the SW alignment bandwidth.  <a href="#adfad906b698d914ccf0bad498d37cdbd">More...</a><br /></td></tr>
+<tr class="separator:adfad906b698d914ccf0bad498d37cdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2f266be121471a6aa759bf30e58a01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a1e2f266be121471a6aa759bf30e58a01">setZDropoff</a> (int z)</td></tr>
+<tr class="memdesc:a1e2f266be121471a6aa759bf30e58a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the SW alignment Z dropoff.  <a href="#a1e2f266be121471a6aa759bf30e58a01">More...</a><br /></td></tr>
+<tr class="separator:a1e2f266be121471a6aa759bf30e58a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Calls BWA-MEM on sequence queries and returns aligned reads, all in memory. </p>
@@ -212,6 +227,54 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 </div>
 </div>
+<a class="anchor" id="adfad906b698d914ccf0bad498d37cdbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setBandwidth </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>w</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the SW alignment bandwidth. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">w</td><td>See BWA-MEM -w. Default 100 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aee617c11497566693513072ec127390a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setGapExtension </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>gap_ext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the gap open penalty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gap_open</td><td>Gap extension penalty. Default 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a25897fa121ae9461a961dc8680be53c4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -230,6 +293,78 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gap_open</td><td>Gap open penalty. Default 6. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4ddfdaf5c4533e9b73917ceabc2c4c75"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setMismatchPenalty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the mismatch penalty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Mismatch penalty (BWA-MEM b). Default 4 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af0610f7e9089124d6e0d31200d3e0380"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setReseedTrigger </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the reseed trigger. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>See BWA-MEM -r. Default 1.5 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1e2f266be121471a6aa759bf30e58a01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setZDropoff </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>z</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the SW alignment Z dropoff. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">z</td><td>See BWA-MEM -d. Default 100 </td></tr>
   </table>
   </dd>
 </dl>
@@ -266,7 +401,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 5 2016 17:39:08 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 6 2016 18:25:37 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
