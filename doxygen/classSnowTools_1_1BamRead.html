@@ -200,6 +200,9 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#a1850a3aa2bdd222c675a9af449151ed8">InsertSize</a> () const </td></tr>
 <tr class="memdesc:a1850a3aa2bdd222c675a9af449151ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the insert size for this read. <br /></td></tr>
 <tr class="separator:a1850a3aa2bdd222c675a9af449151ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf667c1781f31e6518ed7e5dedb8c61a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#acf667c1781f31e6518ed7e5dedb8c61a">ParseReadGroup</a> () const </td></tr>
+<tr class="memdesc:acf667c1781f31e6518ed7e5dedb8c61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the read group, first from qname, then by RG tag.  <a href="#acf667c1781f31e6518ed7e5dedb8c61a">More...</a><br /></td></tr>
+<tr class="separator:acf667c1781f31e6518ed7e5dedb8c61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4fffc6cb10c7d77ddbdae9ad295a830"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4fffc6cb10c7d77ddbdae9ad295a830"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#aa4fffc6cb10c7d77ddbdae9ad295a830">FullInsertSize</a> () const </td></tr>
 <tr class="memdesc:aa4fffc6cb10c7d77ddbdae9ad295a830"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the insert size, absolute value, and always taking into account read length. <br /></td></tr>
@@ -664,6 +667,8 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value stored in the tag. Returns empty string if it does not exist. </dd></dl>
 
+<p>Referenced by <a class="el" href="classSnowTools_1_1BamRead.html#acf667c1781f31e6518ed7e5dedb8c61a">BamRead::ParseReadGroup()</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a7ce8b14d32f3167126f830b6c58904ed"></a>
@@ -691,6 +696,34 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <p>0 - FR (RFORIENTATION) (lower pos read is Fwd strand, higher is reverse) 1 - FF (FFORIENTATION) 2 - RF (RFORIENTATION) 3 - RR (RRORIENTATION) 4 - Undefined (UDORIENTATION) (unpaired or one/both is unmapped) </p>
 
 <p>References <a class="el" href="classSnowTools_1_1BamRead.html#a6a602cda286b646dd00170fec4bdd353">BamRead::MatePosition()</a>, <a class="el" href="classSnowTools_1_1BamRead.html#adcfaba5e50f7a799cb8d4d89fa5afae6">BamRead::MateReverseFlag()</a>, <a class="el" href="classSnowTools_1_1BamRead.html#ad4ab6b24a51712e0a8ce89e492d1d38e">BamRead::PairMappedFlag()</a>, <a class="el" href="classSnowTools_1_1BamRead.html#a6fd3f2218c3245356bd3f841616d208e">BamRead::Position()</a>, and <a class="el" href="classSnowTools_1_1BamRead.html#a20e39d0a44668c55b436cd7fd7d534d5">BamRead::ReverseFlag()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acf667c1781f31e6518ed7e5dedb8c61a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ParseReadGroup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the read group, first from qname, then by RG tag. </p>
+<dl class="section return"><dt>Returns</dt><dd>empty string if no readgroup found </dd></dl>
+
+<p>References <a class="el" href="classSnowTools_1_1BamRead.html#a35a81a15d80b25d069f315becdeac88f">BamRead::GetZTag()</a>, and <a class="el" href="classSnowTools_1_1BamRead.html#a98694bf297ed2b002773ededb9b7f0c9">BamRead::Qname()</a>.</p>
 
 </div>
 </div>
@@ -814,7 +847,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 16 2016 21:18:27 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 17 2016 05:12:13 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
