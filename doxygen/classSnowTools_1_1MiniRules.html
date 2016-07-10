@@ -82,12 +82,15 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const <
 <tr class="memitem:a89fd41cdd1843d518e6c618b5fe6f5a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89fd41cdd1843d518e6c618b5fe6f5a9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>parseDiscordantShortcut</b> (const std::string &amp;line, const <a class="el" href="classSnowTools_1_1AbstractRule.html">AbstractRule</a> &amp;ar)</td></tr>
 <tr class="separator:a89fd41cdd1843d518e6c618b5fe6f5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2984e17c922fe9fed57adeb7d1881d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1MiniRules.html#aa2984e17c922fe9fed57adeb7d1881d3">MiniRules</a> (const <a class="el" href="structSnowTools_1_1CommandLineRegion.html">CommandLineRegion</a> &amp;c, bam_hdr_t *h)</td></tr>
+<tr class="memdesc:aa2984e17c922fe9fed57adeb7d1881d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="classSnowTools_1_1MiniRules.html" title="A set of AbstractRules on a region united by logi rules. ">MiniRules</a> with a an all exclude or include rule.  <a href="#aa2984e17c922fe9fed57adeb7d1881d3">More...</a><br /></td></tr>
+<tr class="separator:aa2984e17c922fe9fed57adeb7d1881d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af39543a680b11c10995cd53efce2629a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af39543a680b11c10995cd53efce2629a"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
 <tr class="separator:af39543a680b11c10995cd53efce2629a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa34a2795f6a6a7e110500d65ea87d93e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa34a2795f6a6a7e110500d65ea87d93e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setRegionFromFile</b> (const std::string &amp;file)</td></tr>
-<tr class="separator:aa34a2795f6a6a7e110500d65ea87d93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a895fab52bc5dc2e105c2046b4a0ceb39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a895fab52bc5dc2e105c2046b4a0ceb39"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setRegionFromFile</b> (const std::string &amp;file, bam_hdr_t *h)</td></tr>
+<tr class="separator:a895fab52bc5dc2e105c2046b4a0ceb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae878be744cbf559d230215fb5427abe1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae878be744cbf559d230215fb5427abe1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isReadOverlappingRegion</b> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
 <tr class="separator:ae878be744cbf559d230215fb5427abe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,14 +155,51 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A set of AbstractRules on a region united by logi rules. </p>
 <p><a class="el" href="classSnowTools_1_1MiniRules.html" title="A set of AbstractRules on a region united by logi rules. ">MiniRules</a> stores an arbitrarily complex collection of AbstractRules (e.g. (Mapped &amp;&amp; Clipped) || (Unmapped)). </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aa2984e17c922fe9fed57adeb7d1881d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSnowTools_1_1MiniRules.html">MiniRules</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structSnowTools_1_1CommandLineRegion.html">CommandLineRegion</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bam_hdr_t *&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Make a <a class="el" href="classSnowTools_1_1MiniRules.html" title="A set of AbstractRules on a region united by logi rules. ">MiniRules</a> with a an all exclude or include rule. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Samtools</td><td>style string, BED file or VCF </td></tr>
+    <tr><td class="paramname">reg_type</td><td>The type of rule this will be </td></tr>
+    <tr><td class="paramname">h</td><td>BAM header that defines available chromosomes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/old/<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a></li>
 <li>src/SnowTools/<a class="el" href="MiniRules2_8h_source.html">MiniRules2.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 6 2016 18:33:01 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 10 2016 16:19:25 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
