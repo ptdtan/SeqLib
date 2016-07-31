@@ -131,6 +131,15 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a1e2f266be121471a6aa759bf30e58a01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a1e2f266be121471a6aa759bf30e58a01">setZDropoff</a> (int z)</td></tr>
 <tr class="memdesc:a1e2f266be121471a6aa759bf30e58a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the SW alignment Z dropoff.  <a href="#a1e2f266be121471a6aa759bf30e58a01">More...</a><br /></td></tr>
 <tr class="separator:a1e2f266be121471a6aa759bf30e58a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafeb7fa565f3c3dade390d9a2b9160ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#aafeb7fa565f3c3dade390d9a2b9160ec">set3primeClippingPenalty</a> (int p)</td></tr>
+<tr class="memdesc:aafeb7fa565f3c3dade390d9a2b9160ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 3-prime clipping penalty.  <a href="#aafeb7fa565f3c3dade390d9a2b9160ec">More...</a><br /></td></tr>
+<tr class="separator:aafeb7fa565f3c3dade390d9a2b9160ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d1be8d9a7ed2614cb60f810065ccc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a96d1be8d9a7ed2614cb60f810065ccc6">set5primeClippingPenalty</a> (int p)</td></tr>
+<tr class="memdesc:a96d1be8d9a7ed2614cb60f810065ccc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the 5-prime clipping penalty.  <a href="#a96d1be8d9a7ed2614cb60f810065ccc6">More...</a><br /></td></tr>
+<tr class="separator:a96d1be8d9a7ed2614cb60f810065ccc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2b20a2015c98435d73e34440e158fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a6d2b20a2015c98435d73e34440e158fc">setAScore</a> (int a)</td></tr>
+<tr class="memdesc:a6d2b20a2015c98435d73e34440e158fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the match score.  <a href="#a6d2b20a2015c98435d73e34440e158fc">More...</a><br /></td></tr>
+<tr class="separator:a6d2b20a2015c98435d73e34440e158fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Calls BWA-MEM on sequence queries and returns aligned reads, all in memory. </p>
@@ -222,6 +231,78 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>path a to an index fasta (index with bwa index) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aafeb7fa565f3c3dade390d9a2b9160ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set3primeClippingPenalty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the 3-prime clipping penalty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>See BWA-MEM -L. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a96d1be8d9a7ed2614cb60f810065ccc6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set5primeClippingPenalty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the 5-prime clipping penalty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>See BWA-MEM -L. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6d2b20a2015c98435d73e34440e158fc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setAScore </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the match score. </p>
+<p>Scales -TdBOELU </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>See BWA-MEM -A </td></tr>
   </table>
   </dd>
 </dl>
@@ -402,7 +483,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 31 2016 17:33:07 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 31 2016 17:34:36 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
