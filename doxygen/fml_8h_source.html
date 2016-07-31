@@ -59,10 +59,10 @@
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structbseq1__t.html">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structfseq1__t.html">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        int32_t l_seq;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordtype">char</span> *seq, *qual; <span class="comment">// NULL-terminated strings; length expected to match $l_seq</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;} <a class="code" href="structbseq1__t.html">bseq1_t</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;} <a class="code" href="structfseq1__t.html">fseq1_t</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define MAG_F_AGGRESSIVE 0x20 // pop variant bubbles (not default)</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define MAG_F_NO_SIMPL   0x80 // skip bubble simplification (default)</span></div>
@@ -106,11 +106,11 @@
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment"> * High-level functions *</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment"> ************************/</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="structbseq1__t.html">bseq1_t</a> *bseq_read(<span class="keyword">const</span> <span class="keywordtype">char</span> *fn, <span class="keywordtype">int</span> *n);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="structfseq1__t.html">fseq1_t</a> *fseq_read(<span class="keyword">const</span> <span class="keywordtype">char</span> *fn, <span class="keywordtype">int</span> *n);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> fml_opt_init(<a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="structfml__utg__t.html">fml_utg_t</a> *fml_assemble(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n_seqs, <a class="code" href="structbseq1__t.html">bseq1_t</a> *seqs, <span class="keywordtype">int</span> *n_utg);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<a class="code" href="structfml__utg__t.html">fml_utg_t</a> *fml_assemble(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n_seqs, <a class="code" href="structfseq1__t.html">fseq1_t</a> *seqs, <span class="keywordtype">int</span> *n_utg);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keywordtype">void</span> fml_utg_destroy(<span class="keywordtype">int</span> n_utg, <a class="code" href="structfml__utg__t.html">fml_utg_t</a> *utg);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
@@ -118,12 +118,12 @@
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * Mid-level functions called by fml_assemble() *</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> ************************************************/</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">void</span> fml_opt_adjust(<a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n_seqs, <span class="keyword">const</span> <a class="code" href="structbseq1__t.html">bseq1_t</a> *seqs);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">void</span> fml_opt_adjust(<a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n_seqs, <span class="keyword">const</span> <a class="code" href="structfseq1__t.html">fseq1_t</a> *seqs);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordtype">float</span> fml_correct(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n, <a class="code" href="structbseq1__t.html">bseq1_t</a> *seq);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">float</span> fml_fltuniq(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n, <a class="code" href="structbseq1__t.html">bseq1_t</a> *seq);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keywordtype">float</span> fml_correct(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n, <a class="code" href="structfseq1__t.html">fseq1_t</a> *seq);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keywordtype">float</span> fml_fltuniq(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n, <a class="code" href="structfseq1__t.html">fseq1_t</a> *seq);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">struct </span><a class="code" href="structrld__t.html">rld_t</a> *fml_seq2fmi(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n, <a class="code" href="structbseq1__t.html">bseq1_t</a> *seq);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">struct </span><a class="code" href="structrld__t.html">rld_t</a> *fml_seq2fmi(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keywordtype">int</span> n, <a class="code" href="structfseq1__t.html">fseq1_t</a> *seq);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">struct </span><a class="code" href="structmag__t.html">mag_t</a> *fml_fmi2mag(<span class="keyword">const</span> <a class="code" href="structfml__opt__t.html">fml_opt_t</a> *opt, <span class="keyword">struct</span> <a class="code" href="structrld__t.html">rld_t</a> *e);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
@@ -145,16 +145,16 @@
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="structmag__t_html"><div class="ttname"><a href="structmag__t.html">mag_t</a></div><div class="ttdef"><b>Definition:</b> mag.h:27</div></div>
+<div class="ttc" id="structfseq1__t_html"><div class="ttname"><a href="structfseq1__t.html">fseq1_t</a></div><div class="ttdef"><b>Definition:</b> fml.h:8</div></div>
 <div class="ttc" id="structrld__t_html"><div class="ttname"><a href="structrld__t.html">rld_t</a></div><div class="ttdef"><b>Definition:</b> rld0.h:22</div></div>
 <div class="ttc" id="structfml__utg__t_html"><div class="ttname"><a href="structfml__utg__t.html">fml_utg_t</a></div><div class="ttdef"><b>Definition:</b> fml.h:38</div></div>
-<div class="ttc" id="structbseq1__t_html"><div class="ttname"><a href="structbseq1__t.html">bseq1_t</a></div><div class="ttdef"><b>Definition:</b> fml.h:8</div></div>
 <div class="ttc" id="structfml__ovlp__t_html"><div class="ttname"><a href="structfml__ovlp__t.html">fml_ovlp_t</a></div><div class="ttdef"><b>Definition:</b> fml.h:33</div></div>
 <div class="ttc" id="structfml__opt__t_html"><div class="ttname"><a href="structfml__opt__t.html">fml_opt_t</a></div><div class="ttdef"><b>Definition:</b> fml.h:21</div></div>
 <div class="ttc" id="structmagopt__t_html"><div class="ttname"><a href="structmagopt__t.html">magopt_t</a></div><div class="ttdef"><b>Definition:</b> fml.h:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 31 2016 19:08:59 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jul 31 2016 19:47:53 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
