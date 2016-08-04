@@ -68,9 +68,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae05878bb141d8bf23385459eecdff73e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#ae05878bb141d8bf23385459eecdff73e">RefGenome</a> (const std::string &amp;file)</td></tr>
 <tr class="memdesc:ae05878bb141d8bf23385459eecdff73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a reference genome.  <a href="#ae05878bb141d8bf23385459eecdff73e">More...</a><br /></td></tr>
 <tr class="separator:ae05878bb141d8bf23385459eecdff73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8c7b240ea48bb3dda25203d5614433e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8c7b240ea48bb3dda25203d5614433e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a> ()</td></tr>
+<tr class="memdesc:ad8c7b240ea48bb3dda25203d5614433e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an empty <a class="el" href="classSnowTools_1_1RefGenome.html" title="Stores an indexed reference genome. ">RefGenome</a> object. <br /></td></tr>
+<tr class="separator:ad8c7b240ea48bb3dda25203d5614433e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0d87996e072df1a809b015bee58fe8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf0d87996e072df1a809b015bee58fe8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">~RefGenome</a> ()</td></tr>
+<tr class="memdesc:aaf0d87996e072df1a809b015bee58fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy malloc'ed faidx_t index inside object. <br /></td></tr>
+<tr class="separator:aaf0d87996e072df1a809b015bee58fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8b84144de84a0e89254f9e7fd7e92c3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#ad8b84144de84a0e89254f9e7fd7e92c3">queryRegion</a> (const std::string &amp;chr_name, int32_t p1, int32_t p2)</td></tr>
 <tr class="memdesc:ad8b84144de84a0e89254f9e7fd7e92c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query a region to get the sequence.  <a href="#ad8b84144de84a0e89254f9e7fd7e92c3">More...</a><br /></td></tr>
 <tr class="separator:ad8b84144de84a0e89254f9e7fd7e92c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c4342479461e5319eebf9e792ef1b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5c4342479461e5319eebf9e792ef1b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#af5c4342479461e5319eebf9e792ef1b4">retrieveIndex</a> (const std::string &amp;file)</td></tr>
+<tr class="memdesc:af5c4342479461e5319eebf9e792ef1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an indexed reference sequence. <br /></td></tr>
+<tr class="separator:af5c4342479461e5319eebf9e792ef1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e61de369e994009e36f344f99c15ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6e61de369e994009e36f344f99c15ad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#ac6e61de369e994009e36f344f99c15ad">empty</a> () const </td></tr>
+<tr class="memdesc:ac6e61de369e994009e36f344f99c15ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if reference has been loaded. <br /></td></tr>
+<tr class="separator:ac6e61de369e994009e36f344f99c15ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stores an indexed reference genome. </p>
@@ -149,7 +165,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 4 2016 16:41:21 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 4 2016 19:58:51 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

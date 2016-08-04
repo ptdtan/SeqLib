@@ -110,7 +110,7 @@
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <a class="code" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">BamWalker</a>(<span class="keyword">const</span> std::string&amp; in);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">   80</a></span>&#160;  <a class="code" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">BamWalker</a>() {}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">BamWalker</a>();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamWalker.html#a2962c1139d95364142dad9ffdfdd29e7">   87</a></span>&#160;  <a class="code" href="classSnowTools_1_1BamWalker.html#a2962c1139d95364142dad9ffdfdd29e7">~BamWalker</a>() {</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    __close_read_bam(); </div>
@@ -171,73 +171,73 @@
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
 <div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamWalker.html#a28de93624ea4a7c46d914eebe5b8e2db">  214</a></span>&#160;  bam_hdr_t * <a class="code" href="classSnowTools_1_1BamWalker.html#a28de93624ea4a7c46d914eebe5b8e2db">header</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> br.get(); };</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a6b394d470631995333bd5aba90eb3acf">SetWriteHeader</a>(bam_hdr_t* hdr);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamWalker.html#af230f50845671d7e9da189b1fe70f0fa">  220</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#af230f50845671d7e9da189b1fe70f0fa">setReadLimit</a>(<span class="keywordtype">int</span> lim) { m_limit = lim; m_num_reads_seen = 0; }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#a6b394d470631995333bd5aba90eb3acf">SetWriteHeader</a>(bam_hdr_t* hdr);</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamWalker.html#aece1b2bfe33bf63a07845abdd909d7f3">  223</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#aece1b2bfe33bf63a07845abdd909d7f3">setReadKeepLimit</a>(<span class="keywordtype">int</span> lim) { m_keep_limit = lim; m_num_reads_kept = 0; }</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#ac6cb48261b2055e553b6efbafed4197b">resetAll</a>();</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordtype">bool</span> m_region_fail = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="comment">// for stdout mode, print header?</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">bool</span> m_print_header = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamWalker.html#af230f50845671d7e9da189b1fe70f0fa">  223</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#af230f50845671d7e9da189b1fe70f0fa">setReadLimit</a>(<span class="keywordtype">int</span> lim) { m_limit = lim; m_num_reads_seen = 0; }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamWalker.html#aece1b2bfe33bf63a07845abdd909d7f3">  226</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#aece1b2bfe33bf63a07845abdd909d7f3">setReadKeepLimit</a>(<span class="keywordtype">int</span> lim) { m_keep_limit = lim; m_num_reads_kept = 0; }</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1BamWalker.html#ac6cb48261b2055e553b6efbafed4197b">resetAll</a>();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">bool</span> m_region_fail = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="comment">// limit to number of reads to be read in</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">int</span> m_limit = -1;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordtype">int</span> m_keep_limit = -1;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">//void __check_regions_blacklist();</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="comment">// point index to this region of bam</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keywordtype">bool</span> __set_region(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&amp; gp, std::shared_ptr&lt;hts_idx_t&gt; passed_idx = std::shared_ptr&lt;hts_idx_t&gt;(<span class="keyword">nullptr</span>));</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="comment">// for stdout mode, print header?</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">bool</span> m_print_header = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="comment">// limit to number of reads to be read in</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordtype">int</span> m_limit = -1;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordtype">int</span> m_keep_limit = -1;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="comment">//void __check_regions_blacklist();</span></div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keyword">struct </span>timespec start;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="comment">//open bam, true if success</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">bool</span> __open_BAM_for_reading();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="comment">// point index to this region of bam</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordtype">bool</span> __set_region(<span class="keyword">const</span> <a class="code" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&amp; gp, std::shared_ptr&lt;hts_idx_t&gt; passed_idx = std::shared_ptr&lt;hts_idx_t&gt;(<span class="keyword">nullptr</span>));</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keyword">struct </span>timespec start;</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">// close this bam file and delete all pointers</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keywordtype">void</span> __close_read_bam();</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  <span class="keywordtype">void</span> __close_write_bam();</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="comment">// open m_out, true if success</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordtype">bool</span> __open_BAM_for_writing();</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// define the regions to walk</span></div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordtype">size_t</span> m_region_idx = 0;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  GenomicRegionVector m_region;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordtype">bool</span> m_strip_all_tags = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <span class="comment">// hts</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  std::shared_ptr&lt;BGZF&gt; fp;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  std::shared_ptr&lt;hts_idx_t&gt; idx;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  std::shared_ptr&lt;hts_itr_t&gt; hts_itr;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  std::shared_ptr&lt;bam_hdr_t&gt; br;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  std::shared_ptr&lt;bam_hdr_t&gt; hdr_write;</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  std::shared_ptr&lt;htsFile&gt; fop;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <span class="comment">// which tags to strip</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  std::vector&lt;std::string&gt; m_tag_list;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">//open bam, true if success</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keywordtype">bool</span> __open_BAM_for_reading();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">// close this bam file and delete all pointers</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordtype">void</span> __close_read_bam();</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  <span class="keywordtype">void</span> __close_write_bam();</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// open m_out, true if success</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordtype">bool</span> __open_BAM_for_writing();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <span class="comment">// define the regions to walk</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordtype">size_t</span> m_region_idx = 0;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  GenomicRegionVector m_region;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordtype">bool</span> m_strip_all_tags = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="comment">// hts</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  std::shared_ptr&lt;BGZF&gt; fp;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  std::shared_ptr&lt;hts_idx_t&gt; idx;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  std::shared_ptr&lt;hts_itr_t&gt; hts_itr;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  std::shared_ptr&lt;bam_hdr_t&gt; br;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  std::shared_ptr&lt;bam_hdr_t&gt; hdr_write;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  std::shared_ptr&lt;htsFile&gt; fop;</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordtype">bool</span> m_verbose = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="comment">// read counter</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">int</span> m_num_reads_seen = 0;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keywordtype">int</span> m_num_reads_kept = 0;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;};</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;}</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="comment">// which tags to strip</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  std::vector&lt;std::string&gt; m_tag_list;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">bool</span> m_verbose = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="comment">// read counter</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordtype">int</span> m_num_reads_seen = 0;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordtype">int</span> m_num_reads_kept = 0;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;};</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
-<div class="ttc" id="classSnowTools_1_1BamWalker_html_af230f50845671d7e9da189b1fe70f0fa"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#af230f50845671d7e9da189b1fe70f0fa">SnowTools::BamWalker::setReadLimit</a></div><div class="ttdeci">void setReadLimit(int lim)</div><div class="ttdoc">Set the limit for total number of reads seen. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:220</div></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;</div>
+<div class="ttc" id="classSnowTools_1_1BamWalker_html_af230f50845671d7e9da189b1fe70f0fa"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#af230f50845671d7e9da189b1fe70f0fa">SnowTools::BamWalker::setReadLimit</a></div><div class="ttdeci">void setReadLimit(int lim)</div><div class="ttdoc">Set the limit for total number of reads seen. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:223</div></div>
 <div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> AlignedContig.h:10</div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a28de93624ea4a7c46d914eebe5b8e2db"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a28de93624ea4a7c46d914eebe5b8e2db">SnowTools::BamWalker::header</a></div><div class="ttdeci">bam_hdr_t * header() const </div><div class="ttdoc">Return a pointer to the BAM header. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:214</div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a569496895a479f9eabe7e91af6bfde89"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a569496895a479f9eabe7e91af6bfde89">SnowTools::BamWalker::GetMiniRulesCollection</a></div><div class="ttdeci">const MiniRulesCollection &amp; GetMiniRulesCollection() const </div><div class="ttdoc">Return the MiniRulesCollection object used by this BamWalker. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:170</div></div>
@@ -254,14 +254,14 @@
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a2962c1139d95364142dad9ffdfdd29e7"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a2962c1139d95364142dad9ffdfdd29e7">SnowTools::BamWalker::~BamWalker</a></div><div class="ttdeci">~BamWalker()</div><div class="ttdoc">Destroy a BamWalker and close all connections to the BAM. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:87</div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a2f8b481a12b9b3d555e7ef5d72a7504d"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a2f8b481a12b9b3d555e7ef5d72a7504d">SnowTools::BamWalker::setStripAllTags</a></div><div class="ttdeci">void setStripAllTags()</div><div class="ttdoc">Set the output bam to remove all alignment tags. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:202</div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a31f579f732e93b3d273ef0442fd67f04"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a31f579f732e93b3d273ef0442fd67f04">SnowTools::BamWalker::OpenReadBam</a></div><div class="ttdeci">bool OpenReadBam(const std::string &amp;bam)</div><div class="ttdoc">Open a BAM file for streaming in. </div></div>
-<div class="ttc" id="classSnowTools_1_1BamWalker_html_aece1b2bfe33bf63a07845abdd909d7f3"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#aece1b2bfe33bf63a07845abdd909d7f3">SnowTools::BamWalker::setReadKeepLimit</a></div><div class="ttdeci">void setReadKeepLimit(int lim)</div><div class="ttdoc">Set the limit for total number of reads kept. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:223</div></div>
+<div class="ttc" id="classSnowTools_1_1BamWalker_html_aece1b2bfe33bf63a07845abdd909d7f3"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#aece1b2bfe33bf63a07845abdd909d7f3">SnowTools::BamWalker::setReadKeepLimit</a></div><div class="ttdeci">void setReadKeepLimit(int lim)</div><div class="ttdoc">Set the limit for total number of reads kept. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:226</div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a9a4b8aa57ecc58dad95a3399aa4f8a74"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a9a4b8aa57ecc58dad95a3399aa4f8a74">SnowTools::BamWalker::setStripTags</a></div><div class="ttdeci">void setStripTags(const std::string &amp;list)</div><div class="ttdoc">Set a list of tags to strip. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a1e6b8f701b791d3d500a1cfdb094d42a"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a1e6b8f701b791d3d500a1cfdb094d42a">SnowTools::BamWalker::displayMiniRulesCollection</a></div><div class="ttdeci">std::string displayMiniRulesCollection() const </div><div class="ttdoc">Return the MiniRulesCollection as a string. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_abd8b034e1f271558a4cfe318483bf224"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#abd8b034e1f271558a4cfe318483bf224">SnowTools::BamWalker::SetMiniRulesCollection</a></div><div class="ttdeci">void SetMiniRulesCollection(const std::string &amp;rules)</div><div class="ttdoc">Pass a MiniRules script to the BAM. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a0c0730cffc706b670786b830423ccfc0"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a0c0730cffc706b670786b830423ccfc0">SnowTools::BamWalker::setBamWalkerRegion</a></div><div class="ttdeci">void setBamWalkerRegion(const GenomicRegion &amp;gp, std::shared_ptr&lt; hts_idx_t &gt; passed_idx=std::shared_ptr&lt; hts_idx_t &gt;(nullptr))</div><div class="ttdoc">Set a part of the BAM to walk. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_ac6cb48261b2055e553b6efbafed4197b"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#ac6cb48261b2055e553b6efbafed4197b">SnowTools::BamWalker::resetAll</a></div><div class="ttdeci">void resetAll()</div><div class="ttdoc">Reset all the counters and regions, but keep the loaded index. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a849ff48a8a85042f690cdce75a1169da"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a849ff48a8a85042f690cdce75a1169da">SnowTools::BamWalker::makeIndex</a></div><div class="ttdeci">void makeIndex()</div><div class="ttdoc">Create the index file for the output bam in BAI format. </div></div>
-<div class="ttc" id="classSnowTools_1_1BamWalker_html_a3d76fbd34bd87b39c9da9d420a0e72c2"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">SnowTools::BamWalker::BamWalker</a></div><div class="ttdeci">BamWalker()</div><div class="ttdoc">Construct an empty BamWalker. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:80</div></div>
+<div class="ttc" id="classSnowTools_1_1BamWalker_html_a3d76fbd34bd87b39c9da9d420a0e72c2"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a3d76fbd34bd87b39c9da9d420a0e72c2">SnowTools::BamWalker::BamWalker</a></div><div class="ttdeci">BamWalker()</div><div class="ttdoc">Construct an empty BamWalker. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWalker_html_a6b394d470631995333bd5aba90eb3acf"><div class="ttname"><a href="classSnowTools_1_1BamWalker.html#a6b394d470631995333bd5aba90eb3acf">SnowTools::BamWalker::SetWriteHeader</a></div><div class="ttdeci">void SetWriteHeader(bam_hdr_t *hdr)</div><div class="ttdoc">Explicitly provide the output BAM a header. </div></div>
 <div class="ttc" id="structSnowTools_1_1ReadCount_html_ab97d468161532185ce874288abcdf137"><div class="ttname"><a href="structSnowTools_1_1ReadCount.html#ab97d468161532185ce874288abcdf137">SnowTools::ReadCount::totalString</a></div><div class="ttdeci">std::string totalString() const </div><div class="ttdoc">Return the total reads visited as a comma-formatted string. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:49</div></div>
 <div class="ttc" id="structSnowTools_1_1ReadCount_html"><div class="ttname"><a href="structSnowTools_1_1ReadCount.html">SnowTools::ReadCount</a></div><div class="ttdoc">Small class to store a counter to measure BamWalker progress. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:35</div></div>
@@ -278,7 +278,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 4 2016 16:41:21 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 4 2016 19:58:50 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
