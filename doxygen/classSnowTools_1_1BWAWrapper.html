@@ -140,6 +140,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:a6d2b20a2015c98435d73e34440e158fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#a6d2b20a2015c98435d73e34440e158fc">setAScore</a> (int a)</td></tr>
 <tr class="memdesc:a6d2b20a2015c98435d73e34440e158fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the match score.  <a href="#a6d2b20a2015c98435d73e34440e158fc">More...</a><br /></td></tr>
 <tr class="separator:a6d2b20a2015c98435d73e34440e158fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e61de369e994009e36f344f99c15ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6e61de369e994009e36f344f99c15ad"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">empty</a> () const </td></tr>
+<tr class="memdesc:ac6e61de369e994009e36f344f99c15ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if no sequences have been included. <br /></td></tr>
+<tr class="separator:ac6e61de369e994009e36f344f99c15ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Calls BWA-MEM on sequence queries and returns aligned reads, all in memory. </p>
@@ -188,10 +192,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <p>Construct a new bwa index for this object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">v</td><td>vector of references to input (e.g. v = {{"r1", "AT"}};) </td></tr>
+    <tr><td class="paramname">v</td><td>vector of references to input (e.g. v = {{"r1", "AT"}};)</td></tr>
   </table>
   </dd>
 </dl>
+<p>Throw an invalid_argument exception if any of the names or sequences of the input USeqVector is empty </p>
 
 </div>
 </div>
@@ -483,7 +488,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 4 2016 19:58:51 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 5 2016 03:26:37 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
