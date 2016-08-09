@@ -74,14 +74,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad8c7b240ea48bb3dda25203d5614433e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf0d87996e072df1a809b015bee58fe8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf0d87996e072df1a809b015bee58fe8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">~RefGenome</a> ()</td></tr>
-<tr class="memdesc:aaf0d87996e072df1a809b015bee58fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy malloc'ed faidx_t index inside object. <br /></td></tr>
+<tr class="memdesc:aaf0d87996e072df1a809b015bee58fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the malloc'ed faidx_t index inside object. <br /></td></tr>
 <tr class="separator:aaf0d87996e072df1a809b015bee58fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dd64421328534cab3b19316904008b1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#a0dd64421328534cab3b19316904008b1">queryRegion</a> (const std::string &amp;chr_name, int32_t p1, int32_t p2) const </td></tr>
 <tr class="memdesc:a0dd64421328534cab3b19316904008b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query a region to get the sequence.  <a href="#a0dd64421328534cab3b19316904008b1">More...</a><br /></td></tr>
 <tr class="separator:a0dd64421328534cab3b19316904008b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5c4342479461e5319eebf9e792ef1b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5c4342479461e5319eebf9e792ef1b4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#af5c4342479461e5319eebf9e792ef1b4">retrieveIndex</a> (const std::string &amp;file)</td></tr>
-<tr class="memdesc:af5c4342479461e5319eebf9e792ef1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an indexed reference sequence. <br /></td></tr>
+<tr class="memitem:af5c4342479461e5319eebf9e792ef1b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#af5c4342479461e5319eebf9e792ef1b4">retrieveIndex</a> (const std::string &amp;file)</td></tr>
+<tr class="memdesc:af5c4342479461e5319eebf9e792ef1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an indexed reference sequence.  <a href="#af5c4342479461e5319eebf9e792ef1b4">More...</a><br /></td></tr>
 <tr class="separator:af5c4342479461e5319eebf9e792ef1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e61de369e994009e36f344f99c15ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6e61de369e994009e36f344f99c15ad"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1RefGenome.html#ac6e61de369e994009e36f344f99c15ad">empty</a> () const </td></tr>
@@ -152,7 +151,38 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   <table class="params">
     <tr><td class="paramname">chr_name</td><td>name of the chr to query </td></tr>
     <tr><td class="paramname">p1</td><td>position 1 </td></tr>
-    <tr><td class="paramname">p2</td><td>position 2 </td></tr>
+    <tr><td class="paramname">p2</td><td>position 2</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>an invalid_argument if p1 &gt; p2, p1 &lt; 0, p2 &lt; 0, chr not found, or seq not found </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>This is currently NOT thread safe </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af5c4342479461e5319eebf9e792ef1b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void retrieveIndex </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load an indexed reference sequence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>Path to an indexed reference genome. See samtools faidx to create </td></tr>
   </table>
   </dd>
 </dl>
@@ -165,7 +195,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 8 2016 19:06:16 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 9 2016 00:11:55 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
