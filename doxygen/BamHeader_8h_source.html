@@ -60,34 +60,36 @@
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;htslib/bgzf.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;htslib/kstring.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSnowTools.html">SnowTools</a> {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html">   16</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSnowTools_1_1BamHeader.html">BamHeader</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSnowTools.html">SnowTools</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html">   18</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSnowTools_1_1BamHeader.html">BamHeader</a> {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">   24</a></span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>() { h = <span class="keyword">nullptr</span>; };</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> std::string&amp; hdr);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">   26</a></span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>() { h = <span class="keyword">nullptr</span>; };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> std::string&amp; hdr);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    bam_hdr_t * h;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    bam_hdr_t * h;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> AlignedContig.h:10</div></div>
-<div class="ttc" id="classSnowTools_1_1BamHeader_html"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html">SnowTools::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:16</div></div>
-<div class="ttc" id="classSnowTools_1_1BamHeader_html_ac837e0bba5c95698ed712ba7b02bb612"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">SnowTools::BamHeader::BamHeader</a></div><div class="ttdeci">BamHeader()</div><div class="ttdoc">Initializes a new empty BamHeader with no data. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:24</div></div>
+<div class="ttc" id="classSnowTools_1_1BamHeader_html"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html">SnowTools::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:18</div></div>
+<div class="ttc" id="classSnowTools_1_1BamHeader_html_ac837e0bba5c95698ed712ba7b02bb612"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">SnowTools::BamHeader::BamHeader</a></div><div class="ttdeci">BamHeader()</div><div class="ttdoc">Initializes a new empty BamHeader with no data. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 9 2016 00:25:44 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 9 2016 03:21:55 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

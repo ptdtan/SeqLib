@@ -105,9 +105,9 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:ae8a5b5e9e0e6be3b115ee77fa7b4d0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a3e4a2fa54ef05064f0db4d3ee742fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AlignedContig.html#a6a3e4a2fa54ef05064f0db4d3ee742fb">hasVariant</a> () const </td></tr>
 <tr class="separator:a6a3e4a2fa54ef05064f0db4d3ee742fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ea602ea24eea49c9391688146d7630d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AlignedContig.html#a2ea602ea24eea49c9391688146d7630d">writeToBAM</a> (<a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> &amp;bw)</td></tr>
+<tr class="memitem:a2ea602ea24eea49c9391688146d7630d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AlignedContig.html#a2ea602ea24eea49c9391688146d7630d">writeToBAM</a> (BamWalker &amp;bw)</td></tr>
 <tr class="separator:a2ea602ea24eea49c9391688146d7630d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbec23474ede512a4e6329f874f475ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AlignedContig.html#adbec23474ede512a4e6329f874f475ce">writeAlignedReadsToBAM</a> (<a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> &amp;bw)</td></tr>
+<tr class="memitem:adbec23474ede512a4e6329f874f475ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AlignedContig.html#adbec23474ede512a4e6329f874f475ce">writeAlignedReadsToBAM</a> (BamWalker &amp;bw)</td></tr>
 <tr class="separator:adbec23474ede512a4e6329f874f475ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1614fd103494493bd5cea613892205a5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structSnowTools_1_1BreakPoint.html">BreakPoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AlignedContig.html#a1614fd103494493bd5cea613892205a5">getAllBreakPoints</a> (bool local_restrict=true) const </td></tr>
 <tr class="separator:a1614fd103494493bd5cea613892205a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -303,7 +303,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AlignmentFragment</b
         <tr>
           <td class="memname">void writeAlignedReadsToBAM </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> &amp;&#160;</td>
+          <td class="paramtype">BamWalker &amp;&#160;</td>
           <td class="paramname"><em>bw</em></td><td>)</td>
           <td></td>
         </tr>
@@ -311,7 +311,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AlignmentFragment</b
 </div><div class="memdoc">
 <p>Write all of the sequencing reads as aligned to contig to a BAM file </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bw</td><td><a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWalker</a> opened with OpenWriteBam </td></tr>
+    <tr><td class="paramname">bw</td><td>BamWalker opened with OpenWriteBam </td></tr>
   </table>
   </dd>
 </dl>
@@ -325,7 +325,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AlignmentFragment</b
         <tr>
           <td class="memname">void writeToBAM </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSnowTools_1_1BamWalker.html">BamWalker</a> &amp;&#160;</td>
+          <td class="paramtype">BamWalker &amp;&#160;</td>
           <td class="paramname"><em>bw</em></td><td>)</td>
           <td></td>
         </tr>
@@ -333,7 +333,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AlignmentFragment</b
 </div><div class="memdoc">
 <p>Write all of the alignment records to a BAM file </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bw</td><td><a class="el" href="classSnowTools_1_1BamWalker.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWalker</a> opened with OpenWriteBam </td></tr>
+    <tr><td class="paramname">bw</td><td>BamWalker opened with OpenWriteBam </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,7 +346,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>AlignmentFragment</b
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 9 2016 00:25:44 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 9 2016 03:21:55 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
