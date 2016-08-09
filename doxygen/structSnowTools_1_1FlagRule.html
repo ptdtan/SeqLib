@@ -31,7 +31,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -63,27 +62,12 @@
 <p>Stores a set of <a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> objects for filtering alignment flags.  
  <a href="structSnowTools_1_1FlagRule.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ReadFilter_8h_source.html">ReadFilter.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a08377f95ed495426c61911507e285aa6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08377f95ed495426c61911507e285aa6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parseRuleLine</b> (std::string line)</td></tr>
-<tr class="separator:a08377f95ed495426c61911507e285aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af39543a680b11c10995cd53efce2629a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af39543a680b11c10995cd53efce2629a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
-<tr class="separator:af39543a680b11c10995cd53efce2629a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e48c1d62ce3091837946a8659d1b57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2e48c1d62ce3091837946a8659d1b57"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEvery</b> ()</td></tr>
-<tr class="separator:ac2e48c1d62ce3091837946a8659d1b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3c90301d2fa949ab33bb772c40a8d55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3c90301d2fa949ab33bb772c40a8d55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setNone</b> ()</td></tr>
-<tr class="separator:ac3c90301d2fa949ab33bb772c40a8d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa3b3e69671f640b174fe6a004111dd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa3b3e69671f640b174fe6a004111dd0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEvery</b> () const </td></tr>
-<tr class="separator:afa3b3e69671f640b174fe6a004111dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a925b32b2c3b70a47686caef98b2513c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a925b32b2c3b70a47686caef98b2513c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parseJson</b> (const <a class="el" href="classJson_1_1Value.html">Json::Value</a> &amp;value)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parseJson</b> (const Json::Value &amp;value)</td></tr>
 <tr class="separator:a925b32b2c3b70a47686caef98b2513c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea539b56624de1673f119c98d78bf276"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea539b56624de1673f119c98d78bf276"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setOnFlag</b> (uint32_t f)</td></tr>
@@ -101,8 +85,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEvery</b> () const 
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a56c777f9b3183c59b2008a49c487d4bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56c777f9b3183c59b2008a49c487d4bf"></a>
-<a class="el" href="classSnowTools_1_1Flag.html">Flag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1FlagRule.html#a56c777f9b3183c59b2008a49c487d4bf">dup</a></td></tr>
-<tr class="memdesc:a56c777f9b3183c59b2008a49c487d4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">if inv is true, then if flag rule is ON and read is ON, return FALSE <br /></td></tr>
+<a class="el" href="classSnowTools_1_1Flag.html">Flag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dup</b></td></tr>
 <tr class="separator:a56c777f9b3183c59b2008a49c487d4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c780422edb615e2ee0b6da3ab1251b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c780422edb615e2ee0b6da3ab1251b5"></a>
 <a class="el" href="classSnowTools_1_1Flag.html">Flag</a>&#160;</td><td class="memItemRight" valign="bottom"><b>supp</b></td></tr>
@@ -156,9 +139,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>na</b> = true</td></t
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a744f339f51414856371c6904129ca419"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a744f339f51414856371c6904129ca419"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="structSnowTools_1_1FlagRule.html">FlagRule</a> &amp;fr)</td></tr>
-<tr class="separator:a744f339f51414856371c6904129ca419"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a744f339f51414856371c6904129ca419"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a744f339f51414856371c6904129ca419"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1FlagRule.html#a744f339f51414856371c6904129ca419">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structSnowTools_1_1FlagRule.html">FlagRule</a> &amp;fr)</td></tr>
 <tr class="memdesc:a744f339f51414856371c6904129ca419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the flag rule. <br /></td></tr>
 <tr class="separator:a744f339f51414856371c6904129ca419"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,14 +146,13 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stores a set of <a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> objects for filtering alignment flags. </p>
 <p>An alignment can be queried against a <a class="el" href="structSnowTools_1_1FlagRule.html" title="Stores a set of Flag objects for filtering alignment flags. ">FlagRule</a> to check if it satisfies the requirements for its alignment flag. </p>
-</div><hr/>The documentation for this struct was generated from the following files:<ul>
-<li>src/old/<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a></li>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/SnowTools/<a class="el" href="ReadFilter_8h_source.html">ReadFilter.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 9 2016 03:21:55 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 9 2016 20:14:57 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -31,7 +31,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -52,7 +51,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="structSnowTools_1_1Range-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -63,36 +61,10 @@
 <p>Hold a range of valid numeric values (e.g.  
  <a href="structSnowTools_1_1Range.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="ReadFilter_8h_source.html">ReadFilter.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afa61e339c5d7dd76c25663fc2718da8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa61e339c5d7dd76c25663fc2718da8a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#afa61e339c5d7dd76c25663fc2718da8a">Range</a> ()</td></tr>
-<tr class="memdesc:afa61e339c5d7dd76c25663fc2718da8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> from 0 to 0, non-inverted. <br /></td></tr>
-<tr class="separator:afa61e339c5d7dd76c25663fc2718da8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37e70320de2bd5842a17d379a82b8cd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a37e70320de2bd5842a17d379a82b8cd2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#a37e70320de2bd5842a17d379a82b8cd2">Range</a> (int mn, int mx, int in, std::string p)</td></tr>
-<tr class="memdesc:a37e70320de2bd5842a17d379a82b8cd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> from mn to mx, inclusive. <br /></td></tr>
-<tr class="separator:a37e70320de2bd5842a17d379a82b8cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff5557f62ee377f7fe52d648c04dd5a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff5557f62ee377f7fe52d648c04dd5a5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> (int val)</td></tr>
-<tr class="separator:aff5557f62ee377f7fe52d648c04dd5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08377f95ed495426c61911507e285aa6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08377f95ed495426c61911507e285aa6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parseRuleLine</b> (std::string line)</td></tr>
-<tr class="separator:a08377f95ed495426c61911507e285aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e48c1d62ce3091837946a8659d1b57"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2e48c1d62ce3091837946a8659d1b57"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setEvery</b> ()</td></tr>
-<tr class="separator:ac2e48c1d62ce3091837946a8659d1b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3c90301d2fa949ab33bb772c40a8d55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3c90301d2fa949ab33bb772c40a8d55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setNone</b> ()</td></tr>
-<tr class="separator:ac3c90301d2fa949ab33bb772c40a8d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa3b3e69671f640b174fe6a004111dd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa3b3e69671f640b174fe6a004111dd0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEvery</b> () const </td></tr>
-<tr class="separator:afa3b3e69671f640b174fe6a004111dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5933dbc07cf514d2d04d793372d28fad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5933dbc07cf514d2d04d793372d28fad"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNone</b> () const </td></tr>
-<tr class="separator:a5933dbc07cf514d2d04d793372d28fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa61e339c5d7dd76c25663fc2718da8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa61e339c5d7dd76c25663fc2718da8a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#afa61e339c5d7dd76c25663fc2718da8a">Range</a> ()</td></tr>
 <tr class="memdesc:afa61e339c5d7dd76c25663fc2718da8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a default range with everything accepted. <br /></td></tr>
@@ -103,7 +75,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isNone</b> () const <
 <tr class="memitem:aff5557f62ee377f7fe52d648c04dd5a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#aff5557f62ee377f7fe52d648c04dd5a5">isValid</a> (int val)</td></tr>
 <tr class="memdesc:aff5557f62ee377f7fe52d648c04dd5a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a query value, determine if the value passes this <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a>.  <a href="#aff5557f62ee377f7fe52d648c04dd5a5">More...</a><br /></td></tr>
 <tr class="separator:aff5557f62ee377f7fe52d648c04dd5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac743537a0ce2cf12b901ef05f3a51df7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#ac743537a0ce2cf12b901ef05f3a51df7">parseJson</a> (const <a class="el" href="classJson_1_1Value.html">Json::Value</a> &amp;value, const std::string &amp;name)</td></tr>
+<tr class="memitem:ac743537a0ce2cf12b901ef05f3a51df7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#ac743537a0ce2cf12b901ef05f3a51df7">parseJson</a> (const Json::Value &amp;value, const std::string &amp;name)</td></tr>
 <tr class="memdesc:ac743537a0ce2cf12b901ef05f3a51df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a JSON value.  <a href="#ac743537a0ce2cf12b901ef05f3a51df7">More...</a><br /></td></tr>
 <tr class="separator:ac743537a0ce2cf12b901ef05f3a51df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa3b3e69671f640b174fe6a004111dd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa3b3e69671f640b174fe6a004111dd0"></a>
@@ -122,32 +94,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 <tr class="memdesc:aad8e67b937cad74814eb52d88ff1f486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the range is inverted (e.g.  <a href="#aad8e67b937cad74814eb52d88ff1f486">More...</a><br /></td></tr>
 <tr class="separator:aad8e67b937cad74814eb52d88ff1f486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a3e202b201e6255d975cd6d3aff1f5a4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e202b201e6255d975cd6d3aff1f5a4d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>min</b></td></tr>
-<tr class="separator:a3e202b201e6255d975cd6d3aff1f5a4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1e1dde676c120fa6d10f3bb2c14059e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1e1dde676c120fa6d10f3bb2c14059e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>max</b></td></tr>
-<tr class="separator:ae1e1dde676c120fa6d10f3bb2c14059e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19bbb3c355941d56eccf70be7f7ed9e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19bbb3c355941d56eccf70be7f7ed9e1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>inverted</b></td></tr>
-<tr class="separator:a19bbb3c355941d56eccf70be7f7ed9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a669f8ab7db52dfe7888fccf6a0e20f1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a669f8ab7db52dfe7888fccf6a0e20f1e"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>pattern</b></td></tr>
-<tr class="separator:a669f8ab7db52dfe7888fccf6a0e20f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a172b2694b7c9e18662bf973a6ccc65fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a172b2694b7c9e18662bf973a6ccc65fd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>every</b> = true</td></tr>
-<tr class="separator:a172b2694b7c9e18662bf973a6ccc65fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea5bcfc4656e7cded6772bb083bea27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ea5bcfc4656e7cded6772bb083bea27"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>none</b> = false</td></tr>
-<tr class="separator:a0ea5bcfc4656e7cded6772bb083bea27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a5605b7971282bfae5e7be5e935e51149"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5605b7971282bfae5e7be5e935e51149"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="structSnowTools_1_1Range.html">Range</a> &amp;r)</td></tr>
-<tr class="separator:a5605b7971282bfae5e7be5e935e51149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5605b7971282bfae5e7be5e935e51149"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5605b7971282bfae5e7be5e935e51149"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#a5605b7971282bfae5e7be5e935e51149">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structSnowTools_1_1Range.html">Range</a> &amp;r)</td></tr>
 <tr class="memdesc:a5605b7971282bfae5e7be5e935e51149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the contents of this <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a>. <br /></td></tr>
@@ -275,7 +223,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
         <tr>
           <td class="memname">void parseJson </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classJson_1_1Value.html">Json::Value</a> &amp;&#160;</td>
+          <td class="paramtype">const Json::Value &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
@@ -303,14 +251,13 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li>src/old/<a class="el" href="MiniRules_8h_source.html">MiniRules.h</a></li>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>src/SnowTools/<a class="el" href="ReadFilter_8h_source.html">ReadFilter.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 9 2016 03:21:55 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 9 2016 20:14:57 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -31,7 +31,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -120,13 +119,13 @@
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif </span></div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> AlignedContig.h:10</div></div>
+<div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:11</div></div>
 <div class="ttc" id="classSnowTools_1_1BamWriter_html_a4299be1d0d307c619e70060e78b85700"><div class="ttname"><a href="classSnowTools_1_1BamWriter.html#a4299be1d0d307c619e70060e78b85700">SnowTools::BamWriter::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const BamWriter &amp;b)</div><div class="ttdoc">Print out some basic info about this walker, including Minz0iRules. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWriter_html_a28de93624ea4a7c46d914eebe5b8e2db"><div class="ttname"><a href="classSnowTools_1_1BamWriter.html#a28de93624ea4a7c46d914eebe5b8e2db">SnowTools::BamWriter::header</a></div><div class="ttdeci">bam_hdr_t * header() const </div><div class="ttdoc">Return a pointer to the BAM header. </div><div class="ttdef"><b>Definition:</b> BamWriter.h:70</div></div>
 <div class="ttc" id="classSnowTools_1_1BamWriter_html_a849ff48a8a85042f690cdce75a1169da"><div class="ttname"><a href="classSnowTools_1_1BamWriter.html#a849ff48a8a85042f690cdce75a1169da">SnowTools::BamWriter::makeIndex</a></div><div class="ttdeci">void makeIndex()</div><div class="ttdoc">Create the index file for the output bam in BAI format. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWriter_html_a6b394d470631995333bd5aba90eb3acf"><div class="ttname"><a href="classSnowTools_1_1BamWriter.html#a6b394d470631995333bd5aba90eb3acf">SnowTools::BamWriter::SetWriteHeader</a></div><div class="ttdeci">void SetWriteHeader(bam_hdr_t *hdr)</div><div class="ttdoc">Explicitly provide the output BAM a header. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWriter_html_a1318dd069374f158cd0a27e474e0db0b"><div class="ttname"><a href="classSnowTools_1_1BamWriter.html#a1318dd069374f158cd0a27e474e0db0b">SnowTools::BamWriter::writeAlignment</a></div><div class="ttdeci">void writeAlignment(BamRead &amp;r)</div><div class="ttdoc">Write an alignment to the output BAM file. </div></div>
-<div class="ttc" id="classSnowTools_1_1BamRead_html"><div class="ttname"><a href="classSnowTools_1_1BamRead.html">SnowTools::BamRead</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRead.h:150</div></div>
+<div class="ttc" id="classSnowTools_1_1BamRead_html"><div class="ttname"><a href="classSnowTools_1_1BamRead.html">SnowTools::BamRead</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRead.h:154</div></div>
 <div class="ttc" id="classSnowTools_1_1BamWriter_html_aa69d3e7dc8c03cd121f0251b7c0dcf7f"><div class="ttname"><a href="classSnowTools_1_1BamWriter.html#aa69d3e7dc8c03cd121f0251b7c0dcf7f">SnowTools::BamWriter::setStdout</a></div><div class="ttdeci">void setStdout()</div><div class="ttdoc">Set a flag to say if we should print reads to stdout. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWriter_html_a94c2e25a4592cc6e57caf7bbb9777fa4"><div class="ttname"><a href="classSnowTools_1_1BamWriter.html#a94c2e25a4592cc6e57caf7bbb9777fa4">SnowTools::BamWriter::OpenWriteBam</a></div><div class="ttdeci">bool OpenWriteBam(const std::string &amp;bam)</div><div class="ttdoc">Open a BAM file for streaming out. </div></div>
 <div class="ttc" id="classSnowTools_1_1BamWriter_html_aa687a22696cb4c9dd20126e6b14ed00e"><div class="ttname"><a href="classSnowTools_1_1BamWriter.html#aa687a22696cb4c9dd20126e6b14ed00e">SnowTools::BamWriter::setPrintHeader</a></div><div class="ttdeci">void setPrintHeader(bool val)</div><div class="ttdoc">If set to true, will print header in output. </div><div class="ttdef"><b>Definition:</b> BamWriter.h:65</div></div>
@@ -137,7 +136,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 9 2016 03:21:55 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 9 2016 20:14:57 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

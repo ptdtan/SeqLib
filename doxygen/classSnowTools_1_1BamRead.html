@@ -31,7 +31,6 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
@@ -233,19 +232,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="separator:a895659b8912b11a36ae970e60598c1a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a9973e080c985555669150c515e1377"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1a9973e080c985555669150c515e1377"></a>
 <a class="el" href="classSnowTools_1_1GenomicRegion.html">GenomicRegion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#a1a9973e080c985555669150c515e1377">asGenomicRegionMate</a> () const </td></tr>
-<tr class="memdesc:a1a9973e080c985555669150c515e1377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mate as a <a class="el" href="classSnowTools_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a>. <br /></td></tr>
+<tr class="memdesc:a1a9973e080c985555669150c515e1377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mate read as a <a class="el" href="classSnowTools_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a>. <br /></td></tr>
 <tr class="separator:a1a9973e080c985555669150c515e1377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac015633382d1cc7901559502e196025a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac015633382d1cc7901559502e196025a"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#ac015633382d1cc7901559502e196025a">MaxInsertionBases</a> () const </td></tr>
-<tr class="memdesc:ac015633382d1cc7901559502e196025a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the max insertion size on this cigar. <br /></td></tr>
+<tr class="memdesc:ac015633382d1cc7901559502e196025a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the max single insertion size on this cigar. <br /></td></tr>
 <tr class="separator:ac015633382d1cc7901559502e196025a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b1bfd8a761030d2b08d8c73528b6544"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b1bfd8a761030d2b08d8c73528b6544"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#a5b1bfd8a761030d2b08d8c73528b6544">MaxDeletionBases</a> () const </td></tr>
-<tr class="memdesc:a5b1bfd8a761030d2b08d8c73528b6544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the max deletion size on this cigar. <br /></td></tr>
+<tr class="memdesc:a5b1bfd8a761030d2b08d8c73528b6544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the max single deletion size on this cigar. <br /></td></tr>
 <tr class="separator:a5b1bfd8a761030d2b08d8c73528b6544"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6deb081aeeb1003f623dc6ad09ff2c19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6deb081aeeb1003f623dc6ad09ff2c19"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#a6deb081aeeb1003f623dc6ad09ff2c19">NumMatchBases</a> () const </td></tr>
-<tr class="memdesc:a6deb081aeeb1003f623dc6ad09ff2c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the max deletion size on this cigar. <br /></td></tr>
+<tr class="memdesc:a6deb081aeeb1003f623dc6ad09ff2c19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of matched bases in this alignment. <br /></td></tr>
 <tr class="separator:a6deb081aeeb1003f623dc6ad09ff2c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0b4c8655d307fa4fc630e7e8117c3a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0b4c8655d307fa4fc630e7e8117c3a6"></a>
 <a class="el" href="classSnowTools_1_1Cigar.html">Cigar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#ac0b4c8655d307fa4fc630e7e8117c3a6">GetCigar</a> () const </td></tr>
@@ -379,7 +378,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>BLATWraper</b></td><
 class&#160;</td><td class="memItemRight" valign="bottom"><b>BWAWrapper</b></td></tr>
 <tr class="separator:a631a77d9ad000faa2cc2a7d39b7d6c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14252a920de4d2eb5647a9d59f81f60b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14252a920de4d2eb5647a9d59f81f60b"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html#a14252a920de4d2eb5647a9d59f81f60b">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
+<tr class="memdesc:a14252a920de4d2eb5647a9d59f81f60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a SAM-lite record for this alignment. <br /></td></tr>
 <tr class="separator:a14252a920de4d2eb5647a9d59f81f60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -845,7 +845,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 9 2016 03:21:55 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 9 2016 20:14:57 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
