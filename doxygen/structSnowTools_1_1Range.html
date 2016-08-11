@@ -58,7 +58,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Hold a range of valid numeric values (e.g.  
+<p>Filter numeric values on whether they fall in/out of a range of values (eg mapping quality).  
  <a href="structSnowTools_1_1Range.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ReadFilter_8h_source.html">ReadFilter.h</a>&gt;</code></p>
@@ -70,10 +70,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afa61e339c5d7dd76c25663fc2718da8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a default range with everything accepted. <br /></td></tr>
 <tr class="separator:afa61e339c5d7dd76c25663fc2718da8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a469fd9c4eb506232cedc470e4bc298c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#a469fd9c4eb506232cedc470e4bc298c6">Range</a> (int min, int max, bool inverted)</td></tr>
-<tr class="memdesc:a469fd9c4eb506232cedc470e4bc298c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> from min to max, inclusive.  <a href="#a469fd9c4eb506232cedc470e4bc298c6">More...</a><br /></td></tr>
+<tr class="memdesc:a469fd9c4eb506232cedc470e4bc298c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> from min to max, inclusive.  <a href="#a469fd9c4eb506232cedc470e4bc298c6">More...</a><br /></td></tr>
 <tr class="separator:a469fd9c4eb506232cedc470e4bc298c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff5557f62ee377f7fe52d648c04dd5a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#aff5557f62ee377f7fe52d648c04dd5a5">isValid</a> (int val)</td></tr>
-<tr class="memdesc:aff5557f62ee377f7fe52d648c04dd5a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a query value, determine if the value passes this <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a>.  <a href="#aff5557f62ee377f7fe52d648c04dd5a5">More...</a><br /></td></tr>
+<tr class="memdesc:aff5557f62ee377f7fe52d648c04dd5a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a query value, determine if the value passes this <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a>.  <a href="#aff5557f62ee377f7fe52d648c04dd5a5">More...</a><br /></td></tr>
 <tr class="separator:aff5557f62ee377f7fe52d648c04dd5a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac743537a0ce2cf12b901ef05f3a51df7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#ac743537a0ce2cf12b901ef05f3a51df7">parseJson</a> (const Json::Value &amp;value, const std::string &amp;name)</td></tr>
 <tr class="memdesc:ac743537a0ce2cf12b901ef05f3a51df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a JSON value.  <a href="#ac743537a0ce2cf12b901ef05f3a51df7">More...</a><br /></td></tr>
@@ -98,13 +98,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struc
 Friends</h2></td></tr>
 <tr class="memitem:a5605b7971282bfae5e7be5e935e51149"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5605b7971282bfae5e7be5e935e51149"></a>
 std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html#a5605b7971282bfae5e7be5e935e51149">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structSnowTools_1_1Range.html">Range</a> &amp;r)</td></tr>
-<tr class="memdesc:a5605b7971282bfae5e7be5e935e51149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the contents of this <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a>. <br /></td></tr>
+<tr class="memdesc:a5605b7971282bfae5e7be5e935e51149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the contents of this <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a>. <br /></td></tr>
 <tr class="separator:a5605b7971282bfae5e7be5e935e51149"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Hold a range of valid numeric values (e.g. </p>
-<p>isize).</p>
-<p>Can optionally invert the range to make rule the complement of the range (eg isize NOT in [300,600] </p>
+<div class="textblock"><p>Filter numeric values on whether they fall in/out of a range of values (eg mapping quality). </p>
+<p>Can optionally invert the range to make rule the complement of the range (eg insert-size NOT in [300,600] </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a469fd9c4eb506232cedc470e4bc298c6"></a>
 <div class="memitem">
@@ -144,7 +143,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </table>
 </div><div class="memdoc">
 
-<p>Construct a <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> from min to max, inclusive. </p>
+<p>Construct a <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> from min to max, inclusive. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">min</td><td>Minimum for range </td></tr>
@@ -205,14 +204,14 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </table>
 </div><div class="memdoc">
 
-<p>Given a query value, determine if the value passes this <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a>. </p>
+<p>Given a query value, determine if the value passes this <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">val</td><td>Query value (e.g. mapping quality) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the value passes this <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> rule </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the value passes this <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> rule </dd></dl>
 
 </div>
 </div>
@@ -257,7 +256,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 03:44:05 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 17:05:33 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

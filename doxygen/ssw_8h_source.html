@@ -82,7 +82,7 @@
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">struct </span>_profile;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>_profile s_profile;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="structs__align.html">   47</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        uint16_t score1;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        uint16_t score2;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        int32_t ref_begin1;</div>
@@ -92,14 +92,14 @@
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        int32_t ref_end2;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        uint32_t* cigar;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        int32_t cigarLen;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} <a class="code" href="structs__align.html">s_align</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;} s_align;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;s_profile* ssw_init (<span class="keyword">const</span> int8_t* read, <span class="keyword">const</span> int32_t readLen, <span class="keyword">const</span> int8_t* mat, <span class="keyword">const</span> int32_t n, <span class="keyword">const</span> int8_t score_size);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> init_destroy (s_profile* p);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">// @function    ssw alignment.</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"></span><a class="code" href="structs__align.html">s_align</a>* ssw_align (<span class="keyword">const</span> s_profile* prof,</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"></span>s_align* ssw_align (<span class="keyword">const</span> s_profile* prof,</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                        <span class="keyword">const</span> int8_t* ref,</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                                        int32_t refLen,</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                        <span class="keyword">const</span> uint8_t weight_gapO,</div>
@@ -109,7 +109,7 @@
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                                        <span class="keyword">const</span> int32_t filterd,</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                        <span class="keyword">const</span> int32_t maskLen);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">void</span> align_destroy (<a class="code" href="structs__align.html">s_align</a>* a);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">void</span> align_destroy (s_align* a);</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> uint32_t to_cigar_int (uint32_t length, <span class="keywordtype">char</span> op_letter)</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
@@ -155,11 +155,10 @@
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#endif  // __cplusplus</span></div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif  // SSW_H</span></div>
-<div class="ttc" id="structs__align_html"><div class="ttname"><a href="structs__align.html">s_align</a></div><div class="ttdef"><b>Definition:</b> ssw.h:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 03:44:05 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 17:05:33 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

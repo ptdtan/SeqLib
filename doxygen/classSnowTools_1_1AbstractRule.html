@@ -59,7 +59,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Stores a full rule (<a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> + <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> + motif etc)  
+<p>Stores a full rule (<a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> + <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> + motif etc)  
  <a href="classSnowTools_1_1AbstractRule.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ReadFilter_8h_source.html">ReadFilter.h</a>&gt;</code></p>
@@ -74,6 +74,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#aeb934421db9cf1e7a521f5720d85b76c">~AbstractRule</a> ()</td></tr>
 <tr class="memdesc:aeb934421db9cf1e7a521f5720d85b76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the filter. <br /></td></tr>
 <tr class="separator:aeb934421db9cf1e7a521f5720d85b76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0961eb40e371536413e2b78294f87d38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0961eb40e371536413e2b78294f87d38"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addMotifRule</b> (const std::string &amp;f, bool inverted)</td></tr>
+<tr class="separator:a0961eb40e371536413e2b78294f87d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5f0a674a38bb284a737f92c7fd3038"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a2f5f0a674a38bb284a737f92c7fd3038">isValid</a> (<a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;r)</td></tr>
 <tr class="memdesc:a2f5f0a674a38bb284a737f92c7fd3038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query a read against this rule.  <a href="#a2f5f0a674a38bb284a737f92c7fd3038">More...</a><br /></td></tr>
 <tr class="separator:a2f5f0a674a38bb284a737f92c7fd3038"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,43 +104,43 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa21ef46b0b84e77d175875c10a3f0c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fa714cc9de775d3505bc730116418a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fa714cc9de775d3505bc730116418a1"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a2fa714cc9de775d3505bc730116418a1">isize</a></td></tr>
-<tr class="memdesc:a2fa714cc9de775d3505bc730116418a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for insert-size filter. <br /></td></tr>
+<tr class="memdesc:a2fa714cc9de775d3505bc730116418a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for insert-size filter. <br /></td></tr>
 <tr class="separator:a2fa714cc9de775d3505bc730116418a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ad1847bd8359bcbf71feebc29dd7f10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ad1847bd8359bcbf71feebc29dd7f10"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a7ad1847bd8359bcbf71feebc29dd7f10">mapq</a></td></tr>
-<tr class="memdesc:a7ad1847bd8359bcbf71feebc29dd7f10"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for mapping quality filter. <br /></td></tr>
+<tr class="memdesc:a7ad1847bd8359bcbf71feebc29dd7f10"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for mapping quality filter. <br /></td></tr>
 <tr class="separator:a7ad1847bd8359bcbf71feebc29dd7f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dd0384fb4c7334656b37095c942170c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dd0384fb4c7334656b37095c942170c"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a1dd0384fb4c7334656b37095c942170c">len</a></td></tr>
-<tr class="memdesc:a1dd0384fb4c7334656b37095c942170c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for length filter. <br /></td></tr>
+<tr class="memdesc:a1dd0384fb4c7334656b37095c942170c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for length filter. <br /></td></tr>
 <tr class="separator:a1dd0384fb4c7334656b37095c942170c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaac11793e05ebba311e8bfa27d90bc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaac11793e05ebba311e8bfa27d90bc3"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#aeaac11793e05ebba311e8bfa27d90bc3">phred</a></td></tr>
-<tr class="memdesc:aeaac11793e05ebba311e8bfa27d90bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for base-quality filter. <br /></td></tr>
+<tr class="memdesc:aeaac11793e05ebba311e8bfa27d90bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for base-quality filter. <br /></td></tr>
 <tr class="separator:aeaac11793e05ebba311e8bfa27d90bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ff7ab141cb808ac05c3d184fe2ec8da"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a6ff7ab141cb808ac05c3d184fe2ec8da">clip</a></td></tr>
-<tr class="memdesc:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for number of clipped bases filter. <br /></td></tr>
+<tr class="memdesc:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for number of clipped bases filter. <br /></td></tr>
 <tr class="separator:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1449fc99765567e8e224bfa774d67c4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1449fc99765567e8e224bfa774d67c4c"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a1449fc99765567e8e224bfa774d67c4c">nm</a></td></tr>
-<tr class="memdesc:a1449fc99765567e8e224bfa774d67c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for NM (num mismatch) filter. <br /></td></tr>
+<tr class="memdesc:a1449fc99765567e8e224bfa774d67c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for NM (num mismatch) filter. <br /></td></tr>
 <tr class="separator:a1449fc99765567e8e224bfa774d67c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a0fa2d519b50b9d380326bd72dc7984"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a0fa2d519b50b9d380326bd72dc7984"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a9a0fa2d519b50b9d380326bd72dc7984">nbases</a></td></tr>
-<tr class="memdesc:a9a0fa2d519b50b9d380326bd72dc7984"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for number of "N" bases filer. <br /></td></tr>
+<tr class="memdesc:a9a0fa2d519b50b9d380326bd72dc7984"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for number of "N" bases filer. <br /></td></tr>
 <tr class="separator:a9a0fa2d519b50b9d380326bd72dc7984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a585164a0c6b2231136df35ea1c9f1ba7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a585164a0c6b2231136df35ea1c9f1ba7"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a585164a0c6b2231136df35ea1c9f1ba7">ins</a></td></tr>
-<tr class="memdesc:a585164a0c6b2231136df35ea1c9f1ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for max CIGAR insertion size filter. <br /></td></tr>
+<tr class="memdesc:a585164a0c6b2231136df35ea1c9f1ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for max CIGAR insertion size filter. <br /></td></tr>
 <tr class="separator:a585164a0c6b2231136df35ea1c9f1ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec96f7f2ebc515fa0cf8e2dc4db06d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abec96f7f2ebc515fa0cf8e2dc4db06d8"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#abec96f7f2ebc515fa0cf8e2dc4db06d8">del</a></td></tr>
-<tr class="memdesc:abec96f7f2ebc515fa0cf8e2dc4db06d8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for max CIGAR deletion size filter. <br /></td></tr>
+<tr class="memdesc:abec96f7f2ebc515fa0cf8e2dc4db06d8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for max CIGAR deletion size filter. <br /></td></tr>
 <tr class="separator:abec96f7f2ebc515fa0cf8e2dc4db06d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbe9b3c3a68f83d1e178cd2e3b6ebe09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbe9b3c3a68f83d1e178cd2e3b6ebe09"></a>
 <a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#afbe9b3c3a68f83d1e178cd2e3b6ebe09">xp</a></td></tr>
-<tr class="memdesc:afbe9b3c3a68f83d1e178cd2e3b6ebe09"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for number of secondary alignments. <br /></td></tr>
+<tr class="memdesc:afbe9b3c3a68f83d1e178cd2e3b6ebe09"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> object for number of secondary alignments. <br /></td></tr>
 <tr class="separator:afbe9b3c3a68f83d1e178cd2e3b6ebe09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -154,7 +157,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="separator:a69ea2c2b0ea42ead4dc770a1d4b9c989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Stores a full rule (<a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> + <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> + motif etc) </p>
+<div class="textblock"><p>Stores a full rule (<a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> + <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> + motif etc) </p>
 <p>An alignment can be queried with an <a class="el" href="classSnowTools_1_1AbstractRule.html" title="Stores a full rule (Flag + Range + motif etc) ">AbstractRule</a> object to check if it passes that rule. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a2f5f0a674a38bb284a737f92c7fd3038"></a>
@@ -307,7 +310,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 03:44:05 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 17:05:33 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

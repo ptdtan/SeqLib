@@ -67,7 +67,10 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html">AbstractRule</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a full rule (<a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> + <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> + motif etc)  <a href="classSnowTools_1_1AbstractRule.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores a full rule (<a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> + <a class="el" href="structSnowTools_1_1Range.html" title="Filter numeric values on whether they fall in/out of a range of values (eg mapping quality)...">Range</a> + motif etc)  <a href="classSnowTools_1_1AbstractRule.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1AhoCorasick.html">AhoCorasick</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tool for using the Aho-Corasick method for substring queries of using large dictionaries.  <a href="structSnowTools_1_1AhoCorasick.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamHeader.html">BamHeader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a header to a BAM file.  <a href="classSnowTools_1_1BamHeader.html#details">More...</a><br /></td></tr>
@@ -129,7 +132,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to store histogram of numeric values.  <a href="classSnowTools_1_1Histogram.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1Range.html">Range</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hold a range of valid numeric values (e.g.  <a href="structSnowTools_1_1Range.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter numeric values on whether they fall in/out of a range of values (eg mapping quality).  <a href="structSnowTools_1_1Range.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1ReadCount.html">ReadCount</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small class to store a counter to measure BamWalker progress.  <a href="structSnowTools_1_1ReadCount.html#details">More...</a><br /></td></tr>
@@ -167,7 +170,8 @@ typedef std::vector<br class="typebreak" />
 &lt; BamRecordVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BamRecordClusterVector</b></td></tr>
 <tr class="separator:af3ce04553e6b9ce6174f525480e1b0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee79c95bcc0c98fd141a9a9aeb21e444"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee79c95bcc0c98fd141a9a9aeb21e444"></a>
-typedef std::vector&lt; <a class="el" href="structSnowTools_1_1USeq.html">USeq</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>USeqVector</b></td></tr>
+typedef std::vector&lt; <a class="el" href="structSnowTools_1_1USeq.html">USeq</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools.html#aee79c95bcc0c98fd141a9a9aeb21e444">USeqVector</a></td></tr>
+<tr class="memdesc:aee79c95bcc0c98fd141a9a9aeb21e444"><td class="mdescLeft">&#160;</td><td class="mdescRight">A collection of contigs that can be indexed. <br /></td></tr>
 <tr class="separator:aee79c95bcc0c98fd141a9a9aeb21e444"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d1b754407a7c1e6214095851d4920d4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d1b754407a7c1e6214095851d4920d4"></a>
 typedef std::vector<br class="typebreak" />
@@ -475,7 +479,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 03:44:05 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 17:05:33 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
