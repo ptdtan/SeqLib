@@ -86,9 +86,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8a9607de5167e04f2faf5582319f3a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#ab8a9607de5167e04f2faf5582319f3a5">OpenWriteBam</a> (const std::string &amp;bam)</td></tr>
 <tr class="memdesc:ab8a9607de5167e04f2faf5582319f3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a BAM file for streaming out.  <a href="#ab8a9607de5167e04f2faf5582319f3a5">More...</a><br /></td></tr>
 <tr class="separator:ab8a9607de5167e04f2faf5582319f3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1318dd069374f158cd0a27e474e0db0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#a1318dd069374f158cd0a27e474e0db0b">writeAlignment</a> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
-<tr class="memdesc:a1318dd069374f158cd0a27e474e0db0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an alignment to the output BAM file.  <a href="#a1318dd069374f158cd0a27e474e0db0b">More...</a><br /></td></tr>
-<tr class="separator:a1318dd069374f158cd0a27e474e0db0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adca9f4ddf50e14f724c21c62d6219c3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#adca9f4ddf50e14f724c21c62d6219c3f">writeAlignment</a> (<a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;r)</td></tr>
+<tr class="memdesc:adca9f4ddf50e14f724c21c62d6219c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an alignment to the output BAM file.  <a href="#adca9f4ddf50e14f724c21c62d6219c3f">More...</a><br /></td></tr>
+<tr class="separator:adca9f4ddf50e14f724c21c62d6219c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69d3e7dc8c03cd121f0251b7c0dcf7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa69d3e7dc8c03cd121f0251b7c0dcf7f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#aa69d3e7dc8c03cd121f0251b7c0dcf7f">setStdout</a> ()</td></tr>
 <tr class="memdesc:aa69d3e7dc8c03cd121f0251b7c0dcf7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a flag to say if we should print reads to stdout. <br /></td></tr>
@@ -359,14 +359,14 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<a class="anchor" id="a1318dd069374f158cd0a27e474e0db0b"></a>
+<a class="anchor" id="adca9f4ddf50e14f724c21c62d6219c3f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void writeAlignment </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;&#160;</td>
           <td class="paramname"><em>r</em></td><td>)</td>
           <td></td>
         </tr>
@@ -376,7 +376,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <p>Write an alignment to the output BAM file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>The <a class="el" href="classSnowTools_1_1BamRead.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRead</a> to save </td></tr>
+    <tr><td class="paramname">r</td><td>The <a class="el" href="classSnowTools_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> to save </td></tr>
   </table>
   </dd>
 </dl>
@@ -395,7 +395,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 00:22:35 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 03:24:15 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

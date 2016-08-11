@@ -58,10 +58,10 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Basic container for cigar data.  
+<p>Basic container for a single cigar operation.  
  <a href="classSnowTools_1_1CigarField.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="BamRead_8h_source.html">BamRead.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="BamRecord_8h_source.html">BamRecord.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -85,8 +85,9 @@ char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#a29fdca039bafd5cccf7cb4fc7b55919b">RawType</a> () const </td></tr>
 <tr class="memdesc:a29fdca039bafd5cccf7cb4fc7b55919b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw sam.h uint8_t cigar type (bam_cigar_op(data)) <br /></td></tr>
 <tr class="separator:a29fdca039bafd5cccf7cb4fc7b55919b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d79066f5b28c73a0f6f248bbf846fe1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#a9d79066f5b28c73a0f6f248bbf846fe1">Length</a> () const </td></tr>
-<tr class="memdesc:a9d79066f5b28c73a0f6f248bbf846fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the cigar op (e.g.  <a href="#a9d79066f5b28c73a0f6f248bbf846fe1">More...</a><br /></td></tr>
+<tr class="memitem:a9d79066f5b28c73a0f6f248bbf846fe1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d79066f5b28c73a0f6f248bbf846fe1"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#a9d79066f5b28c73a0f6f248bbf846fe1">Length</a> () const </td></tr>
+<tr class="memdesc:a9d79066f5b28c73a0f6f248bbf846fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the cigar op (eg 35M returns 35) <br /></td></tr>
 <tr class="separator:a9d79066f5b28c73a0f6f248bbf846fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a907e22239777be8e3e00c0c5399e8ab5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a907e22239777be8e3e00c0c5399e8ab5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#a907e22239777be8e3e00c0c5399e8ab5">ConsumesReference</a> () const </td></tr>
@@ -99,85 +100,21 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a7aaefc6d8fbbe1968bbfc88b523eac20"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#a7aaefc6d8fbbe1968bbfc88b523eac20">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1CigarField.html">CigarField</a> &amp;c)</td></tr>
-<tr class="memdesc:a7aaefc6d8fbbe1968bbfc88b523eac20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the cigar field (e.g.  <a href="#a7aaefc6d8fbbe1968bbfc88b523eac20">More...</a><br /></td></tr>
+<tr class="memitem:a7aaefc6d8fbbe1968bbfc88b523eac20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7aaefc6d8fbbe1968bbfc88b523eac20"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#a7aaefc6d8fbbe1968bbfc88b523eac20">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1CigarField.html">CigarField</a> &amp;c)</td></tr>
+<tr class="memdesc:a7aaefc6d8fbbe1968bbfc88b523eac20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the cigar field (eg 35M) <br /></td></tr>
 <tr class="separator:a7aaefc6d8fbbe1968bbfc88b523eac20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Basic container for cigar data. </p>
+<div class="textblock"><p>Basic container for a single cigar operation. </p>
 <p>Stores a single cigar element in a compact 32bit form (same as HTSlib). </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a9d79066f5b28c73a0f6f248bbf846fe1"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t Length </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Return the length of the cigar op (e.g. </p>
-<p>35M returns 35) </p>
-
-</div>
-</div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="a7aaefc6d8fbbe1968bbfc88b523eac20"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSnowTools_1_1CigarField.html">CigarField</a> &amp;&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Print the cigar field (e.g. </p>
-<p>35M) </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/SnowTools/<a class="el" href="BamRead_8h_source.html">BamRead.h</a></li>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>src/SnowTools/<a class="el" href="BamRecord_8h_source.html">BamRecord.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 00:22:35 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 03:24:15 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

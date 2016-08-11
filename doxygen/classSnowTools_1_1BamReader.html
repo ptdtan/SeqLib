@@ -51,7 +51,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -89,9 +88,9 @@ Public Member Functions</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a3d765c81961dbec55c5c9d9927978184">printRegions</a> () const </td></tr>
 <tr class="memdesc:a3d765c81961dbec55c5c9d9927978184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a string representation of all of the regions to walk. <br /></td></tr>
 <tr class="separator:a3d765c81961dbec55c5c9d9927978184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a575a991ac506a335984434372bfc5ea0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a575a991ac506a335984434372bfc5ea0">printRuntimeMessage</a> (const <a class="el" href="structSnowTools_1_1ReadCount.html">ReadCount</a> &amp;rc_main, const <a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r) const </td></tr>
-<tr class="memdesc:a575a991ac506a335984434372bfc5ea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a run-time message to stdout.  <a href="#a575a991ac506a335984434372bfc5ea0">More...</a><br /></td></tr>
-<tr class="separator:a575a991ac506a335984434372bfc5ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a1e5eacaef3cddde96f1aded3c468dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a4a1e5eacaef3cddde96f1aded3c468dd">printRuntimeMessage</a> (const <a class="el" href="structSnowTools_1_1ReadCount.html">ReadCount</a> &amp;rc_main, const <a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;r) const </td></tr>
+<tr class="memdesc:a4a1e5eacaef3cddde96f1aded3c468dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a run-time message to stdout.  <a href="#a4a1e5eacaef3cddde96f1aded3c468dd">More...</a><br /></td></tr>
+<tr class="separator:a4a1e5eacaef3cddde96f1aded3c468dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31f579f732e93b3d273ef0442fd67f04"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31f579f732e93b3d273ef0442fd67f04"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a31f579f732e93b3d273ef0442fd67f04">OpenReadBam</a> (const std::string &amp;bam)</td></tr>
 <tr class="memdesc:a31f579f732e93b3d273ef0442fd67f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a BAM file for streaming in. <br /></td></tr>
@@ -103,9 +102,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#af94e6e674830428ccf933dbfb30d5c96">SetReadFilterCollection</a> (const <a class="el" href="classSnowTools_1_1ReadFilterCollection.html">ReadFilterCollection</a> &amp;mr)</td></tr>
 <tr class="memdesc:af94e6e674830428ccf933dbfb30d5c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly provide a <a class="el" href="classSnowTools_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a> to this <a class="el" href="classSnowTools_1_1BamReader.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamReader</a>. <br /></td></tr>
 <tr class="separator:af94e6e674830428ccf933dbfb30d5c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ad955b17c2276ea256c778f7c148f2f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a3ad955b17c2276ea256c778f7c148f2f">GetNextRead</a> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r, bool &amp;rule)</td></tr>
-<tr class="memdesc:a3ad955b17c2276ea256c778f7c148f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the next read from the BAM.  <a href="#a3ad955b17c2276ea256c778f7c148f2f">More...</a><br /></td></tr>
-<tr class="separator:a3ad955b17c2276ea256c778f7c148f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5759441307acc6dbeee2b800776315bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a5759441307acc6dbeee2b800776315bf">GetNextRead</a> (<a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;r, bool &amp;rule)</td></tr>
+<tr class="memdesc:a5759441307acc6dbeee2b800776315bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the next read from the BAM.  <a href="#a5759441307acc6dbeee2b800776315bf">More...</a><br /></td></tr>
+<tr class="separator:a5759441307acc6dbeee2b800776315bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a800bb1cbfd963d9fdfc725d5834f3007"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a800bb1cbfd963d9fdfc725d5834f3007"></a>
 const <a class="el" href="classSnowTools_1_1ReadFilterCollection.html">ReadFilterCollection</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a800bb1cbfd963d9fdfc725d5834f3007">GetReadFilterCollection</a> () const </td></tr>
 <tr class="memdesc:a800bb1cbfd963d9fdfc725d5834f3007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classSnowTools_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a> object used by this <a class="el" href="classSnowTools_1_1BamReader.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamReader</a>. <br /></td></tr>
@@ -129,27 +128,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 bam_hdr_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a28de93624ea4a7c46d914eebe5b8e2db">header</a> () const </td></tr>
 <tr class="memdesc:a28de93624ea4a7c46d914eebe5b8e2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the BAM header. <br /></td></tr>
 <tr class="separator:a28de93624ea4a7c46d914eebe5b8e2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af230f50845671d7e9da189b1fe70f0fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af230f50845671d7e9da189b1fe70f0fa"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#af230f50845671d7e9da189b1fe70f0fa">setReadLimit</a> (int lim)</td></tr>
-<tr class="memdesc:af230f50845671d7e9da189b1fe70f0fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the limit for total number of reads seen. <br /></td></tr>
-<tr class="separator:af230f50845671d7e9da189b1fe70f0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aece1b2bfe33bf63a07845abdd909d7f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aece1b2bfe33bf63a07845abdd909d7f3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#aece1b2bfe33bf63a07845abdd909d7f3">setReadKeepLimit</a> (int lim)</td></tr>
-<tr class="memdesc:aece1b2bfe33bf63a07845abdd909d7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the limit for total number of reads kept. <br /></td></tr>
-<tr class="separator:aece1b2bfe33bf63a07845abdd909d7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6cb48261b2055e553b6efbafed4197b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6cb48261b2055e553b6efbafed4197b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#ac6cb48261b2055e553b6efbafed4197b">resetAll</a> ()</td></tr>
 <tr class="memdesc:ac6cb48261b2055e553b6efbafed4197b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all the counters and regions, but keep the loaded index. <br /></td></tr>
 <tr class="separator:ac6cb48261b2055e553b6efbafed4197b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a60b472c034acab7bbe12df7426cd85ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b472c034acab7bbe12df7426cd85ce"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_in</b></td></tr>
-<tr class="separator:a60b472c034acab7bbe12df7426cd85ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e10c8d0c57b414bafcfcf1feabfa2fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e10c8d0c57b414bafcfcf1feabfa2fa"></a>
-<a class="el" href="classSnowTools_1_1ReadFilterCollection.html">ReadFilterCollection</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_mr</b></td></tr>
-<tr class="separator:a3e10c8d0c57b414bafcfcf1feabfa2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -162,18 +144,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>__open_BAM_for_readin
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a2d336c7bf8f980d5b59675fac723de60"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d336c7bf8f980d5b59675fac723de60"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_region_fail</b> = false</td></tr>
-<tr class="separator:a2d336c7bf8f980d5b59675fac723de60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acddc8456764420dc34ef01dc5bd70b66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acddc8456764420dc34ef01dc5bd70b66"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_print_header</b> = false</td></tr>
-<tr class="separator:acddc8456764420dc34ef01dc5bd70b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb6354288415a219839ecb2361450efa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb6354288415a219839ecb2361450efa"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_limit</b> = -1</td></tr>
-<tr class="separator:adb6354288415a219839ecb2361450efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc8205ab9a4d92f57cdd47391f5b5e80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc8205ab9a4d92f57cdd47391f5b5e80"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_keep_limit</b> = -1</td></tr>
-<tr class="separator:afc8205ab9a4d92f57cdd47391f5b5e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60b472c034acab7bbe12df7426cd85ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b472c034acab7bbe12df7426cd85ce"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a60b472c034acab7bbe12df7426cd85ce">m_in</a></td></tr>
+<tr class="memdesc:a60b472c034acab7bbe12df7426cd85ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">file name <br /></td></tr>
+<tr class="separator:a60b472c034acab7bbe12df7426cd85ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e10c8d0c57b414bafcfcf1feabfa2fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e10c8d0c57b414bafcfcf1feabfa2fa"></a>
+<a class="el" href="classSnowTools_1_1ReadFilterCollection.html">ReadFilterCollection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a3e10c8d0c57b414bafcfcf1feabfa2fa">m_mr</a></td></tr>
+<tr class="memdesc:a3e10c8d0c57b414bafcfcf1feabfa2fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">filter collection <br /></td></tr>
+<tr class="separator:a3e10c8d0c57b414bafcfcf1feabfa2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8004bd62c919b61f335362059449872"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8004bd62c919b61f335362059449872"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_region_idx</b> = 0</td></tr>
 <tr class="separator:ad8004bd62c919b61f335362059449872"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,12 +176,6 @@ std::shared_ptr&lt; bam_hdr_t &gt;&#160;</td><td class="memItemRight" valign="bo
 <tr class="memitem:af5a4aaa10c7932bb9d0d5da5db5ffc90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5a4aaa10c7932bb9d0d5da5db5ffc90"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_verbose</b> = false</td></tr>
 <tr class="separator:af5a4aaa10c7932bb9d0d5da5db5ffc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b411de25c7fbb5fb398e55d83d64162"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b411de25c7fbb5fb398e55d83d64162"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_seen</b> = 0</td></tr>
-<tr class="separator:a1b411de25c7fbb5fb398e55d83d64162"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad46b0bd263055dcaac420ef5d4e341c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad46b0bd263055dcaac420ef5d4e341c7"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_num_reads_kept</b> = 0</td></tr>
-<tr class="separator:ad46b0bd263055dcaac420ef5d4e341c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -242,14 +214,14 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3ad955b17c2276ea256c778f7c148f2f"></a>
+<a class="anchor" id="a5759441307acc6dbeee2b800776315bf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool GetNextRead </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;&#160;</td>
           <td class="paramname"><em>r</em>, </td>
         </tr>
         <tr>
@@ -271,7 +243,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<a class="anchor" id="a575a991ac506a335984434372bfc5ea0"></a>
+<a class="anchor" id="a4a1e5eacaef3cddde96f1aded3c468dd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -284,7 +256,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;&#160;</td>
           <td class="paramname"><em>r</em>&#160;</td>
         </tr>
         <tr>
@@ -329,6 +301,8 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
   </table>
   </dd>
 </dl>
+
+<p>References <a class="el" href="classSnowTools_1_1BamReader.html#a3e10c8d0c57b414bafcfcf1feabfa2fa">BamReader::m_mr</a>.</p>
 
 </div>
 </div>
@@ -416,7 +390,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><div class="memdoc">
 
 <p>Pass a <a class="el" href="classSnowTools_1_1ReadFilter.html" title="A set of AbstractRules on a region united by logi rules. ">ReadFilter</a> script to the BAM. </p>
-<p>This will call the constructor of <a class="el" href="classSnowTools_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a>, and parse the provides rules and add it as a rule set to this <a class="el" href="classSnowTools_1_1BamReader.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamReader</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>This will call the constructor of <a class="el" href="classSnowTools_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a>, and parse the provides rules and add it as a rule set to this BamRecorder. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rules</td><td>A string of rules, or a file pointing to a rules script </td></tr>
   </table>
@@ -431,7 +405,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 00:22:35 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 03:24:15 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -72,82 +72,242 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2deb04271a9b895d05bd8f6d9d8bb328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb934421db9cf1e7a521f5720d85b76c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb934421db9cf1e7a521f5720d85b76c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#aeb934421db9cf1e7a521f5720d85b76c">~AbstractRule</a> ()</td></tr>
-<tr class="memdesc:aeb934421db9cf1e7a521f5720d85b76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy. <br /></td></tr>
+<tr class="memdesc:aeb934421db9cf1e7a521f5720d85b76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the filter. <br /></td></tr>
 <tr class="separator:aeb934421db9cf1e7a521f5720d85b76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af39543a680b11c10995cd53efce2629a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af39543a680b11c10995cd53efce2629a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
-<tr class="separator:af39543a680b11c10995cd53efce2629a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a925b32b2c3b70a47686caef98b2513c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a925b32b2c3b70a47686caef98b2513c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>parseJson</b> (const Json::Value &amp;value)</td></tr>
+<tr class="memitem:a2f5f0a674a38bb284a737f92c7fd3038"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a2f5f0a674a38bb284a737f92c7fd3038">isValid</a> (<a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;r)</td></tr>
+<tr class="memdesc:a2f5f0a674a38bb284a737f92c7fd3038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query a read against this rule.  <a href="#a2f5f0a674a38bb284a737f92c7fd3038">More...</a><br /></td></tr>
+<tr class="separator:a2f5f0a674a38bb284a737f92c7fd3038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925b32b2c3b70a47686caef98b2513c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a925b32b2c3b70a47686caef98b2513c0">parseJson</a> (const Json::Value &amp;value)</td></tr>
+<tr class="memdesc:a925b32b2c3b70a47686caef98b2513c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supply the rule parameters with a JSON.  <a href="#a925b32b2c3b70a47686caef98b2513c0">More...</a><br /></td></tr>
 <tr class="separator:a925b32b2c3b70a47686caef98b2513c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa3b3e69671f640b174fe6a004111dd0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa3b3e69671f640b174fe6a004111dd0"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isEvery</b> () const </td></tr>
 <tr class="separator:afa3b3e69671f640b174fe6a004111dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac98b18ca09c89bb7011e468b184cb10c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#ac98b18ca09c89bb7011e468b184cb10c">SetSubsampleRate</a> (double s)</td></tr>
+<tr class="memdesc:ac98b18ca09c89bb7011e468b184cb10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the rate to subsample (default 1 = no subsampling)  <a href="#ac98b18ca09c89bb7011e468b184cb10c">More...</a><br /></td></tr>
+<tr class="separator:ac98b18ca09c89bb7011e468b184cb10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98b479998bf6c29e0df194725356b719"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a98b479998bf6c29e0df194725356b719">SetRuleID</a> (const std::string &amp;s)</td></tr>
+<tr class="memdesc:a98b479998bf6c29e0df194725356b719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supply a name for this rule.  <a href="#a98b479998bf6c29e0df194725356b719">More...</a><br /></td></tr>
+<tr class="separator:a98b479998bf6c29e0df194725356b719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a314befd3458c8581c0a309ea001ae679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a314befd3458c8581c0a309ea001ae679">SetReadGroup</a> (const std::string &amp;rg)</td></tr>
+<tr class="memdesc:a314befd3458c8581c0a309ea001ae679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a read-group for this filter.  <a href="#a314befd3458c8581c0a309ea001ae679">More...</a><br /></td></tr>
+<tr class="separator:a314befd3458c8581c0a309ea001ae679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:aa21ef46b0b84e77d175875c10a3f0c7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa21ef46b0b84e77d175875c10a3f0c7c"></a>
+<a class="el" href="structSnowTools_1_1FlagRule.html">FlagRule</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#aa21ef46b0b84e77d175875c10a3f0c7c">fr</a></td></tr>
+<tr class="memdesc:aa21ef46b0b84e77d175875c10a3f0c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1FlagRule.html" title="Stores a set of Flag objects for filtering alignment flags. ">FlagRule</a> specifying the alignment flag filter. <br /></td></tr>
+<tr class="separator:aa21ef46b0b84e77d175875c10a3f0c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fa714cc9de775d3505bc730116418a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fa714cc9de775d3505bc730116418a1"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>isize</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a2fa714cc9de775d3505bc730116418a1">isize</a></td></tr>
+<tr class="memdesc:a2fa714cc9de775d3505bc730116418a1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for insert-size filter. <br /></td></tr>
 <tr class="separator:a2fa714cc9de775d3505bc730116418a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ad1847bd8359bcbf71feebc29dd7f10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ad1847bd8359bcbf71feebc29dd7f10"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mapq</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a7ad1847bd8359bcbf71feebc29dd7f10">mapq</a></td></tr>
+<tr class="memdesc:a7ad1847bd8359bcbf71feebc29dd7f10"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for mapping quality filter. <br /></td></tr>
 <tr class="separator:a7ad1847bd8359bcbf71feebc29dd7f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dd0384fb4c7334656b37095c942170c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1dd0384fb4c7334656b37095c942170c"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>len</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a1dd0384fb4c7334656b37095c942170c">len</a></td></tr>
+<tr class="memdesc:a1dd0384fb4c7334656b37095c942170c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for length filter. <br /></td></tr>
 <tr class="separator:a1dd0384fb4c7334656b37095c942170c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ff7ab141cb808ac05c3d184fe2ec8da"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clip</b></td></tr>
-<tr class="separator:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaac11793e05ebba311e8bfa27d90bc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaac11793e05ebba311e8bfa27d90bc3"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>phred</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#aeaac11793e05ebba311e8bfa27d90bc3">phred</a></td></tr>
+<tr class="memdesc:aeaac11793e05ebba311e8bfa27d90bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for base-quality filter. <br /></td></tr>
 <tr class="separator:aeaac11793e05ebba311e8bfa27d90bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ff7ab141cb808ac05c3d184fe2ec8da"></a>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a6ff7ab141cb808ac05c3d184fe2ec8da">clip</a></td></tr>
+<tr class="memdesc:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for number of clipped bases filter. <br /></td></tr>
+<tr class="separator:a6ff7ab141cb808ac05c3d184fe2ec8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1449fc99765567e8e224bfa774d67c4c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1449fc99765567e8e224bfa774d67c4c"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nm</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a1449fc99765567e8e224bfa774d67c4c">nm</a></td></tr>
+<tr class="memdesc:a1449fc99765567e8e224bfa774d67c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for NM (num mismatch) filter. <br /></td></tr>
 <tr class="separator:a1449fc99765567e8e224bfa774d67c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a0fa2d519b50b9d380326bd72dc7984"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a0fa2d519b50b9d380326bd72dc7984"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nbases</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a9a0fa2d519b50b9d380326bd72dc7984">nbases</a></td></tr>
+<tr class="memdesc:a9a0fa2d519b50b9d380326bd72dc7984"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for number of "N" bases filer. <br /></td></tr>
 <tr class="separator:a9a0fa2d519b50b9d380326bd72dc7984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a585164a0c6b2231136df35ea1c9f1ba7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a585164a0c6b2231136df35ea1c9f1ba7"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ins</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a585164a0c6b2231136df35ea1c9f1ba7">ins</a></td></tr>
+<tr class="memdesc:a585164a0c6b2231136df35ea1c9f1ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for max CIGAR insertion size filter. <br /></td></tr>
 <tr class="separator:a585164a0c6b2231136df35ea1c9f1ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec96f7f2ebc515fa0cf8e2dc4db06d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abec96f7f2ebc515fa0cf8e2dc4db06d8"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>del</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#abec96f7f2ebc515fa0cf8e2dc4db06d8">del</a></td></tr>
+<tr class="memdesc:abec96f7f2ebc515fa0cf8e2dc4db06d8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for max CIGAR deletion size filter. <br /></td></tr>
 <tr class="separator:abec96f7f2ebc515fa0cf8e2dc4db06d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbe9b3c3a68f83d1e178cd2e3b6ebe09"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbe9b3c3a68f83d1e178cd2e3b6ebe09"></a>
-<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><b>xp</b></td></tr>
+<a class="el" href="structSnowTools_1_1Range.html">Range</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#afbe9b3c3a68f83d1e178cd2e3b6ebe09">xp</a></td></tr>
+<tr class="memdesc:afbe9b3c3a68f83d1e178cd2e3b6ebe09"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> object for number of secondary alignments. <br /></td></tr>
 <tr class="separator:afbe9b3c3a68f83d1e178cd2e3b6ebe09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd0d68c6d31ff249f3ae8662162663c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd0d68c6d31ff249f3ae8662162663c3"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
-<tr class="separator:afd0d68c6d31ff249f3ae8662162663c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab26f6bfd8b4ade48e7563671f5e38616"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab26f6bfd8b4ade48e7563671f5e38616"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>read_group</b></td></tr>
-<tr class="separator:ab26f6bfd8b4ade48e7563671f5e38616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7838b819effec21e6a176ce4303ef2e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7838b819effec21e6a176ce4303ef2e9"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_count</b> = 0</td></tr>
-<tr class="separator:a7838b819effec21e6a176ce4303ef2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c7116be38b3f8569a2f7775f7f42068"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c7116be38b3f8569a2f7775f7f42068"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>subsam_frac</b> = 1</td></tr>
-<tr class="separator:a5c7116be38b3f8569a2f7775f7f42068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa21ef46b0b84e77d175875c10a3f0c7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa21ef46b0b84e77d175875c10a3f0c7c"></a>
-<a class="el" href="structSnowTools_1_1FlagRule.html">FlagRule</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fr</b></td></tr>
-<tr class="separator:aa21ef46b0b84e77d175875c10a3f0c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:acaab70ed1a7453a499903bbdc9cd0e62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaab70ed1a7453a499903bbdc9cd0e62"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ReadFilter</b></td></tr>
+<tr class="separator:acaab70ed1a7453a499903bbdc9cd0e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b3abcd710e89ed66cb38a96ecfa453f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b3abcd710e89ed66cb38a96ecfa453f"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>ReadFilterCollection</b></td></tr>
+<tr class="separator:a9b3abcd710e89ed66cb38a96ecfa453f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ea2c2b0ea42ead4dc770a1d4b9c989"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69ea2c2b0ea42ead4dc770a1d4b9c989"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1AbstractRule.html">AbstractRule</a> &amp;fr)</td></tr>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1AbstractRule.html#a69ea2c2b0ea42ead4dc770a1d4b9c989">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classSnowTools_1_1AbstractRule.html">AbstractRule</a> &amp;<a class="el" href="classSnowTools_1_1AbstractRule.html#aa21ef46b0b84e77d175875c10a3f0c7c">fr</a>)</td></tr>
+<tr class="memdesc:a69ea2c2b0ea42ead4dc770a1d4b9c989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print some basic information about this filter. <br /></td></tr>
 <tr class="separator:a69ea2c2b0ea42ead4dc770a1d4b9c989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Stores a full rule (<a class="el" href="classSnowTools_1_1Flag.html" title="Stores a rule for a single alignment flag. ">Flag</a> + <a class="el" href="structSnowTools_1_1Range.html" title="Hold a range of valid numeric values (e.g. ">Range</a> + motif etc) </p>
 <p>An alignment can be queried with an <a class="el" href="classSnowTools_1_1AbstractRule.html" title="Stores a full rule (Flag + Range + motif etc) ">AbstractRule</a> object to check if it passes that rule. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2f5f0a674a38bb284a737f92c7fd3038"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isValid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Query a read against this rule. </p>
+<p>If the read passes this rule, return true. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>An aligned sequencing read to query against filter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a925b32b2c3b70a47686caef98b2513c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parseJson </td>
+          <td>(</td>
+          <td class="paramtype">const Json::Value &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Supply the rule parameters with a JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>JSON object created by parsing a string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a314befd3458c8581c0a309ea001ae679"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetReadGroup </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>rg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specify a read-group for this filter. </p>
+<p>Reads that do not belong to this read group will not pass isValid </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">A</td><td>read group to be matched against RG:Z:&lt;readgroup&gt; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a98b479998bf6c29e0df194725356b719"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetRuleID </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Supply a name for this rule. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>ID to be associated with this rule </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac98b18ca09c89bb7011e468b184cb10c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSubsampleRate </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the rate to subsample (default 1 = no subsampling) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>A rate between 0 and 1 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/SnowTools/<a class="el" href="ReadFilter_8h_source.html">ReadFilter.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 00:22:35 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 03:24:15 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

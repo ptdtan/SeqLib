@@ -60,8 +60,8 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespaceSnowTools_1_1BamReadSort"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools_1_1BamReadSort.html">BamReadSort</a></td></tr>
-<tr class="memdesc:namespaceSnowTools_1_1BamReadSort"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort methods for reads. <br /></td></tr>
+<tr class="memitem:namespaceSnowTools_1_1BamRecordSort"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceSnowTools_1_1BamRecordSort.html">BamRecordSort</a></td></tr>
+<tr class="memdesc:namespaceSnowTools_1_1BamRecordSort"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sort methods for reads. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -72,14 +72,14 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamHeader.html">BamHeader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store a header to a BAM file.  <a href="classSnowTools_1_1BamHeader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to store and interact with an HTSLib bam1_t read.  <a href="classSnowTools_1_1BamRead.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html">BamReader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Walk along a BAM or along BAM regions and stream in/out reads.  <a href="classSnowTools_1_1BamReader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReadGroup.html">BamReadGroup</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store information pertaining to a given read group *.  <a href="classSnowTools_1_1BamReadGroup.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to store and interact with an HTSLib bam1_t read.  <a href="classSnowTools_1_1BamRecord.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamStats.html">BamStats</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class to store statistics on a BAM file.  <a href="classSnowTools_1_1BamStats.html#details">More...</a><br /></td></tr>
@@ -97,9 +97,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls BWA-MEM on sequence queries and returns aligned reads, all in memory.  <a href="classSnowTools_1_1BWAWrapper.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1Cigar.html">Cigar</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CIGAR for a single gapped alignment.  <a href="classSnowTools_1_1Cigar.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html">CigarField</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic container for cigar data.  <a href="classSnowTools_1_1CigarField.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic container for a single cigar operation.  <a href="classSnowTools_1_1CigarField.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSnowTools_1_1CommandLineRegion.html">CommandLineRegion</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,13 +162,13 @@ Typedefs</h2></td></tr>
 typedef std::unordered_map<br class="typebreak" />
 &lt; std::string, size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CigarMap</b></td></tr>
 <tr class="separator:a92a88d852b0e73f08d95887113c30328"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ee1a1d945b84b3c387724bc5af7181"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12ee1a1d945b84b3c387724bc5af7181"></a>
-typedef std::vector&lt; <a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BamReadVector</b></td></tr>
-<tr class="separator:a12ee1a1d945b84b3c387724bc5af7181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47bc4e186f749dcc98b5da8aa633ed48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47bc4e186f749dcc98b5da8aa633ed48"></a>
+<tr class="memitem:ac046aecc0a5a52f86e80d07ecb197bae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac046aecc0a5a52f86e80d07ecb197bae"></a>
+typedef std::vector&lt; <a class="el" href="classSnowTools_1_1BamRecord.html">BamRecord</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BamRecordVector</b></td></tr>
+<tr class="separator:ac046aecc0a5a52f86e80d07ecb197bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3ce04553e6b9ce6174f525480e1b0f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3ce04553e6b9ce6174f525480e1b0f8"></a>
 typedef std::vector<br class="typebreak" />
-&lt; BamReadVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BamReadClusterVector</b></td></tr>
-<tr class="separator:a47bc4e186f749dcc98b5da8aa633ed48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+&lt; BamRecordVector &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BamRecordClusterVector</b></td></tr>
+<tr class="separator:af3ce04553e6b9ce6174f525480e1b0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee79c95bcc0c98fd141a9a9aeb21e444"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee79c95bcc0c98fd141a9a9aeb21e444"></a>
 typedef std::vector&lt; <a class="el" href="structSnowTools_1_1USeq.html">USeq</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>USeqVector</b></td></tr>
 <tr class="separator:aee79c95bcc0c98fd141a9a9aeb21e444"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -477,7 +478,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 00:22:35 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 03:24:15 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
