@@ -51,7 +51,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -68,9 +67,9 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae5bbb90d93e882be0cb0169cb0a24e35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#ae5bbb90d93e882be0cb0169cb0a24e35">BamWriter</a> (const std::string &amp;in)</td></tr>
-<tr class="memdesc:ae5bbb90d93e882be0cb0169cb0a24e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classSnowTools_1_1BamWriter.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWriter</a> for writing a BAM/SAM/CRAM.  <a href="#ae5bbb90d93e882be0cb0169cb0a24e35">More...</a><br /></td></tr>
-<tr class="separator:ae5bbb90d93e882be0cb0169cb0a24e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb1752612d992f88f465445f54182d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#a2bb1752612d992f88f465445f54182d6">BamWriter</a> (const std::string &amp;f)</td></tr>
+<tr class="memdesc:a2bb1752612d992f88f465445f54182d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classSnowTools_1_1BamWriter.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWriter</a> for writing a BAM file.  <a href="#a2bb1752612d992f88f465445f54182d6">More...</a><br /></td></tr>
+<tr class="separator:a2bb1752612d992f88f465445f54182d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a646daefe44d928e7ccd5d6db1d3c667d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a646daefe44d928e7ccd5d6db1d3c667d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#a646daefe44d928e7ccd5d6db1d3c667d">BamWriter</a> ()</td></tr>
 <tr class="memdesc:a646daefe44d928e7ccd5d6db1d3c667d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <a class="el" href="classSnowTools_1_1BamWriter.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWriter</a>. <br /></td></tr>
@@ -78,13 +77,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e7510e6fe6039a9d02b8a14e2588c0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#a1e7510e6fe6039a9d02b8a14e2588c0d">~BamWriter</a> ()</td></tr>
 <tr class="memdesc:a1e7510e6fe6039a9d02b8a14e2588c0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a <a class="el" href="classSnowTools_1_1BamWriter.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWriter</a> and close all connections to the BAM.  <a href="#a1e7510e6fe6039a9d02b8a14e2588c0d">More...</a><br /></td></tr>
 <tr class="separator:a1e7510e6fe6039a9d02b8a14e2588c0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a849ff48a8a85042f690cdce75a1169da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#a849ff48a8a85042f690cdce75a1169da">makeIndex</a> ()</td></tr>
-<tr class="memdesc:a849ff48a8a85042f690cdce75a1169da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the index file for the output bam in BAI format.  <a href="#a849ff48a8a85042f690cdce75a1169da">More...</a><br /></td></tr>
-<tr class="separator:a849ff48a8a85042f690cdce75a1169da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94c2e25a4592cc6e57caf7bbb9777fa4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94c2e25a4592cc6e57caf7bbb9777fa4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#a94c2e25a4592cc6e57caf7bbb9777fa4">OpenWriteBam</a> (const std::string &amp;bam)</td></tr>
-<tr class="memdesc:a94c2e25a4592cc6e57caf7bbb9777fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a BAM file for streaming out. <br /></td></tr>
-<tr class="separator:a94c2e25a4592cc6e57caf7bbb9777fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa131c9c92a0205ab84a1ca204c5dcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#adfa131c9c92a0205ab84a1ca204c5dcb">CloseBam</a> ()</td></tr>
+<tr class="memdesc:adfa131c9c92a0205ab84a1ca204c5dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a BAM file explitily.  <a href="#adfa131c9c92a0205ab84a1ca204c5dcb">More...</a><br /></td></tr>
+<tr class="separator:adfa131c9c92a0205ab84a1ca204c5dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8ab1eb8423255f3098030609eab57ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#ad8ab1eb8423255f3098030609eab57ff">makeIndex</a> () const </td></tr>
+<tr class="memdesc:ad8ab1eb8423255f3098030609eab57ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the index file for the output bam in BAI format.  <a href="#ad8ab1eb8423255f3098030609eab57ff">More...</a><br /></td></tr>
+<tr class="separator:ad8ab1eb8423255f3098030609eab57ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a9607de5167e04f2faf5582319f3a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#ab8a9607de5167e04f2faf5582319f3a5">OpenWriteBam</a> (const std::string &amp;bam)</td></tr>
+<tr class="memdesc:ab8a9607de5167e04f2faf5582319f3a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a BAM file for streaming out.  <a href="#ab8a9607de5167e04f2faf5582319f3a5">More...</a><br /></td></tr>
+<tr class="separator:ab8a9607de5167e04f2faf5582319f3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1318dd069374f158cd0a27e474e0db0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamWriter.html#a1318dd069374f158cd0a27e474e0db0b">writeAlignment</a> (<a class="el" href="classSnowTools_1_1BamRead.html">BamRead</a> &amp;r)</td></tr>
 <tr class="memdesc:a1318dd069374f158cd0a27e474e0db0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an alignment to the output BAM file.  <a href="#a1318dd069374f158cd0a27e474e0db0b">More...</a><br /></td></tr>
 <tr class="separator:a1318dd069374f158cd0a27e474e0db0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,23 +107,17 @@ bam_hdr_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:a6b394d470631995333bd5aba90eb3acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly provide the output BAM a header.  <a href="#a6b394d470631995333bd5aba90eb3acf">More...</a><br /></td></tr>
 <tr class="separator:a6b394d470631995333bd5aba90eb3acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a60b472c034acab7bbe12df7426cd85ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60b472c034acab7bbe12df7426cd85ce"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_in</b></td></tr>
-<tr class="separator:a60b472c034acab7bbe12df7426cd85ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac77833eeb9542ff011daddcdc7b91014"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac77833eeb9542ff011daddcdc7b91014"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_out</b></td></tr>
-<tr class="separator:ac77833eeb9542ff011daddcdc7b91014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac0dda0f30946284a801927d6779445c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0dda0f30946284a801927d6779445c8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>__open_BAM_for_writing</b> ()</td></tr>
-<tr class="separator:ac0dda0f30946284a801927d6779445c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b51e7c8c30572d5bf5972c964ec3a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52b51e7c8c30572d5bf5972c964ec3a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>__open_BAM_for_writing</b> ()</td></tr>
+<tr class="separator:a52b51e7c8c30572d5bf5972c964ec3a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:ac77833eeb9542ff011daddcdc7b91014"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac77833eeb9542ff011daddcdc7b91014"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_out</b></td></tr>
+<tr class="separator:ac77833eeb9542ff011daddcdc7b91014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acddc8456764420dc34ef01dc5bd70b66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acddc8456764420dc34ef01dc5bd70b66"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_print_header</b> = false</td></tr>
 <tr class="separator:acddc8456764420dc34ef01dc5bd70b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,7 +153,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Walk along a BAM or along BAM regions and stream in/out reads. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ae5bbb90d93e882be0cb0169cb0a24e35"></a>
+<a class="anchor" id="a2bb1752612d992f88f465445f54182d6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -166,19 +161,20 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
           <td class="memname"><a class="el" href="classSnowTools_1_1BamWriter.html">BamWriter</a> </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>in</em></td><td>)</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classSnowTools_1_1BamWriter.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWriter</a> for writing a BAM/SAM/CRAM. </p>
+<p>Construct a new <a class="el" href="classSnowTools_1_1BamWriter.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWriter</a> for writing a BAM file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>Name of BAM/SAM/CRAM file to write </td></tr>
+    <tr><td class="paramname">f</td><td>Name of BAM file to write </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Immediately calls OpenWriteBam. </dd></dl>
 
 </div>
 </div>
@@ -209,12 +205,12 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a849ff48a8a85042f690cdce75a1169da"></a>
+<a class="anchor" id="adfa131c9c92a0205ab84a1ca204c5dcb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void makeIndex </td>
+          <td class="memname">void CloseBam </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -222,8 +218,68 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
       </table>
 </div><div class="memdoc">
 
+<p>Close a BAM file explitily. </p>
+<p>This is required before indexing with makeIndex. </p><dl class="section note"><dt>Note</dt><dd>If not called, BAM will close properly on object destruction </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>a runtime_error if BAM already closed or was never opened </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8ab1eb8423255f3098030609eab57ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void makeIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>Create the index file for the output bam in BAI format. </p>
-<p>This will make a call to HTSlib bam_index_build for the output file. </p>
+<p>This will make a call to HTSlib bam_index_build for the output file. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>a runtime_error if sam_index_build2 exits with &lt; 0 status </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab8a9607de5167e04f2faf5582319f3a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenWriteBam </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>bam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a BAM file for streaming out. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bam</td><td>Path to the output BAM file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>a runtime_error if cannot write BAM </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Calling this function will immediately write the BAM with its header </dd></dl>
 
 </div>
 </div>
@@ -324,6 +380,12 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>a runtime_error if cannot write alignment </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -333,7 +395,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 10 2016 02:05:50 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 00:02:50 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

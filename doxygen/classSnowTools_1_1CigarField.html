@@ -88,8 +88,13 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a9d79066f5b28c73a0f6f248bbf846fe1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#a9d79066f5b28c73a0f6f248bbf846fe1">Length</a> () const </td></tr>
 <tr class="memdesc:a9d79066f5b28c73a0f6f248bbf846fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the length of the cigar op (e.g.  <a href="#a9d79066f5b28c73a0f6f248bbf846fe1">More...</a><br /></td></tr>
 <tr class="separator:a9d79066f5b28c73a0f6f248bbf846fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf328727cd1f334826a146b038d49b5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#acf328727cd1f334826a146b038d49b5b">ConsumesQuery</a> () const </td></tr>
-<tr class="memdesc:acf328727cd1f334826a146b038d49b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if cigar op matches bases on the reference (MDN=X) inline bool ConsumesReference() const { return bam_cigar_type(bam_cigar_op(data))&amp;2; }.  <a href="#acf328727cd1f334826a146b038d49b5b">More...</a><br /></td></tr>
+<tr class="memitem:a907e22239777be8e3e00c0c5399e8ab5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a907e22239777be8e3e00c0c5399e8ab5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#a907e22239777be8e3e00c0c5399e8ab5">ConsumesReference</a> () const </td></tr>
+<tr class="memdesc:a907e22239777be8e3e00c0c5399e8ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if cigar op matches bases on the reference (MDN=X) <br /></td></tr>
+<tr class="separator:a907e22239777be8e3e00c0c5399e8ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf328727cd1f334826a146b038d49b5b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf328727cd1f334826a146b038d49b5b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1CigarField.html#acf328727cd1f334826a146b038d49b5b">ConsumesQuery</a> () const </td></tr>
+<tr class="memdesc:acf328727cd1f334826a146b038d49b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returuns true cigar op matches bases on the query (MIS=X) <br /></td></tr>
 <tr class="separator:acf328727cd1f334826a146b038d49b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -102,32 +107,6 @@ Friends</h2></td></tr>
 <div class="textblock"><p>Basic container for cigar data. </p>
 <p>Stores a single cigar element in a compact 32bit form (same as HTSlib). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="acf328727cd1f334826a146b038d49b5b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ConsumesQuery </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns true if cigar op matches bases on the reference (MDN=X) inline bool ConsumesReference() const { return bam_cigar_type(bam_cigar_op(data))&amp;2; }. </p>
-<p>/** Returuns true cigar op matches bases on the query (MIS=X) </p>
-
-</div>
-</div>
 <a class="anchor" id="a9d79066f5b28c73a0f6f248bbf846fe1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +177,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 10 2016 02:05:50 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 00:02:50 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

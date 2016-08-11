@@ -60,35 +60,49 @@
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;htslib/kstring.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespaceSnowTools.html">   11</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSnowTools.html">SnowTools</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html">   18</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSnowTools_1_1BamHeader.html">BamHeader</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">   26</a></span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>() { h = <span class="keyword">nullptr</span>; };</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> std::string&amp; hdr);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    bam_hdr_t * h;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  };</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:11</div></div>
-<div class="ttc" id="classSnowTools_1_1BamHeader_html"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html">SnowTools::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:18</div></div>
-<div class="ttc" id="classSnowTools_1_1BamHeader_html_ac837e0bba5c95698ed712ba7b02bb612"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">SnowTools::BamHeader::BamHeader</a></div><div class="ttdeci">BamHeader()</div><div class="ttdoc">Initializes a new empty BamHeader with no data. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:26</div></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespaceSnowTools.html">   12</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSnowTools.html">SnowTools</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html">   19</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSnowTools_1_1BamHeader.html">BamHeader</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">   27</a></span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>() {};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> std::string&amp; hdr);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> bam_hdr_t * hdr);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSnowTools_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">NumSequences</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::string <a class="code" href="classSnowTools_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">IDtoName</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">   56</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h.get() != 0; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::shared_ptr&lt;bam_hdr_t&gt; h;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">// adapted from sam_hdr_read</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:12</div></div>
+<div class="ttc" id="classSnowTools_1_1BamHeader_html"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html">SnowTools::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:19</div></div>
+<div class="ttc" id="classSnowTools_1_1BamHeader_html_a47f10ce5225465821ecbccd17cf09648"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">SnowTools::BamHeader::NumSequences</a></div><div class="ttdeci">int NumSequences() const </div><div class="ttdoc">Return the number of sequences store in this dictionary Returns 0 if header is unitialized. </div></div>
+<div class="ttc" id="classSnowTools_1_1BamHeader_html_ac837e0bba5c95698ed712ba7b02bb612"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">SnowTools::BamHeader::BamHeader</a></div><div class="ttdeci">BamHeader()</div><div class="ttdoc">Initializes a new empty BamHeader with no data. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:27</div></div>
+<div class="ttc" id="classSnowTools_1_1BamHeader_html_a479432127ee77145cc19d6a2d1590821"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">SnowTools::BamHeader::isEmpty</a></div><div class="ttdeci">bool isEmpty() const </div><div class="ttdoc">Check if the header has been initialized. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:56</div></div>
+<div class="ttc" id="classSnowTools_1_1BamHeader_html_afe1b3321a8153237a0512f6c87c4c20c"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">SnowTools::BamHeader::IDtoName</a></div><div class="ttdeci">std::string IDtoName(int id) const </div><div class="ttdoc">Convert a numeric sequence ID to a name. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 10 2016 02:05:50 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 00:02:50 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
