@@ -61,132 +61,134 @@
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;SnowTools/BamRead.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;htslib/sam.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define MEM_F_SOFTCLIP  0x200</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">  #include &quot;bwa/bwa.h&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">  #include &quot;bwa/bwt.h&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">  #include &quot;bwa/bntseq.h&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">  #include &quot;bwa/kseq.h&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">  #include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">  #include &quot;bwa/utils.h&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">  #include &quot;bwa/bwamem.h&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="comment">//#include &quot;bwa/is.c&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">int</span> is_bwt(ubyte_t *T, <span class="keywordtype">int</span> n);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;KSEQ_DECLARE(gzFile)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;namespace <a class="code" href="namespaceSnowTools.html">SnowTools</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structSnowTools_1_1USeq.html">   34</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structSnowTools_1_1USeq.html">USeq</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string name;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::string seq;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">typedef</span> std::vector&lt;USeq&gt; USeqVector;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSnowTools_1_1BWAWrapper.html">BWAWrapper</a> {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">   48</a></span>&#160;  <a class="code" href="classSnowTools_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">BWAWrapper</a>() { </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    memopt = mem_opt_init();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    memopt-&gt;flag |= MEM_F_SOFTCLIP;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">   57</a></span>&#160;  <a class="code" href="classSnowTools_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">~BWAWrapper</a>() { </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (idx)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      bwa_idx_destroy(idx);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (memopt)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      free(memopt);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  std::string ChrIDToName(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  bam_hdr_t * HeaderFromIndex() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> alignSingleSequence(<span class="keyword">const</span> std::string&amp; seq, <span class="keyword">const</span> std::string&amp; name, BamReadVector&amp; vec, <span class="keywordtype">bool</span> hardclip, </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                           <span class="keywordtype">double</span> keep_sec_with_frac_of_primary_score, <span class="keywordtype">int</span> max_secondary);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span> constructIndex(<span class="keyword">const</span> USeqVector&amp; v);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordtype">void</span> retrieveIndex(<span class="keyword">const</span> std::string&amp; file);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">void</span> writeIndex(<span class="keyword">const</span> std::string&amp; index_name);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">   99</a></span>&#160;  bwaidx_t* <a class="code" href="classSnowTools_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">getIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> idx; }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">int</span> refCount() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  std::string getInfo() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">void</span> setGapOpen(<span class="keywordtype">int</span> gap_open);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordtype">void</span> setGapExtension(<span class="keywordtype">int</span> gap_ext);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">void</span> setMismatchPenalty(<span class="keywordtype">int</span> m);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> setReseedTrigger(<span class="keywordtype">float</span> r);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">void</span> setBandwidth(<span class="keywordtype">int</span> w);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  <span class="keywordtype">void</span> setZDropoff(<span class="keywordtype">int</span> z);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">void</span> set3primeClippingPenalty(<span class="keywordtype">int</span> p);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">void</span> set5primeClippingPenalty(<span class="keywordtype">int</span> p);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">void</span> setAScore(<span class="keywordtype">int</span> a);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">  156</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">empty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !idx; }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  mem_opt_t * memopt;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  bwaidx_t* idx = 0;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="comment">// Convert a bns to a header string </span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  std::string bwa_print_sam_hdr2(<span class="keyword">const</span> bntseq_t *bns, <span class="keyword">const</span> <span class="keywordtype">char</span> *hdr_line) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="comment">// overwrite the bwa bwt_pac2pwt function</span></div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  bwt_t *__bwt_pac2bwt(<span class="keyword">const</span> uint8_t *pac, <span class="keywordtype">int</span> bwt_seq_lenr);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">// add an anns (chr annotation structure) </span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  bntann1_t* __add_to_anns(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; seq, bntann1_t * ann, <span class="keywordtype">size_t</span> offset);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="comment">// overwrite the bwa-mem add1 function, which takes a sequence and adds to pac</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  uint8_t* __add1(<span class="keyword">const</span> kseq_t *seq, bntseq_t *bns, uint8_t *pac, int64_t *m_pac, <span class="keywordtype">int</span> *m_seqs, <span class="keywordtype">int</span> *m_holes, bntamb1_t **q);</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="comment">// make the pac structure (2-bit encoded packed sequence)</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  uint8_t* __make_pac(<span class="keyword">const</span> USeqVector&amp; v, <span class="keywordtype">bool</span> for_only);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="keywordtype">void</span> __write_pac_to_file(<span class="keyword">const</span> std::string&amp; file);</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  std::string print_bns();</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;};</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;SnowTools/BamHeader.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;htslib/sam.h&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define MEM_F_SOFTCLIP  0x200</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">  #include &quot;bwa/bwa.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">  #include &quot;bwa/bwt.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">  #include &quot;bwa/bntseq.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">  #include &quot;bwa/kseq.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">  #include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">  #include &quot;bwa/utils.h&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">  #include &quot;bwa/bwamem.h&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="comment">//#include &quot;bwa/is.c&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">int</span> is_bwt(ubyte_t *T, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;KSEQ_DECLARE(gzFile)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;namespace <a class="code" href="namespaceSnowTools.html">SnowTools</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structSnowTools_1_1USeq.html">   35</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structSnowTools_1_1USeq.html">USeq</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::string name;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    std::string seq;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">typedef</span> std::vector&lt;USeq&gt; USeqVector;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSnowTools_1_1BWAWrapper.html">BWAWrapper</a> {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">   49</a></span>&#160;  <a class="code" href="classSnowTools_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">BWAWrapper</a>() { </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    memopt = mem_opt_init();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    memopt-&gt;flag |= MEM_F_SOFTCLIP;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">   58</a></span>&#160;  <a class="code" href="classSnowTools_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">~BWAWrapper</a>() { </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (idx)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      bwa_idx_destroy(idx);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (memopt)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      free(memopt);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  std::string ChrIDToName(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="classSnowTools_1_1BamHeader.html">BamHeader</a> HeaderFromIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> alignSingleSequence(<span class="keyword">const</span> std::string&amp; seq, <span class="keyword">const</span> std::string&amp; name, BamReadVector&amp; vec, <span class="keywordtype">bool</span> hardclip, </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                           <span class="keywordtype">double</span> keep_sec_with_frac_of_primary_score, <span class="keywordtype">int</span> max_secondary);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> constructIndex(<span class="keyword">const</span> USeqVector&amp; v);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">void</span> retrieveIndex(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordtype">void</span> writeIndex(<span class="keyword">const</span> std::string&amp; index_name);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">  100</a></span>&#160;  bwaidx_t* <a class="code" href="classSnowTools_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">getIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> idx; }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">int</span> refCount() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  std::string getInfo() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> setGapOpen(<span class="keywordtype">int</span> gap_open);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">void</span> setGapExtension(<span class="keywordtype">int</span> gap_ext);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordtype">void</span> setMismatchPenalty(<span class="keywordtype">int</span> m);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">void</span> setReseedTrigger(<span class="keywordtype">float</span> r);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">void</span> setBandwidth(<span class="keywordtype">int</span> w);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordtype">void</span> setZDropoff(<span class="keywordtype">int</span> z);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">void</span> set3primeClippingPenalty(<span class="keywordtype">int</span> p);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordtype">void</span> set5primeClippingPenalty(<span class="keywordtype">int</span> p);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">void</span> setAScore(<span class="keywordtype">int</span> a);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classSnowTools_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">  157</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">empty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !idx; }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  mem_opt_t * memopt;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  bwaidx_t* idx = 0;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="comment">// Convert a bns to a header string </span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  std::string bwa_print_sam_hdr2(<span class="keyword">const</span> bntseq_t *bns, <span class="keyword">const</span> <span class="keywordtype">char</span> *hdr_line) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="comment">// overwrite the bwa bwt_pac2pwt function</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  bwt_t *__bwt_pac2bwt(<span class="keyword">const</span> uint8_t *pac, <span class="keywordtype">int</span> bwt_seq_lenr);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="comment">// add an anns (chr annotation structure) </span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  bntann1_t* __add_to_anns(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; seq, bntann1_t * ann, <span class="keywordtype">size_t</span> offset);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="comment">// overwrite the bwa-mem add1 function, which takes a sequence and adds to pac</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  uint8_t* __add1(<span class="keyword">const</span> kseq_t *seq, bntseq_t *bns, uint8_t *pac, int64_t *m_pac, <span class="keywordtype">int</span> *m_seqs, <span class="keywordtype">int</span> *m_holes, bntamb1_t **q);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="comment">// make the pac structure (2-bit encoded packed sequence)</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  uint8_t* __make_pac(<span class="keyword">const</span> USeqVector&amp; v, <span class="keywordtype">bool</span> for_only);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordtype">void</span> __write_pac_to_file(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  std::string print_bns();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;};</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:12</div></div>
-<div class="ttc" id="classSnowTools_1_1BWAWrapper_html"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html">SnowTools::BWAWrapper</a></div><div class="ttdoc">Calls BWA-MEM on sequence queries and returns aligned reads, all in memory. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:42</div></div>
-<div class="ttc" id="classSnowTools_1_1BWAWrapper_html_a5205d95c7b8d0db7818032c4c0baee93"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">SnowTools::BWAWrapper::~BWAWrapper</a></div><div class="ttdeci">~BWAWrapper()</div><div class="ttdoc">Destroy the BWAWrapper. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:57</div></div>
-<div class="ttc" id="structSnowTools_1_1USeq_html"><div class="ttname"><a href="structSnowTools_1_1USeq.html">SnowTools::USeq</a></div><div class="ttdoc">Structure to hold unaligned sequence (name and bases) </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:34</div></div>
-<div class="ttc" id="classSnowTools_1_1BWAWrapper_html_acb73aa5fc750eff0735bfcb90b9abd10"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">SnowTools::BWAWrapper::getIndex</a></div><div class="ttdeci">bwaidx_t * getIndex() const </div><div class="ttdoc">Return the index. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:99</div></div>
-<div class="ttc" id="classSnowTools_1_1BWAWrapper_html_ac6e61de369e994009e36f344f99c15ad"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">SnowTools::BWAWrapper::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdoc">Check if no sequences have been included. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:156</div></div>
-<div class="ttc" id="classSnowTools_1_1BWAWrapper_html_a8d9790b13b354f5f661522156f4fc55d"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">SnowTools::BWAWrapper::BWAWrapper</a></div><div class="ttdeci">BWAWrapper()</div><div class="ttdoc">Create a new BWAWrapper. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:48</div></div>
+<div class="ttc" id="classSnowTools_1_1BWAWrapper_html"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html">SnowTools::BWAWrapper</a></div><div class="ttdoc">Calls BWA-MEM on sequence queries and returns aligned reads, all in memory. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:43</div></div>
+<div class="ttc" id="classSnowTools_1_1BWAWrapper_html_a5205d95c7b8d0db7818032c4c0baee93"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">SnowTools::BWAWrapper::~BWAWrapper</a></div><div class="ttdeci">~BWAWrapper()</div><div class="ttdoc">Destroy the BWAWrapper. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:58</div></div>
+<div class="ttc" id="structSnowTools_1_1USeq_html"><div class="ttname"><a href="structSnowTools_1_1USeq.html">SnowTools::USeq</a></div><div class="ttdoc">Structure to hold unaligned sequence (name and bases) </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:35</div></div>
+<div class="ttc" id="classSnowTools_1_1BamHeader_html"><div class="ttname"><a href="classSnowTools_1_1BamHeader.html">SnowTools::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:19</div></div>
+<div class="ttc" id="classSnowTools_1_1BWAWrapper_html_acb73aa5fc750eff0735bfcb90b9abd10"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">SnowTools::BWAWrapper::getIndex</a></div><div class="ttdeci">bwaidx_t * getIndex() const </div><div class="ttdoc">Return the index. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:100</div></div>
+<div class="ttc" id="classSnowTools_1_1BWAWrapper_html_ac6e61de369e994009e36f344f99c15ad"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">SnowTools::BWAWrapper::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdoc">Check if no sequences have been included. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:157</div></div>
+<div class="ttc" id="classSnowTools_1_1BWAWrapper_html_a8d9790b13b354f5f661522156f4fc55d"><div class="ttname"><a href="classSnowTools_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">SnowTools::BWAWrapper::BWAWrapper</a></div><div class="ttdeci">BWAWrapper()</div><div class="ttdoc">Create a new BWAWrapper. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 00:02:50 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 00:22:35 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
