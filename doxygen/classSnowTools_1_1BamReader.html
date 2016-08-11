@@ -124,10 +124,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a2e5db5090711310a703e46dabb09ef2c">displayReadFilterCollection</a> () const </td></tr>
 <tr class="memdesc:a2e5db5090711310a703e46dabb09ef2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the <a class="el" href="classSnowTools_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a> as a string. <br /></td></tr>
 <tr class="separator:a2e5db5090711310a703e46dabb09ef2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a28de93624ea4a7c46d914eebe5b8e2db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a28de93624ea4a7c46d914eebe5b8e2db"></a>
-bam_hdr_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a28de93624ea4a7c46d914eebe5b8e2db">header</a> () const </td></tr>
-<tr class="memdesc:a28de93624ea4a7c46d914eebe5b8e2db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the BAM header. <br /></td></tr>
-<tr class="separator:a28de93624ea4a7c46d914eebe5b8e2db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fc670bd4a5ae84c82fc87c9e992d97a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fc670bd4a5ae84c82fc87c9e992d97a"></a>
+const <a class="el" href="classSnowTools_1_1BamHeader.html">BamHeader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#a7fc670bd4a5ae84c82fc87c9e992d97a">Header</a> () const </td></tr>
+<tr class="memdesc:a7fc670bd4a5ae84c82fc87c9e992d97a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a pointer to the BAM header. <br /></td></tr>
+<tr class="separator:a7fc670bd4a5ae84c82fc87c9e992d97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6cb48261b2055e553b6efbafed4197b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6cb48261b2055e553b6efbafed4197b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamReader.html#ac6cb48261b2055e553b6efbafed4197b">resetAll</a> ()</td></tr>
 <tr class="memdesc:ac6cb48261b2055e553b6efbafed4197b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset all the counters and regions, but keep the loaded index. <br /></td></tr>
@@ -170,9 +170,9 @@ std::shared_ptr&lt; hts_idx_t &gt;&#160;</td><td class="memItemRight" valign="bo
 <tr class="memitem:a2fe604b18dd17e2ca64a31e11274e661"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fe604b18dd17e2ca64a31e11274e661"></a>
 std::shared_ptr&lt; hts_itr_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hts_itr</b></td></tr>
 <tr class="separator:a2fe604b18dd17e2ca64a31e11274e661"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61b6513761a0ccd0b91695417939f0ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61b6513761a0ccd0b91695417939f0ff"></a>
-std::shared_ptr&lt; bam_hdr_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>br</b></td></tr>
-<tr class="separator:a61b6513761a0ccd0b91695417939f0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05bc41a1663dccfe7b8cad9617b44623"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05bc41a1663dccfe7b8cad9617b44623"></a>
+<a class="el" href="classSnowTools_1_1BamHeader.html">BamHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_hdr</b></td></tr>
+<tr class="separator:a05bc41a1663dccfe7b8cad9617b44623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5a4aaa10c7932bb9d0d5da5db5ffc90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5a4aaa10c7932bb9d0d5da5db5ffc90"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_verbose</b> = false</td></tr>
 <tr class="separator:af5a4aaa10c7932bb9d0d5da5db5ffc90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -405,7 +405,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 17:05:33 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 21:50:54 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

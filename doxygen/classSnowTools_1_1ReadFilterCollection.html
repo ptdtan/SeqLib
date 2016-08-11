@@ -70,9 +70,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1ReadFilterCollection.html#ac28566c0885235ee1570500c11446136">ReadFilterCollection</a> ()</td></tr>
 <tr class="memdesc:ac28566c0885235ee1570500c11446136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <a class="el" href="classSnowTools_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a> that will pass all reads. <br /></td></tr>
 <tr class="separator:ac28566c0885235ee1570500c11446136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5dd6c16e0847c247dd53b94b2319659"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5dd6c16e0847c247dd53b94b2319659"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ReadFilterCollection</b> (const std::string &amp;script, bam_hdr_t *h)</td></tr>
-<tr class="separator:ac5dd6c16e0847c247dd53b94b2319659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf17e59e805d524ecfd20a1f43d52df0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf17e59e805d524ecfd20a1f43d52df0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ReadFilterCollection</b> (const std::string &amp;script, const <a class="el" href="classSnowTools_1_1BamHeader.html">SnowTools::BamHeader</a> &amp;h)</td></tr>
+<tr class="separator:aaf17e59e805d524ecfd20a1f43d52df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48de8f2ead139b57ee7347d78aaac566"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48de8f2ead139b57ee7347d78aaac566"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addGlobalRule</b> (const std::string &amp;rule)</td></tr>
 <tr class="separator:a48de8f2ead139b57ee7347d78aaac566"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,9 +109,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>m_count_seen</b> = 
 <tr class="memitem:a2e858aaee15c84e31bd307b6394a44e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e858aaee15c84e31bd307b6394a44e8"></a>
 std::vector&lt; <a class="el" href="classSnowTools_1_1ReadFilter.html">ReadFilter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_regions</b></td></tr>
 <tr class="separator:a2e858aaee15c84e31bd307b6394a44e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99670fe5704d9b5a52e9b43d5fd245a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99670fe5704d9b5a52e9b43d5fd245a6"></a>
-bam_hdr_t *&#160;</td><td class="memItemRight" valign="bottom"><b>h</b> = nullptr</td></tr>
-<tr class="separator:a99670fe5704d9b5a52e9b43d5fd245a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0438274835bd1d5f2ddb63e7e903c42f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0438274835bd1d5f2ddb63e7e903c42f"></a>
+<a class="el" href="classSnowTools_1_1BamHeader.html">BamHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>h</b></td></tr>
+<tr class="separator:a0438274835bd1d5f2ddb63e7e903c42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac81754e32fa3d8361a92aeac476b8895"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac81754e32fa3d8361a92aeac476b8895"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_fall_through</b> = false</td></tr>
 <tr class="separator:ac81754e32fa3d8361a92aeac476b8895"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +131,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 17:05:33 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 21:50:54 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

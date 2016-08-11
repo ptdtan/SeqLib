@@ -84,6 +84,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a> () const </td></tr>
 <tr class="memdesc:a479432127ee77145cc19d6a2d1590821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the header has been initialized. <br /></td></tr>
 <tr class="separator:a479432127ee77145cc19d6a2d1590821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e798032baf4852ba77a31a44d54baf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17e798032baf4852ba77a31a44d54baf"></a>
+const bam_hdr_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamHeader.html#a17e798032baf4852ba77a31a44d54baf">get</a> () const </td></tr>
+<tr class="memdesc:a17e798032baf4852ba77a31a44d54baf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw bam_hdr_t. <br /></td></tr>
+<tr class="separator:a17e798032baf4852ba77a31a44d54baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc564ce14f8a66fbebd7cc5bed40ccfb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSnowTools_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">Name2ID</a> (const std::string &amp;name) const </td></tr>
+<tr class="memdesc:adc564ce14f8a66fbebd7cc5bed40ccfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the numeric ID associated with a sequence name.  <a href="#adc564ce14f8a66fbebd7cc5bed40ccfb">More...</a><br /></td></tr>
+<tr class="separator:adc564ce14f8a66fbebd7cc5bed40ccfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac828b513d3bafa67eafdf80a7cc65091"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac828b513d3bafa67eafdf80a7cc65091"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>WriteToStdout</b> () const </td></tr>
+<tr class="separator:ac828b513d3bafa67eafdf80a7cc65091"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Store a header to a BAM file. </p>
@@ -186,13 +196,38 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a class="anchor" id="adc564ce14f8a66fbebd7cc5bed40ccfb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Name2ID </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the numeric ID associated with a sequence name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the sequence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ID of named sequence, or -1 if not in dictionary </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/SnowTools/<a class="el" href="BamHeader_8h_source.html">BamHeader.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 11 2016 17:05:33 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 11 2016 21:50:54 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
