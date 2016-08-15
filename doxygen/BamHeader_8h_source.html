@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>SnowTools: src/SeqKit/BamHeader.h Source File</title>
+<title>SnowTools: src/SeqLib/BamHeader.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,7 +43,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7a498d78c665e31fb3601a17072fc63f.html">SeqKit</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b9a7fa96e34e450ef45b4467ebea5311.html">SeqLib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -63,27 +63,27 @@
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespaceSeqKit.html">   13</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSeqKit.html">SeqKit</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="namespaceSeqLib.html">   13</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSeqLib.html">SeqLib</a> {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classSeqKit_1_1BamHeader.html">   20</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSeqKit_1_1BamHeader.html">BamHeader</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html">   20</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classSeqKit_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">   28</a></span>&#160;    <a class="code" href="classSeqKit_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>() {};</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">   28</a></span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>() {};</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classSeqKit_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> std::string&amp; hdr);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> std::string&amp; hdr);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classSeqKit_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> bam_hdr_t * hdr);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> bam_hdr_t * hdr);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqKit_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">NumSequences</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">NumSequences</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string <a class="code" href="classSeqKit_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">IDtoName</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string <a class="code" href="classSeqLib_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">IDtoName</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classSeqKit_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">   57</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqKit_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h.get() == 0; }</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">   57</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h.get() == 0; }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classSeqKit_1_1BamHeader.html#a17e798032baf4852ba77a31a44d54baf">   60</a></span>&#160;    <span class="keyword">const</span> bam_hdr_t* <span class="keyword">get</span>() <span class="keyword">const</span> { <span class="keywordflow">return</span> h.get(); }</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a17e798032baf4852ba77a31a44d54baf">   60</a></span>&#160;    <span class="keyword">const</span> bam_hdr_t* <span class="keyword">get</span>() <span class="keyword">const</span> { <span class="keywordflow">return</span> h.get(); }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqKit_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">Name2ID</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">Name2ID</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> WriteToStdout() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keyword">private</span>:</div>
@@ -109,17 +109,17 @@
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSeqKit_1_1BamHeader_html"><div class="ttname"><a href="classSeqKit_1_1BamHeader.html">SeqKit::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:20</div></div>
-<div class="ttc" id="classSeqKit_1_1BamHeader_html_afe1b3321a8153237a0512f6c87c4c20c"><div class="ttname"><a href="classSeqKit_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">SeqKit::BamHeader::IDtoName</a></div><div class="ttdeci">std::string IDtoName(int id) const </div><div class="ttdoc">Convert a numeric sequence ID to a name. </div></div>
-<div class="ttc" id="classSeqKit_1_1BamHeader_html_adc564ce14f8a66fbebd7cc5bed40ccfb"><div class="ttname"><a href="classSeqKit_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">SeqKit::BamHeader::Name2ID</a></div><div class="ttdeci">int Name2ID(const std::string &amp;name) const </div><div class="ttdoc">Get the numeric ID associated with a sequence name. </div></div>
-<div class="ttc" id="classSeqKit_1_1BamHeader_html_a479432127ee77145cc19d6a2d1590821"><div class="ttname"><a href="classSeqKit_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">SeqKit::BamHeader::isEmpty</a></div><div class="ttdeci">bool isEmpty() const </div><div class="ttdoc">Check if the header has been initialized. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:57</div></div>
-<div class="ttc" id="namespaceSeqKit_html"><div class="ttname"><a href="namespaceSeqKit.html">SeqKit</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:13</div></div>
-<div class="ttc" id="classSeqKit_1_1BamHeader_html_a47f10ce5225465821ecbccd17cf09648"><div class="ttname"><a href="classSeqKit_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">SeqKit::BamHeader::NumSequences</a></div><div class="ttdeci">int NumSequences() const </div><div class="ttdoc">Return the number of sequences store in this dictionary Returns 0 if header is unitialized. </div></div>
-<div class="ttc" id="classSeqKit_1_1BamHeader_html_ac837e0bba5c95698ed712ba7b02bb612"><div class="ttname"><a href="classSeqKit_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">SeqKit::BamHeader::BamHeader</a></div><div class="ttdeci">BamHeader()</div><div class="ttdoc">Initializes a new empty BamHeader with no data. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:28</div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_a47f10ce5225465821ecbccd17cf09648"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">SeqLib::BamHeader::NumSequences</a></div><div class="ttdeci">int NumSequences() const </div><div class="ttdoc">Return the number of sequences store in this dictionary Returns 0 if header is unitialized. </div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_ac837e0bba5c95698ed712ba7b02bb612"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">SeqLib::BamHeader::BamHeader</a></div><div class="ttdeci">BamHeader()</div><div class="ttdoc">Initializes a new empty BamHeader with no data. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:28</div></div>
+<div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:13</div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_adc564ce14f8a66fbebd7cc5bed40ccfb"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">SeqLib::BamHeader::Name2ID</a></div><div class="ttdeci">int Name2ID(const std::string &amp;name) const </div><div class="ttdoc">Get the numeric ID associated with a sequence name. </div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_a479432127ee77145cc19d6a2d1590821"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">SeqLib::BamHeader::isEmpty</a></div><div class="ttdeci">bool isEmpty() const </div><div class="ttdoc">Check if the header has been initialized. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:57</div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_afe1b3321a8153237a0512f6c87c4c20c"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">SeqLib::BamHeader::IDtoName</a></div><div class="ttdeci">std::string IDtoName(int id) const </div><div class="ttdoc">Convert a numeric sequence ID to a name. </div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 15 2016 19:56:45 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 15 2016 20:20:11 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
