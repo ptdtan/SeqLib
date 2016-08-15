@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>SnowTools: src/SnowTools/RefGenome.h Source File</title>
+<title>SnowTools: src/SeqKit/RefGenome.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,7 +43,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_37722ba155a67b53265d50882d075ac6.html">SnowTools</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7a498d78c665e31fb3601a17072fc63f.html">SeqKit</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -61,23 +61,23 @@
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;htslib/faidx.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSnowTools.html">SnowTools</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSeqKit.html">SeqKit</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSnowTools_1_1RefGenome.html">   18</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSnowTools_1_1RefGenome.html">RefGenome</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSeqKit_1_1RefGenome.html">   18</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSeqKit_1_1RefGenome.html">RefGenome</a> {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classSnowTools_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a>(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classSeqKit_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a>(<span class="keyword">const</span> std::string&amp; file);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classSnowTools_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">   28</a></span>&#160;    <a class="code" href="classSnowTools_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a>() { index = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classSeqKit_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">   28</a></span>&#160;    <a class="code" href="classSeqKit_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a>() { index = <span class="keyword">nullptr</span>; }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classSnowTools_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">   31</a></span>&#160;    <a class="code" href="classSnowTools_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">~RefGenome</a>() { <span class="keywordflow">if</span> (index) fai_destroy(index); }</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classSeqKit_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">   31</a></span>&#160;    <a class="code" href="classSeqKit_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">~RefGenome</a>() { <span class="keywordflow">if</span> (index) fai_destroy(index); }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::string <a class="code" href="classSnowTools_1_1RefGenome.html#a0dd64421328534cab3b19316904008b1">queryRegion</a>(<span class="keyword">const</span> std::string&amp; chr_name, int32_t p1, int32_t p2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::string <a class="code" href="classSeqKit_1_1RefGenome.html#a0dd64421328534cab3b19316904008b1">queryRegion</a>(<span class="keyword">const</span> std::string&amp; chr_name, int32_t p1, int32_t p2) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSnowTools_1_1RefGenome.html#af5c4342479461e5319eebf9e792ef1b4">retrieveIndex</a>(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSeqKit_1_1RefGenome.html#af5c4342479461e5319eebf9e792ef1b4">retrieveIndex</a>(<span class="keyword">const</span> std::string&amp; file);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classSnowTools_1_1RefGenome.html#ac6e61de369e994009e36f344f99c15ad">   49</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSnowTools_1_1RefGenome.html#ac6e61de369e994009e36f344f99c15ad">empty</a>()<span class="keyword"> const </span>{ </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classSeqKit_1_1RefGenome.html#ac6e61de369e994009e36f344f99c15ad">   49</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqKit_1_1RefGenome.html#ac6e61de369e994009e36f344f99c15ad">empty</a>()<span class="keyword"> const </span>{ </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">return</span> (index == <span class="keyword">nullptr</span>); </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
@@ -91,17 +91,17 @@
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSnowTools_1_1RefGenome_html_ad8c7b240ea48bb3dda25203d5614433e"><div class="ttname"><a href="classSnowTools_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">SnowTools::RefGenome::RefGenome</a></div><div class="ttdeci">RefGenome()</div><div class="ttdoc">Create an empty RefGenome object. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:28</div></div>
-<div class="ttc" id="namespaceSnowTools_html"><div class="ttname"><a href="namespaceSnowTools.html">SnowTools</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:13</div></div>
-<div class="ttc" id="classSnowTools_1_1RefGenome_html_ac6e61de369e994009e36f344f99c15ad"><div class="ttname"><a href="classSnowTools_1_1RefGenome.html#ac6e61de369e994009e36f344f99c15ad">SnowTools::RefGenome::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdoc">Check if reference has been loaded. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:49</div></div>
-<div class="ttc" id="classSnowTools_1_1RefGenome_html_af5c4342479461e5319eebf9e792ef1b4"><div class="ttname"><a href="classSnowTools_1_1RefGenome.html#af5c4342479461e5319eebf9e792ef1b4">SnowTools::RefGenome::retrieveIndex</a></div><div class="ttdeci">void retrieveIndex(const std::string &amp;file)</div><div class="ttdoc">Load an indexed reference sequence. </div></div>
-<div class="ttc" id="classSnowTools_1_1RefGenome_html_a0dd64421328534cab3b19316904008b1"><div class="ttname"><a href="classSnowTools_1_1RefGenome.html#a0dd64421328534cab3b19316904008b1">SnowTools::RefGenome::queryRegion</a></div><div class="ttdeci">std::string queryRegion(const std::string &amp;chr_name, int32_t p1, int32_t p2) const </div><div class="ttdoc">Query a region to get the sequence. </div></div>
-<div class="ttc" id="classSnowTools_1_1RefGenome_html_aaf0d87996e072df1a809b015bee58fe8"><div class="ttname"><a href="classSnowTools_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">SnowTools::RefGenome::~RefGenome</a></div><div class="ttdeci">~RefGenome()</div><div class="ttdoc">Destroy the malloc&#39;ed faidx_t index inside object. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:31</div></div>
-<div class="ttc" id="classSnowTools_1_1RefGenome_html"><div class="ttname"><a href="classSnowTools_1_1RefGenome.html">SnowTools::RefGenome</a></div><div class="ttdoc">Stores an indexed reference genome. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:18</div></div>
+<div class="ttc" id="classSeqKit_1_1RefGenome_html_af5c4342479461e5319eebf9e792ef1b4"><div class="ttname"><a href="classSeqKit_1_1RefGenome.html#af5c4342479461e5319eebf9e792ef1b4">SeqKit::RefGenome::retrieveIndex</a></div><div class="ttdeci">void retrieveIndex(const std::string &amp;file)</div><div class="ttdoc">Load an indexed reference sequence. </div></div>
+<div class="ttc" id="classSeqKit_1_1RefGenome_html_a0dd64421328534cab3b19316904008b1"><div class="ttname"><a href="classSeqKit_1_1RefGenome.html#a0dd64421328534cab3b19316904008b1">SeqKit::RefGenome::queryRegion</a></div><div class="ttdeci">std::string queryRegion(const std::string &amp;chr_name, int32_t p1, int32_t p2) const </div><div class="ttdoc">Query a region to get the sequence. </div></div>
+<div class="ttc" id="classSeqKit_1_1RefGenome_html_aaf0d87996e072df1a809b015bee58fe8"><div class="ttname"><a href="classSeqKit_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">SeqKit::RefGenome::~RefGenome</a></div><div class="ttdeci">~RefGenome()</div><div class="ttdoc">Destroy the malloc&#39;ed faidx_t index inside object. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:31</div></div>
+<div class="ttc" id="namespaceSeqKit_html"><div class="ttname"><a href="namespaceSeqKit.html">SeqKit</a></div><div class="ttdoc">Class to store vector of intervals on the genome. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:13</div></div>
+<div class="ttc" id="classSeqKit_1_1RefGenome_html_ac6e61de369e994009e36f344f99c15ad"><div class="ttname"><a href="classSeqKit_1_1RefGenome.html#ac6e61de369e994009e36f344f99c15ad">SeqKit::RefGenome::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdoc">Check if reference has been loaded. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:49</div></div>
+<div class="ttc" id="classSeqKit_1_1RefGenome_html_ad8c7b240ea48bb3dda25203d5614433e"><div class="ttname"><a href="classSeqKit_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">SeqKit::RefGenome::RefGenome</a></div><div class="ttdeci">RefGenome()</div><div class="ttdoc">Create an empty RefGenome object. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:28</div></div>
+<div class="ttc" id="classSeqKit_1_1RefGenome_html"><div class="ttname"><a href="classSeqKit_1_1RefGenome.html">SeqKit::RefGenome</a></div><div class="ttdoc">Stores an indexed reference genome. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 12 2016 01:33:32 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 15 2016 19:56:45 for SnowTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
