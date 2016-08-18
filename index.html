@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Snowtools by jwalabroad</title>
+    <title>SeqLib by jwalabroad</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
@@ -16,8 +16,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">Snowtools</h1>
-        <p class="header">C++ htslib/bwa-mem interface and command line tools for interrogating sequence data</p>
+        <h1 class="header">SeqLib</h1>
+        <p class="header">C++ htslib/bwa-mem/fermi interface for interrogating sequence data</p>
 
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/jwalabroad/SeqLib/zipball/master">Download ZIP</a></li>
@@ -45,12 +45,12 @@
 <a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
 
 <p>SeqLib is a C++ package for querying BAM and SAM files, performing 
-BWA-MEM operations in memory, and performing advanced filtering of 
-reads using a hierarchy of rules. At its core, SeqLib is a C++ interface
-to the C htslib project, which provides the code for core BAM/SAM operations. 
+BWA-MEM operations in memory, and performing sequence assembly with Fermi from Heng Li.
+At its core, SeqLib is a C++ interface
+to the C htslib, bwamem and fermikit projects, which provides the code for core operations. 
 (<a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a>)</p>
 
-<p>SeqLib is built to be extendable. See (...) for examples of how to take advantage of C++
+<p>SeqLib is built to be extendable. See VariantBamfor examples of how to take advantage of C++
 class extensions to build off of the SeqLib base functionality. </p>
 
 <p>SeqLib is available as a stand-alone executable, which wrap a number of tools. 
@@ -58,47 +58,11 @@ However, certain functionality provided in an optimal form by SamTools or
 BamTools are intentially left out of SeqLib. In cases where improvements or alternative
 approaches are useful, the functionally is partially duplicated (e.g. count).</p>
 
-<p>As noted above, there are many overlaps between this project at the BamTools project from Derek Barnett 
-(<a href="https://github.com/pezmaster31/bamtools">https://github.com/pezmaster31/bamtools</a>). As such, SeqLib is provided as a 
-a supplemental library that may be more suited to your individual needs that BamTools, or vice-versa. To
-aid developers in deciding which package is right for them, I have put together a small list of 
-similarities and differences between these two packages</p>
-
-<h2>
-<a id="snowtoolsbamtools-similarity" class="anchor" href="#snowtoolsbamtools-similarity" aria-hidden="true"><span class="octicon octicon-link"></span></a>SeqLib/BamTools similarity</h2>
-
-<blockquote>
-<ol>
-<li>Provide read/write access to BAM files</li>
-<li>Classes containing individual reads and ways to interact with them (e.g. edit tags)</li>
-<li>Available as an API and a command-line version</li>
-</ol>
-</blockquote>
-
-<h2>
-<a id="snowtoolsbamtools-differences" class="anchor" href="#snowtoolsbamtools-differences" aria-hidden="true"><span class="octicon octicon-link"></span></a>SeqLib/BamTools differences</h2>
-
-<p>SeqLib/BamTools differences</p>
-
-<blockquote>
-<ol>
-<li>Sort/index functionality is independently implemented in BamTools. In SeqLib, the Samtools 
-sort and index functions are called directly.</li>
-<li>BamTools stores quality scores and sequences as strings. In SeqLib, the HTSlib native bam1_t format
-is used instead. This format has a lower memory footprint by using only 4 bits per base, rather than 8. 
-Conversion to C++ style std::string is provided as a function and can be done on the fly.</li>
-<li>BamTools provides the BamMultiReader class for reading multiple BAM files at once, while 
-SeqLib does not currently support this functionality.</li>
-<li>SeqLib contains a built in interface to BWA-MEM for in-memory indexing and querying.</li>
-<li>SeqLib supports reading and writing CRAM files</li>
-</ol>
-</blockquote>
-
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<div class="highlight highlight-source-shell"><pre> git clone https://github.com/broadinstitute/isva.git
- <span class="pl-c1">cd</span> isva/SeqLib/src
+<div class="highlight highlight-source-shell"><pre> git clone https://github.com/jwalabroad/SeqLib.git
+ <span class="pl-c1">cd</span> SeqLib
  ./configure
  make</pre></div>
 
@@ -109,13 +73,6 @@ SeqLib does not currently support this functionality.</li>
 
 <p>This code is being developed and maintained by Jeremiah Wala (<a href="mailto:jwala@broadinstitute.org">jwala@broadinstitute.org</a>)</p>
 
-<h2>
-<a id="attributions" class="anchor" href="#attributions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attributions</h2>
-
-<p>*Jeremiah Wala - Harvard MD-PhD candidate, Bioinformatics and Integrative Genomics
-*Steve Schumacher - Research Scientist, Dana Farber Cancer Institute
-*Cheng-Zhong Zhang - Research Scientist, Broad Institute
-*Marcin Imielinski - Asst Prof, Cornell University</p>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
