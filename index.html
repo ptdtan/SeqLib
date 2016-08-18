@@ -20,10 +20,10 @@
         <p class="header">C++ htslib/bwa-mem interface and command line tools for interrogating sequence data</p>
 
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/jwalabroad/SnowTools/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/jwalabroad/SnowTools/tarball/master">Download TAR</a></li>
-          <li><a class="buttons docs" href="http://jwalabroad.github.io/SnowTools/doxygen/">API Docs</a></li>
-          <li><a class="buttons github" href="https://github.com/jwalabroad/SnowTools">View On GitHub</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jwalabroad/SeqLib/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/jwalabroad/SeqLib/tarball/master">Download TAR</a></li>
+          <li><a class="buttons docs" href="http://jwalabroad.github.io/SeqLib/doxygen/">API Docs</a></li>
+          <li><a class="buttons github" href="https://github.com/jwalabroad/SeqLib">View On GitHub</a></li>
 
         </ul>
 
@@ -32,10 +32,10 @@
 
       </header>
       <section>
-        <p><a href="https://travis-ci.org/jwalabroad/SnowTools"><img src="https://travis-ci.org/jwalabroad/SnowTools.svg?branch=master" alt="Build Status"></a>
-<a href="https://coveralls.io/github/jwalabroad/SnowTools?branch=master"><img src="https://coveralls.io/repos/jwalabroad/SnowTools/badge.svg?branch=master&amp;service=github" alt="Coverage Status"></a></p>
+        <p><a href="https://travis-ci.org/jwalabroad/SeqLib"><img src="https://travis-ci.org/jwalabroad/SeqLib.svg?branch=master" alt="Build Status"></a>
+<a href="https://coveralls.io/github/jwalabroad/SeqLib?branch=master"><img src="https://coveralls.io/repos/jwalabroad/SeqLib/badge.svg?branch=master&amp;service=github" alt="Coverage Status"></a></p>
 
-<div><img src="https://raw.githubusercontent.com/jwalabroad/SnowTools/master/figs/labels_st.png" width="250"></div>
+<div><img src="https://raw.githubusercontent.com/jwalabroad/SeqLib/master/figs/labels_st.png" width="250"></div>
 
 <p>C++ htslib/bwa-mem interface and command line tools for interrogating BAM and SAM files.</p>
 
@@ -44,28 +44,28 @@
 <h2>
 <a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
 
-<p>SnowTools is a C++ package for querying BAM and SAM files, performing 
+<p>SeqLib is a C++ package for querying BAM and SAM files, performing 
 BWA-MEM operations in memory, and performing advanced filtering of 
-reads using a hierarchy of rules. At its core, SnowTools is a C++ interface
+reads using a hierarchy of rules. At its core, SeqLib is a C++ interface
 to the C htslib project, which provides the code for core BAM/SAM operations. 
 (<a href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a>)</p>
 
-<p>SnowTools is built to be extendable. See (...) for examples of how to take advantage of C++
-class extensions to build off of the SnowTools base functionality. </p>
+<p>SeqLib is built to be extendable. See (...) for examples of how to take advantage of C++
+class extensions to build off of the SeqLib base functionality. </p>
 
-<p>SnowTools is available as a stand-alone executable, which wrap a number of tools. 
+<p>SeqLib is available as a stand-alone executable, which wrap a number of tools. 
 However, certain functionality provided in an optimal form by SamTools or 
-BamTools are intentially left out of SnowTools. In cases where improvements or alternative
+BamTools are intentially left out of SeqLib. In cases where improvements or alternative
 approaches are useful, the functionally is partially duplicated (e.g. count).</p>
 
 <p>As noted above, there are many overlaps between this project at the BamTools project from Derek Barnett 
-(<a href="https://github.com/pezmaster31/bamtools">https://github.com/pezmaster31/bamtools</a>). As such, SnowTools is provided as a 
+(<a href="https://github.com/pezmaster31/bamtools">https://github.com/pezmaster31/bamtools</a>). As such, SeqLib is provided as a 
 a supplemental library that may be more suited to your individual needs that BamTools, or vice-versa. To
 aid developers in deciding which package is right for them, I have put together a small list of 
 similarities and differences between these two packages</p>
 
 <h2>
-<a id="snowtoolsbamtools-similarity" class="anchor" href="#snowtoolsbamtools-similarity" aria-hidden="true"><span class="octicon octicon-link"></span></a>SnowTools/BamTools similarity</h2>
+<a id="snowtoolsbamtools-similarity" class="anchor" href="#snowtoolsbamtools-similarity" aria-hidden="true"><span class="octicon octicon-link"></span></a>SeqLib/BamTools similarity</h2>
 
 <blockquote>
 <ol>
@@ -76,21 +76,21 @@ similarities and differences between these two packages</p>
 </blockquote>
 
 <h2>
-<a id="snowtoolsbamtools-differences" class="anchor" href="#snowtoolsbamtools-differences" aria-hidden="true"><span class="octicon octicon-link"></span></a>SnowTools/BamTools differences</h2>
+<a id="snowtoolsbamtools-differences" class="anchor" href="#snowtoolsbamtools-differences" aria-hidden="true"><span class="octicon octicon-link"></span></a>SeqLib/BamTools differences</h2>
 
-<p>SnowTools/BamTools differences</p>
+<p>SeqLib/BamTools differences</p>
 
 <blockquote>
 <ol>
-<li>Sort/index functionality is independently implemented in BamTools. In SnowTools, the Samtools 
+<li>Sort/index functionality is independently implemented in BamTools. In SeqLib, the Samtools 
 sort and index functions are called directly.</li>
-<li>BamTools stores quality scores and sequences as strings. In SnowTools, the HTSlib native bam1_t format
+<li>BamTools stores quality scores and sequences as strings. In SeqLib, the HTSlib native bam1_t format
 is used instead. This format has a lower memory footprint by using only 4 bits per base, rather than 8. 
 Conversion to C++ style std::string is provided as a function and can be done on the fly.</li>
 <li>BamTools provides the BamMultiReader class for reading multiple BAM files at once, while 
-SnowTools does not currently support this functionality.</li>
-<li>SnowTools contains a built in interface to BWA-MEM for in-memory indexing and querying.</li>
-<li>SnowTools supports reading and writing CRAM files</li>
+SeqLib does not currently support this functionality.</li>
+<li>SeqLib contains a built in interface to BWA-MEM for in-memory indexing and querying.</li>
+<li>SeqLib supports reading and writing CRAM files</li>
 </ol>
 </blockquote>
 
@@ -98,7 +98,7 @@ SnowTools does not currently support this functionality.</li>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <div class="highlight highlight-source-shell"><pre> git clone https://github.com/broadinstitute/isva.git
- <span class="pl-c1">cd</span> isva/SnowTools/src
+ <span class="pl-c1">cd</span> isva/SeqLib/src
  ./configure
  make</pre></div>
 
