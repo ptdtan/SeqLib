@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>SeqLib: src/SeqLib/BamStats.h Source File</title>
+<title>SeqLib: src/non_api/BamStats.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,7 +43,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b9a7fa96e34e450ef45b4467ebea5311.html">SeqLib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e3bdff789e6258b5c8ad8f5ba3b82979.html">non_api</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -116,19 +116,19 @@
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:172</div></div>
-<div class="ttc" id="classSeqLib_1_1Histogram_html"><div class="ttname"><a href="classSeqLib_1_1Histogram.html">SeqLib::Histogram</a></div><div class="ttdoc">Class to store histogram of numeric values. </div><div class="ttdef"><b>Definition:</b> Histogram.h:89</div></div>
+<div class="ttc" id="classSeqLib_1_1Histogram_html"><div class="ttname"><a href="classSeqLib_1_1Histogram.html">SeqLib::Histogram</a></div><div class="ttdoc">Class to store histogram of numeric values. </div><div class="ttdef"><b>Definition:</b> Histogram.h:87</div></div>
 <div class="ttc" id="classSeqLib_1_1BamStats_html_a0f740fa8cd9665a46f56876163fd5060"><div class="ttname"><a href="classSeqLib_1_1BamStats.html#a0f740fa8cd9665a46f56876163fd5060">SeqLib::BamStats::addRead</a></div><div class="ttdeci">void addRead(BamRecord &amp;r)</div><div class="ttdoc">Add a read by finding which read group it belongs to and calling the addRead function for that BamRea...</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReadGroup_html_a82da88edf365aff1f52b904079c28ecf"><div class="ttname"><a href="classSeqLib_1_1BamReadGroup.html#a82da88edf365aff1f52b904079c28ecf">SeqLib::BamReadGroup::BamReadGroup</a></div><div class="ttdeci">BamReadGroup()</div><div class="ttdoc">Construct an empty BamReadGroup. </div><div class="ttdef"><b>Definition:</b> BamStats.h:25</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReadGroup_html_a0f740fa8cd9665a46f56876163fd5060"><div class="ttname"><a href="classSeqLib_1_1BamReadGroup.html#a0f740fa8cd9665a46f56876163fd5060">SeqLib::BamReadGroup::addRead</a></div><div class="ttdeci">void addRead(BamRecord &amp;r)</div><div class="ttdoc">Add a BamRecord to this read group. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReadGroup_html"><div class="ttname"><a href="classSeqLib_1_1BamReadGroup.html">SeqLib::BamReadGroup</a></div><div class="ttdoc">Store information pertaining to a given read group *. </div><div class="ttdef"><b>Definition:</b> BamStats.h:18</div></div>
-<div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> BamHeader.h:13</div></div>
+<div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> BamStats.h:11</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReadGroup_html_a8ca5509503ac4f69016abf4cbde77a57"><div class="ttname"><a href="classSeqLib_1_1BamReadGroup.html#a8ca5509503ac4f69016abf4cbde77a57">SeqLib::BamReadGroup::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const BamReadGroup &amp;rg)</div><div class="ttdoc">Display basic information about this read group. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamStats_html_a33dce9e9facfc9403a1c3c7f10d48c32"><div class="ttname"><a href="classSeqLib_1_1BamStats.html#a33dce9e9facfc9403a1c3c7f10d48c32">SeqLib::BamStats::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const BamStats &amp;qc)</div><div class="ttdoc">Loop through the BamReadGroup objections and print them. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamStats_html"><div class="ttname"><a href="classSeqLib_1_1BamStats.html">SeqLib::BamStats</a></div><div class="ttdoc">Class to store statistics on a BAM file. </div><div class="ttdef"><b>Definition:</b> BamStats.h:65</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 19 2016 15:43:08 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Aug 19 2016 16:43:22 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
