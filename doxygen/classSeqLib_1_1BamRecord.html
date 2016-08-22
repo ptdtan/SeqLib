@@ -250,18 +250,13 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <a class="el" href="classSeqLib_1_1Cigar.html">Cigar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#ac0b4c8655d307fa4fc630e7e8117c3a6">GetCigar</a> () const </td></tr>
 <tr class="memdesc:ac0b4c8655d307fa4fc630e7e8117c3a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the CIGAR as a more managable <a class="el" href="classSeqLib_1_1Cigar.html" title="CIGAR for a single gapped alignment. ">Cigar</a> structure. <br /></td></tr>
 <tr class="separator:ac0b4c8655d307fa4fc630e7e8117c3a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd2afb0f07a565ca1ecf32f540faf036"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd2afb0f07a565ca1ecf32f540faf036"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#abd2afb0f07a565ca1ecf32f540faf036">AlignmentLength</a> () const </td></tr>
-<tr class="memdesc:abd2afb0f07a565ca1ecf32f540faf036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the length of the alignment (regardless of hardclipping) <br /></td></tr>
-<tr class="separator:abd2afb0f07a565ca1ecf32f540faf036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59c86bc15d8eee99c031b6dc8ca248b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59c86bc15d8eee99c031b6dc8ca248b1"></a>
 <a class="el" href="classSeqLib_1_1Cigar.html">Cigar</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a59c86bc15d8eee99c031b6dc8ca248b1">GetReverseCigar</a> () const </td></tr>
 <tr class="memdesc:a59c86bc15d8eee99c031b6dc8ca248b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the inverse of the CIGAR as a more managable <a class="el" href="classSeqLib_1_1Cigar.html" title="CIGAR for a single gapped alignment. ">Cigar</a> structure. <br /></td></tr>
 <tr class="separator:a59c86bc15d8eee99c031b6dc8ca248b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8101514ed57f41858aeb06f8f61ea08"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8101514ed57f41858aeb06f8f61ea08"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#af8101514ed57f41858aeb06f8f61ea08">clearSeqQualAndTags</a> ()</td></tr>
-<tr class="memdesc:af8101514ed57f41858aeb06f8f61ea08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the sequence, quality and alignment tags. <br /></td></tr>
-<tr class="separator:af8101514ed57f41858aeb06f8f61ea08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9534f17fd0cfabf55455d733bb3715c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a9534f17fd0cfabf55455d733bb3715c2">ClearSeqQualAndTags</a> ()</td></tr>
+<tr class="memdesc:a9534f17fd0cfabf55455d733bb3715c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the sequence, quality and alignment tags.  <a href="#a9534f17fd0cfabf55455d733bb3715c2">More...</a><br /></td></tr>
+<tr class="separator:a9534f17fd0cfabf55455d733bb3715c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a848ce46e52ffa3e2eba97345bf9edb22"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a848ce46e52ffa3e2eba97345bf9edb22"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a848ce46e52ffa3e2eba97345bf9edb22">Sequence</a> () const </td></tr>
 <tr class="memdesc:a848ce46e52ffa3e2eba97345bf9edb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sequence of this read as a string. <br /></td></tr>
@@ -554,6 +549,24 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <dl class="section return"><dt>Returns</dt><dd>Empty string if chr id &lt; 0, otherwise chromosome name from dictionary. </dd></dl>
 
 <p>References <a class="el" href="classSeqLib_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">BamHeader::IDtoName()</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9534f17fd0cfabf55455d733bb3715c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearSeqQualAndTags </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the sequence, quality and alignment tags. </p>
+<p>Make a more compact alignment stucture, without the string data </p>
 
 </div>
 </div>
@@ -893,7 +906,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 21 2016 20:14:15 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 22 2016 17:33:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

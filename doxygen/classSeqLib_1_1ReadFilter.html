@@ -73,9 +73,6 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1ReadFilter.html#af5b463d8cac33dff2af946543fa97b86">~ReadFilter</a> ()</td></tr>
 <tr class="memdesc:af5b463d8cac33dff2af946543fa97b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the filter. <br /></td></tr>
 <tr class="separator:af5b463d8cac33dff2af946543fa97b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad39cd357159f65e4aa2adfd2504b6abd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1ReadFilter.html#ad39cd357159f65e4aa2adfd2504b6abd">ReadFilter</a> (const <a class="el" href="structSeqLib_1_1CommandLineRegion.html">CommandLineRegion</a> &amp;c, const <a class="el" href="classSeqLib_1_1BamHeader.html">BamHeader</a> &amp;hdr)</td></tr>
-<tr class="memdesc:ad39cd357159f65e4aa2adfd2504b6abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="classSeqLib_1_1ReadFilter.html" title="A set of AbstractRules on a region united by logi rules. ">ReadFilter</a> with an all exclude or include rule.  <a href="#ad39cd357159f65e4aa2adfd2504b6abd">More...</a><br /></td></tr>
-<tr class="separator:ad39cd357159f65e4aa2adfd2504b6abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5f0a674a38bb284a737f92c7fd3038"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1ReadFilter.html#a2f5f0a674a38bb284a737f92c7fd3038">isValid</a> (<a class="el" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r)</td></tr>
 <tr class="memdesc:a2f5f0a674a38bb284a737f92c7fd3038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return whether a read passes this filter.  <a href="#a2f5f0a674a38bb284a737f92c7fd3038">More...</a><br /></td></tr>
 <tr class="separator:a2f5f0a674a38bb284a737f92c7fd3038"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,44 +106,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A set of AbstractRules on a region united by logi rules. </p>
 <p><a class="el" href="classSeqLib_1_1ReadFilter.html" title="A set of AbstractRules on a region united by logi rules. ">ReadFilter</a> stores an arbitrarily complex collection of AbstractRules (e.g. (Mapped &amp;&amp; Clipped) || (Unmapped)). </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad39cd357159f65e4aa2adfd2504b6abd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classSeqLib_1_1ReadFilter.html">ReadFilter</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structSeqLib_1_1CommandLineRegion.html">CommandLineRegion</a> &amp;&#160;</td>
-          <td class="paramname"><em>c</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classSeqLib_1_1BamHeader.html">BamHeader</a> &amp;&#160;</td>
-          <td class="paramname"><em>hdr</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Make a <a class="el" href="classSeqLib_1_1ReadFilter.html" title="A set of AbstractRules on a region united by logi rules. ">ReadFilter</a> with an all exclude or include rule. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Samtools</td><td>style string, BED file or VCF </td></tr>
-    <tr><td class="paramname">reg_type</td><td>The type of rule this will be </td></tr>
-    <tr><td class="paramname">h</td><td>BAM header that defines available chromosomes </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a1ebe2197ca737d8bfa058e579804a78c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -275,7 +235,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 21 2016 20:14:15 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 22 2016 17:33:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -100,35 +100,35 @@
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  };</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structSeqLib_1_1CommandLineRegion.html">   69</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structSeqLib_1_1CommandLineRegion.html">CommandLineRegion</a> {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="structSeqLib_1_1CommandLineRegion.html">CommandLineRegion</a>(<span class="keyword">const</span> std::string&amp; mf, <span class="keywordtype">int</span> t) : f(mf), type(t), pad(0), i_flag(0), e_flag(0) {}</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  std::string f; <span class="comment">// file</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">int</span> type; <span class="comment">// mate linked, excluder, etc</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">int</span> pad;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  uint32_t i_flag; <span class="comment">// inclusive flags</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  uint32_t e_flag; <span class="comment">// exclusive flags</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  uint32_t any_i_flag; <span class="comment">// inclusive any flags (eg if read has any bit of these, keep)</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  uint32_t any_e_flag; <span class="comment">// exclusive any flags (eg if read has any bit of these, fail)</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">int</span> len = 0;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">int</span> mapq = 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">int</span> nbases = INT_MAX;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">int</span> phred = 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">int</span> clip = 0;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">int</span> ins = 0;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordtype">int</span> del = 0;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  std::string rg;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::string motif;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">bool</span> all()<span class="keyword"> const </span>{ </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">return</span> !len &amp;&amp; !mapq &amp;&amp; !nbases &amp;&amp; !phred &amp;&amp; rg.empty() &amp;&amp; !i_flag &amp;&amp; !e_flag &amp;&amp; !any_i_flag &amp;&amp; !any_e_flag; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">/*struct CommandLineRegion {</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">CommandLineRegion(const std::string&amp; mf, int t) : f(mf), type(t), pad(0), i_flag(0), e_flag(0) {}</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment">  std::string f; // file</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">  int type; // mate linked, excluder, etc</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">  int pad;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">  uint32_t i_flag; // inclusive flags</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">  uint32_t e_flag; // exclusive flags</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">  uint32_t any_i_flag; // inclusive any flags (eg if read has any bit of these, keep)</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">  uint32_t any_e_flag; // exclusive any flags (eg if read has any bit of these, fail)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">  int len = 0;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">  int mapq = 0;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">  int nbases = INT_MAX;</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">  int phred = 0;</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">  int clip = 0;</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">  int ins = 0;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">  int del = 0;</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">  std::string rg;</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">  std::string motif;</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">  bool all() const { </span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">    return !len &amp;&amp; !mapq &amp;&amp; !nbases &amp;&amp; !phred &amp;&amp; rg.empty() &amp;&amp; !i_flag &amp;&amp; !e_flag &amp;&amp; !any_i_flag &amp;&amp; !any_e_flag; </span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">  }</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">};</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">  */</span></div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classSeqLib_1_1Flag.html">  106</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSeqLib_1_1Flag.html">Flag</a> {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  </div>
@@ -342,7 +342,11 @@
 <div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
 <div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <span class="comment">// ReadFilter(const ReadFilter&amp; rf);</span></div>
 <div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <a class="code" href="classSeqLib_1_1ReadFilter.html#aec9a1448093e1a8829c487700d446c1d">ReadFilter</a>(<span class="keyword">const</span> <a class="code" href="structSeqLib_1_1CommandLineRegion.html">CommandLineRegion</a>&amp; c, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a>&amp; hdr);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  <span class="comment">// Make a ReadFilter with an all exclude or include rule</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="comment">// @param Samtools style string, BED file or VCF </span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="comment">// @param reg_type The type of rule this will be</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <span class="comment">// @param h BAM header that defines available chromosomes</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="comment"></span>  <span class="comment">//ReadFilter(const CommandLineRegion&amp; c, const BamHeader&amp; hdr);</span></div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1ReadFilter.html#a2f5f0a674a38bb284a737f92c7fd3038">isValid</a>(<a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r);</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div>
@@ -482,7 +486,6 @@
 <div class="ttc" id="classSeqLib_1_1AbstractRule_html_a69ea2c2b0ea42ead4dc770a1d4b9c989"><div class="ttname"><a href="classSeqLib_1_1AbstractRule.html#a69ea2c2b0ea42ead4dc770a1d4b9c989">SeqLib::AbstractRule::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const AbstractRule &amp;fr)</div><div class="ttdoc">Print some basic information about this filter. </div></div>
 <div class="ttc" id="classSeqLib_1_1Range_html_afa61e339c5d7dd76c25663fc2718da8a"><div class="ttname"><a href="classSeqLib_1_1Range.html#afa61e339c5d7dd76c25663fc2718da8a">SeqLib::Range::Range</a></div><div class="ttdeci">Range()</div><div class="ttdoc">Construct a default range with everything accepted. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:153</div></div>
 <div class="ttc" id="structSeqLib_1_1AhoCorasick_html_aca9d233cc8d8b113a5b8c68aee272c85"><div class="ttname"><a href="structSeqLib_1_1AhoCorasick.html#aca9d233cc8d8b113a5b8c68aee272c85">SeqLib::AhoCorasick::~AhoCorasick</a></div><div class="ttdeci">~AhoCorasick()</div><div class="ttdoc">Deallocate the trie. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:36</div></div>
-<div class="ttc" id="structSeqLib_1_1CommandLineRegion_html"><div class="ttname"><a href="structSeqLib_1_1CommandLineRegion.html">SeqLib::CommandLineRegion</a></div><div class="ttdef"><b>Definition:</b> ReadFilter.h:69</div></div>
 <div class="ttc" id="classSeqLib_1_1AbstractRule_html_aa21ef46b0b84e77d175875c10a3f0c7c"><div class="ttname"><a href="classSeqLib_1_1AbstractRule.html#aa21ef46b0b84e77d175875c10a3f0c7c">SeqLib::AbstractRule::fr</a></div><div class="ttdeci">FlagRule fr</div><div class="ttdoc">FlagRule specifying the alignment flag filter. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:332</div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> BamStats.h:11</div></div>
 <div class="ttc" id="classSeqLib_1_1AbstractRule_html_a98b479998bf6c29e0df194725356b719"><div class="ttname"><a href="classSeqLib_1_1AbstractRule.html#a98b479998bf6c29e0df194725356b719">SeqLib::AbstractRule::SetRuleID</a></div><div class="ttdeci">void SetRuleID(const std::string &amp;s)</div><div class="ttdoc">Supply a name for this rule. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:323</div></div>
@@ -524,7 +527,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 21 2016 20:14:15 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 22 2016 17:33:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
