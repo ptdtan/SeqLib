@@ -51,7 +51,6 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classSeqLib_1_1BamRecord-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -66,9 +65,8 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a176dac15321681fbcc9f3b21bde3da16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a176dac15321681fbcc9f3b21bde3da16"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a176dac15321681fbcc9f3b21bde3da16">BamRecord</a> (const std::string &amp;name, const std::string &amp;seq, const <a class="el" href="classSeqLib_1_1GenomicRegion.html">GenomicRegion</a> *gr, const <a class="el" href="classSeqLib_1_1Cigar.html">Cigar</a> &amp;cig)</td></tr>
-<tr class="memdesc:a176dac15321681fbcc9f3b21bde3da16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> with perfect "alignment". <br /></td></tr>
+<tr class="memitem:a176dac15321681fbcc9f3b21bde3da16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a176dac15321681fbcc9f3b21bde3da16">BamRecord</a> (const std::string &amp;name, const std::string &amp;seq, const <a class="el" href="classSeqLib_1_1GenomicRegion.html">GenomicRegion</a> *gr, const <a class="el" href="classSeqLib_1_1Cigar.html">Cigar</a> &amp;cig)</td></tr>
+<tr class="memdesc:a176dac15321681fbcc9f3b21bde3da16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> manually from a name, sequence, cigar and location.  <a href="#a176dac15321681fbcc9f3b21bde3da16">More...</a><br /></td></tr>
 <tr class="separator:a176dac15321681fbcc9f3b21bde3da16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02fd73d861ef2e4aabb38c0c9ff82947"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a> ()</td></tr>
@@ -155,10 +153,12 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a6a602cda286b646dd00170fec4bdd353">MatePosition</a> () const </td></tr>
 <tr class="memdesc:a6a602cda286b646dd00170fec4bdd353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the alignment position of mate. <br /></td></tr>
 <tr class="separator:a6a602cda286b646dd00170fec4bdd353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a7ff870ffc4987d1c596412a61a5292"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a7ff870ffc4987d1c596412a61a5292"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a8a7ff870ffc4987d1c596412a61a5292">CountSecondaryAlignments</a> () const </td></tr>
-<tr class="memdesc:a8a7ff870ffc4987d1c596412a61a5292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of secondary alignments by looking at XA and XP tags. <br /></td></tr>
-<tr class="separator:a8a7ff870ffc4987d1c596412a61a5292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae056a71f4a71fe2d81218b1d93d1cfbe"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#ae056a71f4a71fe2d81218b1d93d1cfbe">CountBWASecondaryAlignments</a> () const </td></tr>
+<tr class="memdesc:ae056a71f4a71fe2d81218b1d93d1cfbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of secondary alignments by looking at XA tag.  <a href="#ae056a71f4a71fe2d81218b1d93d1cfbe">More...</a><br /></td></tr>
+<tr class="separator:ae056a71f4a71fe2d81218b1d93d1cfbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d062cfbf0c0a2f1faa7238f0d5c013b"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a1d062cfbf0c0a2f1faa7238f0d5c013b">CountBWAChimericAlignments</a> () const </td></tr>
+<tr class="memdesc:a1d062cfbf0c0a2f1faa7238f0d5c013b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Count the number of chimeric alignments by looking at XP and SA tags.  <a href="#a1d062cfbf0c0a2f1faa7238f0d5c013b">More...</a><br /></td></tr>
+<tr class="separator:a1d062cfbf0c0a2f1faa7238f0d5c013b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1674436fb351427ebcba8da38823b53d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1674436fb351427ebcba8da38823b53d"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a1674436fb351427ebcba8da38823b53d">PositionEnd</a> () const </td></tr>
 <tr class="memdesc:a1674436fb351427ebcba8da38823b53d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the end of the alignment. <br /></td></tr>
@@ -305,10 +305,13 @@ int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a35a81a15d80b25d069f315becdeac88f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a string (Z) tag.  <a href="#a35a81a15d80b25d069f315becdeac88f">More...</a><br /></td></tr>
 <tr class="separator:a35a81a15d80b25d069f315becdeac88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d3fa999fe77fa623ed4ae37c3cc661f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a5d3fa999fe77fa623ed4ae37c3cc661f">GetSmartIntTag</a> (const std::string &amp;tag) const </td></tr>
-<tr class="memdesc:a5d3fa999fe77fa623ed4ae37c3cc661f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of ints from a Z tag delimited by "x".  <a href="#a5d3fa999fe77fa623ed4ae37c3cc661f">More...</a><br /></td></tr>
+<tr class="memdesc:a5d3fa999fe77fa623ed4ae37c3cc661f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of type int from a Z tag delimited by "^".  <a href="#a5d3fa999fe77fa623ed4ae37c3cc661f">More...</a><br /></td></tr>
 <tr class="separator:a5d3fa999fe77fa623ed4ae37c3cc661f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab8d39d8ac409a3e51824af2e79e65a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#aaab8d39d8ac409a3e51824af2e79e65a">GetSmartDoubleTag</a> (const std::string &amp;tag) const </td></tr>
+<tr class="memdesc:aaab8d39d8ac409a3e51824af2e79e65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of type double from a Z tag delimited by "x".  <a href="#aaab8d39d8ac409a3e51824af2e79e65a">More...</a><br /></td></tr>
+<tr class="separator:aaab8d39d8ac409a3e51824af2e79e65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab76ce21af871fe90c7b828aa8c3124b3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#ab76ce21af871fe90c7b828aa8c3124b3">GetSmartStringTag</a> (const std::string &amp;tag) const </td></tr>
-<tr class="memdesc:ab76ce21af871fe90c7b828aa8c3124b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of strings from a Z tag delimited by "x".  <a href="#ab76ce21af871fe90c7b828aa8c3124b3">More...</a><br /></td></tr>
+<tr class="memdesc:ab76ce21af871fe90c7b828aa8c3124b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a vector of strings from a Z tag delimited by "^".  <a href="#ab76ce21af871fe90c7b828aa8c3124b3">More...</a><br /></td></tr>
 <tr class="separator:ab76ce21af871fe90c7b828aa8c3124b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabe3d89e97fccb2c1bdc23655ca396e4"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#aabe3d89e97fccb2c1bdc23655ca396e4">GetIntTag</a> (const std::string &amp;tag) const </td></tr>
 <tr class="memdesc:aabe3d89e97fccb2c1bdc23655ca396e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get an int (i) tag.  <a href="#aabe3d89e97fccb2c1bdc23655ca396e4">More...</a><br /></td></tr>
@@ -358,18 +361,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bam1_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#ac8a8e932ebee9ad1abe2f4deafc23b31">raw</a> () const </td></tr>
 <tr class="memdesc:ac8a8e932ebee9ad1abe2f4deafc23b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw pointer. <br /></td></tr>
 <tr class="separator:ac8a8e932ebee9ad1abe2f4deafc23b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a161698735a1b5e3842001160621edca7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a161698735a1b5e3842001160621edca7">coveredBase</a> (int pos) const </td></tr>
-<tr class="memdesc:a161698735a1b5e3842001160621edca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if base at position on read is covered by alignment M or I (not clip)  <a href="#a161698735a1b5e3842001160621edca7">More...</a><br /></td></tr>
-<tr class="separator:a161698735a1b5e3842001160621edca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab21596f19cd4e682049f039b31bc299"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#aab21596f19cd4e682049f039b31bc299">coveredMatchBase</a> (int pos) const </td></tr>
-<tr class="memdesc:aab21596f19cd4e682049f039b31bc299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if base at position on read is covered by match only (M)  <a href="#aab21596f19cd4e682049f039b31bc299">More...</a><br /></td></tr>
-<tr class="separator:aab21596f19cd4e682049f039b31bc299"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:adf7b02e74432e537fd7df91b3fb47922"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf7b02e74432e537fd7df91b3fb47922"></a>
-std::shared_ptr&lt; bam1_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>b</b></td></tr>
-<tr class="separator:adf7b02e74432e537fd7df91b3fb47922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -387,7 +378,64 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to store and interact with an HTSLib bam1_t read. </p>
 <p>HTSLibrary reads are stored in the bam1_t struct. Memory allocation is taken care of by bam1_t init, and deallocation by destroy_bam1. This class is a C++ interface that automatically takes care of memory management for these C allocs/deallocs. The only member of <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is a bam1_t object. Alloc/dealloc is taken care of by the constructor and destructor. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a176dac15321681fbcc9f3b21bde3da16"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSeqLib_1_1BamRecord.html">BamRecord</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>seq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSeqLib_1_1GenomicRegion.html">GenomicRegion</a> *&#160;</td>
+          <td class="paramname"><em>gr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSeqLib_1_1Cigar.html">Cigar</a> &amp;&#160;</td>
+          <td class="paramname"><em>cig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> manually from a name, sequence, cigar and location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the read </td></tr>
+    <tr><td class="paramname">seq</td><td>Sequence of the read (compsed of ACTG or N). </td></tr>
+    <tr><td class="paramname">gr</td><td>Location of the alignment </td></tr>
+    <tr><td class="paramname">cig</td><td><a class="el" href="classSeqLib_1_1Cigar.html" title="CIGAR for a single gapped alignment. ">Cigar</a> alignment </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>an invalid_argument exception if length of seq is not commensurate with number of query-bases consumed in cigar. </td></tr>
+    <tr><td class="paramname">Throws</td><td>an invalid_argument exception if width of gr is not commensurate with number of reference-bases consumed in cigar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="abe98e023ba9d4bf5420fc048772b2c81"></a>
 <div class="memitem">
 <div class="memproto">
@@ -570,53 +618,39 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<a class="anchor" id="a161698735a1b5e3842001160621edca7"></a>
+<a class="anchor" id="a1d062cfbf0c0a2f1faa7238f0d5c013b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool coveredBase </td>
+          <td class="memname">int32_t CountBWAChimericAlignments </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check if base at position on read is covered by alignment M or I (not clip) </p>
-<p>Example: Alignment with 50M10I10M20S &ndash; 0-79: true, 80+ false </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>Position on base (0 is start) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if that base is aligned (I or M) </dd></dl>
+<p>Count the number of chimeric alignments by looking at XP and SA tags. </p>
+<dl class="section note"><dt>Note</dt><dd>A secondary alignment is an alternative mapping. This may not work for non-BWA aligners that may not place the XP/SA tags. BWA-MEM used the XP tag prior to v0.7.5, and SA aftewards. </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="aab21596f19cd4e682049f039b31bc299"></a>
+<a class="anchor" id="ae056a71f4a71fe2d81218b1d93d1cfbe"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool coveredMatchBase </td>
+          <td class="memname">int32_t CountBWASecondaryAlignments </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check if base at position on read is covered by match only (M) </p>
-<p>Example: Alignment with 10S50M20S &ndash; 0-9: false, 10-59: true, 60+: false </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>Position on base (0 is start) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if that base is aligned (M) </dd></dl>
+<p>Count the number of secondary alignments by looking at XA tag. </p>
+<dl class="section note"><dt>Note</dt><dd>A secondary alignment is an alternative mapping. This may not work for non-BWA aligners that may not place the XA tag. </dd></dl>
 
 </div>
 </div>
@@ -653,6 +687,37 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
+<a class="anchor" id="aaab8d39d8ac409a3e51824af2e79e65a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; GetSmartDoubleTag </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a vector of type double from a Z tag delimited by "x". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tag</td><td>Name of the tag eg "AL" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of double elems, retrieved from the "^" delimited Z tag </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>an invalid_argument if cannot convert delimited field val to double </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a5d3fa999fe77fa623ed4ae37c3cc661f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -667,7 +732,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
       </table>
 </div><div class="memdoc">
 
-<p>Get a vector of ints from a Z tag delimited by "x". </p>
+<p>Get a vector of type int from a Z tag delimited by "^". </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>Name of the tag eg "AL" </td></tr>
@@ -675,6 +740,12 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector of ints, retrieved from the x delimited Z tag </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>an invalid_argument if cannot convert delimited field val to int </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -692,7 +763,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
       </table>
 </div><div class="memdoc">
 
-<p>Get a vector of strings from a Z tag delimited by "x". </p>
+<p>Get a vector of strings from a Z tag delimited by "^". </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>Name of the tag eg "CN" </td></tr>
@@ -906,7 +977,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 22 2016 17:33:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 22 2016 20:07:41 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
