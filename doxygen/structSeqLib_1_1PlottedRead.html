@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>SeqLib: ByMatePosition Struct Reference</title>
+<title>SeqLib: PlottedRead Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -45,33 +45,46 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>SeqLib</b></li><li class="navelem"><a class="el" href="namespaceSeqLib_1_1BamRecordSort.html">BamRecordSort</a></li><li class="navelem"><a class="el" href="structSeqLib_1_1BamRecordSort_1_1ByMatePosition.html">ByMatePosition</a></li>  </ul>
+<li class="navelem"><b>SeqLib</b></li><li class="navelem"><a class="el" href="structSeqLib_1_1PlottedRead.html">PlottedRead</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="structSeqLib_1_1BamRecordSort_1_1ByMatePosition-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structSeqLib_1_1PlottedRead-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ByMatePosition Struct Reference</div>  </div>
+<div class="title">PlottedRead Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Sort by read-mate position.  
- <a href="structSeqLib_1_1BamRecordSort_1_1ByMatePosition.html#details">More...</a></p>
+<p>A single plotted read.  
+ <a href="structSeqLib_1_1PlottedRead.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="BamRecord_8h_source.html">BamRecord.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="SeqPlot_8h_source.html">SeqPlot.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89e9500bb1e9e7eaaf919d1ce7d85877"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89e9500bb1e9e7eaaf919d1ce7d85877"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (const <a class="el" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;lx, const <a class="el" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;rx) const </td></tr>
-<tr class="separator:a89e9500bb1e9e7eaaf919d1ce7d85877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e476f6243aabe3750d736435b672761"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e476f6243aabe3750d736435b672761"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (const <a class="el" href="structSeqLib_1_1PlottedRead.html">PlottedRead</a> &amp;pr) const </td></tr>
+<tr class="separator:a3e476f6243aabe3750d736435b672761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a1910d262855b71da353ed0d07a6c7823"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1910d262855b71da353ed0d07a6c7823"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>pos</b></td></tr>
+<tr class="separator:a1910d262855b71da353ed0d07a6c7823"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e62219608bc09631f7c28b9d654fd52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e62219608bc09631f7c28b9d654fd52"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>seq</b></td></tr>
+<tr class="separator:a8e62219608bc09631f7c28b9d654fd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2a6893d7e8bbb68b8648d6d205ce368"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2a6893d7e8bbb68b8648d6d205ce368"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>info</b></td></tr>
+<tr class="separator:ac2a6893d7e8bbb68b8648d6d205ce368"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Sort by read-mate position. </p>
+<div class="textblock"><p>A single plotted read. </p>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/SeqLib/<a class="el" href="BamRecord_8h_source.html">BamRecord.h</a></li>
+<li>src/SeqLib/<a class="el" href="SeqPlot_8h_source.html">SeqPlot.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
