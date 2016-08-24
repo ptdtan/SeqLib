@@ -63,18 +63,18 @@
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSeqLib.html">SeqLib</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="comment">// store file accessors for single BAM</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structSeqLib_1_1__Bam.html">   13</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structSeqLib_1_1__Bam.html">_Bam</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keyword">struct </span>_Bam {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  <a class="code" href="structSeqLib_1_1__Bam.html">_Bam</a>(<span class="keyword">const</span> std::string&amp; m) : m_in(m) {}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ~<a class="code" href="structSeqLib_1_1__Bam.html">_Bam</a>() {}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  _Bam(<span class="keyword">const</span> std::string&amp; m) : m_in(m) {}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ~_Bam() {}</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::shared_ptr&lt;htsFile&gt; fp;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::shared_ptr&lt;hts_idx_t&gt; idx;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::shared_ptr&lt;hts_itr_t&gt; hts_itr;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string m_in;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> m_hdr;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    BamHeader m_hdr;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> next_read;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    BamRecord next_read;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> empty = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
@@ -144,7 +144,6 @@
 <div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:205</div></div>
 <div class="ttc" id="classSeqLib_1_1BamPolyReader_html_ad7c149099d91a0672d40d128cb8388f4"><div class="ttname"><a href="classSeqLib_1_1BamPolyReader.html#ad7c149099d91a0672d40d128cb8388f4">SeqLib::BamPolyReader::Open</a></div><div class="ttdeci">bool Open(const std::string &amp;bam)</div><div class="ttdoc">Open a BAM/SAM/CRAM/STDIN file for streaming in. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamPolyReader_html_a64c4e72701ff1157809d53a014ca8801"><div class="ttname"><a href="classSeqLib_1_1BamPolyReader.html#a64c4e72701ff1157809d53a014ca8801">SeqLib::BamPolyReader::BamPolyReader</a></div><div class="ttdeci">BamPolyReader()</div><div class="ttdoc">Construct an empty BamPolyReader. </div></div>
-<div class="ttc" id="structSeqLib_1_1__Bam_html"><div class="ttname"><a href="structSeqLib_1_1__Bam.html">SeqLib::_Bam</a></div><div class="ttdef"><b>Definition:</b> BamPolyReader.h:13</div></div>
 <div class="ttc" id="classSeqLib_1_1BamPolyReader_html_aa135005ea40457125cfcb18780ff589b"><div class="ttname"><a href="classSeqLib_1_1BamPolyReader.html#aa135005ea40457125cfcb18780ff589b">SeqLib::BamPolyReader::SetRegion</a></div><div class="ttdeci">bool SetRegion(const GenomicRegion &amp;gp)</div><div class="ttdoc">Set a part of the BAM to walk. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamPolyReader_html_a98eeb525f16ecea9433b85b3681f5659"><div class="ttname"><a href="classSeqLib_1_1BamPolyReader.html#a98eeb525f16ecea9433b85b3681f5659">SeqLib::BamPolyReader::PrintRegions</a></div><div class="ttdeci">std::string PrintRegions() const </div><div class="ttdoc">Create a string representation of all of the regions to walk. </div></div>
 <div class="ttc" id="classSeqLib_1_1GenomicRegion_html"><div class="ttname"><a href="classSeqLib_1_1GenomicRegion.html">SeqLib::GenomicRegion</a></div><div class="ttdoc">Container for an interval on the genome. </div><div class="ttdef"><b>Definition:</b> GenomicRegion.h:22</div></div>
@@ -160,7 +159,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 19:25:19 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 24 2016 20:38:51 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

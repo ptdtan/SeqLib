@@ -80,7 +80,7 @@
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">void</span> operator()(bam_hdr_t* x) { <span class="keywordflow">if</span> (x) bam_hdr_destroy(x); }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structhtsFile__delete.html">   30</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structhtsFile__delete.html">htsFile_delete</a> { <span class="comment">// shoudl also close cram index</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">struct </span>htsFile_delete { <span class="comment">// shoudl also close cram index</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> operator()(htsFile* x) { <span class="keywordflow">if</span> (x) sam_close(x); }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
@@ -129,7 +129,6 @@
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structhtsFile__delete_html"><div class="ttname"><a href="structhtsFile__delete.html">htsFile_delete</a></div><div class="ttdef"><b>Definition:</b> BamWalker.h:30</div></div>
 <div class="ttc" id="structSeqLib_1_1ReadCount_html_abf4eeb896f8828bc593dcaf617399365"><div class="ttname"><a href="structSeqLib_1_1ReadCount.html#abf4eeb896f8828bc593dcaf617399365">SeqLib::ReadCount::percent</a></div><div class="ttdeci">int percent() const </div><div class="ttdoc">Return the percent of total reads kept. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:67</div></div>
 <div class="ttc" id="structSeqLib_1_1ReadCount_html_ab97d468161532185ce874288abcdf137"><div class="ttname"><a href="structSeqLib_1_1ReadCount.html#ab97d468161532185ce874288abcdf137">SeqLib::ReadCount::totalString</a></div><div class="ttdeci">std::string totalString() const </div><div class="ttdoc">Return the total reads visited as a comma-formatted string. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:73</div></div>
 <div class="ttc" id="structSeqLib_1_1ReadCount_html_a3c192cf5ed9d779e5f39e87a8f43d17c"><div class="ttname"><a href="structSeqLib_1_1ReadCount.html#a3c192cf5ed9d779e5f39e87a8f43d17c">SeqLib::ReadCount::keepString</a></div><div class="ttdeci">std::string keepString() const </div><div class="ttdoc">Return the kept reads as a comma-formatted string. </div><div class="ttdef"><b>Definition:</b> BamWalker.h:78</div></div>
@@ -138,7 +137,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 19:25:19 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 24 2016 20:38:51 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
