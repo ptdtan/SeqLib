@@ -104,33 +104,31 @@
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">Name2ID</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">void</span> WriteToStdout() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    HeaderSequenceVector <a class="code" href="classSeqLib_1_1BamHeader.html#ad858fbab50227d0a79af3849421f1e02">GetHeaderSequenceVector</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    HeaderSequenceVector <a class="code" href="classSeqLib_1_1BamHeader.html#ad858fbab50227d0a79af3849421f1e02">GetHeaderSequenceVector</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// adapted from sam.c - bam_nam2id</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span> bam_name2id_2(<span class="keyword">const</span> bam_hdr_t *h, <span class="keyword">const</span> <span class="keywordtype">char</span> *ref) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// adapted from sam.c - bam_nam2id</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> bam_name2id_2(<span class="keyword">const</span> bam_hdr_t *h, <span class="keyword">const</span> <span class="keywordtype">char</span> *ref) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    std::shared_ptr&lt;bam_hdr_t&gt; h;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    std::shared_ptr&lt;bam_hdr_t&gt; h;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// make the name 2 id map (to be used by Name2ID)</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// replaces part of bam_name2id that makes the hash table</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">int</span> ConstructName2IDTable();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// hash table for name to id</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::shared_ptr&lt;std::unordered_map&lt;std::string, int&gt;&gt; n2i;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// adapted from sam_hdr_read</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  };</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// make the name 2 id map (to be used by Name2ID)</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">// replaces part of bam_name2id that makes the hash table</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> ConstructName2IDTable();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">// hash table for name to id</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::shared_ptr&lt;std::unordered_map&lt;std::string, int&gt;&gt; n2i;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">// adapted from sam_hdr_read</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  };</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html_a47f10ce5225465821ecbccd17cf09648"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">SeqLib::BamHeader::NumSequences</a></div><div class="ttdeci">int NumSequences() const </div><div class="ttdoc">Return the number of sequences store in this dictionary Returns 0 if header is unitialized. </div></div>
 <div class="ttc" id="structSeqLib_1_1HeaderSequence_html_adc852f586959ce13117d737cf3f14899"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">SeqLib::HeaderSequence::Name</a></div><div class="ttdeci">std::string Name</div><div class="ttdoc">Name of the sequence (eg "1") </div><div class="ttdef"><b>Definition:</b> BamHeader.h:27</div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html_acbf14dc35c8ce8b36cd2261cc2d324c9"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#acbf14dc35c8ce8b36cd2261cc2d324c9">SeqLib::BamHeader::GetSequenceLength</a></div><div class="ttdeci">int GetSequenceLength(int id) const </div><div class="ttdoc">Return the length of the sequence. </div></div>
@@ -149,7 +147,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 18:16:45 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 24 2016 18:23:05 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

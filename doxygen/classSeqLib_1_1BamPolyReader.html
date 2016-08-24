@@ -74,9 +74,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ee1565a998ceaf925da45c6645ee14b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#a4ee1565a998ceaf925da45c6645ee14b">~BamPolyReader</a> ()</td></tr>
 <tr class="memdesc:a4ee1565a998ceaf925da45c6645ee14b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a <a class="el" href="classSeqLib_1_1BamPolyReader.html" title="Walk along a collection of BAM/SAM/CRAM stream in reads. ">BamPolyReader</a> and close all connections to the BAMs.  <a href="#a4ee1565a998ceaf925da45c6645ee14b">More...</a><br /></td></tr>
 <tr class="separator:a4ee1565a998ceaf925da45c6645ee14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36101d2b2274e9681d0299be6f84dd40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#a36101d2b2274e9681d0299be6f84dd40">SetCramReference</a> (const std::string &amp;ref)</td></tr>
-<tr class="memdesc:a36101d2b2274e9681d0299be6f84dd40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly set a reference genome to be used to decode CRAM file.  <a href="#a36101d2b2274e9681d0299be6f84dd40">More...</a><br /></td></tr>
-<tr class="separator:a36101d2b2274e9681d0299be6f84dd40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8b885b74d9f81344d5cc5d70f95434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#a1e8b885b74d9f81344d5cc5d70f95434">SetCramReference</a> (const std::string &amp;ref)</td></tr>
+<tr class="memdesc:a1e8b885b74d9f81344d5cc5d70f95434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly set a reference genome to be used to decode CRAM file.  <a href="#a1e8b885b74d9f81344d5cc5d70f95434">More...</a><br /></td></tr>
+<tr class="separator:a1e8b885b74d9f81344d5cc5d70f95434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa135005ea40457125cfcb18780ff589b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#aa135005ea40457125cfcb18780ff589b">SetRegion</a> (const <a class="el" href="classSeqLib_1_1GenomicRegion.html">GenomicRegion</a> &amp;gp)</td></tr>
 <tr class="memdesc:aa135005ea40457125cfcb18780ff589b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a part of the BAM to walk.  <a href="#aa135005ea40457125cfcb18780ff589b">More...</a><br /></td></tr>
 <tr class="separator:aa135005ea40457125cfcb18780ff589b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,12 +239,12 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<a class="anchor" id="a36101d2b2274e9681d0299be6f84dd40"></a>
+<a class="anchor" id="a1e8b885b74d9f81344d5cc5d70f95434"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool SetCramReference </td>
+          <td class="memname">void SetCramReference </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>ref</em></td><td>)</td>
@@ -258,13 +258,6 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ref</td><td>Path to an index reference genome </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns true if reference loaded. </dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">Throws</td><td>an invalid_argument if reference cannot be loaded </td></tr>
   </table>
   </dd>
 </dl>
@@ -328,7 +321,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 18:16:45 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 24 2016 18:23:05 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
