@@ -87,10 +87,12 @@ Public Member Functions</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#a98eeb525f16ecea9433b85b3681f5659">PrintRegions</a> () const </td></tr>
 <tr class="memdesc:a98eeb525f16ecea9433b85b3681f5659"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a string representation of all of the regions to walk. <br /></td></tr>
 <tr class="separator:a98eeb525f16ecea9433b85b3681f5659"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7c149099d91a0672d40d128cb8388f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7c149099d91a0672d40d128cb8388f4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#ad7c149099d91a0672d40d128cb8388f4">Open</a> (const std::string &amp;bam)</td></tr>
-<tr class="memdesc:ad7c149099d91a0672d40d128cb8388f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a BAM/SAM/CRAM/STDIN file for streaming in. <br /></td></tr>
+<tr class="memitem:ad7c149099d91a0672d40d128cb8388f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#ad7c149099d91a0672d40d128cb8388f4">Open</a> (const std::string &amp;bam)</td></tr>
+<tr class="memdesc:ad7c149099d91a0672d40d128cb8388f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a BAM/SAM/CRAM/STDIN file for streaming in.  <a href="#ad7c149099d91a0672d40d128cb8388f4">More...</a><br /></td></tr>
 <tr class="separator:ad7c149099d91a0672d40d128cb8388f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19531aa011731733e97e9a410cbb813"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#af19531aa011731733e97e9a410cbb813">Open</a> (const std::vector&lt; std::string &gt; &amp;bams)</td></tr>
+<tr class="memdesc:af19531aa011731733e97e9a410cbb813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a set of BAM/SAM/CRAM/STDIN files for streaming in.  <a href="#af19531aa011731733e97e9a410cbb813">More...</a><br /></td></tr>
+<tr class="separator:af19531aa011731733e97e9a410cbb813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a857b005f80d24e07cc98f9e8e64c4050"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamPolyReader.html#a857b005f80d24e07cc98f9e8e64c4050">GetNextRecord</a> (<a class="el" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r)</td></tr>
 <tr class="memdesc:a857b005f80d24e07cc98f9e8e64c4050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the next read from the available input streams.  <a href="#a857b005f80d24e07cc98f9e8e64c4050">More...</a><br /></td></tr>
 <tr class="separator:a857b005f80d24e07cc98f9e8e64c4050"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,6 +189,56 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
+<a class="anchor" id="ad7c149099d91a0672d40d128cb8388f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Open </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>bam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a BAM/SAM/CRAM/STDIN file for streaming in. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bam</td><td>Path to a SAM/CRAM/BAM file, or "-" for stdin </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if open was successful </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af19531aa011731733e97e9a410cbb813"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Open </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bams</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a set of BAM/SAM/CRAM/STDIN files for streaming in. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bams</td><td>Path to a vector fo SAM/CRAM/BAM files, or "-" for stdin </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if open was successful </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a36101d2b2274e9681d0299be6f84dd40"></a>
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +328,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 16:32:14 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 24 2016 16:39:12 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
