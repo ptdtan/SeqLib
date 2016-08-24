@@ -74,67 +74,67 @@
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamWriter.html#a1e7510e6fe6039a9d02b8a14e2588c0d">   33</a></span>&#160;  <a class="code" href="classSeqLib_1_1BamWriter.html#a1e7510e6fe6039a9d02b8a14e2588c0d">~BamWriter</a>() {}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a01283ea83293f56642f5f740f4147a38">WriteHeader</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a9e4aa9ebc573b4307d61f29832df413e">SetHeader</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a>&amp; h);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a7f7a3199c392465d0767c6506c1af5b4">Close</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a22c6e7591041369f10bd62aaafaa0db6">BuildIndex</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSeqLib_1_1BamWriter.html#a4299be1d0d307c619e70060e78b85700">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamWriter.html">BamWriter</a>&amp; b);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a19c361a7bdc8f4212d625dad8b5f3711">Open</a>(<span class="keyword">const</span> std::string&amp; f);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a7c89bcdba421e21723b3d50103ff0531">WriteRecord</a>(<a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a36101d2b2274e9681d0299be6f84dd40">SetCramReference</a>(<span class="keyword">const</span> std::string&amp; ref);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamWriter.html#ac253cbffbaf4502cf74c1a8c8f576f00">   84</a></span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> <a class="code" href="classSeqLib_1_1BamWriter.html#ac253cbffbaf4502cf74c1a8c8f576f00">Header</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hdr; };</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#af7c6297d49ee34c38dcc6127065256a1">WriteHeader</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a9e4aa9ebc573b4307d61f29832df413e">SetHeader</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a>&amp; h);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#aef7e3d18ef267f23f64ad397fa359cc1">Close</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#ac2611a1834ceefcdea5d28121d705a56">BuildIndex</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSeqLib_1_1BamWriter.html#a4299be1d0d307c619e70060e78b85700">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamWriter.html">BamWriter</a>&amp; b);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a3afbdf794c31ef3367db5e5e3acf5798">Open</a>(<span class="keyword">const</span> std::string&amp; f);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a6cff0e4c9aa709688de4971bb52f0d99">WriteRecord</a>(<a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a36101d2b2274e9681d0299be6f84dd40">SetCramReference</a>(<span class="keyword">const</span> std::string&amp; ref);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamWriter.html#ac253cbffbaf4502cf74c1a8c8f576f00">   86</a></span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> <a class="code" href="classSeqLib_1_1BamWriter.html#ac253cbffbaf4502cf74c1a8c8f576f00">Header</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> hdr; };</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="comment">// path to output file</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  std::string m_out; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">// open m_out, true if success</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> __open_BAM_for_writing();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="comment">// output format</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  std::string output_format = <span class="stringliteral">&quot;wb&quot;</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// hts</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  std::shared_ptr&lt;htsFile&gt; fop;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// header</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> hdr;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif </span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">// path to output file</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  std::string m_out; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// open m_out, true if success</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> __open_BAM_for_writing();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="comment">// output format</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  std::string output_format = <span class="stringliteral">&quot;wb&quot;</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// hts</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  std::shared_ptr&lt;htsFile&gt; fop;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// header</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> hdr;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="ttc" id="classSeqLib_1_1BamWriter_html_ac2611a1834ceefcdea5d28121d705a56"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#ac2611a1834ceefcdea5d28121d705a56">SeqLib::BamWriter::BuildIndex</a></div><div class="ttdeci">bool BuildIndex() const </div><div class="ttdoc">Create the index file for the output bam in BAI format. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:205</div></div>
 <div class="ttc" id="classSeqLib_1_1BamWriter_html_a646daefe44d928e7ccd5d6db1d3c667d"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a646daefe44d928e7ccd5d6db1d3c667d">SeqLib::BamWriter::BamWriter</a></div><div class="ttdeci">BamWriter()</div><div class="ttdoc">Construct an empty BamWriter to write BAM. </div><div class="ttdef"><b>Definition:</b> BamWriter.h:21</div></div>
-<div class="ttc" id="classSeqLib_1_1BamWriter_html_a01283ea83293f56642f5f740f4147a38"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a01283ea83293f56642f5f740f4147a38">SeqLib::BamWriter::WriteHeader</a></div><div class="ttdeci">void WriteHeader() const </div><div class="ttdoc">Write the BAM header. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamWriter_html_a7f7a3199c392465d0767c6506c1af5b4"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a7f7a3199c392465d0767c6506c1af5b4">SeqLib::BamWriter::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">Close a file explitily. </div></div>
+<div class="ttc" id="classSeqLib_1_1BamWriter_html_af7c6297d49ee34c38dcc6127065256a1"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#af7c6297d49ee34c38dcc6127065256a1">SeqLib::BamWriter::WriteHeader</a></div><div class="ttdeci">bool WriteHeader() const </div><div class="ttdoc">Write the BAM header. </div></div>
+<div class="ttc" id="classSeqLib_1_1BamWriter_html_aef7e3d18ef267f23f64ad397fa359cc1"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#aef7e3d18ef267f23f64ad397fa359cc1">SeqLib::BamWriter::Close</a></div><div class="ttdeci">bool Close()</div><div class="ttdoc">Close a file explitily. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamWriter_html_a9e4aa9ebc573b4307d61f29832df413e"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a9e4aa9ebc573b4307d61f29832df413e">SeqLib::BamWriter::SetHeader</a></div><div class="ttdeci">void SetHeader(const SeqLib::BamHeader &amp;h)</div><div class="ttdoc">Provide a header to this writer. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamWriter_html_a4299be1d0d307c619e70060e78b85700"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a4299be1d0d307c619e70060e78b85700">SeqLib::BamWriter::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const BamWriter &amp;b)</div><div class="ttdoc">Print out some basic info about this writer. </div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> BamStats.h:11</div></div>
-<div class="ttc" id="classSeqLib_1_1BamWriter_html_a19c361a7bdc8f4212d625dad8b5f3711"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a19c361a7bdc8f4212d625dad8b5f3711">SeqLib::BamWriter::Open</a></div><div class="ttdeci">void Open(const std::string &amp;f)</div><div class="ttdoc">Open a BAM file for streaming out. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamWriter_html_a36101d2b2274e9681d0299be6f84dd40"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a36101d2b2274e9681d0299be6f84dd40">SeqLib::BamWriter::SetCramReference</a></div><div class="ttdeci">bool SetCramReference(const std::string &amp;ref)</div><div class="ttdoc">Explicitly set a reference genome to be used to decode CRAM file. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamWriter_html_ac253cbffbaf4502cf74c1a8c8f576f00"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#ac253cbffbaf4502cf74c1a8c8f576f00">SeqLib::BamWriter::Header</a></div><div class="ttdeci">BamHeader Header() const </div><div class="ttdoc">Return the BAM header. </div><div class="ttdef"><b>Definition:</b> BamWriter.h:84</div></div>
+<div class="ttc" id="classSeqLib_1_1BamWriter_html_ac253cbffbaf4502cf74c1a8c8f576f00"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#ac253cbffbaf4502cf74c1a8c8f576f00">SeqLib::BamWriter::Header</a></div><div class="ttdeci">BamHeader Header() const </div><div class="ttdoc">Return the BAM header. </div><div class="ttdef"><b>Definition:</b> BamWriter.h:86</div></div>
 <div class="ttc" id="classSeqLib_1_1BamWriter_html"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html">SeqLib::BamWriter</a></div><div class="ttdoc">Walk along a BAM or along BAM regions and stream in/out reads. </div><div class="ttdef"><b>Definition:</b> BamWriter.h:16</div></div>
+<div class="ttc" id="classSeqLib_1_1BamWriter_html_a6cff0e4c9aa709688de4971bb52f0d99"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a6cff0e4c9aa709688de4971bb52f0d99">SeqLib::BamWriter::WriteRecord</a></div><div class="ttdeci">bool WriteRecord(BamRecord &amp;r)</div><div class="ttdoc">Write an alignment to the output BAM file. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamWriter_html_a1e7510e6fe6039a9d02b8a14e2588c0d"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a1e7510e6fe6039a9d02b8a14e2588c0d">SeqLib::BamWriter::~BamWriter</a></div><div class="ttdeci">~BamWriter()</div><div class="ttdoc">Destroy a BamWriter and close all connections to the BAM. </div><div class="ttdef"><b>Definition:</b> BamWriter.h:33</div></div>
+<div class="ttc" id="classSeqLib_1_1BamWriter_html_a3afbdf794c31ef3367db5e5e3acf5798"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a3afbdf794c31ef3367db5e5e3acf5798">SeqLib::BamWriter::Open</a></div><div class="ttdeci">bool Open(const std::string &amp;f)</div><div class="ttdoc">Open a BAM file for streaming out. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:38</div></div>
-<div class="ttc" id="classSeqLib_1_1BamWriter_html_a7c89bcdba421e21723b3d50103ff0531"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a7c89bcdba421e21723b3d50103ff0531">SeqLib::BamWriter::WriteRecord</a></div><div class="ttdeci">void WriteRecord(BamRecord &amp;r)</div><div class="ttdoc">Write an alignment to the output BAM file. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamWriter_html_a22c6e7591041369f10bd62aaafaa0db6"><div class="ttname"><a href="classSeqLib_1_1BamWriter.html#a22c6e7591041369f10bd62aaafaa0db6">SeqLib::BamWriter::BuildIndex</a></div><div class="ttdeci">void BuildIndex() const </div><div class="ttdoc">Create the index file for the output bam in BAI format. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 16:39:12 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 24 2016 17:15:10 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
