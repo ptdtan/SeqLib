@@ -39,7 +39,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -57,7 +56,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Template class for a collection of children of <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a> objects.  
+<p>Template class to store / query a collection of genomic intervals.  
  <a href="classSeqLib_1_1GenomicRegionCollection.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="GenomicRegionCollection_8h_source.html">GenomicRegionCollection.h</a>&gt;</code></p>
@@ -66,7 +65,7 @@
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a09bc06d105cefe297c3077b0b52d95a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09bc06d105cefe297c3077b0b52d95a8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a09bc06d105cefe297c3077b0b52d95a8">GenomicRegionCollection</a> ()</td></tr>
-<tr class="memdesc:a09bc06d105cefe297c3077b0b52d95a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a>. <br /></td></tr>
+<tr class="memdesc:a09bc06d105cefe297c3077b0b52d95a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a>. <br /></td></tr>
 <tr class="separator:a09bc06d105cefe297c3077b0b52d95a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa44ca278bece95440485c6a4b03523bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa44ca278bece95440485c6a4b03523bd"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#aa44ca278bece95440485c6a4b03523bd">GenomicRegionCollection</a> (std::vector&lt; T &gt; &amp;vec)</td></tr>
@@ -81,25 +80,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6651453f024285d14d3b7e23952cefe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from a vector of reads. <br /></td></tr>
 <tr class="separator:a6651453f024285d14d3b7e23952cefe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a268ee90c740378ba89d69ad1b2ea792e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a268ee90c740378ba89d69ad1b2ea792e">GenomicRegionCollection</a> (int <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a369399896761e31ae71db57fdd0ba431">width</a>, int ovlp, const T &amp;gr)</td></tr>
-<tr class="memdesc:a268ee90c740378ba89d69ad1b2ea792e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> with overlapping intervals.  <a href="#a268ee90c740378ba89d69ad1b2ea792e">More...</a><br /></td></tr>
+<tr class="memdesc:a268ee90c740378ba89d69ad1b2ea792e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> with overlapping intervals.  <a href="#a268ee90c740378ba89d69ad1b2ea792e">More...</a><br /></td></tr>
 <tr class="separator:a268ee90c740378ba89d69ad1b2ea792e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8309b74080ca6419ed94ba62becf3050"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a8309b74080ca6419ed94ba62becf3050">readMuTect</a> (const std::string &amp;file, int <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a39b04fefb69cbda66f838ed08334f147">pad</a>, const <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> &amp;hdr)</td></tr>
-<tr class="memdesc:a8309b74080ca6419ed94ba62becf3050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a MuTect call-stats file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> object.  <a href="#a8309b74080ca6419ed94ba62becf3050">More...</a><br /></td></tr>
+<tr class="memdesc:a8309b74080ca6419ed94ba62becf3050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a MuTect call-stats file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> object.  <a href="#a8309b74080ca6419ed94ba62becf3050">More...</a><br /></td></tr>
 <tr class="separator:a8309b74080ca6419ed94ba62becf3050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e8235b313f926c469b14fd1c0a9d45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a67e8235b313f926c469b14fd1c0a9d45">readBEDfile</a> (const std::string &amp;file, int <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a39b04fefb69cbda66f838ed08334f147">pad</a>, const <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> &amp;hdr)</td></tr>
-<tr class="memdesc:a67e8235b313f926c469b14fd1c0a9d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a BED file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> object.  <a href="#a67e8235b313f926c469b14fd1c0a9d45">More...</a><br /></td></tr>
+<tr class="memdesc:a67e8235b313f926c469b14fd1c0a9d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a BED file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> object.  <a href="#a67e8235b313f926c469b14fd1c0a9d45">More...</a><br /></td></tr>
 <tr class="separator:a67e8235b313f926c469b14fd1c0a9d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04aea3813768b15f40557ab63538ded6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a04aea3813768b15f40557ab63538ded6">readVCFfile</a> (const std::string &amp;file, int <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a39b04fefb69cbda66f838ed08334f147">pad</a>, const <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> &amp;hdr)</td></tr>
-<tr class="memdesc:a04aea3813768b15f40557ab63538ded6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a VCF file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> object.  <a href="#a04aea3813768b15f40557ab63538ded6">More...</a><br /></td></tr>
+<tr class="memdesc:a04aea3813768b15f40557ab63538ded6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a VCF file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> object.  <a href="#a04aea3813768b15f40557ab63538ded6">More...</a><br /></td></tr>
 <tr class="separator:a04aea3813768b15f40557ab63538ded6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af0c2d255d52cc1038b19baeaba5f12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a9af0c2d255d52cc1038b19baeaba5f12">GenomicRegionCollection</a> (const std::string &amp;file, const <a class="el" href="classSeqLib_1_1BamHeader.html">BamHeader</a> &amp;hdr)</td></tr>
-<tr class="memdesc:a9af0c2d255d52cc1038b19baeaba5f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a text file (can be gzipped) and construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a>.  <a href="#a9af0c2d255d52cc1038b19baeaba5f12">More...</a><br /></td></tr>
+<tr class="memdesc:a9af0c2d255d52cc1038b19baeaba5f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a text file (can be gzipped) and construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a>.  <a href="#a9af0c2d255d52cc1038b19baeaba5f12">More...</a><br /></td></tr>
 <tr class="separator:a9af0c2d255d52cc1038b19baeaba5f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49dcb257a867a6a0fe6d7604419fd10c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a49dcb257a867a6a0fe6d7604419fd10c">createTreeMap</a> ()</td></tr>
 <tr class="memdesc:a49dcb257a867a6a0fe6d7604419fd10c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill in the GenomicIntervalTreeMap stored in this object.  <a href="#a49dcb257a867a6a0fe6d7604419fd10c">More...</a><br /></td></tr>
 <tr class="separator:a49dcb257a867a6a0fe6d7604419fd10c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcacb2e3364e61bd9bad7c6ba8ab3f24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#afcacb2e3364e61bd9bad7c6ba8ab3f24">sendToBED</a> (const std::string file)</td></tr>
-<tr class="memdesc:afcacb2e3364e61bd9bad7c6ba8ab3f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> to a BED file.  <a href="#afcacb2e3364e61bd9bad7c6ba8ab3f24">More...</a><br /></td></tr>
+<tr class="memdesc:afcacb2e3364e61bd9bad7c6ba8ab3f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> to a BED file.  <a href="#afcacb2e3364e61bd9bad7c6ba8ab3f24">More...</a><br /></td></tr>
 <tr class="separator:afcacb2e3364e61bd9bad7c6ba8ab3f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e6549eb4e893fe2d601f6c90f86cfc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a57e6549eb4e893fe2d601f6c90f86cfc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a57e6549eb4e893fe2d601f6c90f86cfc">mergeOverlappingIntervals</a> ()</td></tr>
@@ -160,10 +159,10 @@ const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="separator:a088d11cfed6e7783e6737ca67188cd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf762880dc4539a09394816c32e40596"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf762880dc4539a09394816c32e40596"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#aaf762880dc4539a09394816c32e40596">concat</a> (const <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html">GenomicRegionCollection</a>&lt; T &gt; &amp;g)</td></tr>
-<tr class="memdesc:aaf762880dc4539a09394816c32e40596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add two <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> objects together. <br /></td></tr>
+<tr class="memdesc:aaf762880dc4539a09394816c32e40596"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add two <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> objects together. <br /></td></tr>
 <tr class="separator:aaf762880dc4539a09394816c32e40596"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a910badaf8d3abbfad021311302de6dde"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a910badaf8d3abbfad021311302de6dde">sendToBED</a> () const </td></tr>
-<tr class="memdesc:a910badaf8d3abbfad021311302de6dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> to a BED format.  <a href="#a910badaf8d3abbfad021311302de6dde">More...</a><br /></td></tr>
+<tr class="memdesc:a910badaf8d3abbfad021311302de6dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> to a BED format.  <a href="#a910badaf8d3abbfad021311302de6dde">More...</a><br /></td></tr>
 <tr class="separator:a910badaf8d3abbfad021311302de6dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99d9ab26bc6b51d576f9d6ad4980e4d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a99d9ab26bc6b51d576f9d6ad4980e4d8">getNextGenomicRegion</a> (T &amp;gr)</td></tr>
 <tr class="memdesc:a99d9ab26bc6b51d576f9d6ad4980e4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the next <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a> object.  <a href="#a99d9ab26bc6b51d576f9d6ad4980e4d8">More...</a><br /></td></tr>
@@ -207,8 +206,8 @@ std::vector&lt; T &gt;::const_iterator&#160;</td><td class="memItemRight" valign
 <div class="textblock"><h3>template&lt;typename T = GenomicRegion&gt;<br />
 class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
 
-<p>Template class for a collection of children of <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a> objects. </p>
-<p>Contains a set of <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a> objects (or their children), and allows interval queries, reading/writing BED files, etc. </p>
+<p>Template class to store / query a collection of genomic intervals. </p>
+<p>Can hold a collection of <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a> objects, or any object whose class is a child of <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a>. Contains an implementation of an interval tree (as provided by Erik Garrison) for fast interval queries. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a268ee90c740378ba89d69ad1b2ea792e"></a>
 <div class="memitem">
@@ -240,7 +239,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> with overlapping intervals. </p>
+<p>Construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> with overlapping intervals. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">width</td><td>Desired bin width </td></tr>
@@ -276,7 +275,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Read in a text file (can be gzipped) and construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a>. </p>
+<p>Read in a text file (can be gzipped) and construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a>. </p>
 <p>This function will automatically detect which file type is being input: &ndash; ends in .vcf -&gt; readVCFfile &ndash; ends in .bed -&gt; readBEDfile &ndash; header contains "MuTect" -&gt; readMuTect The values are appended to existing vector of <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a> objects </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>Text file to read and store intervals </td></tr>
@@ -346,7 +345,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Number of overlapping elements in this <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of overlapping elements in this <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> </dd></dl>
 
 </div>
 </div>
@@ -423,7 +422,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Read in a BED file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> object. </p>
+<p>Read in a BED file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>Path to BED file </td></tr>
@@ -464,7 +463,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Read in a MuTect call-stats file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> object. </p>
+<p>Read in a MuTect call-stats file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> object. </p>
 <p>Reads a MuTect call-stats file and imports only lines with KEEP marked. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>Path to call-stats file </td></tr>
@@ -505,7 +504,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Read in a VCF file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> object. </p>
+<p>Read in a VCF file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>Path to BED file </td></tr>
@@ -530,7 +529,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Send the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> to a BED file. </p>
+<p>Send the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> to a BED file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">file</td><td>Output file </td></tr>
@@ -553,7 +552,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
       </table>
 </div><div class="memdoc">
 
-<p>Output the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class for a collection of children of GenomicRegion objects. ">GenomicRegionCollection</a> to a BED format. </p>
+<p>Output the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> to a BED format. </p>
 <p>Currently just outputs chr pos pos2 with no header. </p><dl class="section return"><dt>Returns</dt><dd>BED formated string reprsentation </dd></dl>
 
 </div>
@@ -564,7 +563,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 23:01:39 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 25 2016 00:51:16 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

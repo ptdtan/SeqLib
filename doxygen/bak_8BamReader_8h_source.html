@@ -135,7 +135,7 @@
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_ac0b04f384b7e5eb72ff1e43fb4c413e2"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ac0b04f384b7e5eb72ff1e43fb4c413e2">SeqLib::BamReader::BamReader</a></div><div class="ttdeci">BamReader()</div><div class="ttdoc">Construct an empty BamReader. </div></div>
 <div class="ttc" id="classSeqLib_1_1GenomicRegionCollection_html"><div class="ttname"><a href="classSeqLib_1_1GenomicRegionCollection.html">SeqLib::GenomicRegionCollection&lt; GenomicRegion &gt;</a></div></div>
-<div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with an HTSLib bam1_t read. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:205</div></div>
+<div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with a SAM alignment record. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:195</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_aac7ebbdc1833e628562a56a0b780b068"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#aac7ebbdc1833e628562a56a0b780b068">SeqLib::BamReader::SetMultipleRegions</a></div><div class="ttdeci">bool SetMultipleRegions(const GRC &amp;grv)</div><div class="ttdoc">Set up multiple regions. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a98eeb525f16ecea9433b85b3681f5659"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a98eeb525f16ecea9433b85b3681f5659">SeqLib::BamReader::PrintRegions</a></div><div class="ttdeci">std::string PrintRegions() const </div><div class="ttdoc">Create a string representation of all of the regions to walk. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a36101d2b2274e9681d0299be6f84dd40"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a36101d2b2274e9681d0299be6f84dd40">SeqLib::BamReader::SetCramReference</a></div><div class="ttdeci">bool SetCramReference(const std::string &amp;ref)</div><div class="ttdoc">Explicitly set a reference genome to be used to decode CRAM file. </div></div>
@@ -146,7 +146,7 @@
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a2e5db5090711310a703e46dabb09ef2c"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a2e5db5090711310a703e46dabb09ef2c">SeqLib::BamReader::displayReadFilterCollection</a></div><div class="ttdeci">std::string displayReadFilterCollection() const </div><div class="ttdoc">Return the ReadFilterCollection as a string. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a857b005f80d24e07cc98f9e8e64c4050"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a857b005f80d24e07cc98f9e8e64c4050">SeqLib::BamReader::GetNextRecord</a></div><div class="ttdeci">bool GetNextRecord(BamRecord &amp;r)</div><div class="ttdoc">Retrieve the next read from the BAM. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a60b472c034acab7bbe12df7426cd85ce"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a60b472c034acab7bbe12df7426cd85ce">SeqLib::BamReader::m_in</a></div><div class="ttdeci">std::string m_in</div><div class="ttdoc">file name </div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:101</div></div>
-<div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> BamStats.h:11</div></div>
+<div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a372de693ad40b3f42839c8ec6ac845f4">SeqLib::BamReader::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Reset all the counters and regions, but keep the loaded index. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html"><div class="ttname"><a href="classSeqLib_1_1BamReader.html">SeqLib::BamReader</a></div><div class="ttdoc">Walk along a BAM/SAM/CRAM/STDIN and stream in reads. </div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:20</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_aa135005ea40457125cfcb18780ff589b"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#aa135005ea40457125cfcb18780ff589b">SeqLib::BamReader::SetRegion</a></div><div class="ttdeci">bool SetRegion(const GenomicRegion &amp;gp)</div><div class="ttdoc">Set a part of the BAM/CRAM (ie able to be indexed) to walk. </div></div>
@@ -155,7 +155,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 23:01:39 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 25 2016 00:51:16 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

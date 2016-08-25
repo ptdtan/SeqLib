@@ -39,7 +39,6 @@
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -58,7 +57,7 @@
 </div><!--header-->
 <div class="contents">
 
-<p>Class to store and interact with an HTSLib bam1_t read.  
+<p>Class to store and interact with a SAM alignment record.  
  <a href="classSeqLib_1_1BamRecord.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="BamRecord_8h_source.html">BamRecord.h</a>&gt;</code></p>
@@ -66,73 +65,73 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a176dac15321681fbcc9f3b21bde3da16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a176dac15321681fbcc9f3b21bde3da16">BamRecord</a> (const std::string &amp;name, const std::string &amp;seq, const <a class="el" href="classSeqLib_1_1GenomicRegion.html">GenomicRegion</a> *gr, const <a class="el" href="classSeqLib_1_1Cigar.html">Cigar</a> &amp;cig)</td></tr>
-<tr class="memdesc:a176dac15321681fbcc9f3b21bde3da16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> manually from a name, sequence, cigar and location.  <a href="#a176dac15321681fbcc9f3b21bde3da16">More...</a><br /></td></tr>
+<tr class="memdesc:a176dac15321681fbcc9f3b21bde3da16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> manually from a name, sequence, cigar and location.  <a href="#a176dac15321681fbcc9f3b21bde3da16">More...</a><br /></td></tr>
 <tr class="separator:a176dac15321681fbcc9f3b21bde3da16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02fd73d861ef2e4aabb38c0c9ff82947"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a> ()</td></tr>
-<tr class="memdesc:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> by calling bam_init1() <br /></td></tr>
+<tr class="memdesc:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> by calling bam_init1() <br /></td></tr>
 <tr class="separator:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a479432127ee77145cc19d6a2d1590821"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a479432127ee77145cc19d6a2d1590821"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a> () const </td></tr>
 <tr class="memdesc:a479432127ee77145cc19d6a2d1590821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a read is empty (not initialized)  true if read was not initialized with any values. <br /></td></tr>
 <tr class="separator:a479432127ee77145cc19d6a2d1590821"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1d3aa3591fce81d05b5515154181c70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#af1d3aa3591fce81d05b5515154181c70">assign</a> (bam1_t *a)</td></tr>
-<tr class="memdesc:af1d3aa3591fce81d05b5515154181c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly pass a bam1_t to the <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a>.  <a href="#af1d3aa3591fce81d05b5515154181c70">More...</a><br /></td></tr>
+<tr class="memdesc:af1d3aa3591fce81d05b5515154181c70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Explicitly pass a bam1_t to the <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a>.  <a href="#af1d3aa3591fce81d05b5515154181c70">More...</a><br /></td></tr>
 <tr class="separator:af1d3aa3591fce81d05b5515154181c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f8ed101ca6570d23e48ca7e11415dc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f8ed101ca6570d23e48ca7e11415dc1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a9f8ed101ca6570d23e48ca7e11415dc1">BamRecord</a> ()</td></tr>
-<tr class="memdesc:a9f8ed101ca6570d23e48ca7e11415dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> with no memory allocated and a null header. <br /></td></tr>
+<tr class="memdesc:a9f8ed101ca6570d23e48ca7e11415dc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> with no memory allocated and a null header. <br /></td></tr>
 <tr class="separator:a9f8ed101ca6570d23e48ca7e11415dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20e39d0a44668c55b436cd7fd7d534d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20e39d0a44668c55b436cd7fd7d534d5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a20e39d0a44668c55b436cd7fd7d534d5">ReverseFlag</a> () const </td></tr>
-<tr class="memdesc:a20e39d0a44668c55b436cd7fd7d534d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is aligned on reverse strand. <br /></td></tr>
+<tr class="memdesc:a20e39d0a44668c55b436cd7fd7d534d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is aligned on reverse strand. <br /></td></tr>
 <tr class="separator:a20e39d0a44668c55b436cd7fd7d534d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcfaba5e50f7a799cb8d4d89fa5afae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcfaba5e50f7a799cb8d4d89fa5afae6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#adcfaba5e50f7a799cb8d4d89fa5afae6">MateReverseFlag</a> () const </td></tr>
-<tr class="memdesc:adcfaba5e50f7a799cb8d4d89fa5afae6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> has mate aligned on reverse strand. <br /></td></tr>
+<tr class="memdesc:adcfaba5e50f7a799cb8d4d89fa5afae6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> has mate aligned on reverse strand. <br /></td></tr>
 <tr class="separator:adcfaba5e50f7a799cb8d4d89fa5afae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa514c3ef20f1e7d98eb5d373fb8da356"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa514c3ef20f1e7d98eb5d373fb8da356"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#aa514c3ef20f1e7d98eb5d373fb8da356">Interchromosomal</a> () const </td></tr>
-<tr class="memdesc:aa514c3ef20f1e7d98eb5d373fb8da356"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> has is an interchromosomal alignment. <br /></td></tr>
+<tr class="memdesc:aa514c3ef20f1e7d98eb5d373fb8da356"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> has is an interchromosomal alignment. <br /></td></tr>
 <tr class="separator:aa514c3ef20f1e7d98eb5d373fb8da356"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e60fc868c1af3555fb8bc1e81d3078d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e60fc868c1af3555fb8bc1e81d3078d"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a7e60fc868c1af3555fb8bc1e81d3078d">DuplicateFlag</a> () const </td></tr>
-<tr class="memdesc:a7e60fc868c1af3555fb8bc1e81d3078d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is a duplicate. <br /></td></tr>
+<tr class="memdesc:a7e60fc868c1af3555fb8bc1e81d3078d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is a duplicate. <br /></td></tr>
 <tr class="separator:a7e60fc868c1af3555fb8bc1e81d3078d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ae334e53a310a160b86b9b6168eacf1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ae334e53a310a160b86b9b6168eacf1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a7ae334e53a310a160b86b9b6168eacf1">SecondaryFlag</a> () const </td></tr>
-<tr class="memdesc:a7ae334e53a310a160b86b9b6168eacf1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is a secondary alignment. <br /></td></tr>
+<tr class="memdesc:a7ae334e53a310a160b86b9b6168eacf1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is a secondary alignment. <br /></td></tr>
 <tr class="separator:a7ae334e53a310a160b86b9b6168eacf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bc357eeaca6b02cc503358a3acc0a13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3bc357eeaca6b02cc503358a3acc0a13"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a3bc357eeaca6b02cc503358a3acc0a13">PairedFlag</a> () const </td></tr>
-<tr class="memdesc:a3bc357eeaca6b02cc503358a3acc0a13"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is paired. <br /></td></tr>
+<tr class="memdesc:a3bc357eeaca6b02cc503358a3acc0a13"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is paired. <br /></td></tr>
 <tr class="separator:a3bc357eeaca6b02cc503358a3acc0a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ce8b14d32f3167126f830b6c58904ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a7ce8b14d32f3167126f830b6c58904ed">PairOrientation</a> () const </td></tr>
 <tr class="memdesc:a7ce8b14d32f3167126f830b6c58904ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the relative pair orientations.  <a href="#a7ce8b14d32f3167126f830b6c58904ed">More...</a><br /></td></tr>
 <tr class="separator:a7ce8b14d32f3167126f830b6c58904ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd8b975557b92d9828c7b884d840ccab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd8b975557b92d9828c7b884d840ccab"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#abd8b975557b92d9828c7b884d840ccab">QCFailFlag</a> () const </td></tr>
-<tr class="memdesc:abd8b975557b92d9828c7b884d840ccab"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is failed QC. <br /></td></tr>
+<tr class="memdesc:abd8b975557b92d9828c7b884d840ccab"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is failed QC. <br /></td></tr>
 <tr class="separator:abd8b975557b92d9828c7b884d840ccab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad49ec8ab930027b45d5705c043726af5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad49ec8ab930027b45d5705c043726af5"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#ad49ec8ab930027b45d5705c043726af5">MappedFlag</a> () const </td></tr>
-<tr class="memdesc:ad49ec8ab930027b45d5705c043726af5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is mapped. <br /></td></tr>
+<tr class="memdesc:ad49ec8ab930027b45d5705c043726af5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is mapped. <br /></td></tr>
 <tr class="separator:ad49ec8ab930027b45d5705c043726af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9c4451e82b8058d7bff9d99c6de01dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9c4451e82b8058d7bff9d99c6de01dd"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#af9c4451e82b8058d7bff9d99c6de01dd">MateMappedFlag</a> () const </td></tr>
-<tr class="memdesc:af9c4451e82b8058d7bff9d99c6de01dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> mate is mapped. <br /></td></tr>
+<tr class="memdesc:af9c4451e82b8058d7bff9d99c6de01dd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> mate is mapped. <br /></td></tr>
 <tr class="separator:af9c4451e82b8058d7bff9d99c6de01dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4ab6b24a51712e0a8ce89e492d1d38e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4ab6b24a51712e0a8ce89e492d1d38e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#ad4ab6b24a51712e0a8ce89e492d1d38e">PairMappedFlag</a> () const </td></tr>
-<tr class="memdesc:ad4ab6b24a51712e0a8ce89e492d1d38e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is mapped and mate is mapped and in pair. <br /></td></tr>
+<tr class="memdesc:ad4ab6b24a51712e0a8ce89e492d1d38e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is mapped and mate is mapped and in pair. <br /></td></tr>
 <tr class="separator:ad4ab6b24a51712e0a8ce89e492d1d38e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c541b6a75842bd38174b64bc229b50f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c541b6a75842bd38174b64bc229b50f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a6c541b6a75842bd38174b64bc229b50f">ProperPair</a> () const </td></tr>
-<tr class="memdesc:a6c541b6a75842bd38174b64bc229b50f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is mapped in proper pair. <br /></td></tr>
+<tr class="memdesc:a6c541b6a75842bd38174b64bc229b50f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is mapped in proper pair. <br /></td></tr>
 <tr class="separator:a6c541b6a75842bd38174b64bc229b50f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a838ab2f97e8b9eea1be40da16bd2b136"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a838ab2f97e8b9eea1be40da16bd2b136"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a838ab2f97e8b9eea1be40da16bd2b136">ProperOrientation</a> () const </td></tr>
-<tr class="memdesc:a838ab2f97e8b9eea1be40da16bd2b136"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> has proper orientation (FR) <br /></td></tr>
+<tr class="memdesc:a838ab2f97e8b9eea1be40da16bd2b136"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> has proper orientation (FR) <br /></td></tr>
 <tr class="separator:a838ab2f97e8b9eea1be40da16bd2b136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0dcbc1e45f86d3c2b22701a7d6afa43b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0dcbc1e45f86d3c2b22701a7d6afa43b"></a>
 int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a0dcbc1e45f86d3c2b22701a7d6afa43b">CountNBases</a> () const </td></tr>
@@ -380,8 +379,8 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="separator:a01e11933378b027ff89ef521e77079ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class to store and interact with an HTSLib bam1_t read. </p>
-<p>HTSLibrary reads are stored in the bam1_t struct. Memory allocation is taken care of by bam1_t init, and deallocation by destroy_bam1. This class is a C++ interface that automatically takes care of memory management for these C allocs/deallocs. The only member of <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> is a bam1_t object. Alloc/dealloc is taken care of by the constructor and destructor. </p>
+<div class="textblock"><p>Class to store and interact with a SAM alignment record. </p>
+<p>HTSLibrary reads are stored in the bam1_t struct. Memory allocation is taken care of by bam1_t init, and deallocation by destroy_bam1. This class is a C++ interface that automatically takes care of memory management for these C allocs/deallocs. The only member of <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> is a bam1_t object. Alloc/dealloc is taken care of by the constructor and destructor. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a176dac15321681fbcc9f3b21bde3da16"></a>
 <div class="memitem">
@@ -419,7 +418,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
       </table>
 </div><div class="memdoc">
 
-<p>Construct a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> manually from a name, sequence, cigar and location. </p>
+<p>Construct a <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> manually from a name, sequence, cigar and location. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>Name of the read </td></tr>
@@ -532,8 +531,8 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
       </table>
 </div><div class="memdoc">
 
-<p>Explicitly pass a bam1_t to the <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a>. </p>
-<p>The <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with an HTSLib bam1_t read. ">BamRecord</a> now controls the memory, and will delete at destruction </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Explicitly pass a bam1_t to the <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a>. </p>
+<p>The <a class="el" href="classSeqLib_1_1BamRecord.html" title="Class to store and interact with a SAM alignment record. ">BamRecord</a> now controls the memory, and will delete at destruction </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>An allocated bam1_t </td></tr>
   </table>
@@ -981,7 +980,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 23:01:39 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 25 2016 00:51:16 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

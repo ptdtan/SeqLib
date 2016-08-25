@@ -62,7 +62,7 @@
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;SeqLib/BamRecord.h&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;SeqLib/BamHeader.h&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;htslib/sam.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;SeqLib/UnalignedSequence.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define MEM_F_SOFTCLIP  0x200</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
@@ -81,119 +81,110 @@
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;KSEQ_DECLARE(gzFile)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;namespace <a class="code" href="namespaceSeqLib.html">SeqLib</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structSeqLib_1_1USeq.html">   34</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structSeqLib_1_1USeq.html">USeq</a> {</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structSeqLib_1_1USeq.html#a9b45b3e13bd9167aab02e17e08916231">   35</a></span>&#160;    std::string <a class="code" href="structSeqLib_1_1USeq.html#a9b45b3e13bd9167aab02e17e08916231">name</a>; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structSeqLib_1_1USeq.html#a8e62219608bc09631f7c28b9d654fd52">   36</a></span>&#160;    std::string <a class="code" href="structSeqLib_1_1USeq.html#a8e62219608bc09631f7c28b9d654fd52">seq</a>; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">typedef</span> std::vector&lt;USeq&gt; USeqVector; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html">   43</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSeqLib_1_1BWAWrapper.html">BWAWrapper</a> {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">   53</a></span>&#160;  <a class="code" href="classSeqLib_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">BWAWrapper</a>() { </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    memopt = mem_opt_init();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    memopt-&gt;flag |= MEM_F_SOFTCLIP;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSeqLib_1_1BWAWrapper.html">BWAWrapper</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">   45</a></span>&#160;  <a class="code" href="classSeqLib_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">BWAWrapper</a>() { </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    memopt = mem_opt_init();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    memopt-&gt;flag |= MEM_F_SOFTCLIP;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">   51</a></span>&#160;  <a class="code" href="classSeqLib_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">~BWAWrapper</a>() { </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (idx)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      bwa_idx_destroy(idx);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (memopt)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      free(memopt);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">   59</a></span>&#160;  <a class="code" href="classSeqLib_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">~BWAWrapper</a>() { </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (idx)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      bwa_idx_destroy(idx);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">if</span> (memopt)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      free(memopt);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  std::string ChrIDToName(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> HeaderFromIndex() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> alignSingleSequence(<span class="keyword">const</span> std::string&amp; seq, <span class="keyword">const</span> std::string&amp; name, BamRecordVector&amp; vec, <span class="keywordtype">bool</span> hardclip, </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                           <span class="keywordtype">double</span> keep_sec_with_frac_of_primary_score, <span class="keywordtype">int</span> max_secondary);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  std::string ChrIDToName(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> HeaderFromIndex() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> AlignSequence(<span class="keyword">const</span> std::string&amp; seq, <span class="keyword">const</span> std::string&amp; name, BamRecordVector&amp; vec, <span class="keywordtype">bool</span> hardclip, </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                           <span class="keywordtype">double</span> keep_sec_with_frac_of_primary_score, <span class="keywordtype">int</span> max_secondary);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> ConstructIndex(<span class="keyword">const</span> UnalignedSequenceVector&amp; v);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> constructIndex(<span class="keyword">const</span> USeqVector&amp; v);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordtype">bool</span> retrieveIndex(<span class="keyword">const</span> std::string&amp; file);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">bool</span> writeIndex(<span class="keyword">const</span> std::string&amp; index_name);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">bool</span> LoadIndex(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">bool</span> WriteIndex(<span class="keyword">const</span> std::string&amp; index_name);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#afb470412220686ca4f19d59969ba84b4">  101</a></span>&#160;  bwaidx_t* <a class="code" href="classSeqLib_1_1BWAWrapper.html#afb470412220686ca4f19d59969ba84b4">GetIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> idx; }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">int</span> NumSequences() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">  109</a></span>&#160;  bwaidx_t* <a class="code" href="classSeqLib_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">getIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> idx; }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BWAWrapper.html">BWAWrapper</a>&amp; b);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">int</span> NumSequences() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BWAWrapper.html">BWAWrapper</a>&amp; b);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">void</span> setGapOpen(<span class="keywordtype">int</span> gap_open);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordtype">void</span> setGapExtension(<span class="keywordtype">int</span> gap_ext);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <span class="keywordtype">void</span> setMismatchPenalty(<span class="keywordtype">int</span> m);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordtype">void</span> setReseedTrigger(<span class="keywordtype">float</span> r);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordtype">void</span> setBandwidth(<span class="keywordtype">int</span> w);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordtype">void</span> setZDropoff(<span class="keywordtype">int</span> z);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordtype">void</span> set3primeClippingPenalty(<span class="keywordtype">int</span> p);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordtype">void</span> set5primeClippingPenalty(<span class="keywordtype">int</span> p);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordtype">void</span> setAScore(<span class="keywordtype">int</span> a);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordtype">void</span> SetGapOpen(<span class="keywordtype">int</span> gap_open);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordtype">void</span> SetGapExtension(<span class="keywordtype">int</span> gap_ext);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">void</span> SetMismatchPenalty(<span class="keywordtype">int</span> m);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">void</span> SetReseedTrigger(<span class="keywordtype">float</span> r);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordtype">void</span> SetBandwidth(<span class="keywordtype">int</span> w);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordtype">void</span> SetZDropoff(<span class="keywordtype">int</span> z);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordtype">void</span> Set3primeClippingPenalty(<span class="keywordtype">int</span> p);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordtype">void</span> Set5primeClippingPenalty(<span class="keywordtype">int</span> p);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">void</span> SetAScore(<span class="keywordtype">int</span> a);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#aaef62c8761ddd1b95824fc57b1b277b5">  169</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BWAWrapper.html#aaef62c8761ddd1b95824fc57b1b277b5">IsEmpty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !idx; }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="comment">// Construct a bam_hdr_t from a header string </span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">  177</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">empty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !idx; }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <span class="comment">// Construct a bam_hdr_t from a header string </span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="comment">// Store the options in memory</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  mem_opt_t * memopt;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="comment">// hold the full index structure</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  bwaidx_t* idx = 0;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <span class="comment">// Convert a bns to a header string </span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  std::string bwa_print_sam_hdr2(<span class="keyword">const</span> bntseq_t *bns, <span class="keyword">const</span> <span class="keywordtype">char</span> *hdr_line) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  <span class="comment">// overwrite the bwa bwt_pac2pwt function</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  bwt_t *__bwt_pac2bwt(<span class="keyword">const</span> uint8_t *pac, <span class="keywordtype">int</span> bwt_seq_lenr);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="comment">// add an anns (chr annotation structure) </span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  bntann1_t* __add_to_anns(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; seq, bntann1_t * ann, <span class="keywordtype">size_t</span> offset);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="comment">// overwrite the bwa-mem add1 function, which takes a sequence and adds to pac</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  uint8_t* __add1(<span class="keyword">const</span> kseq_t *seq, bntseq_t *bns, uint8_t *pac, int64_t *m_pac, <span class="keywordtype">int</span> *m_seqs, <span class="keywordtype">int</span> *m_holes, bntamb1_t **q);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="comment">// make the pac structure (2-bit encoded packed sequence)</span></div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  uint8_t* __make_pac(<span class="keyword">const</span> USeqVector&amp; v, <span class="keywordtype">bool</span> for_only);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="comment">// write pac part of the index</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">void</span> __write_pac_to_file(<span class="keyword">const</span> std::string&amp; file);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="comment">// write the bns file of the index</span></div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  std::string print_bns();</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;};</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="classSeqLib_1_1BWAWrapper_html_a8d9790b13b354f5f661522156f4fc55d"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">SeqLib::BWAWrapper::BWAWrapper</a></div><div class="ttdeci">BWAWrapper()</div><div class="ttdoc">Create a new BWAWrapper. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:53</div></div>
-<div class="ttc" id="classSeqLib_1_1BWAWrapper_html_ac6e61de369e994009e36f344f99c15ad"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html#ac6e61de369e994009e36f344f99c15ad">SeqLib::BWAWrapper::empty</a></div><div class="ttdeci">bool empty() const </div><div class="ttdoc">Check if no sequences have been included. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:177</div></div>
-<div class="ttc" id="structSeqLib_1_1USeq_html_a9b45b3e13bd9167aab02e17e08916231"><div class="ttname"><a href="structSeqLib_1_1USeq.html#a9b45b3e13bd9167aab02e17e08916231">SeqLib::USeq::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">Name of the contig. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:35</div></div>
-<div class="ttc" id="classSeqLib_1_1BWAWrapper_html"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html">SeqLib::BWAWrapper</a></div><div class="ttdoc">Calls BWA-MEM on sequence queries and returns aligned reads, all in memory. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:43</div></div>
-<div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> BamStats.h:11</div></div>
-<div class="ttc" id="classSeqLib_1_1BWAWrapper_html_a5205d95c7b8d0db7818032c4c0baee93"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">SeqLib::BWAWrapper::~BWAWrapper</a></div><div class="ttdeci">~BWAWrapper()</div><div class="ttdoc">Destroy the BWAWrapper (deallocate index and options) </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:59</div></div>
-<div class="ttc" id="structSeqLib_1_1USeq_html"><div class="ttname"><a href="structSeqLib_1_1USeq.html">SeqLib::USeq</a></div><div class="ttdoc">Structure to hold unaligned sequence (name and bases) </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:34</div></div>
-<div class="ttc" id="structSeqLib_1_1USeq_html_a8e62219608bc09631f7c28b9d654fd52"><div class="ttname"><a href="structSeqLib_1_1USeq.html#a8e62219608bc09631f7c28b9d654fd52">SeqLib::USeq::seq</a></div><div class="ttdeci">std::string seq</div><div class="ttdoc">Sequence of the contig (upper-case ACTGN) </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:36</div></div>
-<div class="ttc" id="classSeqLib_1_1BWAWrapper_html_acb73aa5fc750eff0735bfcb90b9abd10"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html#acb73aa5fc750eff0735bfcb90b9abd10">SeqLib::BWAWrapper::getIndex</a></div><div class="ttdeci">bwaidx_t * getIndex() const </div><div class="ttdoc">Return the raw index. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:109</div></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="comment">// Store the options in memory</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  mem_opt_t * memopt;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <span class="comment">// hold the full index structure</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  bwaidx_t* idx = 0;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="comment">// Convert a bns to a header string </span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  std::string bwa_print_sam_hdr2(<span class="keyword">const</span> bntseq_t *bns, <span class="keyword">const</span> <span class="keywordtype">char</span> *hdr_line) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="comment">// overwrite the bwa bwt_pac2pwt function</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  bwt_t *__bwt_pac2bwt(<span class="keyword">const</span> uint8_t *pac, <span class="keywordtype">int</span> bwt_seq_lenr);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="comment">// add an anns (chr annotation structure) </span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  bntann1_t* __add_to_anns(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> std::string&amp; seq, bntann1_t * ann, <span class="keywordtype">size_t</span> offset);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="comment">// overwrite the bwa-mem add1 function, which takes a sequence and adds to pac</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  uint8_t* __add1(<span class="keyword">const</span> kseq_t *seq, bntseq_t *bns, uint8_t *pac, int64_t *m_pac, <span class="keywordtype">int</span> *m_seqs, <span class="keywordtype">int</span> *m_holes, bntamb1_t **q);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="comment">// make the pac structure (2-bit encoded packed sequence)</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  uint8_t* __make_pac(<span class="keyword">const</span> UnalignedSequenceVector&amp; v, <span class="keywordtype">bool</span> for_only);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="comment">// write pac part of the index</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">void</span> __write_pac_to_file(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="comment">// write the bns file of the index</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  std::string print_bns();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;};</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classSeqLib_1_1BWAWrapper_html_a8d9790b13b354f5f661522156f4fc55d"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html#a8d9790b13b354f5f661522156f4fc55d">SeqLib::BWAWrapper::BWAWrapper</a></div><div class="ttdeci">BWAWrapper()</div><div class="ttdoc">Create an empty BWA MEM interface. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:45</div></div>
+<div class="ttc" id="classSeqLib_1_1BWAWrapper_html"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html">SeqLib::BWAWrapper</a></div><div class="ttdoc">Calls BWA-MEM on sequence queries and returns aligned reads, all in memory. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:35</div></div>
+<div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
+<div class="ttc" id="classSeqLib_1_1BWAWrapper_html_a5205d95c7b8d0db7818032c4c0baee93"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html#a5205d95c7b8d0db7818032c4c0baee93">SeqLib::BWAWrapper::~BWAWrapper</a></div><div class="ttdeci">~BWAWrapper()</div><div class="ttdoc">Destroy the BWAWrapper (deallocate index and options) </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:51</div></div>
+<div class="ttc" id="classSeqLib_1_1BWAWrapper_html_afb470412220686ca4f19d59969ba84b4"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html#afb470412220686ca4f19d59969ba84b4">SeqLib::BWAWrapper::GetIndex</a></div><div class="ttdeci">bwaidx_t * GetIndex() const </div><div class="ttdoc">Return the raw index in bwaidx_t form. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:101</div></div>
+<div class="ttc" id="classSeqLib_1_1BWAWrapper_html_aaef62c8761ddd1b95824fc57b1b277b5"><div class="ttname"><a href="classSeqLib_1_1BWAWrapper.html#aaef62c8761ddd1b95824fc57b1b277b5">SeqLib::BWAWrapper::IsEmpty</a></div><div class="ttdeci">bool IsEmpty() const </div><div class="ttdoc">Check if the index is empty. </div><div class="ttdef"><b>Definition:</b> BWAWrapper.h:169</div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 24 2016 23:01:39 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 25 2016 00:51:16 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
