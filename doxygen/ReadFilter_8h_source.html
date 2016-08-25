@@ -370,59 +370,59 @@
 <div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  </div>
 <div class="line"><a name="l00457"></a><span class="lineno"><a class="line" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ac28566c0885235ee1570500c11446136">  457</a></span>&#160;  <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ac28566c0885235ee1570500c11446136">ReadFilterCollection</a>() {}</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;  <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ac28566c0885235ee1570500c11446136">ReadFilterCollection</a>(<span class="keyword">const</span> std::string&amp; script, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a>&amp; h);</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a9dc2173c6309dbce034a21bc3a4bb379">AddReadFilter</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilter.html">ReadFilter</a>&amp; rf);</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a48de8f2ead139b57ee7347d78aaac566">addGlobalRule</a>(<span class="keyword">const</span> std::string&amp; rule);</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a2f5f0a674a38bb284a737f92c7fd3038">isValid</a>(<a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r);</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;  </div>
-<div class="line"><a name="l00484"></a><span class="lineno"><a class="line" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a3cfd27a6f70e4f877aa8f4961ecc4e87">  484</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a3cfd27a6f70e4f877aa8f4961ecc4e87">CheckAllFilters</a>() { m_fall_through = <span class="keyword">true</span>; };</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#afde0780a26095c27a02996d27b206966">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html">ReadFilterCollection</a> &amp;mr);</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;  <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a26c2d7647c5976ee373c52a972164f2d">getAllRegions</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;</div>
-<div class="line"><a name="l00498"></a><span class="lineno"><a class="line" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#aac782da1f912bceb5d8ad00c8dc892ac">  498</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#aac782da1f912bceb5d8ad00c8dc892ac">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_regions.size(); } </div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div>
-<div class="line"><a name="l00505"></a><span class="lineno"><a class="line" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ae76ea068072d514b3a3f9a3a2f4a716c">  505</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ae76ea068072d514b3a3f9a3a2f4a716c">numRules</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    <span class="keywordtype">size_t</span> num = 0;</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : m_regions)</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;      num += it.size();</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    <span class="keywordflow">return</span> num;</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;  }</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;  <span class="comment">// Return the a tab-delimited tally of which filters were satisfied.</span></div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;   <span class="comment">// Includes the header:</span></div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;   <span class="comment">// total_seen_count total_passed_count region region_passed_count rule rule_passed_count</span></div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;   <span class="comment">//</span></div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;  <span class="comment">//std::string EmitCounts() const;</span></div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160; <span class="keyword">private</span>:  </div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;  <span class="comment">// the global rule that all other rules are inherited from</span></div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;  <a class="code" href="classSeqLib_1_1Filter_1_1AbstractRule.html">AbstractRule</a> rule_all;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;  <span class="keywordtype">size_t</span> m_count = 0; <span class="comment">// passed</span></div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;  <span class="keywordtype">size_t</span> m_count_seen = 0; <span class="comment">// tested</span></div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;  <span class="comment">// store all of the individual filters</span></div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;  std::vector&lt;ReadFilter&gt; m_regions;</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;  <span class="comment">// should we keep checking rules, even it passed? (useful for counting)</span></div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;  <span class="comment">// NEW set this to always on, for simplicity</span></div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;  <span class="keywordtype">bool</span> m_fall_through = <span class="keyword">true</span>; <span class="comment">//false;</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ac28566c0885235ee1570500c11446136">ReadFilterCollection</a>(<span class="keyword">const</span> std::string&amp; script, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a>&amp; h);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a9dc2173c6309dbce034a21bc3a4bb379">AddReadFilter</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilter.html">ReadFilter</a>&amp; rf);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a48de8f2ead139b57ee7347d78aaac566">addGlobalRule</a>(<span class="keyword">const</span> std::string&amp; rule);</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a2f5f0a674a38bb284a737f92c7fd3038">isValid</a>(<a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r);</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;  </div>
+<div class="line"><a name="l00488"></a><span class="lineno"><a class="line" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a3cfd27a6f70e4f877aa8f4961ecc4e87">  488</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a3cfd27a6f70e4f877aa8f4961ecc4e87">CheckAllFilters</a>() { m_fall_through = <span class="keyword">true</span>; };</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#afde0780a26095c27a02996d27b206966">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html">ReadFilterCollection</a> &amp;mr);</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;  <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a26c2d7647c5976ee373c52a972164f2d">getAllRegions</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div>
+<div class="line"><a name="l00502"></a><span class="lineno"><a class="line" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#aac782da1f912bceb5d8ad00c8dc892ac">  502</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#aac782da1f912bceb5d8ad00c8dc892ac">size</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_regions.size(); } </div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div>
+<div class="line"><a name="l00509"></a><span class="lineno"><a class="line" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ae76ea068072d514b3a3f9a3a2f4a716c">  509</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ae76ea068072d514b3a3f9a3a2f4a716c">numRules</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;    <span class="keywordtype">size_t</span> num = 0;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; it : m_regions)</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;      num += it.size();</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;    <span class="keywordflow">return</span> num;</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;  }</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;  <span class="comment">// Return the a tab-delimited tally of which filters were satisfied.</span></div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;   <span class="comment">// Includes the header:</span></div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;   <span class="comment">// total_seen_count total_passed_count region region_passed_count rule rule_passed_count</span></div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;   <span class="comment">//</span></div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;  <span class="comment">//std::string EmitCounts() const;</span></div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160; <span class="keyword">private</span>:  </div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;  <span class="comment">// the global rule that all other rules are inherited from</span></div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;  <a class="code" href="classSeqLib_1_1Filter_1_1AbstractRule.html">AbstractRule</a> rule_all;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;  <span class="keywordtype">size_t</span> m_count = 0; <span class="comment">// passed</span></div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;  <span class="keywordtype">size_t</span> m_count_seen = 0; <span class="comment">// tested</span></div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;  <span class="comment">// store all of the individual filters</span></div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;  std::vector&lt;ReadFilter&gt; m_regions;</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;  <span class="keywordtype">bool</span> ParseFilterObject(<span class="keyword">const</span> std::string&amp; filterName, <span class="keyword">const</span> Json::Value&amp; filterObject);</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;  <span class="keywordtype">bool</span> __validate_json_value(<span class="keyword">const</span> Json::Value value, <span class="keyword">const</span> std::unordered_set&lt;std::string&gt;&amp; valid_vals);</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;};</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;}</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;}</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;  <span class="comment">// should we keep checking rules, even it passed? (useful for counting)</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;  <span class="comment">// NEW set this to always on, for simplicity</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;  <span class="keywordtype">bool</span> m_fall_through = <span class="keyword">true</span>; <span class="comment">//false;</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;  <span class="keywordtype">bool</span> ParseFilterObject(<span class="keyword">const</span> std::string&amp; filterName, <span class="keyword">const</span> Json::Value&amp; filterObject);</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;  <span class="keywordtype">bool</span> __validate_json_value(<span class="keyword">const</span> Json::Value value, <span class="keyword">const</span> std::unordered_set&lt;std::string&gt;&amp; valid_vals);</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;};</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;}</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;}</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilterCollection_html_a48de8f2ead139b57ee7347d78aaac566"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a48de8f2ead139b57ee7347d78aaac566">SeqLib::Filter::ReadFilterCollection::addGlobalRule</a></div><div class="ttdeci">void addGlobalRule(const std::string &amp;rule)</div><div class="ttdoc">Provide a global rule set (applies to each filter) </div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1Flag_html_a4a08bd62f6d96a28aefa66c60cd095e8"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1Flag.html#a4a08bd62f6d96a28aefa66c60cd095e8">SeqLib::Filter::Flag::setOn</a></div><div class="ttdeci">void setOn()</div><div class="ttdoc">Set the flag to ON (require flag ON to pass) </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:90</div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilter_html"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilter.html">SeqLib::Filter::ReadFilter</a></div><div class="ttdoc">A set of AbstractRules on a region united by logi rules. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:351</div></div>
@@ -459,8 +459,8 @@
 <div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilterCollection_html_a9dc2173c6309dbce034a21bc3a4bb379"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a9dc2173c6309dbce034a21bc3a4bb379">SeqLib::Filter::ReadFilterCollection::AddReadFilter</a></div><div class="ttdeci">void AddReadFilter(const ReadFilter &amp;rf)</div><div class="ttdoc">Add a new rule to the collection. </div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1Flag_html_aa8948f467014247d40448d279755f3ab"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1Flag.html#aa8948f467014247d40448d279755f3ab">SeqLib::Filter::Flag::Flag</a></div><div class="ttdeci">Flag()</div><div class="ttdoc">Construct a new Flag with NA rule. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:84</div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1Flag_html"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1Flag.html">SeqLib::Filter::Flag</a></div><div class="ttdoc">Stores a rule for a single alignment flag. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:78</div></div>
-<div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilterCollection_html_a3cfd27a6f70e4f877aa8f4961ecc4e87"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a3cfd27a6f70e4f877aa8f4961ecc4e87">SeqLib::Filter::ReadFilterCollection::CheckAllFilters</a></div><div class="ttdeci">void CheckAllFilters()</div><div class="ttdoc">Set this collection to check all filters. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:484</div></div>
-<div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilterCollection_html_aac782da1f912bceb5d8ad00c8dc892ac"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#aac782da1f912bceb5d8ad00c8dc892ac">SeqLib::Filter::ReadFilterCollection::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdoc">Return the number of filters in this collection. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:498</div></div>
+<div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilterCollection_html_a3cfd27a6f70e4f877aa8f4961ecc4e87"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a3cfd27a6f70e4f877aa8f4961ecc4e87">SeqLib::Filter::ReadFilterCollection::CheckAllFilters</a></div><div class="ttdeci">void CheckAllFilters()</div><div class="ttdoc">Set this collection to check all filters. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:488</div></div>
+<div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilterCollection_html_aac782da1f912bceb5d8ad00c8dc892ac"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#aac782da1f912bceb5d8ad00c8dc892ac">SeqLib::Filter::ReadFilterCollection::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdoc">Return the number of filters in this collection. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:502</div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilter_html_a7a6e1a9b1512fb7f73bd81e1974e946c"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilter.html#a7a6e1a9b1512fb7f73bd81e1974e946c">SeqLib::Filter::ReadFilter::AddRule</a></div><div class="ttdeci">void AddRule(const AbstractRule &amp;ar)</div><div class="ttdoc">Add a rule to this filter. </div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilter_html_aec9a1448093e1a8829c487700d446c1d"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilter.html#aec9a1448093e1a8829c487700d446c1d">SeqLib::Filter::ReadFilter::ReadFilter</a></div><div class="ttdeci">ReadFilter()</div><div class="ttdoc">Construct an empty filter that passes all reads. </div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
@@ -474,7 +474,7 @@
 <div class="ttc" id="classSeqLib_1_1Filter_1_1AbstractRule_html"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1AbstractRule.html">SeqLib::Filter::AbstractRule</a></div><div class="ttdoc">Stores a full rule (Flag + Range + motif etc) </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:254</div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1FlagRule_html_a56c777f9b3183c59b2008a49c487d4bf"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1FlagRule.html#a56c777f9b3183c59b2008a49c487d4bf">SeqLib::Filter::FlagRule::dup</a></div><div class="ttdeci">Flag dup</div><div class="ttdoc">Filter for duplicated flag. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:209</div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1Flag_html_a9db3b754e4fda8b19e624ee3111b3925"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1Flag.html#a9db3b754e4fda8b19e624ee3111b3925">SeqLib::Filter::Flag::parseJson</a></div><div class="ttdeci">bool parseJson(const Json::Value &amp;value, const std::string &amp;name)</div><div class="ttdoc">Parse the Flag rule from a JSON entry. </div></div>
-<div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilterCollection_html_ae76ea068072d514b3a3f9a3a2f4a716c"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ae76ea068072d514b3a3f9a3a2f4a716c">SeqLib::Filter::ReadFilterCollection::numRules</a></div><div class="ttdeci">size_t numRules() const </div><div class="ttdoc">Return the total number of rules in this collection. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:505</div></div>
+<div class="ttc" id="classSeqLib_1_1Filter_1_1ReadFilterCollection_html_ae76ea068072d514b3a3f9a3a2f4a716c"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ae76ea068072d514b3a3f9a3a2f4a716c">SeqLib::Filter::ReadFilterCollection::numRules</a></div><div class="ttdeci">size_t numRules() const </div><div class="ttdoc">Return the total number of rules in this collection. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:509</div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1Flag_html_ab08fe2d200bd6fc849476f7bed16eddc"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1Flag.html#ab08fe2d200bd6fc849476f7bed16eddc">SeqLib::Filter::Flag::setNA</a></div><div class="ttdeci">void setNA()</div><div class="ttdoc">Set the flag to NA (pass alignment regardless of flag value) </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:87</div></div>
 <div class="ttc" id="structSeqLib_1_1Filter_1_1AhoCorasick_html_a3ff099b6f597fb0dfeb8e1827cf08fd5"><div class="ttname"><a href="structSeqLib_1_1Filter_1_1AhoCorasick.html#a3ff099b6f597fb0dfeb8e1827cf08fd5">SeqLib::Filter::AhoCorasick::TrieFromFile</a></div><div class="ttdeci">void TrieFromFile(const std::string &amp;f)</div><div class="ttdoc">Add a set of motifs to the trie from a file. </div></div>
 <div class="ttc" id="classSeqLib_1_1Filter_1_1AbstractRule_html_a98b479998bf6c29e0df194725356b719"><div class="ttname"><a href="classSeqLib_1_1Filter_1_1AbstractRule.html#a98b479998bf6c29e0df194725356b719">SeqLib::Filter::AbstractRule::SetRuleID</a></div><div class="ttdeci">void SetRuleID(const std::string &amp;s)</div><div class="ttdoc">Supply a name for this rule. </div><div class="ttdef"><b>Definition:</b> ReadFilter.h:295</div></div>
@@ -505,7 +505,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 25 2016 04:12:16 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 25 2016 04:36:18 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

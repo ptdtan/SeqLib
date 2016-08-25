@@ -68,9 +68,8 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#ac28566c0885235ee1570500c11446136">ReadFilterCollection</a> ()</td></tr>
 <tr class="memdesc:ac28566c0885235ee1570500c11446136"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty <a class="el" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a> that will pass all reads. <br /></td></tr>
 <tr class="separator:ac28566c0885235ee1570500c11446136"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fb1b37ee0306877fbc4f395c5917538"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fb1b37ee0306877fbc4f395c5917538"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a1fb1b37ee0306877fbc4f395c5917538">ReadFilterCollection</a> (const std::string &amp;script, const <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> &amp;h)</td></tr>
-<tr class="memdesc:a1fb1b37ee0306877fbc4f395c5917538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new filter collection directly from a JSON. <br /></td></tr>
+<tr class="memitem:a1fb1b37ee0306877fbc4f395c5917538"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a1fb1b37ee0306877fbc4f395c5917538">ReadFilterCollection</a> (const std::string &amp;script, const <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> &amp;h)</td></tr>
+<tr class="memdesc:a1fb1b37ee0306877fbc4f395c5917538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new filter collection directly from a JSON.  <a href="#a1fb1b37ee0306877fbc4f395c5917538">More...</a><br /></td></tr>
 <tr class="separator:a1fb1b37ee0306877fbc4f395c5917538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dc2173c6309dbce034a21bc3a4bb379"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html#a9dc2173c6309dbce034a21bc3a4bb379">AddReadFilter</a> (const <a class="el" href="classSeqLib_1_1Filter_1_1ReadFilter.html">ReadFilter</a> &amp;rf)</td></tr>
 <tr class="memdesc:a9dc2173c6309dbce034a21bc3a4bb379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new rule to the collection.  <a href="#a9dc2173c6309dbce034a21bc3a4bb379">More...</a><br /></td></tr>
@@ -106,7 +105,43 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A full set of rules across any number of regions. </p>
 <p>Stores the entire set of <a class="el" href="classSeqLib_1_1Filter_1_1ReadFilter.html" title="A set of AbstractRules on a region united by logi rules. ">ReadFilter</a>, each defined on a unique interval. A single <a class="el" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a> object is sufficient to store any combination of rules, and is the highest in the rule hierarchy. (<a class="el" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html" title="A full set of rules across any number of regions. ">ReadFilterCollection</a> stores <a class="el" href="classSeqLib_1_1Filter_1_1ReadFilter.html" title="A set of AbstractRules on a region united by logi rules. ">ReadFilter</a> stores AbstractRules stores FlagRule/Ranges). </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1fb1b37ee0306877fbc4f395c5917538"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSeqLib_1_1Filter_1_1ReadFilterCollection.html">ReadFilterCollection</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>script</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> &amp;&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new filter collection directly from a JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">script</td><td>A JSON file or directly as JSON formatted string </td></tr>
+    <tr><td class="paramname">h</td><td><a class="el" href="classSeqLib_1_1BamHeader.html" title="Store a header to a BAM file. ">BamHeader</a> to convert chr sequence to id  invalid_argument if cannot parse JSON </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a48de8f2ead139b57ee7347d78aaac566"></a>
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +261,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 25 2016 04:12:16 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 25 2016 04:36:18 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
