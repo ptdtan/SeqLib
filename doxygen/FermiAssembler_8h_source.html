@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>SeqLib: src/SeqLib/FermiAssembler.h Source File</title>
+<title>SeqLib: SeqLib/FermiAssembler.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,7 +43,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b9a7fa96e34e450ef45b4467ebea5311.html">SeqLib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_093b271990c51f543a34d8b3c2fe0e6c.html">SeqLib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,32 +95,38 @@
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classSeqLib_1_1FermiAssembler.html#a0232f511e3f777dd614d3a7ffd779718">GetContigs</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// reads to assemble</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    fseq1_t *m_seqs = 0;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::vector&lt;std::string&gt; m_names;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1FermiAssembler.html#a6f3cf6365f4fde5185ef277979adf3d1">DirectAssemble</a>(<span class="keywordtype">float</span> kcov);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1FermiAssembler.html#a07fdb93afc3cb0b5406127bf2af93616">AddReads</a>(<span class="keyword">const</span> UnalignedSequenceVector&amp; v);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// number of reads</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">size_t</span> n_seqs = 0;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">// number of contigs</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">int</span> n_utgs = 0;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">// options</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    fml_opt_t opt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// the unitigs</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    fml_utg_t *m_utgs = 0;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  };</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// reads to assemble</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    fseq1_t *m_seqs = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::vector&lt;std::string&gt; m_names;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// number of reads</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">size_t</span> n_seqs = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// number of contigs</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">int</span> n_utg = 0;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// options</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    fml_opt_t opt;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// the unitigs</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    fml_utg_t *m_utgs = 0;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  };</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSeqLib_1_1FermiAssembler_html_ac1aa2c23ba78171a975eca96c49cd912"><div class="ttname"><a href="classSeqLib_1_1FermiAssembler.html#ac1aa2c23ba78171a975eca96c49cd912">SeqLib::FermiAssembler::PerformAssembly</a></div><div class="ttdeci">void PerformAssembly()</div><div class="ttdoc">Perform the string graph assembly. </div></div>
 <div class="ttc" id="classSeqLib_1_1FermiAssembler_html_a7ee29cc5ee823edac2de5e43e2821104"><div class="ttname"><a href="classSeqLib_1_1FermiAssembler.html#a7ee29cc5ee823edac2de5e43e2821104">SeqLib::FermiAssembler::CorrectAndFilterReads</a></div><div class="ttdeci">void CorrectAndFilterReads()</div><div class="ttdoc">Peform k-mer based error correction of the reads in place. </div></div>
+<div class="ttc" id="classSeqLib_1_1FermiAssembler_html_a6f3cf6365f4fde5185ef277979adf3d1"><div class="ttname"><a href="classSeqLib_1_1FermiAssembler.html#a6f3cf6365f4fde5185ef277979adf3d1">SeqLib::FermiAssembler::DirectAssemble</a></div><div class="ttdeci">void DirectAssemble(float kcov)</div><div class="ttdoc">Perform assembly, without error correction. </div></div>
 <div class="ttc" id="classSeqLib_1_1FermiAssembler_html_aac350e4ad2554f2ae5557e307b47a740"><div class="ttname"><a href="classSeqLib_1_1FermiAssembler.html#aac350e4ad2554f2ae5557e307b47a740">SeqLib::FermiAssembler::FermiAssembler</a></div><div class="ttdeci">FermiAssembler()</div><div class="ttdoc">Create an empty FermiAssembler with default parameters. </div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
 <div class="ttc" id="classSeqLib_1_1FermiAssembler_html"><div class="ttname"><a href="classSeqLib_1_1FermiAssembler.html">SeqLib::FermiAssembler</a></div><div class="ttdoc">Sequence assembly using FermiKit from Heng Li. </div><div class="ttdef"><b>Definition:</b> FermiAssembler.h:21</div></div>
@@ -134,7 +140,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 28 2016 02:47:20 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 28 2016 22:42:27 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

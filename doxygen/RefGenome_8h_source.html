@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>SeqLib: src/SeqLib/RefGenome.h Source File</title>
+<title>SeqLib: SeqLib/RefGenome.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,7 +43,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b9a7fa96e34e450ef45b4467ebea5311.html">SeqLib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_093b271990c51f543a34d8b3c2fe0e6c.html">SeqLib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -58,48 +58,47 @@
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;htslib/faidx.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;htslib/htslib/faidx.h&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSeqLib.html">SeqLib</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html">   18</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSeqLib_1_1RefGenome.html">RefGenome</a> {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">   23</a></span>&#160;    <a class="code" href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a>() { index = <span class="keyword">nullptr</span>; }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">   26</a></span>&#160;    <a class="code" href="classSeqLib_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">~RefGenome</a>() { <span class="keywordflow">if</span> (index) fai_destroy(index); }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::string <a class="code" href="classSeqLib_1_1RefGenome.html#a16dd25889cf133d459bc3d6fe96ed20c">QueryRegion</a>(<span class="keyword">const</span> std::string&amp; chr_name, int32_t p1, int32_t p2) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1RefGenome.html#a5332a8236d1b6880d4f8c3e1e5453c88">LoadIndex</a>(<span class="keyword">const</span> std::string&amp; file);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#aaef62c8761ddd1b95824fc57b1b277b5">   45</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1RefGenome.html#aaef62c8761ddd1b95824fc57b1b277b5">IsEmpty</a>()<span class="keyword"> const </span>{ </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordflow">return</span> (index == <span class="keyword">nullptr</span>); </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    faidx_t * index;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  };</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSeqLib.html">SeqLib</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html">   17</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSeqLib_1_1RefGenome.html">RefGenome</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">   22</a></span>&#160;    <a class="code" href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a>() { index = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">   25</a></span>&#160;    <a class="code" href="classSeqLib_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">~RefGenome</a>() { <span class="keywordflow">if</span> (index) fai_destroy(index); }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string <a class="code" href="classSeqLib_1_1RefGenome.html#a16dd25889cf133d459bc3d6fe96ed20c">QueryRegion</a>(<span class="keyword">const</span> std::string&amp; chr_name, int32_t p1, int32_t p2) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1RefGenome.html#a5332a8236d1b6880d4f8c3e1e5453c88">LoadIndex</a>(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#aaef62c8761ddd1b95824fc57b1b277b5">   44</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1RefGenome.html#aaef62c8761ddd1b95824fc57b1b277b5">IsEmpty</a>()<span class="keyword"> const </span>{ </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span> (index == <span class="keyword">nullptr</span>); </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    faidx_t * index;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSeqLib_1_1RefGenome_html_a16dd25889cf133d459bc3d6fe96ed20c"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html#a16dd25889cf133d459bc3d6fe96ed20c">SeqLib::RefGenome::QueryRegion</a></div><div class="ttdeci">std::string QueryRegion(const std::string &amp;chr_name, int32_t p1, int32_t p2) const </div><div class="ttdoc">Query a region to get the sequence. </div></div>
-<div class="ttc" id="classSeqLib_1_1RefGenome_html_ad8c7b240ea48bb3dda25203d5614433e"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">SeqLib::RefGenome::RefGenome</a></div><div class="ttdeci">RefGenome()</div><div class="ttdoc">Create an empty RefGenome object. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:23</div></div>
+<div class="ttc" id="classSeqLib_1_1RefGenome_html_ad8c7b240ea48bb3dda25203d5614433e"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">SeqLib::RefGenome::RefGenome</a></div><div class="ttdeci">RefGenome()</div><div class="ttdoc">Create an empty RefGenome object. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:22</div></div>
 <div class="ttc" id="classSeqLib_1_1RefGenome_html_a5332a8236d1b6880d4f8c3e1e5453c88"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html#a5332a8236d1b6880d4f8c3e1e5453c88">SeqLib::RefGenome::LoadIndex</a></div><div class="ttdeci">bool LoadIndex(const std::string &amp;file)</div><div class="ttdoc">Load an indexed reference sequence. </div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
-<div class="ttc" id="classSeqLib_1_1RefGenome_html_aaef62c8761ddd1b95824fc57b1b277b5"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html#aaef62c8761ddd1b95824fc57b1b277b5">SeqLib::RefGenome::IsEmpty</a></div><div class="ttdeci">bool IsEmpty() const </div><div class="ttdoc">Check if reference has been loaded. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:45</div></div>
-<div class="ttc" id="classSeqLib_1_1RefGenome_html"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html">SeqLib::RefGenome</a></div><div class="ttdoc">Stores an indexed reference genome. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:18</div></div>
-<div class="ttc" id="classSeqLib_1_1RefGenome_html_aaf0d87996e072df1a809b015bee58fe8"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">SeqLib::RefGenome::~RefGenome</a></div><div class="ttdeci">~RefGenome()</div><div class="ttdoc">Destroy the malloc&#39;ed faidx_t index inside object. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:26</div></div>
+<div class="ttc" id="classSeqLib_1_1RefGenome_html_aaef62c8761ddd1b95824fc57b1b277b5"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html#aaef62c8761ddd1b95824fc57b1b277b5">SeqLib::RefGenome::IsEmpty</a></div><div class="ttdeci">bool IsEmpty() const </div><div class="ttdoc">Check if reference has been loaded. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:44</div></div>
+<div class="ttc" id="classSeqLib_1_1RefGenome_html"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html">SeqLib::RefGenome</a></div><div class="ttdoc">Stores an indexed reference genome. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:17</div></div>
+<div class="ttc" id="classSeqLib_1_1RefGenome_html_aaf0d87996e072df1a809b015bee58fe8"><div class="ttname"><a href="classSeqLib_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">SeqLib::RefGenome::~RefGenome</a></div><div class="ttdeci">~RefGenome()</div><div class="ttdoc">Destroy the malloc&#39;ed faidx_t index inside object. </div><div class="ttdef"><b>Definition:</b> RefGenome.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 28 2016 02:47:20 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 28 2016 22:42:27 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

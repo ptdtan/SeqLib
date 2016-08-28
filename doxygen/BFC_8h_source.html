@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>SeqLib: src/SeqLib/BFC.h Source File</title>
+<title>SeqLib: SeqLib/BFC.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -43,7 +43,7 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b9a7fa96e34e450ef45b4467ebea5311.html">SeqLib</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_093b271990c51f543a34d8b3c2fe0e6c.html">SeqLib</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -92,71 +92,77 @@
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BFC.html#a4085a8a1b064f6da03109651e7ab7611">FilterUnique</a>();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> learn_correct();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    bfc_opt_t bfc_opt;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BFC.html#aae81972f63ed11e87baf143251c7d21d">   60</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="classSeqLib_1_1BFC.html#aae81972f63ed11e87baf143251c7d21d">GetKCov</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> kcov; }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BFC.html#ac717f203b7ca6b367818d2957909bbe2">   63</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BFC.html#ac717f203b7ca6b367818d2957909bbe2">GetKMer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> kmer; }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// histogram of kmer occurences</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    uint64_t hist[256];</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// diff histogram of kmers??</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    uint64_t hist_high[64];</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> learn_correct();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    bfc_opt_t bfc_opt;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    uint64_t tot_len = 0;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    uint64_t sum_k = 0; <span class="comment">// total valid kmer count (kmers above min_count) ? </span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="comment">// total number of kmers?</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    uint64_t tot_k = 0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">float</span> kcov = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// histogram of kmer occurences</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    uint64_t hist[256];</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// diff histogram of kmers??</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    uint64_t hist_high[64];</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    uint64_t tot_len = 0;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    uint64_t sum_k = 0; <span class="comment">// total valid kmer count (kmers above min_count) ? </span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// reads to correct in place</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    fseq1_t * m_seqs = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// total number of kmers?</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    uint64_t tot_k = 0;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">// number of sequeces</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> n_seqs = 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">float</span> kcov = 0;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// fermi lite options</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    fml_opt_t fml_opt;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// reads to correct in place</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    fseq1_t * m_seqs = 0;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// vector of names</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    std::vector&lt;std::string&gt; m_names;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// number of sequeces</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> n_seqs = 0;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// vector of qualities</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::vector&lt;std::string&gt; m_qualities;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="comment">// fermi lite options</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    fml_opt_t fml_opt;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// assign names, qualities and seq to m_seqs</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> allocate_sequences_from_reads(<span class="keyword">const</span> BamRecordVector&amp; brv, <span class="keywordtype">bool</span> name_and_qual_too);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// do the actual read correction</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> correct_reads();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">// vector of names</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    std::vector&lt;std::string&gt; m_names;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">// vector of qualities</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::vector&lt;std::string&gt; m_qualities;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// 0 turns off filter uniq</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> flt_uniq = 0; <span class="comment">// from fml_correct call</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// assign names, qualities and seq to m_seqs</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> allocate_sequences_from_reads(<span class="keyword">const</span> BamRecordVector&amp; brv, <span class="keywordtype">bool</span> name_and_qual_too);</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> l_pre;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">// 0 is auto learn</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">int</span> kmer = 0;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// holds data after learning how to correct</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    bfc_ch_t *ch = 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="comment">// do the actual read correction</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> correct_reads();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">// 0 turns off filter uniq</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">int</span> flt_uniq = 0; <span class="comment">// from fml_correct call</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> l_pre;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// holds data for actual error correction</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    ec_step_t es;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  };</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// 0 is auto learn</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">int</span> kmer = 0;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">// holds data after learning how to correct</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    bfc_ch_t *ch = 0;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// holds data for actual error correction</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    ec_step_t es;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  };</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;   }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSeqLib_1_1BFC_html_ac03c6ee0577429cf9c112ebcc829539e"><div class="ttname"><a href="classSeqLib_1_1BFC.html#ac03c6ee0577429cf9c112ebcc829539e">SeqLib::BFC::BFC</a></div><div class="ttdeci">BFC()</div><div class="ttdoc">Construct a new BFC engine. </div><div class="ttdef"><b>Definition:</b> BFC.h:26</div></div>
 <div class="ttc" id="classSeqLib_1_1BFC_html_a21cfd075b8d2807e34d8ba31bb7f0830"><div class="ttname"><a href="classSeqLib_1_1BFC.html#a21cfd075b8d2807e34d8ba31bb7f0830">SeqLib::BFC::TrainCorrection</a></div><div class="ttdeci">void TrainCorrection(const BamRecordVector &amp;brv)</div><div class="ttdoc">Train error correction. </div></div>
 <div class="ttc" id="classSeqLib_1_1BFC_html_a0b0b9ce244440e08b4556d7d006c3a17"><div class="ttname"><a href="classSeqLib_1_1BFC.html#a0b0b9ce244440e08b4556d7d006c3a17">SeqLib::BFC::GetSequences</a></div><div class="ttdeci">void GetSequences(UnalignedSequenceVector &amp;v) const </div><div class="ttdoc">Return the reads (error corrected if ran ErrorCorrect) </div></div>
 <div class="ttc" id="classSeqLib_1_1BFC_html_a765ecc03b6b954cb2fae8ad05681254b"><div class="ttname"><a href="classSeqLib_1_1BFC.html#a765ecc03b6b954cb2fae8ad05681254b">SeqLib::BFC::TrainAndCorrect</a></div><div class="ttdeci">void TrainAndCorrect(const BamRecordVector &amp;brv)</div><div class="ttdoc">Train and error correction on same reads. </div></div>
+<div class="ttc" id="classSeqLib_1_1BFC_html_ac717f203b7ca6b367818d2957909bbe2"><div class="ttname"><a href="classSeqLib_1_1BFC.html#ac717f203b7ca6b367818d2957909bbe2">SeqLib::BFC::GetKMer</a></div><div class="ttdeci">int GetKMer() const </div><div class="ttdoc">Return the calculated kcov. </div><div class="ttdef"><b>Definition:</b> BFC.h:63</div></div>
+<div class="ttc" id="classSeqLib_1_1BFC_html_aae81972f63ed11e87baf143251c7d21d"><div class="ttname"><a href="classSeqLib_1_1BFC.html#aae81972f63ed11e87baf143251c7d21d">SeqLib::BFC::GetKCov</a></div><div class="ttdeci">float GetKCov() const </div><div class="ttdoc">Return the calculated kcov. </div><div class="ttdef"><b>Definition:</b> BFC.h:60</div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
 <div class="ttc" id="classSeqLib_1_1BFC_html"><div class="ttname"><a href="classSeqLib_1_1BFC.html">SeqLib::BFC</a></div><div class="ttdoc">Class to perform error-correction using BFC algorithm. </div><div class="ttdef"><b>Definition:</b> BFC.h:22</div></div>
 <div class="ttc" id="classSeqLib_1_1BFC_html_a23d39ba82de07b99b4feb6f92dbb8fe8"><div class="ttname"><a href="classSeqLib_1_1BFC.html#a23d39ba82de07b99b4feb6f92dbb8fe8">SeqLib::BFC::SetKmer</a></div><div class="ttdeci">void SetKmer(int k)</div><div class="ttdoc">Set the k-mer size. </div><div class="ttdef"><b>Definition:</b> BFC.h:36</div></div>
@@ -167,7 +173,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 28 2016 02:47:20 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Aug 28 2016 22:42:27 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
