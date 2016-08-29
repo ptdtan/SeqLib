@@ -31,6 +31,7 @@
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
@@ -114,7 +115,7 @@
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> (r.pos &gt;= available);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, <span class="keyword">const</span> PlottedReadLine &amp;r) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="namespaceJson.html#a7143f1a02d02dfdc823ecca4c1988101">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> PlottedReadLine &amp;r) {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> last_loc = 0;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : r.read_vec) {</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      assert(i-&gt;pos - last_loc &gt;= 0);</div>
@@ -140,6 +141,7 @@
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespaceJson_html_a7143f1a02d02dfdc823ecca4c1988101"><div class="ttname"><a href="namespaceJson.html#a7143f1a02d02dfdc823ecca4c1988101">Json::operator&lt;&lt;</a></div><div class="ttdeci">JSON_API JSONCPP_OSTREAM &amp; operator&lt;&lt;(JSONCPP_OSTREAM &amp;, const Value &amp;root)</div><div class="ttdoc">Output using the StyledStreamWriter. </div></div>
 <div class="ttc" id="classSeqLib_1_1GenomicRegion_html"><div class="ttname"><a href="classSeqLib_1_1GenomicRegion.html">SeqLib::GenomicRegion</a></div><div class="ttdoc">Container for an interval on the genome. </div><div class="ttdef"><b>Definition:</b> GenomicRegion.h:22</div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
 <div class="ttc" id="classSeqLib_1_1SeqPlot_html"><div class="ttname"><a href="classSeqLib_1_1SeqPlot.html">SeqLib::SeqPlot</a></div><div class="ttdoc">Object for creating ASCII alignment plots. </div><div class="ttdef"><b>Definition:</b> SeqPlot.h:10</div></div>
@@ -150,7 +152,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 29 2016 15:45:47 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 29 2016 16:01:46 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
