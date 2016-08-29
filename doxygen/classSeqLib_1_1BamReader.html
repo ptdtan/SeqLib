@@ -132,6 +132,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a> () const </td></tr>
 <tr class="memdesc:a35d6746546355da137905d6b7c17b15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the reader has opened the first file. <br /></td></tr>
 <tr class="separator:a35d6746546355da137905d6b7c17b15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d946a5b46be8acd9ca38fba53d0b60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#a39d946a5b46be8acd9ca38fba53d0b60">SetPreloadedIndex</a> (const std::string &amp;f, hts_idx_t *i)</td></tr>
+<tr class="memdesc:a39d946a5b46be8acd9ca38fba53d0b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pre-loaded raw index.  <a href="#a39d946a5b46be8acd9ca38fba53d0b60">More...</a><br /></td></tr>
+<tr class="separator:a39d946a5b46be8acd9ca38fba53d0b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3546b17a8a49b5b56a3e3267a57075be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">IsOpen</a> (const std::string &amp;f) const </td></tr>
 <tr class="memdesc:a3546b17a8a49b5b56a3e3267a57075be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the reader has opened the file.  <a href="#a3546b17a8a49b5b56a3e3267a57075be">More...</a><br /></td></tr>
 <tr class="separator:a3546b17a8a49b5b56a3e3267a57075be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -568,6 +571,43 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
+<a class="anchor" id="a39d946a5b46be8acd9ca38fba53d0b60"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SetPreloadedIndex </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">hts_idx_t *&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set pre-loaded raw index. </p>
+<p>Provide the reader with an index structure that is already loaded. This is useful if there are multiple newly created <a class="el" href="classSeqLib_1_1BamReader.html" title="Walk along a BAM/SAM/CRAM/STDIN and stream in reads. ">BamReader</a> objects that use the same index (e.g. make a BAM index in a loop) </p><dl class="section note"><dt>Note</dt><dd>This does not make a copy, so ops on this index are shared with every other object that controls it. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Pointer to an HTSlib index </td></tr>
+    <tr><td class="paramname">f</td><td>Name of the file to set index for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the file f is controlled by this object </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aa135005ea40457125cfcb18780ff589b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -626,7 +666,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 28 2016 22:42:27 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 29 2016 15:45:47 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

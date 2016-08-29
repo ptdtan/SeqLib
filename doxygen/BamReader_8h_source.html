@@ -121,132 +121,141 @@
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    GRC* m_region; <span class="comment">// local copy of region</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    std::shared_ptr&lt;htsFile&gt; fp;     <span class="comment">// BAM file pointer</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    std::shared_ptr&lt;hts_idx_t&gt; idx;  <span class="comment">// bam index</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::shared_ptr&lt;hts_itr_t&gt; hts_itr; <span class="comment">// iterator to index location</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    std::string m_in;                   <span class="comment">// file name</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    BamHeader m_hdr;                    <span class="comment">// the BAM header</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// set a pre-loaded index (save on loading each time)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> set_index(hts_idx_t *  i) { idx = std::shared_ptr&lt;hts_idx_t&gt;(i, idx_delete()); }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// set a pre-loaded index and make a deep copy</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> deep_set_index();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    GRC* m_region; <span class="comment">// local copy of region</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// the next read &quot;slotted&quot; for this BAM</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    BamRecord next_read;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// the next read &quot;slot&quot; is empty</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> empty = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// if set to true, then won&#39;t even attempt to lookup read</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> mark_for_closure = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// open the file pointer</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">bool</span> open_BAM_for_reading();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// hold the reference for CRAM reading</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    std::string m_cram_reference;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// which region are we on</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">size_t</span> m_region_idx = 0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::shared_ptr&lt;htsFile&gt; fp;     <span class="comment">// BAM file pointer</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::shared_ptr&lt;hts_idx_t&gt; idx;  <span class="comment">// bam index</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    std::shared_ptr&lt;hts_itr_t&gt; hts_itr; <span class="comment">// iterator to index location</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::string m_in;                   <span class="comment">// file name</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    BamHeader m_hdr;                    <span class="comment">// the BAM header</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// the next read &quot;slotted&quot; for this BAM</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    BamRecord next_read;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="comment">// the next read &quot;slot&quot; is empty</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">bool</span> empty = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// if set to true, then won&#39;t even attempt to lookup read</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> mark_for_closure = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// open the file pointer</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> open_BAM_for_reading();</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// point index to this region of bam</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordtype">bool</span> __set_region(<span class="keyword">const</span> GenomicRegion&amp; gp);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// hold the reference for CRAM reading</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    std::string m_cram_reference;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  };</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">class </span>BamReader {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <a class="code" href="classSeqLib_1_1BamReader.html#ac0b04f384b7e5eb72ff1e43fb4c413e2">BamReader</a>();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a3dc1d89a4822279b5a3ac75f75bb151d">  117</a></span>&#160;  <a class="code" href="classSeqLib_1_1BamReader.html#a3dc1d89a4822279b5a3ac75f75bb151d">~BamReader</a>() { }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamReader.html#a36101d2b2274e9681d0299be6f84dd40">SetCramReference</a>(<span class="keyword">const</span> std::string&amp; ref);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aa135005ea40457125cfcb18780ff589b">SetRegion</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1GenomicRegion.html">GenomicRegion</a>&amp; gp);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aac7ebbdc1833e628562a56a0b780b068">SetMultipleRegions</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a>&amp; grc);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">  151</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (m_bams.size()) <span class="keywordflow">return</span> m_bams.begin()-&gt;second.fp != 0; <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">  156</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">IsOpen</a>(<span class="keyword">const</span> std::string&amp; f)<span class="keyword"> const </span>{ </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    std::unordered_map&lt;std::string, _Bam&gt;::const_iterator ff = m_bams.find(f);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">if</span> (ff == m_bams.end())</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">return</span> ff-&gt;second.fp != 0; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aef7e3d18ef267f23f64ad397fa359cc1">Close</a>();</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aef7e3d18ef267f23f64ad397fa359cc1">Close</a>(<span class="keyword">const</span> std::string&amp; f);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">// which region are we on</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">size_t</span> m_region_idx = 0;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">// point index to this region of bam</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span> __set_region(<span class="keyword">const</span> GenomicRegion&amp; gp);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  };</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">class </span>BamReader {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="classSeqLib_1_1BamReader.html#ac0b04f384b7e5eb72ff1e43fb4c413e2">BamReader</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a3dc1d89a4822279b5a3ac75f75bb151d">  123</a></span>&#160;  <a class="code" href="classSeqLib_1_1BamReader.html#a3dc1d89a4822279b5a3ac75f75bb151d">~BamReader</a>() { }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamReader.html#a36101d2b2274e9681d0299be6f84dd40">SetCramReference</a>(<span class="keyword">const</span> std::string&amp; ref);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aa135005ea40457125cfcb18780ff589b">SetRegion</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1GenomicRegion.html">GenomicRegion</a>&amp; gp);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aac7ebbdc1833e628562a56a0b780b068">SetMultipleRegions</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a>&amp; grc);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">  157</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (m_bams.size()) <span class="keywordflow">return</span> m_bams.begin()-&gt;second.fp != 0; <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a39d946a5b46be8acd9ca38fba53d0b60">SetPreloadedIndex</a>(<span class="keyword">const</span> std::string&amp; f, hts_idx_t * i);</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>(<span class="keyword">const</span> std::string&amp; f);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#ae8433e275bdc2f823bda717f2d190249">  181</a></span>&#160;  std::vector&lt;std::string&gt; <a class="code" href="classSeqLib_1_1BamReader.html#ae8433e275bdc2f823bda717f2d190249">ListFiles</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    std::vector&lt;std::string&gt; out;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : m_bams)</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      out.push_back(i.first);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  std::string <a class="code" href="classSeqLib_1_1BamReader.html#a98eeb525f16ecea9433b85b3681f5659">PrintRegions</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSeqLib_1_1BamReader.html#abfc0fade10544dabd50ac480ec38f7d2">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamReader.html">BamReader</a>&amp; b);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#ad7c149099d91a0672d40d128cb8388f4">Open</a>(<span class="keyword">const</span> std::string&amp; bam);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#ad7c149099d91a0672d40d128cb8388f4">Open</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; bams);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a857b005f80d24e07cc98f9e8e64c4050">GetNextRecord</a>(<a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamReader.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>();</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">  220</a></span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> <a class="code" href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">Header</a>()<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (m_bams.size()) <span class="keywordflow">return</span> m_bams.begin()-&gt;second.m_hdr; <span class="keywordflow">return</span> <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a>(); }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="comment">// regions to walk</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a> m_region;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">  175</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">IsOpen</a>(<span class="keyword">const</span> std::string&amp; f)<span class="keyword"> const </span>{ </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    std::unordered_map&lt;std::string, _Bam&gt;::const_iterator ff = m_bams.find(f);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">if</span> (ff == m_bams.end())</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">return</span> ff-&gt;second.fp != 0; </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aef7e3d18ef267f23f64ad397fa359cc1">Close</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aef7e3d18ef267f23f64ad397fa359cc1">Close</a>(<span class="keyword">const</span> std::string&amp; f);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>(<span class="keyword">const</span> std::string&amp; f);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#ae8433e275bdc2f823bda717f2d190249">  200</a></span>&#160;  std::vector&lt;std::string&gt; <a class="code" href="classSeqLib_1_1BamReader.html#ae8433e275bdc2f823bda717f2d190249">ListFiles</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    std::vector&lt;std::string&gt; out;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; i : m_bams)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      out.push_back(i.first);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  std::string <a class="code" href="classSeqLib_1_1BamReader.html#a98eeb525f16ecea9433b85b3681f5659">PrintRegions</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classSeqLib_1_1BamReader.html#abfc0fade10544dabd50ac480ec38f7d2">operator&lt;&lt;</a>(std::ostream&amp; out, <span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamReader.html">BamReader</a>&amp; b);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#ad7c149099d91a0672d40d128cb8388f4">Open</a>(<span class="keyword">const</span> std::string&amp; bam);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#ad7c149099d91a0672d40d128cb8388f4">Open</a>(<span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; bams);</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="comment">// store the file pointers etc to BAM files</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  std::unordered_map&lt;std::string, _Bam&gt; m_bams;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="comment">// hold the reference for CRAM reading</span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  std::string m_cram_reference;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;};</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a857b005f80d24e07cc98f9e8e64c4050">GetNextRecord</a>(<a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r);</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;}</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#endif </span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSeqLib_1_1BamReader.html#a372de693ad40b3f42839c8ec6ac845f4">Reset</a>();</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">  239</a></span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> <a class="code" href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">Header</a>()<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (m_bams.size()) <span class="keywordflow">return</span> m_bams.begin()-&gt;second.m_hdr; <span class="keywordflow">return</span> <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a>(); }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="comment">// regions to walk</span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a> m_region;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="comment">// store the file pointers etc to BAM files</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  std::unordered_map&lt;std::string, _Bam&gt; m_bams;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">// hold the reference for CRAM reading</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  std::string m_cram_reference;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;};</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_ac0b04f384b7e5eb72ff1e43fb4c413e2"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ac0b04f384b7e5eb72ff1e43fb4c413e2">SeqLib::BamReader::BamReader</a></div><div class="ttdeci">BamReader()</div><div class="ttdoc">Construct an empty BamReader. </div></div>
 <div class="ttc" id="classSeqLib_1_1GenomicRegionCollection_html"><div class="ttname"><a href="classSeqLib_1_1GenomicRegionCollection.html">SeqLib::GenomicRegionCollection&lt; GenomicRegion &gt;</a></div></div>
 <div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with a SAM alignment record. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:199</div></div>
-<div class="ttc" id="classSeqLib_1_1BamReader_html_ac253cbffbaf4502cf74c1a8c8f576f00"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">SeqLib::BamReader::Header</a></div><div class="ttdeci">BamHeader Header() const </div><div class="ttdoc">Return a header to the first file. </div><div class="ttdef"><b>Definition:</b> BamReader.h:220</div></div>
+<div class="ttc" id="classSeqLib_1_1BamReader_html_ac253cbffbaf4502cf74c1a8c8f576f00"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">SeqLib::BamReader::Header</a></div><div class="ttdeci">BamHeader Header() const </div><div class="ttdoc">Return a header to the first file. </div><div class="ttdef"><b>Definition:</b> BamReader.h:239</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_aac7ebbdc1833e628562a56a0b780b068"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#aac7ebbdc1833e628562a56a0b780b068">SeqLib::BamReader::SetMultipleRegions</a></div><div class="ttdeci">bool SetMultipleRegions(const GRC &amp;grv)</div><div class="ttdoc">Set up multiple regions. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamReader_html_ae8433e275bdc2f823bda717f2d190249"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ae8433e275bdc2f823bda717f2d190249">SeqLib::BamReader::ListFiles</a></div><div class="ttdeci">std::vector&lt; std::string &gt; ListFiles() const </div><div class="ttdoc">Return a vector of all of the BAM/SAM/CRAMs in this reader. </div><div class="ttdef"><b>Definition:</b> BamReader.h:181</div></div>
+<div class="ttc" id="classSeqLib_1_1BamReader_html_ae8433e275bdc2f823bda717f2d190249"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ae8433e275bdc2f823bda717f2d190249">SeqLib::BamReader::ListFiles</a></div><div class="ttdeci">std::vector&lt; std::string &gt; ListFiles() const </div><div class="ttdoc">Return a vector of all of the BAM/SAM/CRAMs in this reader. </div><div class="ttdef"><b>Definition:</b> BamReader.h:200</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a98eeb525f16ecea9433b85b3681f5659"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a98eeb525f16ecea9433b85b3681f5659">SeqLib::BamReader::PrintRegions</a></div><div class="ttdeci">std::string PrintRegions() const </div><div class="ttdoc">Create a string representation of all of the regions to walk. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a36101d2b2274e9681d0299be6f84dd40"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a36101d2b2274e9681d0299be6f84dd40">SeqLib::BamReader::SetCramReference</a></div><div class="ttdeci">bool SetCramReference(const std::string &amp;ref)</div><div class="ttdoc">Explicitly set a reference genome to be used to decode CRAM file. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamReader_html_a35d6746546355da137905d6b7c17b15d"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">SeqLib::BamReader::IsOpen</a></div><div class="ttdeci">bool IsOpen() const </div><div class="ttdoc">Return if the reader has opened the first file. </div><div class="ttdef"><b>Definition:</b> BamReader.h:151</div></div>
+<div class="ttc" id="classSeqLib_1_1BamReader_html_a35d6746546355da137905d6b7c17b15d"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">SeqLib::BamReader::IsOpen</a></div><div class="ttdeci">bool IsOpen() const </div><div class="ttdoc">Return if the reader has opened the first file. </div><div class="ttdef"><b>Definition:</b> BamReader.h:157</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_abfc0fade10544dabd50ac480ec38f7d2"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#abfc0fade10544dabd50ac480ec38f7d2">SeqLib::BamReader::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const BamReader &amp;b)</div><div class="ttdoc">Print out some basic info about this reader. </div></div>
 <div class="ttc" id="classSeqLib_1_1GenomicRegion_html"><div class="ttname"><a href="classSeqLib_1_1GenomicRegion.html">SeqLib::GenomicRegion</a></div><div class="ttdoc">Container for an interval on the genome. </div><div class="ttdef"><b>Definition:</b> GenomicRegion.h:22</div></div>
-<div class="ttc" id="classSeqLib_1_1BamReader_html_a3dc1d89a4822279b5a3ac75f75bb151d"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a3dc1d89a4822279b5a3ac75f75bb151d">SeqLib::BamReader::~BamReader</a></div><div class="ttdeci">~BamReader()</div><div class="ttdoc">Destroy a BamReader and close all connections to the BAMs. </div><div class="ttdef"><b>Definition:</b> BamReader.h:117</div></div>
+<div class="ttc" id="classSeqLib_1_1BamReader_html_a3dc1d89a4822279b5a3ac75f75bb151d"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a3dc1d89a4822279b5a3ac75f75bb151d">SeqLib::BamReader::~BamReader</a></div><div class="ttdeci">~BamReader()</div><div class="ttdoc">Destroy a BamReader and close all connections to the BAMs. </div><div class="ttdef"><b>Definition:</b> BamReader.h:123</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a857b005f80d24e07cc98f9e8e64c4050"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a857b005f80d24e07cc98f9e8e64c4050">SeqLib::BamReader::GetNextRecord</a></div><div class="ttdeci">bool GetNextRecord(BamRecord &amp;r)</div><div class="ttdoc">Retrieve the next read from the BAM. </div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a372de693ad40b3f42839c8ec6ac845f4"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a372de693ad40b3f42839c8ec6ac845f4">SeqLib::BamReader::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">Reset all the counters and regions, but keep the loaded index. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html"><div class="ttname"><a href="classSeqLib_1_1BamReader.html">SeqLib::BamReader</a></div><div class="ttdoc">Walk along a BAM/SAM/CRAM/STDIN and stream in reads. </div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:20</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_aa135005ea40457125cfcb18780ff589b"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#aa135005ea40457125cfcb18780ff589b">SeqLib::BamReader::SetRegion</a></div><div class="ttdeci">bool SetRegion(const GenomicRegion &amp;gp)</div><div class="ttdoc">Set a part of the BAM/CRAM (ie able to be indexed) to walk. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_aef7e3d18ef267f23f64ad397fa359cc1"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#aef7e3d18ef267f23f64ad397fa359cc1">SeqLib::BamReader::Close</a></div><div class="ttdeci">bool Close()</div><div class="ttdoc">Close all of the BAMs. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamReader_html_a3546b17a8a49b5b56a3e3267a57075be"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">SeqLib::BamReader::IsOpen</a></div><div class="ttdeci">bool IsOpen(const std::string &amp;f) const </div><div class="ttdoc">Return if the reader has opened the file. </div><div class="ttdef"><b>Definition:</b> BamReader.h:156</div></div>
+<div class="ttc" id="classSeqLib_1_1BamReader_html_a39d946a5b46be8acd9ca38fba53d0b60"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a39d946a5b46be8acd9ca38fba53d0b60">SeqLib::BamReader::SetPreloadedIndex</a></div><div class="ttdeci">bool SetPreloadedIndex(const std::string &amp;f, hts_idx_t *i)</div><div class="ttdoc">Set pre-loaded raw index. </div></div>
+<div class="ttc" id="classSeqLib_1_1BamReader_html_a3546b17a8a49b5b56a3e3267a57075be"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">SeqLib::BamReader::IsOpen</a></div><div class="ttdeci">bool IsOpen(const std::string &amp;f) const </div><div class="ttdoc">Return if the reader has opened the file. </div><div class="ttdef"><b>Definition:</b> BamReader.h:175</div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:38</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_ad7c149099d91a0672d40d128cb8388f4"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ad7c149099d91a0672d40d128cb8388f4">SeqLib::BamReader::Open</a></div><div class="ttdeci">bool Open(const std::string &amp;bam)</div><div class="ttdoc">Open a BAM file for streaming in. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Aug 28 2016 22:42:27 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 29 2016 15:45:47 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
