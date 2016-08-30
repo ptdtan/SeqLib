@@ -80,18 +80,18 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="classSeqLib_1_1BamHeader.html">BamHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BWAWrapper.html#a99fcdd8e92bef8120df73a993443e618">HeaderFromIndex</a> () const </td></tr>
 <tr class="memdesc:a99fcdd8e92bef8120df73a993443e618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a <a class="el" href="classSeqLib_1_1BamHeader.html" title="Store a header to a BAM file. ">BamHeader</a> from the loaded index files. <br /></td></tr>
 <tr class="separator:a99fcdd8e92bef8120df73a993443e618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ed3a25525f38f1ee21c5ae3c3761ee3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BWAWrapper.html#a2ed3a25525f38f1ee21c5ae3c3761ee3">AlignSequence</a> (const std::string &amp;seq, const std::string &amp;name, BamRecordVector &amp;vec, bool hardclip, double keep_sec_with_frac_of_primary_score, int max_secondary)</td></tr>
-<tr class="memdesc:a2ed3a25525f38f1ee21c5ae3c3761ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a BWA-MEM alignment of a single sequnece, and store hits in BamReadVector.  <a href="#a2ed3a25525f38f1ee21c5ae3c3761ee3">More...</a><br /></td></tr>
-<tr class="separator:a2ed3a25525f38f1ee21c5ae3c3761ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae06f6b4edfb0b4c65796e708b7ef7c3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BWAWrapper.html#ae06f6b4edfb0b4c65796e708b7ef7c3d">AlignSequence</a> (const std::string &amp;seq, const std::string &amp;name, BamRecordVector &amp;vec, bool hardclip, double keep_sec_with_frac_of_primary_score, int max_secondary) const </td></tr>
+<tr class="memdesc:ae06f6b4edfb0b4c65796e708b7ef7c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a BWA-MEM alignment of a single sequnece, and store hits in BamReadVector.  <a href="#ae06f6b4edfb0b4c65796e708b7ef7c3d">More...</a><br /></td></tr>
+<tr class="separator:ae06f6b4edfb0b4c65796e708b7ef7c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7b7ba5930011d63947a1d39151387a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BWAWrapper.html#a3e7b7ba5930011d63947a1d39151387a">ConstructIndex</a> (const UnalignedSequenceVector &amp;v)</td></tr>
 <tr class="memdesc:a3e7b7ba5930011d63947a1d39151387a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new bwa index for this object.  <a href="#a3e7b7ba5930011d63947a1d39151387a">More...</a><br /></td></tr>
 <tr class="separator:a3e7b7ba5930011d63947a1d39151387a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5332a8236d1b6880d4f8c3e1e5453c88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BWAWrapper.html#a5332a8236d1b6880d4f8c3e1e5453c88">LoadIndex</a> (const std::string &amp;file)</td></tr>
 <tr class="memdesc:a5332a8236d1b6880d4f8c3e1e5453c88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a bwa index object from disk.  <a href="#a5332a8236d1b6880d4f8c3e1e5453c88">More...</a><br /></td></tr>
 <tr class="separator:a5332a8236d1b6880d4f8c3e1e5453c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2668eecd826950adb5bd56862f7cdf72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BWAWrapper.html#a2668eecd826950adb5bd56862f7cdf72">WriteIndex</a> (const std::string &amp;index_name)</td></tr>
-<tr class="memdesc:a2668eecd826950adb5bd56862f7cdf72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump the stored index to files.  <a href="#a2668eecd826950adb5bd56862f7cdf72">More...</a><br /></td></tr>
-<tr class="separator:a2668eecd826950adb5bd56862f7cdf72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31880c09819394f1356f8b172e205ee8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BWAWrapper.html#a31880c09819394f1356f8b172e205ee8">WriteIndex</a> (const std::string &amp;index_name) const </td></tr>
+<tr class="memdesc:a31880c09819394f1356f8b172e205ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump the stored index to files.  <a href="#a31880c09819394f1356f8b172e205ee8">More...</a><br /></td></tr>
+<tr class="separator:a31880c09819394f1356f8b172e205ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb470412220686ca4f19d59969ba84b4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb470412220686ca4f19d59969ba84b4"></a>
 bwaidx_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BWAWrapper.html#afb470412220686ca4f19d59969ba84b4">GetIndex</a> () const </td></tr>
 <tr class="memdesc:afb470412220686ca4f19d59969ba84b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the raw index in bwaidx_t form. <br /></td></tr>
@@ -169,7 +169,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a2ed3a25525f38f1ee21c5ae3c3761ee3"></a>
+<a class="anchor" id="ae06f6b4edfb0b4c65796e708b7ef7c3d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -212,7 +212,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -602,7 +602,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
-<a class="anchor" id="a2668eecd826950adb5bd56862f7cdf72"></a>
+<a class="anchor" id="a31880c09819394f1356f8b172e205ee8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -611,7 +611,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>index_name</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -634,7 +634,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 29 2016 23:14:59 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 30 2016 02:49:52 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

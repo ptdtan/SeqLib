@@ -104,13 +104,13 @@
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> HeaderFromIndex() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> AlignSequence(<span class="keyword">const</span> std::string&amp; seq, <span class="keyword">const</span> std::string&amp; name, BamRecordVector&amp; vec, <span class="keywordtype">bool</span> hardclip, </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                           <span class="keywordtype">double</span> keep_sec_with_frac_of_primary_score, <span class="keywordtype">int</span> max_secondary);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                           <span class="keywordtype">double</span> keep_sec_with_frac_of_primary_score, <span class="keywordtype">int</span> max_secondary) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> ConstructIndex(<span class="keyword">const</span> UnalignedSequenceVector&amp; v);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">bool</span> LoadIndex(<span class="keyword">const</span> std::string&amp; file);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">bool</span> WriteIndex(<span class="keyword">const</span> std::string&amp; index_name);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">bool</span> WriteIndex(<span class="keyword">const</span> std::string&amp; index_name) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BWAWrapper.html#afb470412220686ca4f19d59969ba84b4">  101</a></span>&#160;  bwaidx_t* <a class="code" href="classSeqLib_1_1BWAWrapper.html#afb470412220686ca4f19d59969ba84b4">GetIndex</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> idx; }</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
@@ -165,7 +165,7 @@
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  uint8_t* __make_pac(<span class="keyword">const</span> UnalignedSequenceVector&amp; v, <span class="keywordtype">bool</span> for_only);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="comment">// write pac part of the index</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">void</span> __write_pac_to_file(<span class="keyword">const</span> std::string&amp; file);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">void</span> __write_pac_to_file(<span class="keyword">const</span> std::string&amp; file) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="comment">// write the bns file of the index</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  std::string print_bns();</div>
@@ -185,7 +185,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 29 2016 23:14:58 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 30 2016 02:49:52 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
