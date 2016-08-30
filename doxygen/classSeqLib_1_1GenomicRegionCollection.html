@@ -165,9 +165,9 @@ const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#acf78fb9915edeeadc03a35962582f0ff">Concat</a> (const <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html">GenomicRegionCollection</a>&lt; T &gt; &amp;g)</td></tr>
 <tr class="memdesc:acf78fb9915edeeadc03a35962582f0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add two <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> objects together. <br /></td></tr>
 <tr class="separator:acf78fb9915edeeadc03a35962582f0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89feb02bcb6e72de6b1091190ede868a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a89feb02bcb6e72de6b1091190ede868a">AsBEDString</a> () const </td></tr>
-<tr class="memdesc:a89feb02bcb6e72de6b1091190ede868a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> to a BED format.  <a href="#a89feb02bcb6e72de6b1091190ede868a">More...</a><br /></td></tr>
-<tr class="separator:a89feb02bcb6e72de6b1091190ede868a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d5c9e5c6f8210b201823a2d42059d6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a89d5c9e5c6f8210b201823a2d42059d6">AsBEDString</a> (const <a class="el" href="classSeqLib_1_1BamHeader.html">BamHeader</a> &amp;h) const </td></tr>
+<tr class="memdesc:a89d5c9e5c6f8210b201823a2d42059d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> to a BED format.  <a href="#a89d5c9e5c6f8210b201823a2d42059d6">More...</a><br /></td></tr>
+<tr class="separator:a89d5c9e5c6f8210b201823a2d42059d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ccfa0016144e18dd4d1cc1ee5e92de4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a7ccfa0016144e18dd4d1cc1ee5e92de4">GetNextGenomicRegion</a> (T &amp;gr)</td></tr>
 <tr class="memdesc:a7ccfa0016144e18dd4d1cc1ee5e92de4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the next <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a> object.  <a href="#a7ccfa0016144e18dd4d1cc1ee5e92de4">More...</a><br /></td></tr>
 <tr class="separator:a7ccfa0016144e18dd4d1cc1ee5e92de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -311,21 +311,28 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a89feb02bcb6e72de6b1091190ede868a"></a>
+<a class="anchor" id="a89d5c9e5c6f8210b201823a2d42059d6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">std::string AsBEDString </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classSeqLib_1_1BamHeader.html">BamHeader</a> &amp;&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Output the <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> to a BED format. </p>
-<p>Currently just outputs chr pos pos2 with no header. </p><dl class="section return"><dt>Returns</dt><dd>BED formated string reprsentation </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>Header to convert id to chromosome name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>BED formated string reprsentation </dd></dl>
 
 </div>
 </div>
@@ -672,7 +679,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 30 2016 21:02:05 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 30 2016 21:27:09 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
