@@ -69,6 +69,23 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BFC.html#ac03c6ee0577429cf9c112ebcc829539e">BFC</a> ()</td></tr>
 <tr class="memdesc:ac03c6ee0577429cf9c112ebcc829539e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classSeqLib_1_1BFC.html" title="Class to perform error-correction using BFC algorithm. ">BFC</a> engine. <br /></td></tr>
 <tr class="separator:ac03c6ee0577429cf9c112ebcc829539e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74dde716540e49716ddd7252fa853121"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BFC.html#a74dde716540e49716ddd7252fa853121">AllocateMemory</a> (size_t n)</td></tr>
+<tr class="memdesc:a74dde716540e49716ddd7252fa853121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a block of memory for the reads if the amount to enter is known.  <a href="#a74dde716540e49716ddd7252fa853121">More...</a><br /></td></tr>
+<tr class="separator:a74dde716540e49716ddd7252fa853121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698bf936143131a3bce0e3943c902702"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a698bf936143131a3bce0e3943c902702"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorCorrect</b> ()</td></tr>
+<tr class="separator:a698bf936143131a3bce0e3943c902702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac677ce3f4b245f8426f87ec46459bda9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac677ce3f4b245f8426f87ec46459bda9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Train</b> ()</td></tr>
+<tr class="separator:ac677ce3f4b245f8426f87ec46459bda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a894b3d971bfcadd13eccc95f73897a00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a894b3d971bfcadd13eccc95f73897a00"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BFC.html#a894b3d971bfcadd13eccc95f73897a00">AddSequence</a> (const char *seq, const char *qual, const char *name)</td></tr>
+<tr class="memdesc:a894b3d971bfcadd13eccc95f73897a00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a sequence for either training or correction. <br /></td></tr>
+<tr class="separator:a894b3d971bfcadd13eccc95f73897a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb31f275eb61754113dfef15a4ebfc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aacb31f275eb61754113dfef15a4ebfc0"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BFC.html#aacb31f275eb61754113dfef15a4ebfc0">AddSequence</a> (const char *seq, const char *qual)</td></tr>
+<tr class="memdesc:aacb31f275eb61754113dfef15a4ebfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a sequence for either training or correction. <br /></td></tr>
+<tr class="separator:aacb31f275eb61754113dfef15a4ebfc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d39ba82de07b99b4feb6f92dbb8fe8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23d39ba82de07b99b4feb6f92dbb8fe8"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BFC.html#a23d39ba82de07b99b4feb6f92dbb8fe8">SetKmer</a> (int k)</td></tr>
 <tr class="memdesc:a23d39ba82de07b99b4feb6f92dbb8fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the k-mer size. <br /></td></tr>
@@ -120,6 +137,25 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <div class="textblock"><p>Class to perform error-correction using <a class="el" href="classSeqLib_1_1BFC.html" title="Class to perform error-correction using BFC algorithm. ">BFC</a> algorithm. </p>
 <p><a class="el" href="classSeqLib_1_1BFC.html" title="Class to perform error-correction using BFC algorithm. ">BFC</a> is designed and implemented by Heng Li (<a href="https://github.com/lh3/bfc">https://github.com/lh3/bfc</a>). From Heng: It is a variant of the classical spectrum alignment algorithm introduced by Pevzner et al (2001). It uses an exhaustive search to find a k-mer path through a read that minimizeds a heuristic objective function jointly considering penalities on correction, quality and k-mer support. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a74dde716540e49716ddd7252fa853121"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AllocateMemory </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate a block of memory for the reads if the amount to enter is known. </p>
+<dl class="section note"><dt>Note</dt><dd>This is not necessary, as reads will dynamically reallocate </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a6a9c58391f001ae42f75fc1f5877cb99"></a>
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +221,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 30 2016 21:27:09 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 30 2016 22:07:14 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
