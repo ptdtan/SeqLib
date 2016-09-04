@@ -152,7 +152,7 @@
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  };</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">typedef</span> std::tr1::unordered_map&lt;std::string, _Bam&gt; _BamMap;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keyword">typedef</span> SeqHashMap&lt;std::string, _Bam&gt; _BamMap;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">class </span>BamReader {</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
@@ -175,7 +175,7 @@
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a46c085d98a891e42377aa9b8f7f5415e">SetPreloadedIndex</a>(SharedIndex&amp; i);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
 <div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">  173</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a3546b17a8a49b5b56a3e3267a57075be">IsOpen</a>(<span class="keyword">const</span> std::string&amp; f)<span class="keyword"> const </span>{ </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    std::tr1::unordered_map&lt;std::string, _Bam&gt;::const_iterator ff = m_bams.find(f);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    SeqHashMap&lt;std::string, _Bam&gt;::const_iterator ff = m_bams.find(f);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (ff == m_bams.end())</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">return</span> ff-&gt;second.fp != 0; </div>
@@ -228,7 +228,7 @@
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_ac0b04f384b7e5eb72ff1e43fb4c413e2"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ac0b04f384b7e5eb72ff1e43fb4c413e2">SeqLib::BamReader::BamReader</a></div><div class="ttdeci">BamReader()</div><div class="ttdoc">Construct an empty BamReader. </div></div>
 <div class="ttc" id="classSeqLib_1_1GenomicRegionCollection_html"><div class="ttname"><a href="classSeqLib_1_1GenomicRegionCollection.html">SeqLib::GenomicRegionCollection&lt; GenomicRegion &gt;</a></div></div>
-<div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with a SAM alignment record. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:205</div></div>
+<div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with a SAM alignment record. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:200</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_ac253cbffbaf4502cf74c1a8c8f576f00"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">SeqLib::BamReader::Header</a></div><div class="ttdeci">BamHeader Header() const </div><div class="ttdoc">Return a header to the first file. </div><div class="ttdef"><b>Definition:</b> BamReader.h:237</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_aac7ebbdc1833e628562a56a0b780b068"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#aac7ebbdc1833e628562a56a0b780b068">SeqLib::BamReader::SetMultipleRegions</a></div><div class="ttdeci">bool SetMultipleRegions(const GRC &amp;grv)</div><div class="ttdoc">Set up multiple regions. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_ae8433e275bdc2f823bda717f2d190249"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ae8433e275bdc2f823bda717f2d190249">SeqLib::BamReader::ListFiles</a></div><div class="ttdeci">std::vector&lt; std::string &gt; ListFiles() const </div><div class="ttdoc">Return a vector of all of the BAM/SAM/CRAMs in this reader. </div><div class="ttdef"><b>Definition:</b> BamReader.h:198</div></div>
@@ -251,7 +251,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 4 2016 21:24:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 4 2016 21:30:14 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
