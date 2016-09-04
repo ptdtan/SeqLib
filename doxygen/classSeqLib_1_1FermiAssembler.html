@@ -82,15 +82,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef05c97314da5992ae6b4d69ff45f7c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#aef05c97314da5992ae6b4d69ff45f7c2">ClearContigs</a> ()</td></tr>
 <tr class="memdesc:aef05c97314da5992ae6b4d69ff45f7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all of the contigs and deallocate memory.  <a href="#aef05c97314da5992ae6b4d69ff45f7c2">More...</a><br /></td></tr>
 <tr class="separator:aef05c97314da5992ae6b4d69ff45f7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54bdf5bb4ee810bd873bc1db67422b14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54bdf5bb4ee810bd873bc1db67422b14"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#a54bdf5bb4ee810bd873bc1db67422b14">CorrectReads</a> ()</td></tr>
-<tr class="memdesc:a54bdf5bb4ee810bd873bc1db67422b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peform k-mer based error correction of the reads in place. <br /></td></tr>
+<tr class="memitem:a54bdf5bb4ee810bd873bc1db67422b14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#a54bdf5bb4ee810bd873bc1db67422b14">CorrectReads</a> ()</td></tr>
+<tr class="memdesc:a54bdf5bb4ee810bd873bc1db67422b14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peform Bloom filter error correction of the reads in place.  <a href="#a54bdf5bb4ee810bd873bc1db67422b14">More...</a><br /></td></tr>
 <tr class="separator:a54bdf5bb4ee810bd873bc1db67422b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed72e57604a5e483a273f0297894c94b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aed72e57604a5e483a273f0297894c94b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> ()</td></tr>
-<tr class="separator:aed72e57604a5e483a273f0297894c94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ee29cc5ee823edac2de5e43e2821104"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#a7ee29cc5ee823edac2de5e43e2821104">CorrectAndFilterReads</a> ()</td></tr>
-<tr class="memdesc:a7ee29cc5ee823edac2de5e43e2821104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peform k-mer based error correction of the reads in place.  <a href="#a7ee29cc5ee823edac2de5e43e2821104">More...</a><br /></td></tr>
+<tr class="memdesc:a7ee29cc5ee823edac2de5e43e2821104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peform Bloom filter error correction of the reads in place.  <a href="#a7ee29cc5ee823edac2de5e43e2821104">More...</a><br /></td></tr>
 <tr class="separator:a7ee29cc5ee823edac2de5e43e2821104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad32995327584323399fa82fda8b89965"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad32995327584323399fa82fda8b89965"></a>
 UnalignedSequenceVector&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#ad32995327584323399fa82fda8b89965">GetSequences</a> () const </td></tr>
@@ -107,8 +103,17 @@ std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bott
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#a6f3cf6365f4fde5185ef277979adf3d1">DirectAssemble</a> (float kcov)</td></tr>
 <tr class="memdesc:a6f3cf6365f4fde5185ef277979adf3d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform assembly, without error correction. <br /></td></tr>
 <tr class="separator:a6f3cf6365f4fde5185ef277979adf3d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c50c36e45800571018e9481a7a80f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44c50c36e45800571018e9481a7a80f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#a44c50c36e45800571018e9481a7a80f9">SetMinOverlap</a> (uint32_t m)</td></tr>
+<tr class="memdesc:a44c50c36e45800571018e9481a7a80f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum overlap between reads during string graph construction. <br /></td></tr>
+<tr class="separator:a44c50c36e45800571018e9481a7a80f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb7a8d544a18e018871a81f5f9a7923"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cb7a8d544a18e018871a81f5f9a7923"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#a5cb7a8d544a18e018871a81f5f9a7923">GetMinOverlap</a> () const </td></tr>
+<tr class="memdesc:a5cb7a8d544a18e018871a81f5f9a7923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the minimum overlap parameter for this assembler. <br /></td></tr>
+<tr class="separator:a5cb7a8d544a18e018871a81f5f9a7923"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a458e398f1d55527858a2494d57488a96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a458e398f1d55527858a2494d57488a96"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddReads</b> (const UnalignedSequenceVector &amp;v)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1FermiAssembler.html#a458e398f1d55527858a2494d57488a96">AddReads</a> (const UnalignedSequenceVector &amp;v)</td></tr>
+<tr class="memdesc:a458e398f1d55527858a2494d57488a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a set of unaligned sequences to stage for assembly. <br /></td></tr>
 <tr class="separator:a458e398f1d55527858a2494d57488a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -188,8 +193,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>AddReads</b> (const U
       </table>
 </div><div class="memdoc">
 
-<p>Peform k-mer based error correction of the reads in place. </p>
+<p>Peform Bloom filter error correction of the reads in place. </p>
 <p>Also remove unique reads. </p>
+
+</div>
+</div>
+<a class="anchor" id="a54bdf5bb4ee810bd873bc1db67422b14"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CorrectReads </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Peform Bloom filter error correction of the reads in place. </p>
 
 </div>
 </div>
@@ -217,7 +239,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>AddReads</b> (const U
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 1 2016 20:57:06 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 4 2016 21:24:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

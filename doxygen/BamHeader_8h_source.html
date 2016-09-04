@@ -60,103 +60,99 @@
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;htslib/htslib/bgzf.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;htslib/htslib/kstring.h&quot;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;tr1/memory&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//#include &lt;unordered_map&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;tr1/unordered_map&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::tr1::shared_ptr;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::tr1::unordered_map;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSeqLib.html">SeqLib</a> {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structSeqLib_1_1HeaderSequence.html">   24</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structSeqLib_1_1HeaderSequence.html">HeaderSequence</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structSeqLib_1_1HeaderSequence.html#a689578541e13c8e843f02828e9f6de69">   30</a></span>&#160;  <a class="code" href="structSeqLib_1_1HeaderSequence.html#a689578541e13c8e843f02828e9f6de69">HeaderSequence</a>(<span class="keyword">const</span> std::string&amp; n, uint32_t l) : <a class="code" href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">Name</a>(n), <a class="code" href="structSeqLib_1_1HeaderSequence.html#af8d8a0e464944d6e219e87ef2f33d2e0">Length</a>(l) {}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;SeqLib/SeqLibUtils.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceSeqLib.html">SeqLib</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structSeqLib_1_1HeaderSequence.html">   18</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structSeqLib_1_1HeaderSequence.html">HeaderSequence</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structSeqLib_1_1HeaderSequence.html#a689578541e13c8e843f02828e9f6de69">   24</a></span>&#160;  <a class="code" href="structSeqLib_1_1HeaderSequence.html#a689578541e13c8e843f02828e9f6de69">HeaderSequence</a>(<span class="keyword">const</span> std::string&amp; n, uint32_t l) : <a class="code" href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">Name</a>(n), <a class="code" href="structSeqLib_1_1HeaderSequence.html#af8d8a0e464944d6e219e87ef2f33d2e0">Length</a>(l) {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">   26</a></span>&#160;    std::string <a class="code" href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">Name</a>; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structSeqLib_1_1HeaderSequence.html#af8d8a0e464944d6e219e87ef2f33d2e0">   27</a></span>&#160;    uint32_t <a class="code" href="structSeqLib_1_1HeaderSequence.html#af8d8a0e464944d6e219e87ef2f33d2e0">Length</a>; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">typedef</span> std::vector&lt;HeaderSequence&gt; HeaderSequenceVector;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">   32</a></span>&#160;    std::string <a class="code" href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">Name</a>; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structSeqLib_1_1HeaderSequence.html#af8d8a0e464944d6e219e87ef2f33d2e0">   33</a></span>&#160;    uint32_t <a class="code" href="structSeqLib_1_1HeaderSequence.html#af8d8a0e464944d6e219e87ef2f33d2e0">Length</a>; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">typedef</span> std::vector&lt;HeaderSequence&gt; HeaderSequenceVector;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html">   43</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">   51</a></span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>() {};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> std::string&amp; hdr);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> bam_hdr_t * hdr);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">NumSequences</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#acbf14dc35c8ce8b36cd2261cc2d324c9">GetSequenceLength</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#acbf14dc35c8ce8b36cd2261cc2d324c9">GetSequenceLength</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a35d6746546355da137905d6b7c17b15d">   77</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamHeader.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h != 0; }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    std::string <a class="code" href="classSeqLib_1_1BamHeader.html#acab86c9bb272bbb0b1638f0dd8d284db">AsString</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    std::string <a class="code" href="classSeqLib_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">IDtoName</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">   92</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h.get() == 0; }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a17e798032baf4852ba77a31a44d54baf">   95</a></span>&#160;    <span class="keyword">const</span> bam_hdr_t* <span class="keyword">get</span>() <span class="keyword">const</span> { <span class="keywordflow">return</span> h.get(); }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a2d18d0c52c5bfaa429d4641c3bad6ce9">   98</a></span>&#160;    bam_hdr_t* <a class="code" href="classSeqLib_1_1BamHeader.html#a2d18d0c52c5bfaa429d4641c3bad6ce9">get_</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h.get(); }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">Name2ID</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    HeaderSequenceVector <a class="code" href="classSeqLib_1_1BamHeader.html#ad858fbab50227d0a79af3849421f1e02">GetHeaderSequenceVector</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="comment">// adapted from sam.c - bam_nam2id</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">int</span> bam_name2id_2(<span class="keyword">const</span> bam_hdr_t *h, <span class="keyword">const</span> <span class="keywordtype">char</span> *ref) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    shared_ptr&lt;bam_hdr_t&gt; h;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">// make the name 2 id map (to be used by Name2ID)</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">// replaces part of bam_name2id that makes the hash table</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> ConstructName2IDTable();</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="comment">// hash table for name to id</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    shared_ptr&lt;unordered_map&lt;std::string, int&gt; &gt; n2i;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="comment">// adapted from sam_hdr_read</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  };</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html">   37</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">   45</a></span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>() {};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> HeaderSequenceVector&amp; hsv);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> std::string&amp; hdr);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">BamHeader</a>(<span class="keyword">const</span> bam_hdr_t * hdr);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">NumSequences</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#acbf14dc35c8ce8b36cd2261cc2d324c9">GetSequenceLength</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#acbf14dc35c8ce8b36cd2261cc2d324c9">GetSequenceLength</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a35d6746546355da137905d6b7c17b15d">   76</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamHeader.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h != 0; }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    std::string <a class="code" href="classSeqLib_1_1BamHeader.html#acab86c9bb272bbb0b1638f0dd8d284db">AsString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    std::string <a class="code" href="classSeqLib_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">IDtoName</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">   91</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">isEmpty</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h.get() == 0; }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a17e798032baf4852ba77a31a44d54baf">   94</a></span>&#160;    <span class="keyword">const</span> bam_hdr_t* <span class="keyword">get</span>() <span class="keyword">const</span> { <span class="keywordflow">return</span> h.get(); }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamHeader.html#a2d18d0c52c5bfaa429d4641c3bad6ce9">   97</a></span>&#160;    bam_hdr_t* <a class="code" href="classSeqLib_1_1BamHeader.html#a2d18d0c52c5bfaa429d4641c3bad6ce9">get_</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> h.get(); }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classSeqLib_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">Name2ID</a>(<span class="keyword">const</span> std::string&amp; name) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    HeaderSequenceVector <a class="code" href="classSeqLib_1_1BamHeader.html#ad858fbab50227d0a79af3849421f1e02">GetHeaderSequenceVector</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// adapted from sam.c - bam_nam2id</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">int</span> bam_name2id_2(<span class="keyword">const</span> bam_hdr_t *h, <span class="keyword">const</span> <span class="keywordtype">char</span> *ref) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    SeqPointer&lt;bam_hdr_t&gt; h;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="comment">// make the name 2 id map (to be used by Name2ID)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">// replaces part of bam_name2id that makes the hash table</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> ConstructName2IDTable();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="comment">// hash table for name to id</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    SeqPointer&lt;SeqHashMap&lt;std::string, int&gt; &gt; n2i;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">// adapted from sam_hdr_read</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    bam_hdr_t* sam_hdr_read2(<span class="keyword">const</span> std::string&amp; hdr) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  };</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html_a47f10ce5225465821ecbccd17cf09648"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a47f10ce5225465821ecbccd17cf09648">SeqLib::BamHeader::NumSequences</a></div><div class="ttdeci">int NumSequences() const </div><div class="ttdoc">Return the number of sequences store in this dictionary Returns 0 if header is unitialized. </div></div>
-<div class="ttc" id="structSeqLib_1_1HeaderSequence_html_adc852f586959ce13117d737cf3f14899"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">SeqLib::HeaderSequence::Name</a></div><div class="ttdeci">std::string Name</div><div class="ttdoc">Name of the sequence (eg "1") </div><div class="ttdef"><b>Definition:</b> BamHeader.h:32</div></div>
-<div class="ttc" id="classSeqLib_1_1BamHeader_html_a35d6746546355da137905d6b7c17b15d"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a35d6746546355da137905d6b7c17b15d">SeqLib::BamHeader::IsOpen</a></div><div class="ttdeci">bool IsOpen() const </div><div class="ttdoc">Return if the header has been opened. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:77</div></div>
+<div class="ttc" id="structSeqLib_1_1HeaderSequence_html_adc852f586959ce13117d737cf3f14899"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html#adc852f586959ce13117d737cf3f14899">SeqLib::HeaderSequence::Name</a></div><div class="ttdeci">std::string Name</div><div class="ttdoc">Name of the sequence (eg "1") </div><div class="ttdef"><b>Definition:</b> BamHeader.h:26</div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_a35d6746546355da137905d6b7c17b15d"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a35d6746546355da137905d6b7c17b15d">SeqLib::BamHeader::IsOpen</a></div><div class="ttdeci">bool IsOpen() const </div><div class="ttdoc">Return if the header has been opened. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:76</div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html_acbf14dc35c8ce8b36cd2261cc2d324c9"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#acbf14dc35c8ce8b36cd2261cc2d324c9">SeqLib::BamHeader::GetSequenceLength</a></div><div class="ttdeci">int GetSequenceLength(int id) const </div><div class="ttdoc">Return the length of the sequence. </div></div>
-<div class="ttc" id="structSeqLib_1_1HeaderSequence_html"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html">SeqLib::HeaderSequence</a></div><div class="ttdoc">Store a reference chromosome and its length. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:24</div></div>
-<div class="ttc" id="structSeqLib_1_1HeaderSequence_html_af8d8a0e464944d6e219e87ef2f33d2e0"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html#af8d8a0e464944d6e219e87ef2f33d2e0">SeqLib::HeaderSequence::Length</a></div><div class="ttdeci">uint32_t Length</div><div class="ttdoc">Length of the sequence (eg LN:191469) </div><div class="ttdef"><b>Definition:</b> BamHeader.h:33</div></div>
-<div class="ttc" id="structSeqLib_1_1HeaderSequence_html_a689578541e13c8e843f02828e9f6de69"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html#a689578541e13c8e843f02828e9f6de69">SeqLib::HeaderSequence::HeaderSequence</a></div><div class="ttdeci">HeaderSequence(const std::string &amp;n, uint32_t l)</div><div class="ttdoc">Make a new header sequence. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:30</div></div>
-<div class="ttc" id="classSeqLib_1_1BamHeader_html_ac837e0bba5c95698ed712ba7b02bb612"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">SeqLib::BamHeader::BamHeader</a></div><div class="ttdeci">BamHeader()</div><div class="ttdoc">Initializes a new empty BamHeader with no data. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:51</div></div>
+<div class="ttc" id="structSeqLib_1_1HeaderSequence_html"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html">SeqLib::HeaderSequence</a></div><div class="ttdoc">Store a reference chromosome and its length. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:18</div></div>
+<div class="ttc" id="structSeqLib_1_1HeaderSequence_html_af8d8a0e464944d6e219e87ef2f33d2e0"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html#af8d8a0e464944d6e219e87ef2f33d2e0">SeqLib::HeaderSequence::Length</a></div><div class="ttdeci">uint32_t Length</div><div class="ttdoc">Length of the sequence (eg LN:191469) </div><div class="ttdef"><b>Definition:</b> BamHeader.h:27</div></div>
+<div class="ttc" id="structSeqLib_1_1HeaderSequence_html_a689578541e13c8e843f02828e9f6de69"><div class="ttname"><a href="structSeqLib_1_1HeaderSequence.html#a689578541e13c8e843f02828e9f6de69">SeqLib::HeaderSequence::HeaderSequence</a></div><div class="ttdeci">HeaderSequence(const std::string &amp;n, uint32_t l)</div><div class="ttdoc">Make a new header sequence. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:24</div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_ac837e0bba5c95698ed712ba7b02bb612"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#ac837e0bba5c95698ed712ba7b02bb612">SeqLib::BamHeader::BamHeader</a></div><div class="ttdeci">BamHeader()</div><div class="ttdoc">Initializes a new empty BamHeader with no data. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:45</div></div>
 <div class="ttc" id="namespaceSeqLib_html"><div class="ttname"><a href="namespaceSeqLib.html">SeqLib</a></div><div class="ttdef"><b>Definition:</b> bak.BamReader.h:16</div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html_ad858fbab50227d0a79af3849421f1e02"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#ad858fbab50227d0a79af3849421f1e02">SeqLib::BamHeader::GetHeaderSequenceVector</a></div><div class="ttdeci">HeaderSequenceVector GetHeaderSequenceVector() const </div><div class="ttdoc">Return the reference sequences as vector of HeaderSequence objects. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamHeader_html_a2d18d0c52c5bfaa429d4641c3bad6ce9"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a2d18d0c52c5bfaa429d4641c3bad6ce9">SeqLib::BamHeader::get_</a></div><div class="ttdeci">bam_hdr_t * get_() const </div><div class="ttdoc">Return the raw bam_hdr_t. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:98</div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_a2d18d0c52c5bfaa429d4641c3bad6ce9"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a2d18d0c52c5bfaa429d4641c3bad6ce9">SeqLib::BamHeader::get_</a></div><div class="ttdeci">bam_hdr_t * get_() const </div><div class="ttdoc">Return the raw bam_hdr_t. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:97</div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html_adc564ce14f8a66fbebd7cc5bed40ccfb"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#adc564ce14f8a66fbebd7cc5bed40ccfb">SeqLib::BamHeader::Name2ID</a></div><div class="ttdeci">int Name2ID(const std::string &amp;name) const </div><div class="ttdoc">Get the numeric ID associated with a sequence name. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamHeader_html_a479432127ee77145cc19d6a2d1590821"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">SeqLib::BamHeader::isEmpty</a></div><div class="ttdeci">bool isEmpty() const </div><div class="ttdoc">Check if the header has been initialized. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:92</div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html_a479432127ee77145cc19d6a2d1590821"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#a479432127ee77145cc19d6a2d1590821">SeqLib::BamHeader::isEmpty</a></div><div class="ttdeci">bool isEmpty() const </div><div class="ttdoc">Check if the header has been initialized. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:91</div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html_afe1b3321a8153237a0512f6c87c4c20c"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#afe1b3321a8153237a0512f6c87c4c20c">SeqLib::BamHeader::IDtoName</a></div><div class="ttdeci">std::string IDtoName(int id) const </div><div class="ttdoc">Convert a numeric sequence ID to a name. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamHeader_html_acab86c9bb272bbb0b1638f0dd8d284db"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html#acab86c9bb272bbb0b1638f0dd8d284db">SeqLib::BamHeader::AsString</a></div><div class="ttdeci">std::string AsString() const </div><div class="ttdoc">Return the full text of the header. </div></div>
-<div class="ttc" id="classSeqLib_1_1BamHeader_html"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:43</div></div>
+<div class="ttc" id="classSeqLib_1_1BamHeader_html"><div class="ttname"><a href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a></div><div class="ttdoc">Store a header to a BAM file. </div><div class="ttdef"><b>Definition:</b> BamHeader.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 1 2016 20:57:06 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 4 2016 21:24:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

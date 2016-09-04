@@ -67,7 +67,7 @@
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">   22</a></span>&#160;    <a class="code" href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a>() { index = <span class="keyword">nullptr</span>; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">   22</a></span>&#160;    <a class="code" href="classSeqLib_1_1RefGenome.html#ad8c7b240ea48bb3dda25203d5614433e">RefGenome</a>() { index = NULL; }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">   25</a></span>&#160;    <a class="code" href="classSeqLib_1_1RefGenome.html#aaf0d87996e072df1a809b015bee58fe8">~RefGenome</a>() { <span class="keywordflow">if</span> (index) fai_destroy(index); }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
@@ -76,7 +76,7 @@
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1RefGenome.html#a5332a8236d1b6880d4f8c3e1e5453c88">LoadIndex</a>(<span class="keyword">const</span> std::string&amp; file);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classSeqLib_1_1RefGenome.html#aaef62c8761ddd1b95824fc57b1b277b5">   44</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1RefGenome.html#aaef62c8761ddd1b95824fc57b1b277b5">IsEmpty</a>()<span class="keyword"> const </span>{ </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span> (index == <span class="keyword">nullptr</span>); </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">return</span> (index == NULL); </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">private</span>:</div>
@@ -99,7 +99,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 1 2016 20:57:06 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 4 2016 21:24:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

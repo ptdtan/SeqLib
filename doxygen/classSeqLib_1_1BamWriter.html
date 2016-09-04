@@ -120,11 +120,11 @@ Protected Attributes</h2></td></tr>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>m_out</b></td></tr>
 <tr class="separator:ac77833eeb9542ff011daddcdc7b91014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a554e5429d5ea3983680df4061c7966fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a554e5429d5ea3983680df4061c7966fd"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>output_format</b> = &quot;wb&quot;</td></tr>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>output_format</b></td></tr>
 <tr class="separator:a554e5429d5ea3983680df4061c7966fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86abdd26a8d7bc98c072859c2591e385"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86abdd26a8d7bc98c072859c2591e385"></a>
-std::shared_ptr&lt; htsFile &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fop</b></td></tr>
-<tr class="separator:a86abdd26a8d7bc98c072859c2591e385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbb47bf1abc2ebfb1a9b62ffed0097ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbb47bf1abc2ebfb1a9b62ffed0097ca"></a>
+SeqPointer&lt; htsFile &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>fop</b></td></tr>
+<tr class="separator:abbb47bf1abc2ebfb1a9b62ffed0097ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add6b5ee66d72e4916210baf72e4a418e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add6b5ee66d72e4916210baf72e4a418e"></a>
 <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>hdr</b></td></tr>
 <tr class="separator:add6b5ee66d72e4916210baf72e4a418e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,7 +156,13 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <p>Construct an empty <a class="el" href="classSeqLib_1_1BamWriter.html" title="Walk along a BAM or along BAM regions and stream in/out reads. ">BamWriter</a> and specify output format. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">o</td><td>One of SeqLib::BAM, SeqLib::CRAM, SeqLib::SAM, SeqLib::STDOUT </td></tr>
+    <tr><td class="paramname">o</td><td>One of SeqLib::BAM, SeqLib::CRAM, SeqLib::SAM </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>an invalid_argument if not one of accepted values </td></tr>
   </table>
   </dd>
 </dl>
@@ -357,7 +363,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 1 2016 20:57:06 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 4 2016 21:24:43 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
