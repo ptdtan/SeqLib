@@ -261,6 +261,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <a class="el" href="classSeqLib_1_1GenomicRegion.html">GenomicRegion</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a1a9973e080c985555669150c515e1377">asGenomicRegionMate</a> () const </td></tr>
 <tr class="memdesc:a1a9973e080c985555669150c515e1377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return mate read as a <a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a>. <br /></td></tr>
 <tr class="separator:a1a9973e080c985555669150c515e1377"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a663d6d827b5f26f89ee995afb814963a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#a663d6d827b5f26f89ee995afb814963a">NumAlignedBases</a> () const </td></tr>
+<tr class="memdesc:a663d6d827b5f26f89ee995afb814963a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of "aligned bases" in the same style as BamTools.  <a href="#a663d6d827b5f26f89ee995afb814963a">More...</a><br /></td></tr>
+<tr class="separator:a663d6d827b5f26f89ee995afb814963a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac015633382d1cc7901559502e196025a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac015633382d1cc7901559502e196025a"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamRecord.html#ac015633382d1cc7901559502e196025a">MaxInsertionBases</a> () const </td></tr>
 <tr class="memdesc:ac015633382d1cc7901559502e196025a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the max single insertion size on this cigar. <br /></td></tr>
@@ -802,6 +805,33 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
+<a class="anchor" id="a663d6d827b5f26f89ee995afb814963a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int NumAlignedBases </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the number of "aligned bases" in the same style as BamTools. </p>
+<p>BamTools reports AlignedBases, which for example returns the literal strings (for diff CIGARs): 3S5M - CTG 5M - CTAGC 3M1D3M - ATG-TGA 3M1I3M - ATGCTGA</p>
+<dl class="section return"><dt>Returns</dt><dd>The number of M, D, and I bases </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a7ce8b14d32f3167126f830b6c58904ed"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1020,7 +1050,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 4 2016 21:47:00 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 5 2016 16:39:46 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
