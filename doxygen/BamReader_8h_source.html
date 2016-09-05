@@ -208,24 +208,26 @@
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
 <div class="line"><a name="l00237"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">  237</a></span>&#160;  <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a> <a class="code" href="classSeqLib_1_1BamReader.html#ac253cbffbaf4502cf74c1a8c8f576f00">Header</a>()<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (m_bams.size()) <span class="keywordflow">return</span> m_bams.begin()-&gt;second.m_hdr; <span class="keywordflow">return</span> <a class="code" href="classSeqLib_1_1BamHeader.html">BamHeader</a>(); }</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="comment">// regions to walk</span></div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a> m_region;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  std::string <a class="code" href="classSeqLib_1_1BamReader.html#a97ae27b803947cf8697c6dbbbb238f37">HeaderConcat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="comment">// store the file pointers etc to BAM files</span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  _BamMap m_bams;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="comment">// regions to walk</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a> m_region;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="comment">// hold the reference for CRAM reading</span></div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  std::string m_cram_reference;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="comment">// store the file pointers etc to BAM files</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  _BamMap m_bams;</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;};</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="comment">// hold the reference for CRAM reading</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  std::string m_cram_reference;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;};</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;}</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_ac0b04f384b7e5eb72ff1e43fb4c413e2"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ac0b04f384b7e5eb72ff1e43fb4c413e2">SeqLib::BamReader::BamReader</a></div><div class="ttdeci">BamReader()</div><div class="ttdoc">Construct an empty BamReader. </div></div>
 <div class="ttc" id="classSeqLib_1_1GenomicRegionCollection_html"><div class="ttname"><a href="classSeqLib_1_1GenomicRegionCollection.html">SeqLib::GenomicRegionCollection&lt; GenomicRegion &gt;</a></div></div>
 <div class="ttc" id="classSeqLib_1_1BamRecord_html"><div class="ttname"><a href="classSeqLib_1_1BamRecord.html">SeqLib::BamRecord</a></div><div class="ttdoc">Class to store and interact with a SAM alignment record. </div><div class="ttdef"><b>Definition:</b> BamRecord.h:201</div></div>
@@ -233,6 +235,7 @@
 <div class="ttc" id="classSeqLib_1_1BamReader_html_aac7ebbdc1833e628562a56a0b780b068"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#aac7ebbdc1833e628562a56a0b780b068">SeqLib::BamReader::SetMultipleRegions</a></div><div class="ttdeci">bool SetMultipleRegions(const GRC &amp;grv)</div><div class="ttdoc">Set up multiple regions. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_ae8433e275bdc2f823bda717f2d190249"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#ae8433e275bdc2f823bda717f2d190249">SeqLib::BamReader::ListFiles</a></div><div class="ttdeci">std::vector&lt; std::string &gt; ListFiles() const </div><div class="ttdoc">Return a vector of all of the BAM/SAM/CRAMs in this reader. </div><div class="ttdef"><b>Definition:</b> BamReader.h:198</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a98eeb525f16ecea9433b85b3681f5659"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a98eeb525f16ecea9433b85b3681f5659">SeqLib::BamReader::PrintRegions</a></div><div class="ttdeci">std::string PrintRegions() const </div><div class="ttdoc">Create a string representation of all of the regions to walk. </div></div>
+<div class="ttc" id="classSeqLib_1_1BamReader_html_a97ae27b803947cf8697c6dbbbb238f37"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a97ae27b803947cf8697c6dbbbb238f37">SeqLib::BamReader::HeaderConcat</a></div><div class="ttdeci">std::string HeaderConcat() const </div><div class="ttdoc">Return a concatenation of all the headers. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a36101d2b2274e9681d0299be6f84dd40"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a36101d2b2274e9681d0299be6f84dd40">SeqLib::BamReader::SetCramReference</a></div><div class="ttdeci">bool SetCramReference(const std::string &amp;ref)</div><div class="ttdoc">Explicitly set a reference genome to be used to decode CRAM file. </div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_a35d6746546355da137905d6b7c17b15d"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">SeqLib::BamReader::IsOpen</a></div><div class="ttdeci">bool IsOpen() const </div><div class="ttdoc">Return if the reader has opened the first file. </div><div class="ttdef"><b>Definition:</b> BamReader.h:150</div></div>
 <div class="ttc" id="classSeqLib_1_1BamReader_html_abfc0fade10544dabd50ac480ec38f7d2"><div class="ttname"><a href="classSeqLib_1_1BamReader.html#abfc0fade10544dabd50ac480ec38f7d2">SeqLib::BamReader::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const BamReader &amp;b)</div><div class="ttdoc">Print out some basic info about this reader. </div></div>
@@ -251,7 +254,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Sep 5 2016 19:43:19 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Sep 5 2016 20:15:03 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
