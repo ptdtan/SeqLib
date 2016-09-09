@@ -83,12 +83,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a268ee90c740378ba89d69ad1b2ea792e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a268ee90c740378ba89d69ad1b2ea792e">GenomicRegionCollection</a> (int width, int ovlp, const T &amp;gr)</td></tr>
 <tr class="memdesc:a268ee90c740378ba89d69ad1b2ea792e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> with overlapping intervals.  <a href="#a268ee90c740378ba89d69ad1b2ea792e">More...</a><br /></td></tr>
 <tr class="separator:a268ee90c740378ba89d69ad1b2ea792e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac44abf839cd3047c9f62882096646e43"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#ac44abf839cd3047c9f62882096646e43">GenomicRegionCollection</a> (int width, int ovlp, const HeaderSequenceVector &amp;h)</td></tr>
+<tr class="memdesc:ac44abf839cd3047c9f62882096646e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a tiled set of intervals across a genome.  <a href="#ac44abf839cd3047c9f62882096646e43">More...</a><br /></td></tr>
+<tr class="separator:ac44abf839cd3047c9f62882096646e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad93af037ad754a81296c5a4a2111b030"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#ad93af037ad754a81296c5a4a2111b030">ReadBED</a> (const std::string &amp;file, const <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> &amp;hdr)</td></tr>
 <tr class="memdesc:ad93af037ad754a81296c5a4a2111b030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a BED file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> object.  <a href="#ad93af037ad754a81296c5a4a2111b030">More...</a><br /></td></tr>
 <tr class="separator:ad93af037ad754a81296c5a4a2111b030"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24ed3852f541c0449d885d24222b11fb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a24ed3852f541c0449d885d24222b11fb">ReadVCF</a> (const std::string &amp;file, const <a class="el" href="classSeqLib_1_1BamHeader.html">SeqLib::BamHeader</a> &amp;hdr)</td></tr>
 <tr class="memdesc:a24ed3852f541c0449d885d24222b11fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a VCF file and adds to <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a> object.  <a href="#a24ed3852f541c0449d885d24222b11fb">More...</a><br /></td></tr>
 <tr class="separator:a24ed3852f541c0449d885d24222b11fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2697cc8b37d7bca7c055228382a9b208"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2697cc8b37d7bca7c055228382a9b208"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a2697cc8b37d7bca7c055228382a9b208">Shuffle</a> ()</td></tr>
+<tr class="memdesc:a2697cc8b37d7bca7c055228382a9b208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shuffle the order of the intervals. <br /></td></tr>
+<tr class="separator:a2697cc8b37d7bca7c055228382a9b208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af0c2d255d52cc1038b19baeaba5f12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html#a9af0c2d255d52cc1038b19baeaba5f12">GenomicRegionCollection</a> (const std::string &amp;file, const <a class="el" href="classSeqLib_1_1BamHeader.html">BamHeader</a> &amp;hdr)</td></tr>
 <tr class="memdesc:a9af0c2d255d52cc1038b19baeaba5f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read in a text file (can be gzipped) and construct a <a class="el" href="classSeqLib_1_1GenomicRegionCollection.html" title="Template class to store / query a collection of genomic intervals. ">GenomicRegionCollection</a>.  <a href="#a9af0c2d255d52cc1038b19baeaba5f12">More...</a><br /></td></tr>
 <tr class="separator:a9af0c2d255d52cc1038b19baeaba5f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,6 +273,48 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
     <tr><td class="paramname">width</td><td>Desired bin width </td></tr>
     <tr><td class="paramname">ovlp</td><td>Amount that the bins should overlap </td></tr>
     <tr><td class="paramname">gr</td><td><a class="el" href="classSeqLib_1_1GenomicRegion.html" title="Container for an interval on the genome. ">GenomicRegion</a> to divide into smaller overlapping bins </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac44abf839cd3047c9f62882096646e43"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSeqLib_1_1GenomicRegionCollection.html">GenomicRegionCollection</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ovlp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const HeaderSequenceVector &amp;&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a tiled set of intervals across a genome. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Width of each interval tile </td></tr>
+    <tr><td class="paramname">ovlp</td><td>Amount of overlap between neighboring tiles </td></tr>
+    <tr><td class="paramname">h</td><td>Set of chromosomes and their lengths to build the tile on </td></tr>
   </table>
   </dd>
 </dl>
@@ -663,7 +712,7 @@ class SeqLib::GenomicRegionCollection&lt; T &gt;</h3>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 6 2016 22:54:58 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 9 2016 14:52:54 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
