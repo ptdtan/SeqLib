@@ -70,10 +70,15 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSeqLib_1_1UnalignedSequence.html#aa196be17daf0e4a726135c2c2818bb88">UnalignedSequence</a> ()</td></tr>
 <tr class="memdesc:aa196be17daf0e4a726135c2c2818bb88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an empty sequence. <br /></td></tr>
 <tr class="separator:aa196be17daf0e4a726135c2c2818bb88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b0ee08cd7160a3515072b98e87edb9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4b0ee08cd7160a3515072b98e87edb9a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSeqLib_1_1UnalignedSequence.html#a4b0ee08cd7160a3515072b98e87edb9a">UnalignedSequence</a> (const std::string &amp;n, const std::string &amp;s, const std::string &amp;q)</td></tr>
-<tr class="memdesc:a4b0ee08cd7160a3515072b98e87edb9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a sequence. <br /></td></tr>
+<tr class="memitem:ae442cd17c518d4695d54a012ee588c47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSeqLib_1_1UnalignedSequence.html#ae442cd17c518d4695d54a012ee588c47">UnalignedSequence</a> (const std::string &amp;n, const std::string &amp;s)</td></tr>
+<tr class="memdesc:ae442cd17c518d4695d54a012ee588c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an unaliged sequence with name and sequence.  <a href="#ae442cd17c518d4695d54a012ee588c47">More...</a><br /></td></tr>
+<tr class="separator:ae442cd17c518d4695d54a012ee588c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b0ee08cd7160a3515072b98e87edb9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSeqLib_1_1UnalignedSequence.html#a4b0ee08cd7160a3515072b98e87edb9a">UnalignedSequence</a> (const std::string &amp;n, const std::string &amp;s, const std::string &amp;q)</td></tr>
+<tr class="memdesc:a4b0ee08cd7160a3515072b98e87edb9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an unaliged sequence with name, sequence and quality score.  <a href="#a4b0ee08cd7160a3515072b98e87edb9a">More...</a><br /></td></tr>
 <tr class="separator:a4b0ee08cd7160a3515072b98e87edb9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75aa5606b6f5d7353ac22b4acfacc4f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSeqLib_1_1UnalignedSequence.html#a75aa5606b6f5d7353ac22b4acfacc4f8">UnalignedSequence</a> (const std::string &amp;n, const std::string &amp;s, const std::string &amp;q, char t)</td></tr>
+<tr class="memdesc:a75aa5606b6f5d7353ac22b4acfacc4f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an unaliged sequence with name, sequence and quality score.  <a href="#a75aa5606b6f5d7353ac22b4acfacc4f8">More...</a><br /></td></tr>
+<tr class="separator:a75aa5606b6f5d7353ac22b4acfacc4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -89,16 +94,171 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSeqLib_1_1UnalignedSequence.html#a7b5f8a04df873374ff402d54b2b46e3a">Qual</a></td></tr>
 <tr class="memdesc:a7b5f8a04df873374ff402d54b2b46e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quality scores. <br /></td></tr>
 <tr class="separator:a7b5f8a04df873374ff402d54b2b46e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172011577e5b1d66b6b5c8a58b77f59d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a172011577e5b1d66b6b5c8a58b77f59d"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSeqLib_1_1UnalignedSequence.html#a172011577e5b1d66b6b5c8a58b77f59d">Strand</a></td></tr>
+<tr class="memdesc:a172011577e5b1d66b6b5c8a58b77f59d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strand of the sequence. Default is '*'. <br /></td></tr>
+<tr class="separator:a172011577e5b1d66b6b5c8a58b77f59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure to hold unaligned sequence (name and bases) </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="ae442cd17c518d4695d54a012ee588c47"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSeqLib_1_1UnalignedSequence.html">UnalignedSequence</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an unaliged sequence with name and sequence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Name of the sequence </td></tr>
+    <tr><td class="paramname">s</td><td>Sequence, stored as ACTG or N characters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4b0ee08cd7160a3515072b98e87edb9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSeqLib_1_1UnalignedSequence.html">UnalignedSequence</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an unaliged sequence with name, sequence and quality score. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Name of the sequence </td></tr>
+    <tr><td class="paramname">s</td><td>Sequence, stored as ACTG or N characters </td></tr>
+    <tr><td class="paramname">q</td><td>Quality string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a75aa5606b6f5d7353ac22b4acfacc4f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structSeqLib_1_1UnalignedSequence.html">UnalignedSequence</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct an unaliged sequence with name, sequence and quality score. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>Name of the sequence </td></tr>
+    <tr><td class="paramname">s</td><td>Sequence, stored as ACTG or N characters </td></tr>
+    <tr><td class="paramname">q</td><td>Quality string </td></tr>
+    <tr><td class="paramname">t</td><td>Strand of the sequence, one of '*', '+', '-' </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
 <li>SeqLib/<a class="el" href="UnalignedSequence_8h_source.html">UnalignedSequence.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 9 2016 14:52:54 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 11 2016 16:00:23 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
