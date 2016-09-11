@@ -88,8 +88,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:a35d6746546355da137905d6b7c17b15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if the reader has opened the first file. <br /></td></tr>
 <tr class="separator:a35d6746546355da137905d6b7c17b15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c085d98a891e42377aa9b8f7f5415e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#a46c085d98a891e42377aa9b8f7f5415e">SetPreloadedIndex</a> (const std::string &amp;f, SharedIndex &amp;i)</td></tr>
-<tr class="memdesc:a46c085d98a891e42377aa9b8f7f5415e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pre-loaded raw index.  <a href="#a46c085d98a891e42377aa9b8f7f5415e">More...</a><br /></td></tr>
+<tr class="memdesc:a46c085d98a891e42377aa9b8f7f5415e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pre-loaded raw htslib index.  <a href="#a46c085d98a891e42377aa9b8f7f5415e">More...</a><br /></td></tr>
 <tr class="separator:a46c085d98a891e42377aa9b8f7f5415e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6879928700a4fa1945185ef7d4ed0b47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#a6879928700a4fa1945185ef7d4ed0b47">SetPreloadedHTSFile</a> (const std::string &amp;f, SharedHTSFile &amp;i)</td></tr>
+<tr class="memdesc:a6879928700a4fa1945185ef7d4ed0b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set pre-loaded raw htslib file pointer.  <a href="#a6879928700a4fa1945185ef7d4ed0b47">More...</a><br /></td></tr>
+<tr class="separator:a6879928700a4fa1945185ef7d4ed0b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0987acea9bc4c15db3f7ca920704d9"><td class="memItemLeft" align="right" valign="top">SharedHTSFile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#aef0987acea9bc4c15db3f7ca920704d9">GetHTSFile</a> (const std::string &amp;f) const </td></tr>
+<tr class="memdesc:aef0987acea9bc4c15db3f7ca920704d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shared pointer to the raw htsFile object </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>runtime_error if the requested file has not been opened already with Open. </td></tr>
+  </table>
+  </dd>
+</dl>
+ <a href="#aef0987acea9bc4c15db3f7ca920704d9">More...</a><br /></td></tr>
+<tr class="separator:aef0987acea9bc4c15db3f7ca920704d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab979554f001657e7f75325efd72dc71e"><td class="memItemLeft" align="right" valign="top">SharedHTSFile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#ab979554f001657e7f75325efd72dc71e">GetHTSFile</a> () const </td></tr>
+<tr class="memdesc:ab979554f001657e7f75325efd72dc71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a shared pointer to the raw htsFile object from the first BAM </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>runtime_error if no files have been opened already with Open. </td></tr>
+  </table>
+  </dd>
+</dl>
+ <a href="#ab979554f001657e7f75325efd72dc71e">More...</a><br /></td></tr>
+<tr class="separator:ab979554f001657e7f75325efd72dc71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892bf3fe2b7488a466ee9f27f00ecd51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#a892bf3fe2b7488a466ee9f27f00ecd51">SetPreloadedHTSFile</a> (SharedHTSFile &amp;i)</td></tr>
+<tr class="memdesc:a892bf3fe2b7488a466ee9f27f00ecd51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pre-loaded raw htsfile pointer, to the first BAM.  <a href="#a892bf3fe2b7488a466ee9f27f00ecd51">More...</a><br /></td></tr>
+<tr class="separator:a892bf3fe2b7488a466ee9f27f00ecd51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d4f8ab6d48c10146dc746496de74e51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSeqLib_1_1BamReader.html#a4d4f8ab6d48c10146dc746496de74e51">SetPreloadedIndex</a> (SharedIndex &amp;i)</td></tr>
 <tr class="memdesc:a4d4f8ab6d48c10146dc746496de74e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pre-loaded raw index, to the first BAM.  <a href="#a4d4f8ab6d48c10146dc746496de74e51">More...</a><br /></td></tr>
 <tr class="separator:a4d4f8ab6d48c10146dc746496de74e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +231,65 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if BAM is found and is closable (eg no already closed) </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aef0987acea9bc4c15db3f7ca920704d9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SharedHTSFile GetHTSFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a shared pointer to the raw htsFile object </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>runtime_error if the requested file has not been opened already with Open. </td></tr>
+  </table>
+  </dd>
+</dl>
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>File to retrieve the htsFile from. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab979554f001657e7f75325efd72dc71e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SharedHTSFile GetHTSFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a shared pointer to the raw htsFile object from the first BAM </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">Throws</td><td>runtime_error if no files have been opened already with Open. </td></tr>
+  </table>
+  </dd>
+</dl>
+</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>File to retrieve the htsFile from. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -396,6 +479,62 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 
 </div>
 </div>
+<a class="anchor" id="a6879928700a4fa1945185ef7d4ed0b47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SetPreloadedHTSFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SharedHTSFile &amp;&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set pre-loaded raw htslib file pointer. </p>
+<p>Provide the reader with an opened HTSlib file pointer structure that is already loaded. This is useful if there are multiple newly created <a class="el" href="classSeqLib_1_1BamReader.html" title="Stream in reads from multiple BAM/SAM/CRAM or stdin. ">BamReader</a> objects that use the same htsfile </p><dl class="section note"><dt>Note</dt><dd>This does not make a copy, so ops on this file pointer are shared. This means that this <a class="el" href="classSeqLib_1_1BamReader.html" title="Stream in reads from multiple BAM/SAM/CRAM or stdin. ">BamReader</a> is then not thread-safe. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Pointer to an HTSlib file pointer </td></tr>
+    <tr><td class="paramname">f</td><td>Name of the file to set index for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the file f is controlled by this object </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a892bf3fe2b7488a466ee9f27f00ecd51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SetPreloadedHTSFile </td>
+          <td>(</td>
+          <td class="paramtype">SharedHTSFile &amp;&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a pre-loaded raw htsfile pointer, to the first BAM. </p>
+<dl class="section note"><dt>Note</dt><dd>see SetPreloadedFile </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a46c085d98a891e42377aa9b8f7f5415e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -420,7 +559,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
       </table>
 </div><div class="memdoc">
 
-<p>Set pre-loaded raw index. </p>
+<p>Set pre-loaded raw htslib index. </p>
 <p>Provide the reader with an index structure that is already loaded. This is useful if there are multiple newly created <a class="el" href="classSeqLib_1_1BamReader.html" title="Stream in reads from multiple BAM/SAM/CRAM or stdin. ">BamReader</a> objects that use the same index (e.g. make a BAM index in a loop) </p><dl class="section note"><dt>Note</dt><dd>This does not make a copy, so ops on this index are shared with every other object that controls it. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -448,7 +587,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><div class="memdoc">
 
 <p>Set a pre-loaded raw index, to the first BAM. </p>
-<dl class="section note"><dt>Note</dt><dd>see <a class="el" href="classSeqLib_1_1BamReader.html#a46c085d98a891e42377aa9b8f7f5415e" title="Set pre-loaded raw index. ">SetPreloadedIndex(const std::string&amp; f, SharedIndex&amp; i)</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>see <a class="el" href="classSeqLib_1_1BamReader.html#a46c085d98a891e42377aa9b8f7f5415e" title="Set pre-loaded raw htslib index. ">SetPreloadedIndex(const std::string&amp; f, SharedIndex&amp; i)</a> </dd></dl>
 
 </div>
 </div>
@@ -484,7 +623,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Sep 11 2016 20:02:18 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 11 2016 23:24:32 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
