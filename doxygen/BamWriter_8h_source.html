@@ -86,7 +86,7 @@
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a3afbdf794c31ef3367db5e5e3acf5798">Open</a>(<span class="keyword">const</span> std::string&amp; f);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamWriter.html#a35d6746546355da137905d6b7c17b15d">   68</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> fop != 0; }</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamWriter.html#a35d6746546355da137905d6b7c17b15d">   68</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> fop.get() != NULL; }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamWriter.html#aa31fb658aa82df586d09295d03932987">WriteRecord</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1BamRecord.html">BamRecord</a> &amp;r);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
@@ -137,7 +137,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 29 2016 15:03:25 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 30 2016 14:40:19 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

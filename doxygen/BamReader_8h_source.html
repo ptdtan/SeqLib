@@ -173,7 +173,7 @@
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#ab1fc0358b9387d4227f9ee91c8e83a33">SetMultipleRegions</a>(<span class="keyword">const</span> <a class="code" href="classSeqLib_1_1GenomicRegionCollection.html">GRC</a>&amp; grc);</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">  155</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (m_bams.size()) <span class="keywordflow">return</span> m_bams.begin()-&gt;second.fp != 0; <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">  155</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a35d6746546355da137905d6b7c17b15d">IsOpen</a>()<span class="keyword"> const </span>{ <span class="keywordflow">if</span> (m_bams.size()) <span class="keywordflow">return</span> m_bams.begin()-&gt;second.fp.get() != NULL; <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#a46c085d98a891e42377aa9b8f7f5415e">SetPreloadedIndex</a>(<span class="keyword">const</span> std::string&amp; f, SharedIndex&amp; i);</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
@@ -187,7 +187,7 @@
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    SeqHashMap&lt;std::string, _Bam&gt;::const_iterator ff = m_bams.find(f);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">if</span> (ff == m_bams.end())</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> ff-&gt;second.fp != 0; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> ff-&gt;second.fp.get() != NULL; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  }</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classSeqLib_1_1BamReader.html#aef7e3d18ef267f23f64ad397fa359cc1">Close</a>();</div>
@@ -264,7 +264,7 @@
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 29 2016 15:03:25 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Sep 30 2016 14:40:19 for SeqLib by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
